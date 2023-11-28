@@ -1,0 +1,31 @@
+<div class="{{#if section.settings.include_margins}}page-width{{/if}}">
+  {{#with section as |section|}} 
+    {{#each block_order as |blockId|}} 
+      {{#with (lookup ../blocks [blockId])}} 
+        {{render this}} 
+      {{/with}} 
+    {{/each}} 
+  {{/with}}
+</div>
+
+{{#schema}}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "switch",
+      "id": "include_margins",
+      "label": "t:sections.apps.settings.include_margins.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": []
+}
+{{/schema}}

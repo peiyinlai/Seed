@@ -1,0 +1,24 @@
+{{assign 'min' (default min 1)}}
+{{assign 'max' (default max 99999)}}
+{{assign 'value' (default value 1)}}
+{{assign 'namespace' (ternary (eq namespace 'CartDrawer-') 'Drawer-quantity-' 'Quantity-')}}
+
+<quantity-input class="quantity">
+  <button class="quantity__button {{#if min '==' value}}disabled{{/if}}" name="minus" type="button">
+    {{snippet "icon-minus"}}
+  </button>
+  <input
+    class="quantity__input body3"
+    type="number"
+    name="quantity"
+    id="{{namespace}}{{id}}"
+    min="{{min}}"
+    max="{{max}}"
+    value="{{value}}"
+    form="{{form_id}}"
+    {{#and (if min "==" value) (if max "==" value)}}disabled{{/and}}
+  />
+  <button class="quantity__button {{#if max '==' value}}disabled{{/if}}" name="plus" type="button">
+    {{snippet "icon-plus"}}
+  </button>
+</quantity-input>

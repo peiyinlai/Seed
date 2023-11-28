@@ -1,0 +1,62 @@
+.announcement-bar--list {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.announcement-bar--list .announcement-bar--item {
+  width: 100%;
+}
+
+.announcement-bar--list.announcement-bar--compact {
+  flex-direction: row;
+}
+
+.announcement-bar--list.announcement-bar--compact .announcement-bar--item {
+  width: auto;
+  padding: 0px 10px;
+  flex: 1 1 auto;
+}
+
+.announcement--text {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.announcement-bar__slider {
+  text-align: center;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  height: auto;
+}
+
+.announcement-bar__slider .announcement-bar__slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-bar__slider.announcement-bar__slider--vertical {
+  display: block;
+}
+
+.announcement-bar__slider.announcement-bar__slider--vertical
+  .announcement-bar__slide {
+  height: auto;
+}
+
+/* The ipad end responds to the mobile end in vertical screen */
+
+/* @custom-media --tablet (max-width: 959px); */
+
+/* @custom-media --gt-mobile (min-width: 751px); */
+
+/* detectingScreen need to consider the configuration of the tablet */
