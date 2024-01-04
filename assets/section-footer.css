@@ -269,6 +269,11 @@ footer-menu {
   }
 }
 
+.footer .newsletter-form__button {
+  padding: 10px;
+  padding-right: 0;
+}
+
 /* The ipad end responds to the mobile end in vertical screen */
 
 /* @custom-media --tablet (max-width: 959px); */

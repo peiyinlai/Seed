@@ -363,6 +363,7 @@
       "sign__out": "Wylogować się",
       "sign_in": "Zalogowanie",
       "sign_in_activate": "Kod weryfikacyjny został wysłany na Twoje konto {{account}}. Po zweryfikowaniu konto będzie można aktywować.",
+      "sign_in_activate_title": "Aktywizować konto",
       "sign_up": "Rejestracja",
       "su": "Nd",
       "subscription_desc": "Można dostać najnowsze informacje działań tego sklepu.",

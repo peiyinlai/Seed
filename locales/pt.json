@@ -363,6 +363,7 @@
       "sign__out": "Sair",
       "sign_in": "Entre",
       "sign_in_activate": "O código de verificação foi enviado para sua conta {{account}}, você pode ativar sua conta após verificação.",
+      "sign_in_activate_title": "Ativar a conta",
       "sign_up": "Inscreva-se",
       "su": "Do",
       "subscription_desc": "Acesso às últimas notícias sobre as atividades da loja",

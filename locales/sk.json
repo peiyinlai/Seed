@@ -363,6 +363,7 @@
       "sign__out": "Odhlásiť sa",
       "sign_in": "PRIHLÁSIŤ SA",
       "sign_in_activate": "Na vaše konto {{account}} bol odoslaný overovací kód. Po overení môžete svoje konto aktivovať",
+      "sign_in_activate_title": "Aktivácia účtu",
       "sign_up": "ZAREGISTROVAŤ SA",
       "su": "Ne",
       "subscription_desc": "Získajte najnovšie správy o obchode",

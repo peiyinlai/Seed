@@ -25,6 +25,10 @@
 }
 .header #cart-icon-bubble-wrapper {
   display: flex;
+  height: 28px;
+  width: 22px;
+  justify-content: center;
+  align-items: center;
 }
 .header {
   border-bottom: 1px solid rgb(var(--color-entry-line));
@@ -141,7 +145,7 @@
   background-color: rgba(var(--color-cart-dot));
   border-radius: 20px;
   color: rgba(var(--color-cart-dot-text));
-  bottom: -3px;
+  bottom: 1px;
   left: 13px;
   line-height: 20px;
   min-width: 20px;

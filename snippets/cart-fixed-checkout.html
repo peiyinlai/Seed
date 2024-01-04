@@ -4,7 +4,7 @@
   <div class="cart-fixed-checkout__container">
     {{#if cart.total_discount ">" 0}}
     <div class="cart-fixed-checkout__dropdown-button">
-      <a href="javascript:void(0);">
+      <a href="javascript:;">
         {{snippet "icon-caret-down"}}
       </a>
     </div>
@@ -39,7 +39,7 @@
       {{/if}}
 
       <div class="cart-fixed-checkout__footer">
-        <a href="javascript:void(0);" class="cart__total {{#if cart.total_discount ">" 0}}cart-drawer__dropdown-toggle{{else}}cart-drawer__dropdown-toggle-normal{{/if}}">
+        <a href="javascript:;" class="cart__total {{#if cart.total_discount ">" 0}}cart-drawer__dropdown-toggle{{else}}cart-drawer__dropdown-toggle-normal{{/if}}">
           <b class="body3 fw-bold cart__total-text">{{t "cart.payment.total_sum"}}</b>
           <div class="cart__price-zone">
             {{#if cart.total_discount '>' 0}}

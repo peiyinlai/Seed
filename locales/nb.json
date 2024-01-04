@@ -363,6 +363,7 @@
       "sign__out": "Logg Av",
       "sign_in": "LOGG INN",
       "sign_in_activate": "Verifisering kode er sendt til {{account}}-kontoen din. Du kan aktivere kontoen din etter verifisering",
+      "sign_in_activate_title": "Kontoaktivering",
       "sign_up": "MELDE SEG PÅ",
       "su": "sø",
       "subscription_desc": "Få siste nytt om butikken",

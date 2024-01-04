@@ -363,6 +363,7 @@
       "sign__out": "Odhlásit Se",
       "sign_in": "PŘIHLÁSIT",
       "sign_in_activate": "Na váš účet {{account}} byl odeslán ověřovací kód. Po ověření můžete svůj účet aktivovat",
+      "sign_in_activate_title": "Aktivace účtu",
       "sign_up": "ZAREGISTROVAT",
       "su": "Ne",
       "subscription_desc": "Získejte nejnovější zprávy o obchodě",

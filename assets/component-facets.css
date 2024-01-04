@@ -127,6 +127,12 @@
   display: none;
 }
 
+.facet-checkbox > input[type="checkbox"]:disabled ~ span {
+  border-color: rgba(var(--color-text), 0.1);
+  color: rgba(var(--color-text), 0.6);
+  cursor: not-allowed;
+}
+
 .facet-checkbox > input[type="checkbox"]:checked ~ span {
   font-weight: 500;
 }

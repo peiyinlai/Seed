@@ -363,6 +363,7 @@
       "sign__out": "Đăng xuất",
       "sign_in": "ĐĂNG NHẬP",
       "sign_in_activate": "Mã xác minh đã được gửi tới tài khoản của bạn {{account}}. Bạn có thể kích hoạt tài khoản của mình sau khi xác minh",
+      "sign_in_activate_title": "",
       "sign_up": "ĐĂNG KÝ",
       "su": "CN",
       "subscription_desc": "Nhận tin tức mới nhất về cửa hàng",

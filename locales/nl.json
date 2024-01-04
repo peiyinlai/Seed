@@ -363,6 +363,7 @@
       "sign__out": "Uitloggen",
       "sign_in": "Inloggen",
       "sign_in_activate": "Verificatiecode is verzonden naar uw account {{account}}, u kunt uw account activeren na verificatie.",
+      "sign_in_activate_title": "Account activeren",
       "sign_up": "Registreren",
       "su": "zo",
       "subscription_desc": "Ontvang het laatste nieuws over de evenement van de winkel",

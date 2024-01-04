@@ -1,10 +1,8 @@
 <div class="{{#if section.settings.include_margins}}page-width{{/if}}">
-  {{#with section as |section|}} 
-    {{#each block_order as |blockId|}} 
-      {{#with (lookup ../blocks [blockId])}} 
-        {{render this}} 
-      {{/with}} 
-    {{/each}} 
+  {{#with section as |section|}}
+    {{#each blocks}}
+      {{render this}}
+    {{/each}}
   {{/with}}
 </div>
 

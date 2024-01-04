@@ -50,7 +50,11 @@ defineCustomElement(
         const cartDrawer = this.CartDrawer[0];
         cartDrawer.classList.remove('active');
         document.body.classList.remove('overflow-hidden');
-        cartDrawer.querySelector('.cart-fixed-checkout').classList.add('collapsed');
+        const fixedCheckoutContainer = cartDrawer.querySelector('.cart-fixed-checkout');
+
+        if (fixedCheckoutContainer) {
+          fixedCheckoutContainer.classList.add('collapsed');
+        }
       }
     },
 );

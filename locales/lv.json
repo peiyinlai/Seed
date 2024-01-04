@@ -363,6 +363,7 @@
       "sign__out": "Izrakstīties",
       "sign_in": "Pierakstieties",
       "sign_in_activate": "Uz jūsu kontu {{account}} ir nosūtīts verifikācijas kods. Pēc verifikācijas jūs varat aktivizēt savu kontu",
+      "sign_in_activate_title": "Konta aktivizēšana",
       "sign_up": "PIERAKSTĪŠANĀS",
       "su": "Sv",
       "subscription_desc": "Saņemiet jaunākās ziņas par veikalu",

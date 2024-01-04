@@ -363,6 +363,7 @@
       "sign__out": "Abmelden",
       "sign_in": "Anmelden",
       "sign_in_activate": "Der Verifizierungscode wurde an Ihr Konto{{account}} gesendet, Sie können Ihr Konto nach der Verifizierung aktivieren.",
+      "sign_in_activate_title": "Konto aktivieren",
       "sign_up": "Registrieren",
       "su": "So",
       "subscription_desc": "Erhalten Sie die aktuelle Nachrichten über die Aktivitäten des Shop",

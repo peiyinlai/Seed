@@ -12,7 +12,7 @@
 {{assign "mobile_flatten" section.settings.mobile_banner_flatten}}
 {{assign "show_mobile_textarea" section.settings.m_show_textarea}}
 {{assign "blocks_length" (default (length section.blocks) 0)}}
-{{assign 'image_pc_size' (ternary (and banner1 banner2) '1/2' '100vw')}}
+{{assign "image_pc_size" (ternary (and banner1 banner2) "1/2" "100vw")}}
 
 {{assign "banner_ratio" "0"}}
 {{#if (isTruthy override_banner_height)}}
@@ -37,13 +37,7 @@
             banner-item-wrapper--size-{{#if (isFalsey override_banner_height)}}{{banner_height_size}}{{else}}none{{/if}}"
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet
-              "image"
-              data=banner1
-              pc_size=image_pc_size
-              class="banner-item banner-pc-item"
-              lazy=true
-            }}
+            {{snippet "image" data=banner1 pc_size=image_pc_size class="banner-item banner-pc-item" lazy=true}}
           </div>
         </div>
       {{/if}}
@@ -53,13 +47,7 @@
             banner-item-wrapper--size-{{#if (isFalsey override_banner_height)}}{{banner_height_size}}{{else}}none{{/if}}"
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet
-              "image"
-              data=banner2
-              pc_size=image_pc_size
-              class="banner-item banner-pc-item"
-              lazy=true
-            }}
+            {{snippet "image" data=banner2 pc_size=image_pc_size class="banner-item banner-pc-item" lazy=true}}
           </div>
         </div>
       {{/if}}
@@ -82,44 +70,42 @@
                 wrapper--default-scheme
               {{/if}}"
           >
-            {{#each section.block_order as |blockId|}}
-              {{#with (lookup ../section.blocks blockId)}}
-                {{#if (trim type) "===" "title"}}
-                  <h2 {{{this.shopline_attributes}}} class="title {{settings.title_size}}">
-                    {{newline_to_br settings.title}}
-                  </h2>
-                {{/if}}
+            {{#each section.blocks}}
+              {{#if (trim type) "===" "title"}}
+                <h2 {{{this.shopline_attributes}}} class="title {{settings.title_size}}">
+                  {{newline_to_br settings.title}}
+                </h2>
+              {{/if}}
 
-                {{#if (trim type) "===" "desc"}}
-                  <p {{{this.shopline_attributes}}} class="desc body1">
-                    {{settings.description}}
-                  </p>
-                {{/if}}
-                {{#if (trim type) "===" "button"}}
-                  {{assign "outline_button" settings.outline_button}}
-                  {{assign "outline_button_2" settings.outline_button_2}}
-                  <div {{{this.shopline_attributes}}} class="control-wrap">
-                    <div class="control">
-                      {{~#if settings.button_text}}
-                        <a
-                          {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
-                          class="button {{#if (isTruthy outline_button)}}button--secondary{{else}}btn-primary{{/if}}"
-                        >
-                          {{settings.button_text}}
-                        </a>
-                      {{~/if}}
-                      {{~#if settings.link_text_2}}
-                        <a
-                          {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
-                          class="button {{#if (isTruthy outline_button_2)}}button--secondary{{else}}btn-primary{{/if}}"
-                        >
-                          {{settings.link_text_2}}
-                        </a>
-                      {{~/if}}
-                    </div>
+              {{#if (trim type) "===" "desc"}}
+                <p {{{this.shopline_attributes}}} class="desc body1">
+                  {{settings.description}}
+                </p>
+              {{/if}}
+              {{#if (trim type) "===" "button"}}
+                {{assign "outline_button" settings.outline_button}}
+                {{assign "outline_button_2" settings.outline_button_2}}
+                <div {{{this.shopline_attributes}}} class="control-wrap">
+                  <div class="control">
+                    {{~#if settings.button_text}}
+                      <a
+                        {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                        class="button {{#if (isTruthy outline_button)}}button--secondary{{else}}btn-primary{{/if}}"
+                      >
+                        {{settings.button_text}}
+                      </a>
+                    {{~/if}}
+                    {{~#if settings.link_text_2}}
+                      <a
+                        {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
+                        class="button {{#if (isTruthy outline_button_2)}}button--secondary{{else}}btn-primary{{/if}}"
+                      >
+                        {{settings.link_text_2}}
+                      </a>
+                    {{~/if}}
                   </div>
-                {{/if}}
-              {{/with}}
+                </div>
+              {{/if}}
             {{/each}}
           </div>
         </div>
@@ -164,45 +150,43 @@
               {{else}} wrapper--default-scheme {{/if}}
               "
           >
-            {{#each section.block_order as |blockId|}}
-              {{#with (lookup ../section.blocks blockId)}}
-                {{#if (trim type) "===" "title"}}
-                  <h2 {{{this.shopline_attributes}}} class="title2 {{settings.title_size}}">
-                    {{newline_to_br settings.title}}
-                  </h2>
-                {{/if}}
+            {{#each section.blocks}}
+              {{#if (trim type) "===" "title"}}
+                <h2 {{{this.shopline_attributes}}} class="title2 {{settings.title_size}}">
+                  {{newline_to_br settings.title}}
+                </h2>
+              {{/if}}
 
-                {{#if (trim type) "===" "desc"}}
-                  <p {{{this.shopline_attributes}}} class="body1">
-                    {{settings.description}}
-                  </p>
-                {{/if}}
-                {{#if (trim type) "===" "button"}}
-                  {{assign "outline_button" settings.outline_button}}
-                  {{assign "outline_button_2" settings.outline_button_2}}
-                  <div class="control-wrap" {{{this.shopline_attributes}}}>
-                    <div class="control">
-                      {{~#if settings.button_text}}
-                        <a
-                          {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
-                          class="button {{#if (isTruthy outline_button)}}button--secondary{{/if}}"
-                        >
-                          {{settings.button_text}}
-                        </a>
-                      {{~/if}}
-                      {{~#if settings.link_text_2}}
-                        <a
-                          {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
-                          class="button {{#if (isTruthy outline_button_2)}}button--secondary{{/if}}"
-                        >
-                          {{settings.link_text_2}}
-                        </a>
-                      {{~/if}}
-                    </div>
+              {{#if (trim type) "===" "desc"}}
+                <p {{{this.shopline_attributes}}} class="body1">
+                  {{settings.description}}
+                </p>
+              {{/if}}
+              {{#if (trim type) "===" "button"}}
+                {{assign "outline_button" settings.outline_button}}
+                {{assign "outline_button_2" settings.outline_button_2}}
+                <div class="control-wrap" {{{this.shopline_attributes}}}>
+                  <div class="control">
+                    {{~#if settings.button_text}}
+                      <a
+                        {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                        class="button {{#if (isTruthy outline_button)}}button--secondary{{/if}}"
+                      >
+                        {{settings.button_text}}
+                      </a>
+                    {{~/if}}
+                    {{~#if settings.link_text_2}}
+                      <a
+                        {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
+                        class="button {{#if (isTruthy outline_button_2)}}button--secondary{{/if}}"
+                      >
+                        {{settings.link_text_2}}
+                      </a>
+                    {{~/if}}
                   </div>
+                </div>
 
-                {{/if}}
-              {{/with}}
+              {{/if}}
             {{/each}}
           </div>
         </div>

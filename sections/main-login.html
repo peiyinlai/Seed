@@ -16,19 +16,25 @@
 }}
 
 <div class="customer login section-padding">
-  <h1 class="title5 text-center customer-form-title">
-    {{t "customer.general.sign_in"}}
-  </h1>
   {{#form "customer_login" id="login-customer-form" thirdLogin="true"}}
+    {{assign "activation_tag" form.register_config.activation_tag}}
     {{assign "support_type_list" (split form.register_config.types ",")}}
     {{assign "has_switch" (and (inArray support_type_list 'email') (inArray support_type_list 'mobile') )}}
     {{assign
       "has_third_login"
       (or (inArray support_type_list "line") (inArray support_type_list "facebook") (inArray support_type_list "google"))
     }}
+
+    <h1 id="customer-login-title" class="title5 text-center customer-form-title">
+      {{t "customer.general.sign_in"}}
+    </h1>
+
+    {{#if activation_tag}}
+      <p id="customer-activation-hint" class="body6 text-center customer-form-hint display-none" data-show="activation"></p>
+    {{/if}}
     
     {{#if has_switch}}
-      <div class="tab" id="login-customer-tab">
+      <div class="tab" id="login-customer-tab" data-show="normal">
         <a class="body3 active" data-type="email">
           {{t "customer.account.email"}}
         </a>
@@ -91,6 +97,29 @@
         </button>
       </div>
     </div>
+
+    {{#if activation_tag}}
+      <div class="field display-none" data-type="verifycode" data-show="activation">
+        <div class="field__container">
+          <input
+            type="text"
+            class="field__input"
+            id="RegisterVerifyCode"
+            name="customer[verifycode]"
+            disabled
+            placeholder="{{t 'customer.general.verification_code'}}"
+          />
+          <label for="RegisterVerifyCode" class="field__label body3">
+            {{t "customer.general.verification_code"}}
+          </label>
+        </div>
+        <div class="field__suffix">
+          <button class="button button--link verifycode-button" id="customer-login-activate-send-btn">
+            {{t "customer.general.send"}}
+          </button>
+        </div>
+      </div>
+    {{/if}}
 
     <p id="customer-error-message" class="body6"></p>
 

@@ -2,7 +2,7 @@
   {
     "name": "Seed",
     "theme_name": "Seed",
-    "theme_version": "1.0.80",
+    "theme_version": "1.1.14",
     "theme_author": "Shopline",
     "theme_documentation_url": "",
     "theme_support_url": "",
@@ -11,7 +11,6 @@
     "theme_home_mobile_preview_img": "https://img.myshopline.com/image/official/96ab6a503ba54d408b83046065dc37be.png",
     "theme_pdp_pc_preview_img": "https://img.myshopline.com/image/official/264d05db8718437c9e4a0cb3b102a23e.png",
     "theme_pdp_mobile_preview_img": "https://img.myshopline.com/image/official/3a94a26c00ad475d84ef38d5f800f56b.png",
-    "refill_section_object": true,
     "theme_type_version": "OS_2.1"
   },
   {

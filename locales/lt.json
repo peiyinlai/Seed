@@ -363,6 +363,7 @@
       "sign__out": "Atsijungti",
       "sign_in": "PRISIJUNGTI",
       "sign_in_activate": "Patvirtinimo kodas buvo išsiųstas į jūsų paskyrą {{account}}. Patikrinus paskyrą, galite ją aktyvuoti",
+      "sign_in_activate_title": "Paskyros aktyvinimas",
       "sign_up": "REGISTRUOTIS",
       "su": "Sk",
       "subscription_desc": "Gaukite paskutines naujienas apie parduotuvės veiklą",

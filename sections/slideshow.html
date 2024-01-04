@@ -7,9 +7,9 @@
 
 {{#with this as |global|}}
   
-  {{#if (length section.block_order)}}
+  {{#if (length section.blocks)}}
     {{#with section as |section|}}
-      {{#with (lookup blocks (first block_order))}}
+      {{#with (first blocks)}}
         {{#and (if global.pc_height "===" "natural") (not this.settings.image)}}
           {{#with global}}
             {{assign "pc_height" "500px"}}
@@ -45,14 +45,13 @@
   >
     <div id="Slider-{{section.id}}" class="slideshow__slider slider">
       {{#with section as |section|}}
-        {{#each block_order as |blockId|}}
-          {{#with (lookup ../blocks blockId)}}
-            {{assign "firstLinkInImage" (and this.settings.link (if (length this.settings.link_text) "===" 0))}}
-            <div
-              {{{shopline_attributes}}}
-              id="Slide-{{blockId}}"
-              class="slideshow__slide slider__slide"
-              style="
+        {{#each blocks}}
+          {{assign "firstLinkInImage" (and this.settings.link (if (length this.settings.link_text) "===" 0))}}
+          <div
+            {{{shopline_attributes}}}
+            id="Slide-{{id}}"
+            class="slideshow__slide slider__slide"
+            style="
                 --slideshow-overlay-opacity: {{this.settings.overlay_opacity}};
                 --slideshow-title-size: {{this.settings.title_size}}px;
                 --slideshow-pc-text-position-vertical: {{itemAt (split this.settings.pc_text_position ' ') 0}};
@@ -60,101 +59,98 @@
                 --slideshow-pc-text-align: {{this.settings.pc_text_align}};
                 --slideshow-mobile-text-align: {{this.settings.mobile_text_align}};
               "
+          >
+            
+            <a
+              href="{{#if firstLinkInImage}}{{this.settings.link}}{{else}}javascript:;{{/if}}"
+              class="slideshow-slide__media {{#if @index '>' 0}}slideshow-slide__media--adapt{{/if}} "
             >
               
-              <a
-                href="{{#if firstLinkInImage}}{{this.settings.link}}{{else}}javascript:;{{/if}}"
-                class="slideshow-slide__media {{#if @index '>' 0}}slideshow-slide__media--adapt{{/if}} "
-              >
-                
-                {{#if this.settings.image}}
-                  {{snippet
-                    "image"
-                    class="slideshow-slide__image display-none display-block-desktop"
-                    data=this.settings.image
-                    lazy=true
-                  }}
-                {{else}}
-                  <div class="slideshow-slide__image-placeholder display-none display-block-desktop">
-                    {{placeholder_svg_tag "lifestyle-1"}}
-                  </div>
-                {{/if}}
-
-                
-                {{assign
-                  "mobileImage"
-                  (default
-                    (ternary this.settings.image_mobile this.settings.image_mobile null)
-                    (ternary this.settings.image this.settings.image null)
-                  )
+              {{#if this.settings.image}}
+                {{snippet
+                  "image"
+                  class="slideshow-slide__image display-none display-block-desktop"
+                  data=this.settings.image
+                  lazy=true
                 }}
-                {{#if mobileImage}}
-                  {{snippet "image" class="slideshow-slide__image display-none-desktop" data=mobileImage lazy=true}}
-                {{else}}
-                  <div class="slideshow-slide__image-placeholder display-none-desktop">
-                    {{placeholder_svg_tag "lifestyle-1"}}
-                  </div>
-                {{/if}}
-              </a>
+              {{else}}
+                <div class="slideshow-slide__image-placeholder display-none display-block-desktop">
+                  {{placeholder_svg_tag "lifestyle-1"}}
+                </div>
+              {{/if}}
 
-              <div class="slideshow-slide__text-wrapper">
-                <div class="slideshow-slide__text">
-                  {{#if this.settings.text_mask}}
-                    {{#if this.settings.text_mask_color "==" "deep"}}
-                      <div class="slideshow-slide__text-mask mask-deep"></div>
-                    {{/if}}
-                    {{#if this.settings.text_mask_color "==" "light"}}
-                      <div class="slideshow-slide__text-mask mask-light"></div>
-                    {{/if}}
+              
+              {{assign
+                "mobileImage"
+                (default
+                  (ternary this.settings.image_mobile this.settings.image_mobile null)
+                  (ternary this.settings.image this.settings.image null)
+                )
+              }}
+              {{#if mobileImage}}
+                {{snippet "image" class="slideshow-slide__image display-none-desktop" data=mobileImage lazy=true}}
+              {{else}}
+                <div class="slideshow-slide__image-placeholder display-none-desktop">
+                  {{placeholder_svg_tag "lifestyle-1"}}
+                </div>
+              {{/if}}
+            </a>
+
+            <div class="slideshow-slide__text-wrapper">
+              <div class="slideshow-slide__text">
+                {{#if this.settings.text_mask}}
+                  {{#if this.settings.text_mask_color "==" "deep"}}
+                    <div class="slideshow-slide__text-mask mask-deep"></div>
                   {{/if}}
+                  {{#if this.settings.text_mask_color "==" "light"}}
+                    <div class="slideshow-slide__text-mask mask-light"></div>
+                  {{/if}}
+                {{/if}}
 
-                  <div class="slideshow-slide__text-nobtn">
-                    {{#if this.settings.sub_title}}
-                      <p class="slideshow-slide__sub-title body3" data-animation>{{this.settings.sub_title}}</p>
-                    {{/if}}
-                    {{#if this.settings.title}}
-                      <h2 class="slideshow-slide__title title1" data-animation>{{newline_to_br
-                          this.settings.title
-                        }}</h2>
-                    {{/if}}
-                    {{#if this.settings.subheading}}
-                      <p class="slideshow-slide__desc body3" data-animation>{{this.settings.subheading}}</p>
-                    {{/if}}
-                  </div>
+                <div class="slideshow-slide__text-nobtn">
+                  {{#if this.settings.sub_title}}
+                    <p class="slideshow-slide__sub-title body3" data-animation>{{this.settings.sub_title}}</p>
+                  {{/if}}
+                  {{#if this.settings.title}}
+                    <h2 class="slideshow-slide__title title1" data-animation>{{newline_to_br this.settings.title}}</h2>
+                  {{/if}}
+                  {{#if this.settings.subheading}}
+                    <p class="slideshow-slide__desc body3" data-animation>{{this.settings.subheading}}</p>
+                  {{/if}}
+                </div>
 
-                  <div class="slideshow-slide__buttons">
-                    {{#if this.settings.link_text}}
-                      <a
-                        class="button slideshow-slide__button
-                          {{#if this.settings.is_profile_link}}button--secondary{{/if}}"
-                        style="{{#if this.settings.is_profile_link}}background-color: transparent;{{/if}}"
-                        title="{{this.settings.link_text}}"
-                        href="{{#if this.settings.link}}{{this.settings.link}}{{else}}javascript:;{{/if}}"
-                      >
-                        {{this.settings.link_text}}
-                      </a>
-                    {{/if}}
-                    {{#if this.settings.link_text_2}}
-                      <a
-                        class="button slideshow-slide__button
-                          {{#if this.settings.is_profile_link2}}button--secondary{{/if}}"
-                        style="{{#if this.settings.is_profile_link2}}background-color: transparent;{{/if}}"
-                        title="{{this.settings.link_text_2}}"
-                        href="{{#if this.settings.link_2}}{{this.settings.link_2}}{{else}}javascript:;{{/if}}"
-                      >
-                        {{this.settings.link_text_2}}
-                      </a>
-                    {{/if}}
-                  </div>
+                <div class="slideshow-slide__buttons">
+                  {{#if this.settings.link_text}}
+                    <a
+                      class="button slideshow-slide__button
+                        {{#if this.settings.is_profile_link}}button--secondary{{/if}}"
+                      style="{{#if this.settings.is_profile_link}}background-color: transparent;{{/if}}"
+                      title="{{this.settings.link_text}}"
+                      href="{{#if this.settings.link}}{{this.settings.link}}{{else}}javascript:;{{/if}}"
+                    >
+                      {{this.settings.link_text}}
+                    </a>
+                  {{/if}}
+                  {{#if this.settings.link_text_2}}
+                    <a
+                      class="button slideshow-slide__button
+                        {{#if this.settings.is_profile_link2}}button--secondary{{/if}}"
+                      style="{{#if this.settings.is_profile_link2}}background-color: transparent;{{/if}}"
+                      title="{{this.settings.link_text_2}}"
+                      href="{{#if this.settings.link_2}}{{this.settings.link_2}}{{else}}javascript:;{{/if}}"
+                    >
+                      {{this.settings.link_text_2}}
+                    </a>
+                  {{/if}}
                 </div>
               </div>
             </div>
-          {{/with}}
+          </div>
         {{/each}}
       {{/with}}
     </div>
 
-    {{#if (length section.block_order) ">" 1}}
+    {{#if (length section.blocks) ">" 1}}
       <div class="slideshow__control slideshow__control--{{section.settings.style}}">
         {{#if section.settings.style "===" "arrows"}}
           <div class="control__arrow-buttons">
@@ -168,7 +164,7 @@
         {{else if section.settings.style "===" "bars"}}
           <div class="control__bars">
             {{#with section as |section|}}
-              {{#each block_order as |blockId|}}
+              {{#each blocks}}
                 <button class="slider-counter__link control__bar" name="pager" data-index="{{@index}}"></button>
               {{/each}}
             {{/with}}
@@ -176,7 +172,7 @@
         {{else if section.settings.style "===" "dots"}}
           <div class="control__dots">
             {{#with section as |section|}}
-              {{#each block_order as |blockId|}}
+              {{#each blocks}}
                 <button class="slider-counter__link control__dot" name="pager" data-index="{{@index}}"></button>
               {{/each}}
             {{/with}}
@@ -366,7 +362,7 @@
               "label": "t:sections.slideshow.blocks.image.settings.pc_text_position.options__3.label"
             },
             {
-              "value": "flex-end flex-center",
+              "value": "flex-end center",
               "label": "t:sections.slideshow.blocks.image.settings.pc_text_position.options__4.label"
             },
             {

@@ -363,6 +363,7 @@
       "sign__out": "Cerrar sesión",
       "sign_in": "Iniciar sesión",
       "sign_in_activate": "El código de verificación ha sido enviado a su cuenta {{account}}, puede activar su cuenta después de la verificación.",
+      "sign_in_activate_title": "Activar la cuenta",
       "sign_up": "Registrarse",
       "su": "Do",
       "subscription_desc": "Puede obtener las últimas noticias de promoción de la tienda",

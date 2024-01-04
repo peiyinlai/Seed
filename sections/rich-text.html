@@ -17,35 +17,33 @@
       rich-text__wrapper--{{settings.desktop_content_position}}
       rich-text__blocks"
   >
-    {{#each section.block_order as |blockId|}}
-      {{#with (lookup ../section.blocks blockId)}}
-        {{#if this.type "==" "heading"}}
-          <h2 class="rte rich-text__heading {{this.settings.heading_size}}">{{{this.settings.heading}}}</h2>
-        {{/if}}
-        {{#if this.type "==" "text"}}
-          <div class="rte rich-text__text body2">{{{this.settings.text}}}</div>
-        {{/if}}
-        {{#if this.type "==" "button"}}
-          <div class="rich-text__buttons">
-            {{#if this.settings.button_text}}
-              <a
-                class="button body2 {{#if this.settings.button_style_secondary}}button--secondary{{/if}}"
-                href="{{#if this.settings.button_link}}{{this.settings.button_link}}{{else}}javascript:;{{/if}}"
-              >
-                {{this.settings.button_text}}
-              </a>
-            {{/if}}
-            {{#if this.settings.button_text_2}}
-              <a
-                class="button body2 {{#if this.settings.button_style_secondary_2}}button--secondary{{/if}}"
-                href="{{#if this.settings.button_link_2}}{{this.settings.button_link_2}}{{else}}javascript:;{{/if}}"
-              >
-                {{this.settings.button_text_2}}
-              </a>
-            {{/if}}
-          </div>
-        {{/if}}
-      {{/with}}
+    {{#each section.blocks}}
+      {{#if this.type "==" "heading"}}
+        <h2 class="rte rich-text__heading {{this.settings.heading_size}}">{{{this.settings.heading}}}</h2>
+      {{/if}}
+      {{#if this.type "==" "text"}}
+        <div class="rte rich-text__text body2">{{{this.settings.text}}}</div>
+      {{/if}}
+      {{#if this.type "==" "button"}}
+        <div class="rich-text__buttons">
+          {{#if this.settings.button_text}}
+            <a
+              class="button body2 {{#if this.settings.button_style_secondary}}button--secondary{{/if}}"
+              href="{{#if this.settings.button_link}}{{this.settings.button_link}}{{else}}javascript:;{{/if}}"
+            >
+              {{this.settings.button_text}}
+            </a>
+          {{/if}}
+          {{#if this.settings.button_text_2}}
+            <a
+              class="button body2 {{#if this.settings.button_style_secondary_2}}button--secondary{{/if}}"
+              href="{{#if this.settings.button_link_2}}{{this.settings.button_link_2}}{{else}}javascript:;{{/if}}"
+            >
+              {{this.settings.button_text_2}}
+            </a>
+          {{/if}}
+        </div>
+      {{/if}}
     {{/each}}
   </div>
 </div>

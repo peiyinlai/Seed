@@ -34,32 +34,30 @@
           grid-cols-{{mobile_grid_cols}}-tablet collection-list__slider__container slider
           {{#if scroll_pc}}slider--desktop{{/if}}
           {{#if scroll_mobile}}slider--mobile mobile-slider-full-screen{{/if}}"
-          style="--mobile-cols:{{mobile_grid_cols}}"
+        style="--mobile-cols:{{mobile_grid_cols}}"
       >
-        {{#each section.block_order as |blockId|}}
-          {{#with (lookup ../section.blocks blockId)}}
-            {{assign "title" settings.title}}
-            {{assign "image_position" settings.image_display_area}}
-            {{assign "card_collection" settings.category}}
-            {{#if @index ">=" ../../max_in_mobile}}
-              {{assign "class" "display-none-tablet"}}
-            {{/if}}
-            {{snippet
-              "collection-card"
-              card_collection=card_collection
-              title=title
-              ratio=../../ratio
-              position=image_position
-              desktop_grid_cols=desktop_grid_cols
-              mobile_grid_cols=mobile_grid_cols
-              is_scroll=../../is_scroll
-              class=class
-              blockId=blockId
-            }}
-          {{/with}}
+        {{#each section.blocks}}
+          {{assign "title" settings.title}}
+          {{assign "image_position" settings.image_display_area}}
+          {{assign "card_collection" settings.category}}
+          {{#if @index ">=" ../max_in_mobile}}
+            {{assign "class" "display-none-tablet"}}
+          {{/if}}
+          {{snippet
+            "collection-card"
+            card_collection=card_collection
+            title=title
+            ratio=../ratio
+            position=image_position
+            desktop_grid_cols=desktop_grid_cols
+            mobile_grid_cols=mobile_grid_cols
+            is_scroll=../is_scroll
+            class=class
+            blockId=id
+          }}
         {{/each}}
       </div>
-      {{assign "length" (length section.block_order)}}
+      {{assign "length" (length section.blocks)}}
       {{#and (if length ">" desktop_grid_cols) scroll_pc}}
         <button name="previous" class="colletionlist__arrow display-none display-flex-desktop">
           {{snippet "icon-arrow" class="icon"}}

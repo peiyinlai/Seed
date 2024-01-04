@@ -363,6 +363,7 @@
       "sign__out": "Sign Out",
       "sign_in": "Sign in",
       "sign_in_activate": "Verification code has been sent to your account {{account}}. You can get your account activated after verification",
+      "sign_in_activate_title": "account activation",
       "sign_up": "Register",
       "su": "Su",
       "subscription_desc": "You can get store's latest activity information",

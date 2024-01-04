@@ -363,6 +363,7 @@
       "sign__out": "Keluar dari login",
       "sign_in": "Login",
       "sign_in_activate": "Kode verifikasi telah dikirim ke akun Anda {{account}}, setelah diverifikasi bisa diaktifkan akun.",
+      "sign_in_activate_title": "Aktivasi akun",
       "sign_up": "Pendaftaran",
       "su": "Min",
       "subscription_desc": "Bisa mendapatkan berita promosi terbaru toko",

@@ -23,11 +23,10 @@
     </a>
   {{/if}}
 
-  {{#if show_cart_entry}}
-    <a id="cart-icon-bubble" class="icon-button header__icon-button" href="{{ routes.cart_url }}">
-      {{snippet 'cart-icon-bubble' not_show_count=true}}
-    </a>
-  {{/if}}
+  
+  <a id="cart-icon-bubble" class="icon-button header__icon-button {{#if (isFalsey show_cart_entry)}}display-none{{/if}}" href="{{ routes.cart_url }}">
+    {{snippet 'cart-icon-bubble' not_show_count=true}}
+  </a>
 
   {{snippet
     "header-menu-drawer"

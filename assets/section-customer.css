@@ -26,6 +26,16 @@
   }
 }
 
+.customer-form-hint {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 959px) {
+  .customer-form-hint {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 959px) {
   .customer {
     padding: 40px 20px;

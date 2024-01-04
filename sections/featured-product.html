@@ -59,78 +59,76 @@
       <div class="product__info-wrapper">
         <div id="ProductInfo-{{section.id}}" class="product__info-container">
           {{#with this as |global|}}
-            {{#each section.block_order as |blockId|}}
-              {{#with (lookup ../section.blocks blockId)}}
-                {{#startsWith "shopline://apps" type}}
-                  {{render this}}
-                {{/startsWith}}
-                {{#if type "===" "quantity_selector"}}
-                  <div class="product__info-item" {{{shopline_attributes}}}>
-                    <div class="quantity-input-label body3 fw-bold">
-                      {{t "order.order_details.products.quantity"}}
+            {{#each section.blocks}}
+              {{#startsWith "shopline://apps" type}}
+                {{render this}}
+              {{/startsWith}}
+              {{#if type "===" "quantity_selector"}}
+                <div class="product__info-item" {{{shopline_attributes}}}>
+                  <div class="quantity-input-label body3 fw-bold">
+                    {{t "order.order_details.products.quantity"}}
+                  </div>
+                  {{snippet "quantity-input" id=global.section.id form_id=global.product_form_id}}
+                </div>
+              {{else if type "===" "title"}}
+                <h2 class="product__info-item {{this.settings.heading_size}} fw-bold" {{{shopline_attributes}}}>
+                  {{default global.product.title (t "onboarding.product_title")}}
+                </h2>
+              {{else if type "===" "text"}}
+                <div
+                  class="product__info-item rte
+                    {{#if settings.text_style '==' 'body'}}body3{{/if}}
+                    {{#if settings.text_style '==' 'subtitle'}}body2{{/if}}
+                    {{#if settings.text_style '==' 'uppercase'}}body3 text-uppercase{{/if}}"
+                  {{{shopline_attributes}}}
+                >
+                  {{{settings.text}}}
+                </div>
+              {{else if type "===" "html"}}
+                <div class="product__info-item" {{{shopline_attributes}}}>{{{settings.html}}}</div>
+              {{else if type "===" "price"}}
+                <div class="product__info-item" id="price-{{global.section.id}}" {{{shopline_attributes}}}>
+                  {{snippet "price" product=global.product use_variant=true}}
+                  {{#or global.cart.taxes_included global.shop.shipping_policy.body}}
+                    <div class="body6 rte">
+                      {{#if global.cart.taxes_included}}
+                        {{t "products.product_details.include_taxes"}}
+                      {{/if}}
+                      {{#if global.shop.shipping_policy.body}}
+                        {{{t "products.product_details.shipping_policy_html" link=global.shop.shipping_policy.url}}}
+                      {{/if}}
                     </div>
-                    {{snippet "quantity-input" id=global.section.id form_id=global.product_form_id}}
-                  </div>
-                {{else if type "===" "title"}}
-                  <h2 class="product__info-item {{this.settings.heading_size}} fw-bold" {{{shopline_attributes}}}>
-                    {{default global.product.title (t "onboarding.product_title")}}
-                  </h2>
-                {{else if type "===" "text"}}
-                  <div
-                    class="product__info-item rte
-                      {{#if settings.text_style '==' 'body'}}body3{{/if}}
-                      {{#if settings.text_style '==' 'subtitle'}}body2{{/if}}
-                      {{#if settings.text_style '==' 'uppercase'}}body3 text-uppercase{{/if}}"
-                    {{{shopline_attributes}}}
-                  >
-                    {{{settings.text}}}
-                  </div>
-                {{else if type "===" "html"}}
-                  <div class="product__info-item" {{{shopline_attributes}}}>{{{settings.html}}}</div>
-                {{else if type "===" "price"}}
-                  <div class="product__info-item" id="price-{{global.section.id}}" {{{shopline_attributes}}}>
-                    {{snippet "price" product=global.product use_variant=true}}
-                    {{#or global.cart.taxes_included global.shop.shipping_policy.body}}
-                      <div class="body6 rte">
-                        {{#if global.cart.taxes_included}}
-                          {{t "products.product_details.include_taxes"}}
-                        {{/if}}
-                        {{#if global.shop.shipping_policy.body}}
-                          {{{t "products.product_details.shipping_policy_html" link=global.shop.shipping_policy.url}}}
-                        {{/if}}
-                      </div>
-                    {{/or}}
-                  </div>
-                {{else if type "===" "share"}}
-                  <div class="product__info-item share" {{{shopline_attributes}}}>
-                    {{assign "share_url" (append global.request.origin global.product.url)}}
-                    {{snippet "share-button" share_link=share_url}}
-                  </div>
-                {{else if type "===" "variant_picker"}}
-                  {{#if (isFalsey global.product.has_only_default_variant)}}
-                    <div class="product__info-item" {{{shopline_attributes}}}>
-                      {{snippet
-                        "product-variant-picker"
-                        section=global.section
-                        block=this
-                        product=global.product
-                        product_form_id=global.product_form_id
-                        update_url=false
-                      }}
-                    </div>
-                  {{/if}}
-                {{else if type "===" "buy_buttons"}}
+                  {{/or}}
+                </div>
+              {{else if type "===" "share"}}
+                <div class="product__info-item share" {{{shopline_attributes}}}>
+                  {{assign "share_url" (append global.request.origin global.product.url)}}
+                  {{snippet "share-button" share_link=share_url}}
+                </div>
+              {{else if type "===" "variant_picker"}}
+                {{#if (isFalsey global.product.has_only_default_variant)}}
                   <div class="product__info-item" {{{shopline_attributes}}}>
                     {{snippet
-                      "product-buy-buttons"
+                      "product-variant-picker"
                       section=global.section
                       block=this
                       product=global.product
                       product_form_id=global.product_form_id
+                      update_url=false
                     }}
                   </div>
                 {{/if}}
-              {{/with}}
+              {{else if type "===" "buy_buttons"}}
+                <div class="product__info-item" {{{shopline_attributes}}}>
+                  {{snippet
+                    "product-buy-buttons"
+                    section=global.section
+                    block=this
+                    product=global.product
+                    product_form_id=global.product_form_id
+                  }}
+                </div>
+              {{/if}}
             {{/each}}
           {{/with}}
           <a

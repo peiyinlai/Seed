@@ -363,6 +363,7 @@
       "sign__out": "Odjavi se",
       "sign_in": "PRIJAVITE SE",
       "sign_in_activate": "Kontrolni kod je poslan na vaš račun {{account}}. Vaš račun možete aktivirati nakon verifikacije",
+      "sign_in_activate_title": "Aktivacija računa",
       "sign_up": "UPIŠITE SE",
       "su": "ned",
       "subscription_desc": "Saznajte najnovije vijesti o trgovini",

@@ -3,6 +3,13 @@ class CustomerLogin {
     this.form = document.querySelector('#login-customer-form');
     this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
     this.submitBtn = this.form.querySelector('button[type="submit"]');
+    this.verifyCodeButton = this.form.querySelector('.verifycode-button');
+
+    if (this.verifyCodeButton) {
+      this.verifyCodeTimer = this.getVerifyCodeTimer();
+      this.verifyCodeButton.addEventListener('click', this.onSendVerifyCodeHandler.bind(this));
+    }
+
     this.handleTabSwitch();
     this.handleTogglePwdInput();
 
@@ -21,7 +28,35 @@ class CustomerLogin {
         }
       : {};
 
-    this.login = new window.Shopline.customerAccount.Login(this.form, loginOptions);
+    this.login = new window.Shopline.customerAccount.Login(this.form, {
+      ...loginOptions,
+      activate: {
+        verifyCodeBtn: 'customer-login-activate-send-btn',
+      },
+    });
+  }
+
+  onSendVerifyCodeHandler(e) {
+    e.preventDefault();
+
+    if (!this.verifyCodeTimer.done()) return;
+    this.verifyCodeTimer.start();
+
+    this.login
+      .sendVerifyCode()
+      .then((response) => {
+        if (response.errorMessage) {
+          this.verifyCodeError = true;
+        }
+      })
+      .finally(() => {
+        if (this.verifyCodeError) {
+          this.verifyCodeTimer.stop();
+        }
+      })
+      .catch(() => {
+        this.verifyCodeTimer.stop();
+      });
   }
 
   onSubmitHandler(e) {
@@ -39,11 +74,39 @@ class CustomerLogin {
         window.location.href = window.routes.account_url;
       })
       .catch((err) => {
-        this.handleSetErrorMsg(err);
+        if (err.code === 'needActivate') {
+          this.handleSetErrorMsg(null);
+          this.handleToggleActivateStep();
+        } else {
+          this.handleSetErrorMsg(err);
+        }
       })
       .finally(() => {
         this.submitBtn.classList.remove('loading');
       });
+  }
+
+  handleToggleActivateStep() {
+    const title = this.form.querySelector('#customer-login-title');
+    const hint = this.form.querySelector('#customer-activation-hint');
+    const formValue = this.login.getFormValue();
+    const accountFieldName = this.login.getAccountFieldName();
+
+    if (hint) {
+      hint.innerText = t('customer.general.sign_in_activate', { account: formValue[accountFieldName[0]] });
+    }
+    if (title) {
+      title.innerText = t('customer.general.sign_in_activate_title');
+    }
+
+    const verifyCodeInput = this.form.querySelector('.field[data-type="verifycode"] input');
+    verifyCodeInput.toggleAttribute('required', true);
+    verifyCodeInput.removeAttribute('disabled');
+
+    const normalElements = this.form.querySelectorAll('[data-show="normal"]');
+    const activateElements = this.form.querySelectorAll('[data-show="activation"]');
+    Array.from(normalElements).forEach((element) => element.classList.add('display-none'));
+    Array.from(activateElements).forEach((element) => element.classList.remove('display-none'));
   }
 
   handleTabSwitch() {
@@ -135,6 +198,41 @@ class CustomerLogin {
       return;
     }
     this.form.querySelector('#customer-error-message').innerHTML = error;
+  }
+
+  getVerifyCodeTimer() {
+    let count = 60;
+    let timer;
+    const self = this;
+
+    return {
+      count,
+      done() {
+        return count <= 0 || count === 60;
+      },
+      stop() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+        count = 60;
+        self.verifyCodeButton.removeAttribute('disabled');
+        self.verifyCodeButton.innerText = count;
+        self.verifyCodeButton.innerText = t('customer.general.send');
+      },
+      start() {
+        if (timer) return;
+        self.verifyCodeButton.innerText = `${t('customer.general.resend')} (${count})`;
+        self.verifyCodeButton.setAttribute('disabled', true);
+        timer = setInterval(() => {
+          count--;
+          self.verifyCodeButton.innerText = `${t('customer.general.resend')} (${count})`;
+          if (this.done()) {
+            this.stop();
+          }
+        }, 1000);
+      },
+    };
   }
 }
 

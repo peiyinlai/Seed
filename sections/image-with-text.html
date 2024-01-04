@@ -13,8 +13,8 @@
 
 <link rel="stylesheet" href="{{asset_url 'section-image-with-text.css'}}" />
 
-{{
-  snippet "section-padding-creator"
+{{snippet
+  "section-padding-creator"
   section_id=section.id
   padding_top=section.settings.padding_top
   padding_bottom=section.settings.padding_bottom
@@ -25,68 +25,71 @@
   {{assign "ignore_image_height" true}}
 {{/or}}
 <div class="section-padding page-width">
-  <div class="image-with-text image-with-text--align-{{pc_box_align}}
-    img-w-{{pc_image_width}}
-    pos-{{pc_image_position}} {{#if ignore_image_height}}image-with-text--stretch{{/if}}
-    {{#if (isTruthy image_overlap_display)}}image-with-text--overlap{{/if}}">
+  <div
+    class="image-with-text
+      image-with-text--align-{{pc_box_align}}
+      img-w-{{pc_image_width}}
+      pos-{{pc_image_position}}
+      {{#if ignore_image_height}}image-with-text--stretch{{/if}}
+      {{#if (isTruthy image_overlap_display)}}image-with-text--overlap{{/if}}"
+  >
     <a
-      class="image-with-text__img-wrap image-with-text__img-wrap--{{image_height}}
+      class="image-with-text__img-wrap
+        image-with-text__img-wrap--{{image_height}}
         global-media-border-shadow hover-image-scale"
       href="javascript:;"
     >
       <div class="image-with-text__image-box">
         {{#if image}}
-          {{snippet 'image' class="image-with-text__image" data=image lazy=true}}
+          {{snippet "image" class="image-with-text__image" data=image lazy=true}}
         {{else}}
-          {{ placeholder_svg_tag 'image' "empty-image-class"}}
+          {{placeholder_svg_tag "image" "empty-image-class"}}
         {{/if}}
       </div>
     </a>
-    <div class="image-with-text__info-wrap
-      {{#if (isFalsey image_overlap_display)}}color-scheme-{{color_scheme}}{{/if}}
-      ">
+    <div
+      class="image-with-text__info-wrap {{#if (isFalsey image_overlap_display)}}color-scheme-{{color_scheme}}{{/if}} "
+    >
       {{#if block_length ">" 0}}
         <div class="image-with-text__info-reference">
-          <div class="image-with-text__info
-          {{#if (isTruthy image_overlap_display)}}color-scheme-{{color_scheme}} image-with-text__info--overlap-pc-{{pc_image_position}}{{/if}}
-          image-with-text__info--align-{{pc_text_align}}
-          image-with-text__info--m-align-{{mobile_text_align}}">
-            {{#each section.block_order as |blockId|}}
-              {{#with (lookup ../section.blocks blockId)}}
-                {{#startsWith ../../app_block_prefix type}}
-                  {{render this}}
-                {{/startsWith}}
-                {{#if (trim type) "===" "title"}}
-                  <h2
+          <div
+            class="image-with-text__info
+              {{#if (isTruthy image_overlap_display)}}color-scheme-{{color_scheme}} image-with-text__info--overlap-pc-{{pc_image_position}}{{/if}}
+              image-with-text__info--align-{{pc_text_align}}
+              image-with-text__info--m-align-{{mobile_text_align}}"
+          >
+            {{#each section.blocks}}
+              {{#startsWith ../app_block_prefix type}}
+                {{render this}}
+              {{/startsWith}}
+              {{#if (trim type) "===" "title"}}
+                <h2
+                  {{{this.shopline_attributes}}}
+                  class="title3 image-with-text__title image-with-text__title--size-{{settings.title_size}}"
+                >
+                  {{settings.title}}
+                </h2>
+              {{/if}}
+              {{#if (trim type) "===" "content"}}
+                <div
+                  {{{this.shopline_attributes}}}
+                  class="body3 image-with-text__content rte"
+                >{{{settings.content}}}</div>
+              {{/if}}
+              {{#if (trim type) "===" "sub_title"}}
+                <div class="body3 image-with-text__sub-title image-with-text__sub-title--size-{{settings.text_size}}">{{{settings.text}}}</div>
+              {{/if}}
+              {{#if (trim type) "===" "button"}}
+                {{#if (trim settings.button_text)}}
+                  <a
                     {{{this.shopline_attributes}}}
-                    class="title3 image-with-text__title image-with-text__title--size-{{settings.title_size}}"
+                    {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                    class="image-with-text__btn button"
                   >
-                    {{settings.title}}
-                  </h2>
+                    {{settings.button_text}}
+                  </a>
                 {{/if}}
-                {{#if (trim type) "===" "content"}}
-                  <div
-                    {{{this.shopline_attributes}}}
-                    class="body3 image-with-text__content rte"
-                  >{{{ settings.content }}}</div>
-                {{/if}}
-                {{#if (trim type) "===" "sub_title"}}
-                  <div
-                    class="body3 image-with-text__sub-title {{settings.text_size}}"
-                  >{{{settings.text}}}</div>
-                {{/if}}
-                {{#if (trim type) "===" "button"}}
-                  {{#if (trim settings.button_text)}}
-                    <a
-                      {{{this.shopline_attributes}}}
-                      {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
-                      class="image-with-text__btn button"
-                    >
-                      {{settings.button_text}}
-                    </a>
-                  {{/if}}
-                {{/if}}
-              {{/with}}
+              {{/if}}
             {{/each}}
           </div>
         </div>

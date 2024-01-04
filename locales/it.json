@@ -363,6 +363,7 @@
       "sign__out": "Esci",
       "sign_in": "Accedi",
       "sign_in_activate": "Il codice di verifica è stato inviato al tuo account {{account}}. Una volta verificato, l'account può essere attivato.",
+      "sign_in_activate_title": "Attiva l’account",
       "sign_up": "Iscriviti",
       "su": "dom",
       "subscription_desc": "È possibile ricevere le ultime notizie delle attività del negozio",

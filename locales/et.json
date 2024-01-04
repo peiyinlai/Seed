@@ -363,6 +363,7 @@
       "sign__out": "Logi välja",
       "sign_in": "LOGI SISSE",
       "sign_in_activate": "Kinnituskood on saadetud sinu kontole {{account}}. Pärast kinnitamist saad konto aktiveerida",
+      "sign_in_activate_title": "Konto aktiveerimine",
       "sign_up": "REGISTREERU",
       "su": "P",
       "subscription_desc": "Hankige uusimaid uudiseid poe kohta",

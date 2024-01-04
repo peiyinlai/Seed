@@ -303,7 +303,8 @@ class FacetFiltersForm extends HTMLElement {
       }
     });
 
-    this.onSubmitForm(forms.join('&'), event);
+    const validForms = forms.filter((item) => Boolean(item));
+    this.onSubmitForm(validForms.join('&'), event);
   }
 
   onActiveFilterClick(event) {

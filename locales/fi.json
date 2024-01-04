@@ -363,6 +363,7 @@
       "sign__out": "Kirjaudu ulos",
       "sign_in": "KIRJAUDU SISÄÄN",
       "sign_in_activate": "Vahvistuskoodi on lähetetty tilillesi {{account}}. Voit aktivoida tilisi vahvistuksen jälkeen",
+      "sign_in_activate_title": "Tilin aktivointi",
       "sign_up": "KIRJAUDU",
       "su": "Su",
       "subscription_desc": "Hanki uusimmat uutiset kaupasta",

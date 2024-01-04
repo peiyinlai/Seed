@@ -85,9 +85,10 @@
                                     name="{{value.param_name}}"
                                     value="{{value.value}}"
                                     {{#if value.active}}checked{{/if}}
+                                    {{#and (not value.active) (if value.count '===' 0)}}disabled{{/and}}
                                   />
                                   <span class="body3">
-                                    {{value.label}}
+                                    {{value.label}} ({{ value.count }})
                                   </span>
                                 </label>
                               </li>
@@ -247,9 +248,10 @@
                                       name="{{value.param_name}}"
                                       value="{{value.value}}"
                                       {{#if value.active}}checked{{/if}}
+                                      {{#and (not value.active) (if value.count '===' 0)}}disabled{{/and}}
                                     />
                                     <span class="body3">
-                                      {{value.label}}
+                                      {{value.label}} ({{ value.count }})
                                     </span>
                                   </label>
                                 </li>
@@ -366,12 +368,27 @@
         </facet-remove>
       {{/each}}
       {{#if filter.type "==" "price_range"}}
-        {{#or filter.min_value.value filter.max_value.value}}
+        {{#or
+          filter.min_value.value
+          filter.max_value.value
+          (if filter.min_value.value "===" 0)
+          (if filter.max_value.value "===" 0)
+        }}
           <facet-remove>
             <a href="{{filter.url_to_remove}}" class="active-facets__button active-facets__button--light body4">
               <span class="active-facets__button-inner">
                 {{snippet "icon-close"}}
-                {{#if filter.min_value.value }}{{ money filter.min_value.value }}{{ else }}{{ money 0 }}{{/if}}-{{#if filter.max_value.value }}{{ money filter.max_value.value  }}{{ else }}{{ money filter.range_max }}{{/if}}
+                {{#or filter.min_value.value (if filter.min_value.value "===" 0)}}
+                  {{money filter.min_value.value}}
+                {{else}}
+                  {{money 0}}
+                {{/or}}
+                -
+                {{#or filter.max_value.value (if filter.max_value.value "===" 0)}}
+                  {{money filter.max_value.value}}
+                {{else}}
+                  {{money filter.range_max}}
+                {{/or}}
               </span>
             </a>
           </facet-remove>

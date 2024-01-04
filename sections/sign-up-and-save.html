@@ -10,55 +10,60 @@
 {{assign "show_newsletter_full" section.settings.full_screen_width}}
 {{assign "color_scheme" section.settings.color_scheme}}
 <div data-section-type="sign-up-and-save" data-section-id="{{section.id}}">
-  <div class="section section-padding section-newsletter page-width{{#if show_newsletter_full}}-fluid{{/if}} color-scheme-{{ color_scheme }}">
+  <div
+    class="section section-padding section-newsletter
+      page-width{{#if show_newsletter_full}}-fluid{{/if}}
+      color-scheme-{{color_scheme}}"
+  >
     <div class="newsletter-content">
-      {{#each section.block_order as |blockId|}}
-        {{#with (lookup ../section.blocks blockId)}}
-          {{#if this.type "===" "title"}}
-            <div {{{ this.shopline_attributes }}} class="newsletter-title">
-              <h2 class="section-title text-center {{this.settings.fontSize}}">
-                {{this.settings.title}}
-              </h2>
-            </div>
-          {{/if}}
-          {{#if this.type "===" "desc"}}
-            <div {{{ this.shopline_attributes }}} class="rte newsletter-desc body3 text-center">{{{ this.settings.description }}}</div>
-          {{/if}}
-          {{#if this.type "===" "button"}}
-            {{#form "customer"}}
-              <div {{{ this.shopline_attributes }}} class="newsletter-button-group">
-                <div class="field newsletter--field">
-                  {{snippet
-                    "input-email"
-                    input_class="field__input"
-                    input_required=true
-                    input_name="contact[email]"
-                    input_placeholder=this.settings.placeholder
-                  }}
-                  <label class="field__label body3">
-                    {{this.settings.placeholder}}
-                  </label>
-                </div>
-                <button type="submit" class="button newsletter--button display-none display-inline-flex-desktop">
-                  {{#if (isTruthy this.settings.button_text)}}
-                    {{this.settings.button_text}}
-                  {{else}}
-                    {{snippet "icon-mail"}}
-                  {{/if}}
-                </button>
-                <button type="submit" class="button newsletter--button display-inline-flex display-none-desktop">
-                  {{snippet "icon-mail"}}
-                </button>
+      {{#each section.blocks}}
+        {{#if this.type "===" "title"}}
+          <div {{{this.shopline_attributes}}} class="newsletter-title">
+            <h2 class="section-title text-center {{this.settings.fontSize}}">
+              {{this.settings.title}}
+            </h2>
+          </div>
+        {{/if}}
+        {{#if this.type "===" "desc"}}
+          <div
+            {{{this.shopline_attributes}}}
+            class="rte newsletter-desc body3 text-center"
+          >{{{this.settings.description}}}</div>
+        {{/if}}
+        {{#if this.type "===" "button"}}
+          {{#form "customer"}}
+            <div {{{this.shopline_attributes}}} class="newsletter-button-group">
+              <div class="field newsletter--field">
+                {{snippet
+                  "input-email"
+                  input_class="field__input"
+                  input_required=true
+                  input_name="contact[email]"
+                  input_placeholder=this.settings.placeholder
+                }}
+                <label class="field__label body3">
+                  {{this.settings.placeholder}}
+                </label>
               </div>
-              {{#if form.posted_successfully}}
-              {{ snippet "tips-card" type="success" text=(t "general.footer.subscribe_success")}}
-              {{/if}}
-              {{#if form.errors.messages}}
-                  {{snippet "tips-card" type="error" text=form.errors.messages}}
-              {{/if}}
-            {{/form}}
-          {{/if}}
-        {{/with}}
+              <button type="submit" class="button newsletter--button display-none display-inline-flex-desktop">
+                {{#if (isTruthy this.settings.button_text)}}
+                  {{this.settings.button_text}}
+                {{else}}
+                  {{snippet "icon-mail"}}
+                {{/if}}
+              </button>
+              <button type="submit" class="button newsletter--button display-inline-flex display-none-desktop">
+                {{snippet "icon-mail"}}
+              </button>
+            </div>
+            {{#if form.posted_successfully}}
+              {{snippet "tips-card" type="success" text=(t "general.footer.subscribe_success")}}
+            {{/if}}
+            {{#if form.errors.messages}}
+              {{snippet "tips-card" type="error" text=form.errors.messages}}
+            {{/if}}
+          {{/form}}
+        {{/if}}
       {{/each}}
     </div>
   </div>

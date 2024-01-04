@@ -363,6 +363,7 @@
       "sign__out": "サインアウト",
       "sign_in": "サインイン",
       "sign_in_activate": "確認コードがアカウント {{account}} に送信されました。確認完了すると、アカウントをアクティブ化できます。",
+      "sign_in_activate_title": "アカウントのアクティベーション",
       "sign_up": "サインアップ",
       "su": "日",
       "subscription_desc": "ストアの最新セール情報を入手可能",

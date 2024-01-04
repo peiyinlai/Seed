@@ -30,6 +30,7 @@
 {{#if (if settings.content_shadow_opacity ">=" 1)}}
   {{assign "no_spacing" "false"}}
 {{/if}}
+<script src="{{asset_url 'component-slider.js'}}" defer></script>
 <script src="{{asset_url 'section-text-columns-with-image.js'}}" defer></script>
 <link rel="stylesheet" href="{{asset_url 'section-text-columns-with-image.css'}}" />
 {{snippet
@@ -38,9 +39,12 @@
   padding_top=section.settings.padding_top
   padding_bottom=section.settings.padding_bottom
 }}
-<div class="section section-padding text-columns-with-images color-scheme-{{color_scheme}}
-  section-gap{{#if color_scheme '!==' 'none' }}--padding{{/if}}
-  ">
+<div
+  class="section section-padding text-columns-with-images
+    color-scheme-{{color_scheme}}
+    section-gap{{#if color_scheme '!==' 'none'}}--padding{{/if}}
+    "
+>
   <div class="page-width color-scheme-{{color_scheme}}">
     {{#if section.settings.title}}
       <h2 class="text-columns-with-images__title section-title {{section.settings.title_font_size}} text-center">
@@ -51,25 +55,29 @@
     {{#if (isFalsey show_block_bg)}}
       {{assign "container-wrapper-cls" "mobile-rows-no-mask"}}
     {{/if}}
-    <div class="{{#if show_touch}}display-none display-flex-desktop{{/if}} text-columns-with-images__wrapper grid grid-cols-1 grid-cols-{{pc_cols}}-desktop" style="{{#if (if pc_cols '==' 1)}}justify-content:center;{{/if}}">
-      {{#each section.block_order as |blockId|}}
-        {{#with (lookup ../section.blocks blockId)}}
-          <div class="text-columns-with-images__inner {{../../container-wrapper-cls}}">
-            {{snippet
-              "text-columns-with-image-card"
-              image_style=../../image_style
-              image_width=../../image_width
-              image_ratio=../../image_ratio
-              no_spacing=../../no_spacing
-              show_mask=../../show_block_bg
-              color_scheme=../../color_scheme
-              text_align=../../text_align
-              pc_cols=../../pc_cols
-              jump_link=../../jump_link
-              shopline_attributes=this.shopline_attributes
-            }}
-          </div>
-        {{/with}}
+    <div
+      class="{{#if show_touch}}display-none display-flex-desktop{{/if}}
+        text-columns-with-images__wrapper grid grid-cols-1
+        grid-cols-{{pc_cols}}-desktop"
+      style="{{#if (if pc_cols '==' 1)}}justify-content:center;{{/if}}"
+    >
+      {{#each section.blocks}}
+        <div class="text-columns-with-images__inner {{../container-wrapper-cls}}">
+          {{snippet
+            "text-columns-with-image-card"
+            image_style=../image_style
+            image_width=../image_width
+            image_ratio=../image_ratio
+            no_spacing=../no_spacing
+            show_mask=../show_block_bg
+            color_scheme=../color_scheme
+            text_align=../text_align
+            pc_cols=../pc_cols
+            jump_link=../jump_link
+            shopline_attributes=this.shopline_attributes
+            theme_settings=../settings
+          }}
+        </div>
       {{/each}}
     </div>
 
@@ -81,23 +89,22 @@
           style="width: 100%;"
         >
           <ul id="Slider-{{section.id}}" class="text-columns-images-swiper-box slider list-unstyled">
-            {{#each section.block_order as |blockId|}}
-              {{#with (lookup ../section.blocks blockId)}}
-                <li id="Slide-{{blockId}}" class="slider__slide">
-                  {{snippet
-                    "text-columns-with-image-card"
-                    image_style=../../image_style
-                    image_width=../../image_width
-                    image_ratio=../../image_ratio
-                    no_spacing=../../no_spacing
-                    show_mask=../../show_block_bg
-                    color_scheme=../../color_scheme
-                    text_align=../../text_align
-                    jump_link=../../jump_link
-                    shopline_attributes=this.shopline_attributes
-                  }}
-                </li>
-              {{/with}}
+            {{#each section.blocks}}
+              <li id="Slide-{{id}}" class="slider__slide">
+                {{snippet
+                  "text-columns-with-image-card"
+                  image_style=../image_style
+                  image_width=../image_width
+                  image_ratio=../image_ratio
+                  no_spacing=../no_spacing
+                  show_mask=../show_block_bg
+                  color_scheme=../color_scheme
+                  text_align=../text_align
+                  jump_link=../jump_link
+                  shopline_attributes=this.shopline_attributes
+                  theme_settings=../settings
+                }}
+              </li>
             {{/each}}
           </ul>
           <div class="text-image-pagination-box body4">

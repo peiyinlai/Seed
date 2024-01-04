@@ -363,6 +363,7 @@
       "sign__out": "Oturumu Kapat",
       "sign_in": "OTURUM AÇ",
       "sign_in_activate": "Doğrulama kodu {{account}} hesabınıza gönderildi. Doğrulamadan sonra hesabınızı etkinleştirebilirsiniz",
+      "sign_in_activate_title": "Hesap aktivasyonu",
       "sign_up": "ÜYE OL",
       "su": "Pa",
       "subscription_desc": "Mağazadan en güncel haberleri alın",

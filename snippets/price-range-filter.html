@@ -1,7 +1,13 @@
 
 
-{{assign 'initial_min_value' (ternary filter.min_value.value filter.min_value.value 0)}}
-{{assign 'initial_max_value' (ternary filter.max_value.value filter.max_value.value filter.range_max)}}
+{{assign
+  "initial_min_value"
+  (ternary (or filter.min_value.value (if filter.min_value.value "===" 0)) filter.min_value.value 0)
+}}
+{{assign
+  "initial_max_value"
+  (ternary (or filter.max_value.value (if filter.max_value.value "===" 0)) filter.max_value.value filter.range_max)
+}}
 
 <price-range
   class="price-range-container"

@@ -363,6 +363,7 @@
       "sign__out": "Kijelentkezés",
       "sign_in": "BEJELENTKEZÉS",
       "sign_in_activate": "Az ellenőrző kódot elküldtük a számlájára {{account}}. Az ellenőrzést követően aktiválhatja fiókját",
+      "sign_in_activate_title": "Fiók Aktiválás",
       "sign_up": "REGISZTRÁCIÓ",
       "su": "V",
       "subscription_desc": "Értesülhet az üzlet tevékenységéről szóló legújabb hírekről",

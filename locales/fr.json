@@ -363,6 +363,7 @@
       "sign__out": "Se déconnecter",
       "sign_in": "Se connecter",
       "sign_in_activate": "Le code de vérification a été envoyé à votre compte{{account}}, vous pouvez activer votre compte après vérification.",
+      "sign_in_activate_title": "Activation du compte",
       "sign_up": "S'inscrire",
       "su": "Di",
       "subscription_desc": "Recevoir les dernières actualités de la boutique",

@@ -1,50 +1,48 @@
 <link rel="stylesheet" href="{{asset_url 'section-main-article.css'}}" />
 <article class="article-template">
   {{#with this as |global|}}
-    {{#each section.block_order as |blockId|}}
-      {{#with (lookup ../section.blocks blockId)}}
-        {{#if type "===" "select"}}
-          {{#if global.article.image.src}}
-            <div class="page-width article-template__hero-container" {{{shopline_attributes}}}>
-              <div
-                class="article-template__hero-{{settings.image_height}} media"
-                {{#and (if settings.image_height "===" "adapt") (if global.article.image)}}
-                  style="padding-bottom:{{times (divide 1 global.article.image.aspect_ratio) 100}}%;"
-                {{/and}}
-              >
-                {{snippet "image" data=global.article.image lazy=false fetchpriority="high"}}
-              </div>
+    {{#each section.blocks}}
+      {{#if type "===" "select"}}
+        {{#if global.article.image.src}}
+          <div class="page-width article-template__hero-container" {{{shopline_attributes}}}>
+            <div
+              class="article-template__hero-{{settings.image_height}} media"
+              {{#and (if settings.image_height "===" "adapt") (if global.article.image)}}
+                style="padding-bottom:{{times (divide 1 global.article.image.aspect_ratio) 100}}%;"
+              {{/and}}
+            >
+              {{snippet "image" data=global.article.image lazy=false fetchpriority="high"}}
             </div>
+          </div>
+        {{/if}}
+      {{/if}}
+      {{#if type "===" "title"}}
+        <header class="page-width" {{{shopline_attributes}}}>
+          <h1 class="article-template__title title4">{{global.article.title}}</h1>
+          {{#if settings.blog_show_date}}
+            <span class="circle-divider caption-with-letter-spacing body3">
+              {{date global.article.published_at "abbreviated_date"}}
+            </span>
           {{/if}}
-        {{/if}}
-        {{#if type "===" "title"}}
-          <header class="page-width" {{{shopline_attributes}}}>
-            <h1 class="article-template__title title4">{{global.article.title}}</h1>
-            {{#if settings.blog_show_date}}
-              <span class="circle-divider caption-with-letter-spacing body3">
-                {{date global.article.published_at "abbreviated_date"}}
-              </span>
-            {{/if}}
-            {{#if settings.blog_show_author}}
-              <span class="caption-with-letter-spacing body3">
-                <span itemprop="name">{{global.article.author}}</span>
-              </span>
-            {{/if}}
-          </header>
-          <div class="article-template__divide page-width"></div>
-        {{/if}}
-        {{#if type "===" "content"}}
-          <div class="article-template__content page-width rte body3" itemprop="articleBody" {{{shopline_attributes}}}>
-            {{{global.article.content}}}
-          </div>
-        {{/if}}
-        {{#if type "===" "share"}}
-          <div class="article-template__social-sharing page-width" {{{shopline_attributes}}}>
-            {{assign "share_url" (append global.request.origin global.article.url)}}
-            {{snippet "share-button" share_link=share_url}}
-          </div>
-        {{/if}}
-      {{/with}}
+          {{#if settings.blog_show_author}}
+            <span class="caption-with-letter-spacing body3">
+              <span itemprop="name">{{global.article.author}}</span>
+            </span>
+          {{/if}}
+        </header>
+        <div class="article-template__divide page-width"></div>
+      {{/if}}
+      {{#if type "===" "content"}}
+        <div class="article-template__content page-width rte body3" itemprop="articleBody" {{{shopline_attributes}}}>
+          {{{global.article.content}}}
+        </div>
+      {{/if}}
+      {{#if type "===" "share"}}
+        <div class="article-template__social-sharing page-width" {{{shopline_attributes}}}>
+          {{assign "share_url" (append global.request.origin global.article.url)}}
+          {{snippet "share-button" share_link=share_url}}
+        </div>
+      {{/if}}
     {{/each}}
   {{/with}}
   <div class="article-template__back element-margin-top page-width">
@@ -143,7 +141,7 @@
                   input_autocorrect="off"
                   input_autocapitalize="off"
                   input_required=true
-                  input_placeholder=(t 'customer.account.email')
+                  input_placeholder=(t "customer.account.email")
                 }}
                 <label class="field__label" for="CommentForm-email">
                   {{t "customer.account.email"}}
@@ -196,8 +194,8 @@
         "{{{ article.image.src }}}"
       ],
     {{/if}}
-    "datePublished": "{{ date (toInt article.published_at) '%Y-%m-%dT%H:%M:%SZ' }}",
-    "dateCreated": "{{ date (toInt article.created_at) '%Y-%m-%dT%H:%M:%SZ' }}",
+    "datePublished": "{{ date article.published_at '%Y-%m-%dT%H:%M:%SZ' }}",
+    "dateCreated": "{{ date  article.created_at '%Y-%m-%dT%H:%M:%SZ' }}",
     "author": {
       "@type": "Person",
       "name": "{{ article.author }}"

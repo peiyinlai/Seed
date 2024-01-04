@@ -1,14 +1,12 @@
 {{assign "show_announcement" false}}
 
 {{#with this as |global|}}
-  {{#each section.block_order as |blockId|}}
-    {{#with (lookup ../section.blocks blockId)}}
-      {{#if (trim settings.notice_link_text)}}
-        {{#with global}}
-          {{assign "show_announcement" true}}
-        {{/with}}
-      {{/if}}
-    {{/with}}
+  {{#each section.blocks}}
+    {{#if (trim settings.notice_link_text)}}
+      {{#with global}}
+        {{assign "show_announcement" true}}
+      {{/with}}
+    {{/if}}
   {{/each}}
 {{/with}}
 
@@ -26,20 +24,18 @@
           announcement-bar--{{section.settings.display_mode}}
           {{#if section.settings.display_mode '===' 'compact'}}display-none-tablet{{/if}}"
       >
-        {{#each section.block_order as |blockId|}}
-          {{#with (lookup ../section.blocks blockId)}}
-            {{~#if (isTruthy settings.notice_link_text)}}
-              <div class="announcement-bar--item color-scheme-{{settings.notice_style}}" {{{shopline_attributes}}}>
-                {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
-                <{{ele}} 
-                  {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}} 
-                  class="body4 announcement--text"
-                >
-                  {{~settings.notice_link_text~}}
-                </{{ele}}>
-              </div>
-            {{~/if}}
-          {{/with}}
+        {{#each section.blocks}}
+          {{~#if (isTruthy settings.notice_link_text)}}
+            <div class="announcement-bar--item color-scheme-{{settings.notice_style}}" {{{shopline_attributes}}}>
+              {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
+              <{{ele}}
+                {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}}
+                class="body4 announcement--text"
+              >
+                {{~settings.notice_link_text~}}
+              </{{ele}}>
+            </div>
+          {{~/if}}
         {{/each}}
       </div>
     {{/or}}
@@ -51,25 +47,23 @@
         class="{{#if section.settings.display_mode '===' 'compact'}}display-none-desktop{{/if}}"
       >
         <div id="Slider-{{section.id}}" class="announcement-bar__slider announcement-bar__slider--{{direction}} slider">
-          {{#each section.block_order as |blockId|}}
-            {{#with (lookup ../section.blocks blockId)}}
-              {{~#if (isTruthy settings.notice_link_text)}}
-                <div
-                  id="Slide-{{blockId}}"
-                  class="announcement-bar__slide slider__slide announcement-bar--item
-                    color-scheme-{{settings.notice_style}}"
-                  {{{shopline_attributes}}}
+          {{#each section.blocks}}
+            {{~#if (isTruthy settings.notice_link_text)}}
+              <div
+                id="Slide-{{id}}"
+                class="announcement-bar__slide slider__slide announcement-bar--item
+                  color-scheme-{{settings.notice_style}}"
+                {{{shopline_attributes}}}
+              >
+                {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
+                <{{ele}}
+                  {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}}
+                  class="body4 announcement--text"
                 >
-                  {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
-                  <{{ele}} 
-                    {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}}
-                    class="body4 announcement--text"
-                  >
-                    {{~settings.notice_link_text~}}
-                  </{{ele}}>
-                </div>
-              {{~/if}}
-            {{/with}}
+                  {{~settings.notice_link_text~}}
+                </{{ele}}>
+              </div>
+            {{~/if}}
           {{/each}}
         </div>
       </announcement-bar-section>

@@ -363,6 +363,7 @@
       "sign__out": "Deconectare",
       "sign_in": "AUTENTIFICARE",
       "sign_in_activate": "Codul de verificare a fost trimis în contul dvs. {{account}}. Puteți activa contul dvs. după verificare",
+      "sign_in_activate_title": "Activare cont",
       "sign_up": "ÎNSCRIERE",
       "su": "D",
       "subscription_desc": "Obțineți cele mai recente știri despre activitatea de afaceri",
