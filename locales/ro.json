@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Acest obiect s-a vândut la început doar cu suma de {{num}}"
+        },
+        "most": {
+          "desc": "Acest obiect s-a vândut doar cu suma de {{num}} cel mult"
+        },
+        "noIncrement": {
+          "desc": "Acest obiect s-a vândut doar cu un increment de {{num}}"
+        }
+      }
+    },
     "cart": {
       "buy_now": "CUMPĂRĂ ACUM",
       "cancel": "Anulează",
@@ -502,6 +515,9 @@
       "form_error": "Interogarea a eșuat",
       "orderId": "Comanda ID",
       "orderId_error": "ID-ul comenzii nu poate fi gol",
+      "other_email": "Adresă de e-mail",
+      "other_phone": "Număr de telefon mobil",
+      "phone": "Telefon mobil",
       "query_illegal": "ordinea nu există",
       "risk_black_user": "Acest cont este în pericol",
       "risk_interception": "ordinea nu există",
@@ -642,6 +658,7 @@
       "country_region": "Țară/Regiune",
       "default_placeholder": "Selectați {{attrName}}",
       "description": "Descriere",
+      "each_price": "{{price}}/fiecare",
       "email": "E-mail",
       "enter_email_address": "Introduceți adresa de e-mail",
       "enter_valid_email_address": "Introduceți o adresă de e-mail validă",
@@ -663,14 +680,26 @@
       "load_more": "Arată mai mult",
       "maximum_length_of_message": "Lungimea maximă a mesajului dvs. nu trebuie să fie mai mare de 1500 de cuvinte",
       "message": "Mesajul dvs.",
+      "moq_increment": "Multiplu de {{num}}",
+      "moq_increment_tips": "Cantitatea adițională achiziționată are doar multiplii de {{num}}",
+      "moq_max_tips": "Această specificație poate achiziționa până la {{num}} bucăți",
+      "moq_maximum": "Achiziție maximă de {{num}}",
+      "moq_min_tips": "Această specificație trebuie achiziționată {{num}} sau mai mult",
+      "moq_minimum": "Achiziție minimă de {{num}}",
       "more_payment_options": "mai multe opțiuni de plată",
       "name": "Nume",
       "optional": "Opțional",
       "phone_number": "Număr de telefon",
+      "price": "Preț",
+      "price_break_title": "Preț vrac",
+      "price_breaks_view_less": "Ascundeți",
+      "price_breaks_view_more": "Arată mai mult",
       "product_enquiry": "Solicitare produs",
       "submission_failed": "Trimitere nereușită, încercați din nou",
       "submission_successfully": "Trimitere reușită",
       "submit": "Trimite",
+      "table_each_price": "{{price}}fiecare",
+      "table_each_price_ssr": "{{{priceDom}}}fiecare",
       "tax_included": "taxă inclusă",
       "view_product_detail": "Vizualizați detalii produs",
       "copy_button_text": "Copiază",
@@ -692,6 +721,7 @@
       "new_arrivals": "Noutăți",
       "new_products": "De la cel mai aproape până la cel mai departe în funcție de timpul de creație",
       "no_product": "Nu există produse în această colecție",
+      "price_break_tag": "Preț vrac disponibil",
       "price_high_to_low": "De la prețul cel mai mare la cel mai mic",
       "price_low_to_high": "De la prețul cel mai mic la cel mai mare",
       "product_has_been_removed": "Produsul a fost eliminat de pe rafturi",

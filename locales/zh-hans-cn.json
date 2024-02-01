@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "此商品的起批量为 {{num}} 件"
+        },
+        "most": {
+          "desc": "此商品的最大批发量为 {{num}} 件"
+        },
+        "noIncrement": {
+          "desc": "此商品的增量必须为 {{num}} 件"
+        }
+      }
+    },
     "cart": {
       "buy_now": "立即购买",
       "cancel": "取消",
@@ -502,6 +515,9 @@
       "form_error": "查询失败",
       "orderId": "Order ID",
       "orderId_error": "订单id不能为空",
+      "other_email": "邮箱",
+      "other_phone": "手机号",
+      "phone": "手机",
       "query_illegal": "该订单不存在",
       "risk_black_user": "此帐号存在风险",
       "risk_interception": "该订单不存在",
@@ -642,6 +658,7 @@
       "country_region": "国家/地区",
       "default_placeholder": "请选择{{attrName}}",
       "description": "描述",
+      "each_price": "{{price}}/每项",
       "email": "邮箱",
       "enter_email_address": "请填写邮箱",
       "enter_valid_email_address": "请填写正确的邮箱",
@@ -663,14 +680,26 @@
       "load_more": "展示更多",
       "maximum_length_of_message": "留言长度不超过1500个字",
       "message": "留言",
+      "moq_increment": "{{num}}的倍数",
+      "moq_increment_tips": "加购的数量仅支持{{num}}的倍数",
+      "moq_max_tips": "该规格最多可购买 {{num}}件",
+      "moq_maximum": "最多购买 {{num}}",
+      "moq_min_tips": "该规格必须购买 {{num}}以上",
+      "moq_minimum": "最小购买{{num}}",
       "more_payment_options": "更多支付选项",
       "name": "姓名",
       "optional": "可选",
       "phone_number": "电话号码",
+      "price": "价格",
+      "price_break_title": "批量定价",
+      "price_breaks_view_less": "收起",
+      "price_breaks_view_more": "查看更多",
       "product_enquiry": "咨询商品",
       "submission_failed": "提交失败，请重试",
       "submission_successfully": "提交成功",
       "submit": "提交",
+      "table_each_price": "{{price}} 每项",
+      "table_each_price_ssr": "{{{priceDom}}} 每项",
       "tax_included": "内含税费",
       "view_product_detail": "查看商品详情",
       "copy_button_text": "复制",
@@ -692,6 +721,7 @@
       "new_arrivals": "最新上架",
       "new_products": "创建时间新-旧",
       "no_product": "分类下无商品",
+      "price_break_tag": "可批量定价",
       "price_high_to_low": "价格从高到低",
       "price_low_to_high": "价格从低到高",
       "product_has_been_removed": "当前商品已下架",

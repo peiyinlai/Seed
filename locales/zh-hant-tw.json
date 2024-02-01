@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "此商品的起批量為 {{num}} 件"
+        },
+        "most": {
+          "desc": "此商品的最大批發量為 {{num}} 件"
+        },
+        "noIncrement": {
+          "desc": "此商品的增量必須為 {{num}} 件"
+        }
+      }
+    },
     "cart": {
       "buy_now": "立即購買",
       "cancel": "取消",
@@ -502,6 +515,9 @@
       "form_error": "查詢失敗",
       "orderId": "Order ID",
       "orderId_error": "訂單編號不能為空",
+      "other_email": "電子郵件地址",
+      "other_phone": "行動電話號碼",
+      "phone": "行動電話",
       "query_illegal": "訂單不存在",
       "risk_black_user": "此帳號存在風險",
       "risk_interception": "訂單不存在",
@@ -642,6 +658,7 @@
       "country_region": "國家/地區",
       "default_placeholder": "請選擇{{attrName}}",
       "description": "說明",
+      "each_price": "{{price}}/每項",
       "email": "郵箱",
       "enter_email_address": "請填寫郵箱",
       "enter_valid_email_address": "請填寫正確的郵箱",
@@ -663,14 +680,26 @@
       "load_more": "展示更多",
       "maximum_length_of_message": "留言長度不超過1500個字",
       "message": "留言",
+      "moq_increment": "{{num}}的倍數",
+      "moq_increment_tips": "加購的數量僅支持{{num}}的倍數",
+      "moq_max_tips": "此規格最多可購買 {{num}}件",
+      "moq_maximum": "最多購買 {{num}}",
+      "moq_min_tips": "該規格必須購買 {{num}}以上",
+      "moq_minimum": "最小購買{{num}}",
       "more_payment_options": "更多支付選項",
       "name": "姓名",
       "optional": "非必填",
       "phone_number": "電話號碼",
+      "price": "價格",
+      "price_break_title": "批量定價",
+      "price_breaks_view_less": "收起",
+      "price_breaks_view_more": "查看更多",
       "product_enquiry": "諮詢商品",
       "submission_failed": "提交失敗，請重試",
       "submission_successfully": "提交成功",
       "submit": "提交",
+      "table_each_price": "{{price}} 每項",
+      "table_each_price_ssr": "{{{priceDom}}} 每項",
       "tax_included": "內含稅費",
       "view_product_detail": "查看商品詳情",
       "copy_button_text": "複製",
@@ -692,6 +721,7 @@
       "new_arrivals": "新品",
       "new_products": "創建時間新-舊",
       "no_product": "分類下無商品",
+      "price_break_tag": "可批量定價",
       "price_high_to_low": "價格：由高至低",
       "price_low_to_high": "價格：由低至高",
       "product_has_been_removed": "產品已從貨架上移除",

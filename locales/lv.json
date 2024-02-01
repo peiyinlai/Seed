@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Šī prece tiek pārdota tikai sākot ar summu {{num}}"
+        },
+        "most": {
+          "desc": "Šo preci pārdod tikai par summu {{num}} ne vairāk kā"
+        },
+        "noIncrement": {
+          "desc": "Šī prece tiek pārdota tikai ar pieaugumu {{num}}"
+        }
+      }
+    },
     "cart": {
       "buy_now": "PĒRCIET TŪLĪT",
       "cancel": "Atceltu",
@@ -502,6 +515,9 @@
       "form_error": "Vaicājums neizdevās",
       "orderId": "Pasūtījuma ID",
       "orderId_error": "Pasūtījuma ID lauks nedrīkst būt tukšs",
+      "other_email": "E-pasta adrese",
+      "other_phone": "mobilā tālruņa numurs",
+      "phone": "Mobilais telefons",
       "query_illegal": "pasūtījums neeksistē",
       "risk_black_user": "Šis konts ir apdraudēts",
       "risk_interception": "pasūtījums neeksistē",
@@ -642,6 +658,7 @@
       "country_region": "Valsts / reģions",
       "default_placeholder": "Lūdzu, atlasiet {{attrName}}",
       "description": "Apraksts",
+      "each_price": "{{price}}/gab",
       "email": "E-pasts",
       "enter_email_address": "Lūdzu, ievadiet savu e-pasta adresi",
       "enter_valid_email_address": "Lūdzu, ievadiet derīgu e-pasta adresi",
@@ -663,14 +680,26 @@
       "load_more": "Ielādēt vairāk",
       "maximum_length_of_message": "Jūsu ziņojuma maksimālais garums nedrīkst pārsniegt 1500 vārdus",
       "message": "Jūsu ziņa",
+      "moq_increment": "Daudzkārtēji no {{num}}",
+      "moq_increment_tips": "Iepirkumu grozam pievienotais daudzums atbalsta tikai {{num}} daudzkārtņus",
+      "moq_max_tips": "Maksimālais pirkums ir {{num}} vienības, kas atbilst šai specifikācijai",
+      "moq_maximum": "Maksimālais pirkums {{num}}",
+      "moq_min_tips": "Šai specifikācijai ir jāiegādājas vairāk nekā {{num}}",
+      "moq_minimum": "Minimālais pirkums {{num}}",
       "more_payment_options": "Vairāk norēķinu iespēju",
       "name": "Vārds",
       "optional": "Pēc izvēles",
       "phone_number": "tālruņa numurs",
+      "price": "Cena",
+      "price_break_title": "Lielapjoma cenas",
+      "price_breaks_view_less": "Paslēpt",
+      "price_breaks_view_more": "Rādīt vairāk",
       "product_enquiry": "Produktu izmeklēšana",
       "submission_failed": "Iesniegšana neizdevās, lūdzu, mēģiniet vēlreiz",
       "submission_successfully": "Veiksmīga iesniegšana",
       "submit": "Iesniegt",
+      "table_each_price": "{{price}}gab",
+      "table_each_price_ssr": "{{{priceDom}}}gab",
       "tax_included": "iekļauts nodoklis",
       "view_product_detail": "Skatīt informāciju par produktu",
       "copy_button_text": "Kopija",
@@ -692,6 +721,7 @@
       "new_arrivals": "Jauna ierašanās",
       "new_products": "Dilstošā radīšanas secībā",
       "no_product": "Atvainojiet, šajā kolekcijā nav produktiem",
+      "price_break_tag": "Pieejamas lielapjoma cenas",
       "price_high_to_low": "Cena augsta līdz zema",
       "price_low_to_high": "cena zema līdz augsta",
       "product_has_been_removed": "Produkts tiek noņemts no plauktiem",

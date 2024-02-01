@@ -79,7 +79,7 @@ defineCustomElement('quick-add-modal', () => {
         new RegExp(sectionId, 'g'),
         `quickadd-${sectionId}`,
       );
-      this.productElement.querySelectorAll('variant-selects, variant-radios').forEach((variantSelect) => {
+      this.productElement.querySelectorAll('variant-selects, variant-radios, product-info').forEach((variantSelect) => {
         
         variantSelect.dataset.originalSection = sectionId;
       });

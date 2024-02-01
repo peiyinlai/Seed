@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "De initiële groothandelshoeveelheid voor dit artikel is {{num}} stuks"
+        },
+        "most": {
+          "desc": "De maximale groothandelshoeveelheid van dit product is {{num}} stuks"
+        },
+        "noIncrement": {
+          "desc": "De extra hoeveelheid van dit artikel is {{num}} stuks"
+        }
+      }
+    },
     "cart": {
       "buy_now": "Nu kopen",
       "cancel": "Annuleren",
@@ -502,6 +515,9 @@
       "form_error": "Zoekopdracht mislukt",
       "orderId": "Order ID",
       "orderId_error": "Bestel-ID mag niet leeg zijn",
+      "other_email": "E-mailadres",
+      "other_phone": "Telefoonnummer",
+      "phone": "Telefoon",
       "query_illegal": "bestelling bestaat niet",
       "risk_black_user": "Dit account loopt risico",
       "risk_interception": "bestelling bestaat niet",
@@ -642,6 +658,7 @@
       "country_region": "Land/regio",
       "default_placeholder": "Kies {{attrName}} a.u. b.",
       "description": "Beschrijving",
+      "each_price": "{{price}}/per stuk",
       "email": "E-mail",
       "enter_email_address": "Vul uw e-mailadres in",
       "enter_valid_email_address": "Vul het juiste e-mailadres in",
@@ -663,14 +680,26 @@
       "load_more": "Meer tonen",
       "maximum_length_of_message": "Berichtlengte niet meer dan 1500 tekens",
       "message": "Berichten",
+      "moq_increment": "Veelvouden van {{num}}",
+      "moq_increment_tips": "Het aantal aankopen wordt alleen ondersteund in veelvouden van {{num}}",
+      "moq_max_tips": "Maximale aankoop van {{num}} stuks van deze specificatie",
+      "moq_maximum": "Maximale aankoop van {{num}}",
+      "moq_min_tips": "Er moet meer dan {{num}} worden gekocht voor deze specificatie",
+      "moq_minimum": "Minimale aankoop van {{num}}",
       "more_payment_options": "Meer betalingsmogelijkheden",
       "name": "Naam",
       "optional": "Optioneel",
       "phone_number": "Telefoonnummer",
+      "price": "Prijs",
+      "price_break_title": "Bulkprijzen",
+      "price_breaks_view_less": "Opbergen",
+      "price_breaks_view_more": "Meer bekijken",
       "product_enquiry": "Het artikel aanvragen",
       "submission_failed": "Indiening mislukt, probeer het opnieuw.",
       "submission_successfully": "Succesvol ingediend",
       "submit": "Indienen",
+      "table_each_price": "{{price}}per stuk",
+      "table_each_price_ssr": "{{{priceDom}}}per stuk",
       "tax_included": "inclusief belasting",
       "view_product_detail": "De productdetails bekijken",
       "copy_button_text": "Kopiëren",
@@ -692,6 +721,7 @@
       "new_arrivals": "Nieuwe releases",
       "new_products": "Volgens aanmaaktijd van dichtbij tot veraf",
       "no_product": "Sorry, er zijn geen producten in deze categorie",
+      "price_break_tag": "Bulkprijzen beschikbaar",
       "price_high_to_low": "Prijs van hoog tot laag",
       "price_low_to_high": "Prijs van laag tot hoog",
       "product_has_been_removed": "Het artikel is huidig uit de schappen gehaald",

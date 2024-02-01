@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "จำนวนขั้นต่ำสำหรับผลิตภัณฑ์นี้คือ {{num}} ชิ้น"
+        },
+        "most": {
+          "desc": "จำนวนการขายส่งสูงสุดสำหรับสินค้านี้คือ {{num}} ชิ้น"
+        },
+        "noIncrement": {
+          "desc": "รายการนี้จะต้องเพิ่มทีละ {{num}} ชิ้น"
+        }
+      }
+    },
     "cart": {
       "buy_now": "ซื้อตอนนี้",
       "cancel": "ยกเลิก",
@@ -502,6 +515,9 @@
       "form_error": "แบบสอบถามล้มเหลว",
       "orderId": "รหัสคำสั่งซื้อ",
       "orderId_error": "ต้องระบุรหัสคำสั่งซื้อ",
+      "other_email": "ที่อยู่อีเมล",
+      "other_phone": "หมายเลขโทรศัพท์มือถือ",
+      "phone": "โทรศัพท์มือถือ",
       "query_illegal": "ไม่มีคำสั่งซื้อ",
       "risk_black_user": "บัญชีนี้มีความเสี่ยง",
       "risk_interception": "ไม่มีคำสั่งซื้อ",
@@ -642,6 +658,7 @@
       "country_region": "ประเทศ/ภูมิภาค",
       "default_placeholder": "โปรดเลือก {{attrName}}",
       "description": "คำอธิบาย",
+      "each_price": "{{price}}/ชิ้น",
       "email": "อีเมล",
       "enter_email_address": "กรุณากรอกอีเมลของคุณ",
       "enter_valid_email_address": "กรุณากรอกอีเมลที่ถูกต้อง",
@@ -663,14 +680,26 @@
       "load_more": "แสดงเพิ่มเติม",
       "maximum_length_of_message": "ความยาวสูงสุดของข้อความไม่ควรเกิน 1500 ตัวอักษร",
       "message": "ข้อความของคุณ",
+      "moq_increment": "พหุคูณของ {{num}}",
+      "moq_increment_tips": "ปริมาณการซื้อเพิ่มเติมรองรับเฉพาะจำนวนทวีคูณของ {{num}}",
+      "moq_max_tips": "สเปคนี้สามารถซื้อได้สูงสุด {{num}} ชิ้น",
+      "moq_maximum": "การสั่งซื้อสูงสุด {{num}}",
+      "moq_min_tips": "สเปคนี้จะต้องซื้อ {{num}} ชิ้นหรือมากกว่า",
+      "moq_minimum": "การซื้อขั้นต่ำ{{num}}",
       "more_payment_options": "ตัวเลือกการชำระเงินเพิ่มเติม",
       "name": "ชื่อ",
       "optional": "ไม่จำเป็น",
       "phone_number": "เบอร์โทรศัพท์",
+      "price": "ราคา",
+      "price_break_title": "การกำหนดราคาแบบแบทช์",
+      "price_breaks_view_less": "เก็บ",
+      "price_breaks_view_more": "ดูเพิ่มเติม",
       "product_enquiry": "สอบถามสินค้า",
       "submission_failed": "การส่งไม่สำเร็จ โปรดลองอีกครั้ง",
       "submission_successfully": "ส่งเรียบร้อยแล้ว",
       "submit": "ส่ง",
+      "table_each_price": "{{price}}ชิ้น",
+      "table_each_price_ssr": "{{{priceDom}}}ชิ้น",
       "tax_included": "รวมภาษี",
       "view_product_detail": "หน้าหลัก",
       "copy_button_text": "คัดลอก",
@@ -692,6 +721,7 @@
       "new_arrivals": "สินค้าใหม่",
       "new_products": "เวลาสร้างใหม่-เก่า",
       "no_product": "ขออภัย ไม่มีสินค้าในหมวดหมู่นี้",
+      "price_break_tag": "สามารถกำหนดราคาแบบแบทช์",
       "price_high_to_low": "ราคา: สูงไปต่ำ",
       "price_low_to_high": "ราคา: ต่ำไปสูง",
       "product_has_been_removed": "สินค้าถูกนำออกจากร้านค้าแล้ว",

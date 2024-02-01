@@ -76,7 +76,7 @@
           "type": "collection",
           "settings": {
             "category": null,
-            "title": null,
+            "title": "",
             "image_display_area": "center center"
           }
         },
@@ -84,7 +84,7 @@
           "type": "collection",
           "settings": {
             "category": null,
-            "title": null,
+            "title": "",
             "image_display_area": "center center"
           }
         },
@@ -92,7 +92,7 @@
           "type": "collection",
           "settings": {
             "category": null,
-            "title": null,
+            "title": "",
             "image_display_area": "center center"
           }
         }

@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "이 상품의 시작 수량은 {{num}}개입니다"
+        },
+        "most": {
+          "desc": "이 상품의 최대 도매 수량은 {{num}}개입니다"
+        },
+        "noIncrement": {
+          "desc": "이 상품의 증량은 반드시 {{num}}개여야 합니다"
+        }
+      }
+    },
     "cart": {
       "buy_now": "지금 구매",
       "cancel": "취소",
@@ -502,6 +515,9 @@
       "form_error": "쿼리 실패",
       "orderId": "주문 아이디",
       "orderId_error": "주문 ID는 비워둘 수 없습니다.",
+      "other_email": "이메일",
+      "other_phone": "핸드폰 번호",
+      "phone": "핸드폰",
       "query_illegal": "주문이 존재하지 않습니다",
       "risk_black_user": "이 계정은 위험합니다",
       "risk_interception": "주문이 존재하지 않습니다",
@@ -642,6 +658,7 @@
       "country_region": "국가/지역",
       "default_placeholder": "{{attrName}}을 선택하세요",
       "description": "묘사",
+      "each_price": "{{price}}/개당",
       "email": "이메일",
       "enter_email_address": "이메일을 입력하세요",
       "enter_valid_email_address": "정확한 이메일을 입력하세요",
@@ -663,14 +680,26 @@
       "load_more": "많이 보여드리도록 하겠습니다",
       "maximum_length_of_message": "댓글 갈이는 1500자를 넘으면 안됩니다",
       "message": "댓글",
+      "moq_increment": "{{num}}배수",
+      "moq_increment_tips": "추가구매 수량이 {{num}}배수만 지원",
+      "moq_max_tips": "이 규격은 최대 {{num}}건까지 구매 가능",
+      "moq_maximum": "최대구매(n}",
+      "moq_min_tips": "이 규격은 {{num}}이상 구매 필수",
+      "moq_minimum": "최소구매{{num}}",
       "more_payment_options": "더 많은 지불 옵션",
       "name": "성명",
       "optional": "선택 가능",
       "phone_number": "전화번호",
+      "price": "가격",
+      "price_break_title": "대량정가",
+      "price_breaks_view_less": "접기",
+      "price_breaks_view_more": "더 보기",
       "product_enquiry": "상품 문의",
       "submission_failed": "제출 실패, 다시 시도하세요",
       "submission_successfully": "제출 성공",
       "submit": "제출",
+      "table_each_price": "{{price}}개당",
+      "table_each_price_ssr": "{{{priceDom}}}개당",
       "tax_included": "세금 포함",
       "view_product_detail": "상품 정보 보기",
       "copy_button_text": "복사",
@@ -692,6 +721,7 @@
       "new_arrivals": "최신 출시",
       "new_products": "만든 시간에 따라 가까운 곳에서 먼 곳으로",
       "no_product": "분류 아래 상품이 없습니다.",
+      "price_break_tag": "대량정가 가능",
       "price_high_to_low": "가격이 높은것부터 낮은 순으로",
       "price_low_to_high": "가격이 낮은것부터 높은순으로",
       "product_has_been_removed": "상품을 내렸습니다",

@@ -2,6 +2,39 @@ if (typeof window.Shopline === 'undefined') {
   window.Shopline = {};
 }
 
+// pubsub event
+
+
+const PUB_SUB_EVENTS = {
+  quantityUpdate: 'quantity-update',
+  variantChange: 'variant-change',
+};
+
+const subscribers = {};
+
+function subscribe(eventName, callback) {
+  if (subscribers[eventName] === undefined) {
+    subscribers[eventName] = [];
+  }
+
+  subscribers[eventName] = [...subscribers[eventName], callback];
+
+  return function unsubscribe() {
+    subscribers[eventName] = subscribers[eventName].filter((cb) => {
+      return cb !== callback;
+    });
+  };
+}
+
+function publish(eventName, data) {
+  if (subscribers[eventName]) {
+    subscribers[eventName].forEach((callback) => {
+      callback(data);
+    });
+  }
+}
+;
+
 // init cart related
 function initCartDrawerBySectionRender(mountEntry) {
   fetch(`${window.location.pathname}?section_id=cart-drawer`)
@@ -620,9 +653,7 @@ class VariantSelects extends HTMLElement {
       .then((responseText) => {
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const destination = document.getElementById(`price-${this.dataset.section}`);
-        const source = html.getElementById(
-          `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`,
-        );
+        const source = html.getElementById(`price-${sectionId}`);
         if (source && destination) destination.innerHTML = source.innerHTML;
 
         const price = document.getElementById(`price-${this.dataset.section}`);
@@ -631,12 +662,31 @@ class VariantSelects extends HTMLElement {
 
         this.updateProductInfo(
           document.getElementById(`inventory-${this.dataset.section}`),
-          html.getElementById(
-            `inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`,
-          ),
+          html.getElementById(`inventory-${sectionId}`),
         );
 
+        // moq
+        const volumePricingDestination = document.getElementById(`Volume-${this.dataset.section}`);
+        const volumePricingSource = html.getElementById(`Volume-${sectionId}`);
+        const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
+        const pricePerItemSource = html.getElementById(`Price-Per-Item-${sectionId}`);
+        if (volumePricingSource && volumePricingDestination) {
+          volumePricingDestination.innerHTML = volumePricingSource.innerHTML;
+        }
+
+        if (pricePerItemSource && pricePerItemDestination) {
+          pricePerItemDestination.innerHTML = pricePerItemSource.innerHTML;
+        }
+
         this.toggleAddButton(!this.currentVariant.available, this.variantStrings.soldOut);
+
+        publish(PUB_SUB_EVENTS.variantChange, {
+          data: {
+            sectionId,
+            html,
+            variant: this.currentVariant,
+          },
+        });
       });
   }
 

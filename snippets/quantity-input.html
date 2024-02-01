@@ -1,5 +1,7 @@
 {{assign 'min' (default min 1)}}
 {{assign 'max' (default max 99999)}}
+{{assign 'step' (default step 1)}}
+{{assign 'cart_qty' (default cart_qty 0)}}
 {{assign 'value' (default value 1)}}
 {{assign 'namespace' (ternary (eq namespace 'CartDrawer-') 'Drawer-quantity-' 'Quantity-')}}
 
@@ -13,8 +15,12 @@
     name="quantity"
     id="{{namespace}}{{id}}"
     min="{{min}}"
+    data-min="{{min}}"
     max="{{max}}"
+    data-max="{{max}}"
+    step="{{step}}"
     value="{{value}}"
+    data-cart-quantity="{{ cart_qty }}"
     form="{{form_id}}"
     {{#and (if min "==" value) (if max "==" value)}}disabled{{/and}}
   />

@@ -22,20 +22,29 @@
 {{assign "price" (default target.price 1999)}}
 {{assign "available" (default target.available false)}}
 {{assign "money_price" (money_with_currency price)}}
+{{assign 'money_price_min' (money_with_currency product.price_min)}}
+{{assign 'money_price_max' (money_with_currency product.price_max)}}
+
 <div class="price {{price_class}} ">
   <div class="price__container">
-    {{#if compare_at_price ">" price}}
-      <div class="price__sale">
-        <span class="body2 fw-bold price-item price-item--sale">
-          {{money_price}}
-        </span>
-
-        <span class="body5 fw-bold price-item--regular">{{money_with_currency compare_at_price}}</span>
+    {{#if product.quantity_price_breaks_configured}}
+      <div class="price__regular">
+        <span class="body2 fw-bold price-item price-item--regular">{{ money_price_min }} - {{ money_price_max }}</span>
       </div>
     {{else}}
-      <div class="price__regular">
-        <span class="body2 fw-bold price-item price-item--regular">{{money_price}}</span>
-      </div>
+      {{#if compare_at_price ">" price}}
+        <div class="price__sale">
+          <span class="body2 fw-bold price-item price-item--sale">
+            {{money_price}}
+          </span>
+
+          <span class="body5 fw-bold price-item--regular">{{money_with_currency compare_at_price}}</span>
+        </div>
+      {{else}}
+        <div class="price__regular">
+          <span class="body2 fw-bold price-item price-item--regular">{{money_price}}</span>
+        </div>
+      {{/if}}
     {{/if}}
   </div>
 </div>

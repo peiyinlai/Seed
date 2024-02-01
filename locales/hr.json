@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Ovaj artikal se prodaje samo u iznosu od {{num}}"
+        },
+        "most": {
+          "desc": "Ova se stavka prodaje u iznosu od najviše {{num}}"
+        },
+        "noIncrement": {
+          "desc": "Ova se stavka prodaje samo uz povećanje od {{num}}"
+        }
+      }
+    },
     "cart": {
       "buy_now": "KUPITE SADA",
       "cancel": "Otkaži",
@@ -502,6 +515,9 @@
       "form_error": "Upit nije uspio",
       "orderId": "ID narudžbe",
       "orderId_error": "ID narudžbe ne može biti prazan",
+      "other_email": "Email adresa",
+      "other_phone": "Broj mobitela",
+      "phone": "Mobitel",
       "query_illegal": "red ne postoji",
       "risk_black_user": "Acest cont este în pericol",
       "risk_interception": "red ne postoji",
@@ -642,6 +658,7 @@
       "country_region": "Država/regija",
       "default_placeholder": "Molimo odaberite {{attrName}}",
       "description": "Opis",
+      "each_price": "{{price}}/ svaki",
       "email": "E-pošta",
       "enter_email_address": "Molim upišite svoju adresu e-pošte",
       "enter_valid_email_address": "Unesite valjanu adresu e-pošte",
@@ -663,14 +680,26 @@
       "load_more": "Prikaži više",
       "maximum_length_of_message": "Maksimalna duljina vaše poruke ne smije biti veća od 1500 riječi",
       "message": "Vaša poruka",
+      "moq_increment": "Više od {{num}}",
+      "moq_increment_tips": "Dodatno kupljena količina podržana je samo u višekratnicima od {{num}}",
+      "moq_max_tips": "Za specifikaciju se može kupiti najviše {{num}} komada",
+      "moq_maximum": "Maksimalna kupnja {{num}}",
+      "moq_min_tips": "Specifikacija se mora kupiti više od {{num}}",
+      "moq_minimum": "Minimalna kupnja {{num}}",
       "more_payment_options": "Još mogućnosti plaćanja",
       "name": "Ime",
       "optional": "Izborno",
       "phone_number": "Broj telefona",
+      "price": "Cijena",
+      "price_break_title": "Količinski određivanje cijena",
+      "price_breaks_view_less": "Sakriti",
+      "price_breaks_view_more": "Prikaži više",
       "product_enquiry": "Upit o proizvodu",
       "submission_failed": "Neuspješno podnijeto, molimo pokušajte ponovo",
       "submission_successfully": "Uspješno podnijeto",
       "submit": "Podnijeti",
+      "table_each_price": "{{price}} svaki",
+      "table_each_price_ssr": "{{{priceDom}}} svaki",
       "tax_included": "porez uključen",
       "view_product_detail": "Pogledajte pojedinosti o proizvodu",
       "copy_button_text": "Kopirati",
@@ -692,6 +721,7 @@
       "new_arrivals": "Novi dolazak",
       "new_products": "Od najbližeg do najdaljeg po vremenu stvaranja",
       "no_product": "Žao nam je, nema proizvoda u ovoj kolekciji",
+      "price_break_tag": "Biti u mogućnosti provoditi količinski određivanje cijena",
       "price_high_to_low": "Cijena od visoke do niske",
       "price_low_to_high": "Cijena od niske do visoke",
       "product_has_been_removed": "Proizvod je uklonjen s polica",

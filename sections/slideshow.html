@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{asset_url 'section-slideshow.css'}}" />
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
-<script src="{{asset_url 'section-slideshow.js'}}" defer></script>
 
 {{assign "pc_height" section.settings.section_height}}
 {{assign "mobile_height" section.settings.mobile_height}}
@@ -434,6 +433,7 @@
           "default": 70,
           "min": 40,
           "max": 100,
+          "step": 1,
           "unit": "px"
         },
         {

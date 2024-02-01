@@ -44,7 +44,6 @@
   <a {{#if jump_link}}href="{{ jump_link }}"{{else}}href="javascript:;"{{/if}}>
     <div class="card__inner ratio global-product-card-border-shadow"  style="--ratio-percent: {{ image_ratio }}%; --image-fill-type: {{image_fill_type}}; --badge-border-radius: {{theme_settings.product_discount_radius}}px;">
       <div class="card__media media--hover-effect">
-        {{assign 'first_image_pc_size' }}
         {{#if product_data.featured_media}}
           {{snippet 'image' data=product_data.featured_media lazy=lazy_load pc_size=(append '1/' desktop_grid_cols ) mobile_size=(append '1/' mobile_grid_cols ) class="collection-hero__image"}}
           {{#and product_data.media.[1] show_secondary_image}}

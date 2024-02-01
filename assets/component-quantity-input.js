@@ -8,6 +8,7 @@ defineCustomElement('quantity-input', () => {
       this.changeEvent = new Event('change', {
         bubbles: true,
       });
+      this.quantityUpdateUnSubscriber = undefined;
 
       [this.minusButton, this.plusButton].forEach((button) =>
         button.addEventListener('click', this.onButtonClick.bind(this)),
@@ -20,8 +21,17 @@ defineCustomElement('quantity-input', () => {
       this.input.addEventListener('change', () => {
         this.onInputChange();
       });
+    }
 
+    connectedCallback() {
       this.init();
+      this.quantityUpdateUnSubscriber = subscribe(PUB_SUB_EVENTS.quantityUpdate, this.onInputChange.bind(this));
+    }
+
+    disconnectedCallback() {
+      if (this.quantityUpdateUnSubscriber) {
+        this.quantityUpdateUnSubscriber();
+      }
     }
 
     init() {

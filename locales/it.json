@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "La minima quantità all'ingrosso per questo prodotto è di {{num}} pezzi"
+        },
+        "most": {
+          "desc": "La massima quantità all'ingrosso per questo prodotto è di {{num}} pezzi"
+        },
+        "noIncrement": {
+          "desc": "La quantità in aumento di questo prodotto di {{num}} pezzi"
+        }
+      }
+    },
     "cart": {
       "buy_now": "Acquista ora",
       "cancel": "Annulla",
@@ -502,6 +515,9 @@
       "form_error": "Richiesta non riuscita",
       "orderId": "ID ordine",
       "orderId_error": "L'ID ordine non può essere vuoto",
+      "other_email": "Email",
+      "other_phone": "Numero di cellulare",
+      "phone": "Cellulare",
       "query_illegal": "l'ordine non esiste",
       "risk_black_user": "Questo conto è a rischio",
       "risk_interception": "l'ordine non esiste",
@@ -642,6 +658,7 @@
       "country_region": "Paese/regione",
       "default_placeholder": "Seleziona {{attrName}}",
       "description": "Descrizione",
+      "each_price": "{{price}}/ciascuno",
       "email": "Email",
       "enter_email_address": "Inserisci la tua email",
       "enter_valid_email_address": "Inserisci l'email corretto",
@@ -663,14 +680,26 @@
       "load_more": "Mostra di più",
       "maximum_length_of_message": "La lunghezza del messaggio non supera le 1500 parole",
       "message": "Messaggio",
+      "moq_increment": "Multipli di {{num}}",
+      "moq_increment_tips": "La quantità di acquisto aggiuntiva supporta solo multipli di {{num}}",
+      "moq_max_tips": "Questa specifica richiede un acquisto di {{num}} pezzi al massimo",
+      "moq_maximum": "Acquisto massimo di {{num}}",
+      "moq_min_tips": "Questa specifica richiede un acquisto di {{num}} pezzi al minimo",
+      "moq_minimum": "Acquisto minimo di {{num}}",
       "more_payment_options": "Altre opzioni di pagamento",
       "name": "Nome",
       "optional": "Opzionale",
       "phone_number": "Numero di telefono",
+      "price": "Prezzo",
+      "price_break_title": "Prezzo all'ingrosso",
+      "price_breaks_view_less": "Chiudi",
+      "price_breaks_view_more": "Vedi di più",
       "product_enquiry": "Domanda sul prodotto",
       "submission_failed": "Impossibile inviare, riprova per favore",
       "submission_successfully": "Inviato con successo",
       "submit": "Invia",
+      "table_each_price": "{{price}}ciascuno",
+      "table_each_price_ssr": "{{{priceDom}}}ciascuno",
       "tax_included": "tasse incluse",
       "view_product_detail": "Vedi i dettagli del prodotto",
       "copy_button_text": "Copia",
@@ -692,6 +721,7 @@
       "new_arrivals": "Ultimi arrivi",
       "new_products": "In base al tempo di creazione da vicino a lontano",
       "no_product": "Non ci sono prodotti in questa categoria",
+      "price_break_tag": "È possibile il prezzo all'ingrosso",
       "price_high_to_low": "Prezzo decrescente",
       "price_low_to_high": "Prezzo crescente",
       "product_has_been_removed": "Il prodotto attuale è stato rimosso",

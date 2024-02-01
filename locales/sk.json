@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Táto položka sa predáva iba pri štarte s množstvom {{num}}"
+        },
+        "most": {
+          "desc": "Táto položka sa predáva iba s množstvom {{num}} nanajvýš"
+        },
+        "noIncrement": {
+          "desc": "Táto položka sa predáva iba s prírastkom {{num}}"
+        }
+      }
+    },
     "cart": {
       "buy_now": "KÚPIŤ",
       "cancel": "Zrušiť",
@@ -502,6 +515,9 @@
       "form_error": "Dopyt zlyhal",
       "orderId": "Číslo objednávky",
       "orderId_error": "ID objednávky nemôže byť prázdne",
+      "other_email": "Emailová adresa",
+      "other_phone": "Číslo mobilného telefónu",
+      "phone": "Mobilný telefón",
       "query_illegal": "poriadok neexistuje",
       "risk_black_user": "Tento účet je ohrozený",
       "risk_interception": "poriadok neexistuje",
@@ -642,6 +658,7 @@
       "country_region": "Krajina/región",
       "default_placeholder": "Prosím vyberte {{attrName}}",
       "description": "Popis",
+      "each_price": "{{price}}/ každý",
       "email": "E-mail",
       "enter_email_address": "Prosím, zadajte svoju e-mailovú adresu",
       "enter_valid_email_address": "Prosím zadajte platnú emailovú adresu",
@@ -663,14 +680,26 @@
       "load_more": "Zobraziť viac",
       "maximum_length_of_message": "Maximálna dĺžka vašej správy by nemala byť väčšia ako 1500 slov",
       "message": "Vaša správa",
+      "moq_increment": "Násobok {{num}}",
+      "moq_increment_tips": "Dodatočne zakúpené množstvo je podporované iba v násobkoch {{num}}",
+      "moq_max_tips": "K špecifikácii sa dá kúpiť maximálne {{num}} kusov",
+      "moq_maximum": "Maximálny nákup {{num}}",
+      "moq_min_tips": "Špecifikáciu je potrebné zakúpiť viac ako {{num}}",
+      "moq_minimum": "Minimálny nákup {{num}}",
       "more_payment_options": "viac možností platby",
       "name": "Meno",
       "optional": "Voliteľné",
       "phone_number": "Číslo telefónne",
+      "price": "Cena",
+      "price_break_title": "Hromadné oceňovanie",
+      "price_breaks_view_less": "Skryť",
+      "price_breaks_view_more": "Zobraziť viac",
       "product_enquiry": "Dopyt na produkt",
       "submission_failed": "Odoslanie zlyhalo, skúste to znova",
       "submission_successfully": "Úspešne odoslané",
       "submit": "Odoslať",
+      "table_each_price": "{{price}} každý",
+      "table_each_price_ssr": "{{{priceDom}}} každý",
       "tax_included": "vrátane dane",
       "view_product_detail": "Zobraziť podrobnosti o produkte",
       "copy_button_text": "Kopírovať",
@@ -692,6 +721,7 @@
       "new_arrivals": "Nový prírastok",
       "new_products": "Od najbližšieho po najvzdialenejší podľa času vytvorenia",
       "no_product": "V kategórii nie sú žiadne produkty",
+      "price_break_tag": "Byť schopný vykonávať hromadné oceňovanie",
       "price_high_to_low": "Cena od najvyššiej po najnižšiu",
       "price_low_to_high": "Cena od najnižšej po najvyššiu",
       "product_has_been_removed": "Produkt je odstránený z regálov",

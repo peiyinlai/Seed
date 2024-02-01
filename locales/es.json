@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "La cantidad mínima al por mayor de este producto es de {{num}} piezas"
+        },
+        "most": {
+          "desc": "La cantidad máxima al por mayor de este producto es de {{num}} piezas"
+        },
+        "noIncrement": {
+          "desc": "La cantidad creciente de este producto es de {{num}} piezas"
+        }
+      }
+    },
     "cart": {
       "buy_now": "Comprar ahora",
       "cancel": "Cancelar",
@@ -502,6 +515,9 @@
       "form_error": "Consulta fallida",
       "orderId": "Solicitar ID",
       "orderId_error": "El ID de pedido no puede estar vacío",
+      "other_email": "E-mail",
+      "other_phone": "Número de celular",
+      "phone": "Teléfono móvil",
       "query_illegal": "orden no existe",
       "risk_black_user": "Esta cuenta está en riesgo",
       "risk_interception": "orden no existe",
@@ -642,6 +658,7 @@
       "country_region": "País/Región",
       "default_placeholder": "Selecciona {{attrName}}",
       "description": "Descripción",
+      "each_price": "{{price}}/pc",
       "email": "Dirección de correo electrónico",
       "enter_email_address": "Completa la dirección de correo electrónico",
       "enter_valid_email_address": "Completa la dirección de correo electrónico correcta",
@@ -663,14 +680,26 @@
       "load_more": "Mostrar más",
       "maximum_length_of_message": "La longitud de mensaje no debe exceder los 1500 caracteres",
       "message": "Mensaje",
+      "moq_increment": "Múltiplos de {{num}}",
+      "moq_increment_tips": "La cantidad añadida al carrito solo es compatible con múltiplos de {{num}}",
+      "moq_max_tips": "Debe comprar hasta {{num}} pcs para esta especificación",
+      "moq_maximum": "Comprar hasta {{num}}",
+      "moq_min_tips": "Debe comprar al menos {{num}} pcs para esta especificación",
+      "moq_minimum": "Comprar al menos {{num}}",
       "more_payment_options": "Más opciones de pago",
       "name": "Apellido y nombre",
       "optional": "Opcional",
       "phone_number": "Número de celular",
+      "price": "Precio",
+      "price_break_title": "Fijación de precio por lote",
+      "price_breaks_view_less": "Plegar",
+      "price_breaks_view_more": "Ver más",
       "product_enquiry": "Consultar artículos",
       "submission_failed": "Falló en enviar, inténtalo de nuevo",
       "submission_successfully": "Enviado con éxito",
       "submit": "Enviar",
+      "table_each_price": "{{price}}pc",
+      "table_each_price_ssr": "{{{priceDom}}}pc",
       "tax_included": "impuesto incluido",
       "view_product_detail": "Ver detalles del artículo",
       "copy_button_text": "Copiar",
@@ -692,6 +721,7 @@
       "new_arrivals": "Recién llegados",
       "new_products": "Por el tiempo de creación del cercano al lejano",
       "no_product": "No hay artículos en esta categoría",
+      "price_break_tag": "Fijación de precio por lote disponible",
       "price_high_to_low": "Precio: mayor a menor",
       "price_low_to_high": "Precio: menor a mayor",
       "product_has_been_removed": "El artículo actual está quitado de la estantería",

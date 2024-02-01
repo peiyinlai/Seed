@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "यह वस्तु केवल {{num}} की राशि पर बेची जाती है"
+        },
+        "most": {
+          "desc": "यह वस्तु अधिकतम राशि {{num}} के साथ बेची जाती है"
+        },
+        "noIncrement": {
+          "desc": "यह वस्तु केवल {{num}} की वृद्धि के साथ बेची जाती है"
+        }
+      }
+    },
     "cart": {
       "buy_now": "अभी खरीदें",
       "cancel": "रद्द करें",
@@ -502,6 +515,9 @@
       "form_error": "क्वेरी विफल",
       "orderId": "आदेश ID",
       "orderId_error": "ऑर्डर आईडी खाली नहीं हो सकती",
+      "other_email": "ईमेल पता",
+      "other_phone": "मोबाइल फोन नंबर",
+      "phone": "फोन संशोधित करें",
       "query_illegal": "आदेश मौजूद नहीं है",
       "risk_black_user": "यह खाता खतरे में है",
       "risk_interception": "आदेश मौजूद नहीं है",
@@ -642,6 +658,7 @@
       "country_region": "देश/क्षेत्र",
       "default_placeholder": "कृपया {{attrName}} चुनें",
       "description": "",
+      "each_price": "{{price}}/ प्रत्येक",
       "email": "ईमेल",
       "enter_email_address": "कृपया अपना पूरा ईमेल दर्ज करें",
       "enter_valid_email_address": "कृपया एक वैध ई-मेल पता डालें",
@@ -663,14 +680,26 @@
       "load_more": "और दिखाओ",
       "maximum_length_of_message": "आपके संदेश की अधिकतम लंबाई 1500 शब्दों से अधिक नहीं होनी चाहिए",
       "message": "आपका संदेश",
+      "moq_increment": "{{num}} का गुणक",
+      "moq_increment_tips": "अतिरिक्त खरीदी गई मात्रा केवल {{num}} के गुणकों में समर्थित है",
+      "moq_max_tips": "विनिर्देशन के लिए अधिकतम {{num}} टुकड़े खरीदे जा सकते हैं",
+      "moq_maximum": "अधिकतम खरीदारी {{num}}",
+      "moq_min_tips": "विनिर्देश {{num}} से अधिक खरीदा जाना चाहिए",
+      "moq_minimum": "न्यूनतम खरीदारी {{num}}",
       "more_payment_options": "अन्य भुगतान विकल्प",
       "name": "नाम",
       "optional": "वैकल्पिक",
       "phone_number": "फ़ोन नंबर",
+      "price": "मूल्य",
+      "price_break_title": "वॉल्यूम मूल्य निर्धारण",
+      "price_breaks_view_less": "छिपाना",
+      "price_breaks_view_more": "और दिखाओ",
       "product_enquiry": "उत्पाद जानकारी",
       "submission_failed": "जमा होना विफल, कृपया पुनः प्रयास करें",
       "submission_successfully": "सफलतापूर्वक जमा हुआ",
       "submit": "जमा करें",
+      "table_each_price": "{{price}} प्रत्येक",
+      "table_each_price_ssr": "{{{priceDom}}} प्रत्येक",
       "tax_included": "टैक्स शामिल",
       "view_product_detail": "उत्पाद विवरण देखें",
       "copy_button_text": "कॉपी करें",
@@ -692,6 +721,7 @@
       "new_arrivals": "नया आगमन",
       "new_products": "सृजन के समय के अनुसार निकटतम से सबसे दूर तक",
       "no_product": "श्रेणी में कोई उत्पाद नहीं हैं",
+      "price_break_tag": "वॉल्यूम मूल्य निर्धारण का संचालन करने में सक्षम होना",
       "price_high_to_low": "कीमत ज्यादा से कम",
       "price_low_to_high": "कीमत कम से ज्यादा",
       "product_has_been_removed": "उत्पाद को सूची से हटा दिया गया है",

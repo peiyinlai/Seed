@@ -22,7 +22,7 @@ defineCustomElement('product-form', () => {
     }
 
     onSubmitHandler() {
-      if (this.submitButton.classList.contains('disabled')) return;
+      if (this.submitButton.classList.contains('disabled') || this.submitButton.classList.contains('loading')) return;
 
       this.handleErrorMessage();
 

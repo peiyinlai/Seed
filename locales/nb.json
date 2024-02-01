@@ -36,6 +36,19 @@
     }
   },
   "cart": {
+    "b2b": {
+      "amount": {
+        "increase": {
+          "desc": "Denne solgte tingen starter med mengden {{num}}"
+        },
+        "most": {
+          "desc": "Denne solgte tingen bare med et maksimalt beløp på {{num}}"
+        },
+        "noIncrement": {
+          "desc": "Denne solgte tingen bare i trinn på {{num}}"
+        }
+      }
+    },
     "cart": {
       "buy_now": "KJØP NÅ",
       "cancel": "Annullere",
@@ -502,6 +515,9 @@
       "form_error": "Søket mislyktes",
       "orderId": "Bestillings ID",
       "orderId_error": "Bestillings-ID kan ikke være tom",
+      "other_email": "E-postadresse",
+      "other_phone": "Mobiltelefonnummer",
+      "phone": "Mobiltelefon",
       "query_illegal": "rekkefølgen eksisterer ikke",
       "risk_black_user": "Denne kontoen er i faresonen",
       "risk_interception": "rekkefølgen eksisterer ikke",
@@ -642,6 +658,7 @@
       "country_region": "Land/område",
       "default_placeholder": "Velg {{attrName}}",
       "description": "Beskrivelse",
+      "each_price": "{{price}}/ Hver",
       "email": "E-post",
       "enter_email_address": "Skriv inn e-postadressen din",
       "enter_valid_email_address": "Skriv inn en gyldig e-postadresse",
@@ -663,14 +680,26 @@
       "load_more": "Last mer",
       "maximum_length_of_message": "Den maksimale lengden på meldingen bør ikke inneholde mer enn 1500 ord",
       "message": "Meldingen din",
+      "moq_increment": "Multipler av {{num}}",
+      "moq_increment_tips": "Det ekstra inköp er bare kompatibelt med multipler av {{num}}",
+      "moq_max_tips": "Denne spesifikasjonen kan kjøp opptil {{num}} stykker",
+      "moq_maximum": "Maksimalt inköp {{num}}",
+      "moq_min_tips": "Denne spesifikasjonen krever kjøp av {{num}} ovenfor",
+      "moq_minimum": "Minimum kjøp {{num}}",
       "more_payment_options": "flere betalingsalternativer",
       "name": "Navn",
       "optional": "Valgfri",
       "phone_number": "Telefonnummer",
+      "price": "Pris",
+      "price_break_title": "Partipriser",
+      "price_breaks_view_less": "Skjul",
+      "price_breaks_view_more": "Vis mer",
       "product_enquiry": "Forespørsel om produkt",
       "submission_failed": "Innsending mislyktes",
       "submission_successfully": "Sendt inn",
       "submit": "Forelegge",
+      "table_each_price": "{{price}} Hver",
+      "table_each_price_ssr": "{{{priceDom}}} Hver",
       "tax_included": "avgift inkludert",
       "view_product_detail": "Vis produktdetaljer",
       "copy_button_text": "Kopiere",
@@ -692,6 +721,7 @@
       "new_arrivals": "Nyankomne",
       "new_products": "Fra det nærmeste til det fjerneste fra skapelses øyeblikket",
       "no_product": "dessverre er det ikke noe produkt i denne samlingen",
+      "price_break_tag": "Partipriser tilgjengelig",
       "price_high_to_low": "Pris høy til lav",
       "price_low_to_high": "Pris lav til høy",
       "product_has_been_removed": "Produktet fjernes fra hyller",

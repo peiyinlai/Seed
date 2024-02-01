@@ -1,5 +1,4 @@
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
-<script src="{{asset_url 'section-slideshow.js'}}" defer></script>
 <link rel="stylesheet" href="{{asset_url 'section-collection-list.css'}}" />
 <link rel="stylesheet" href="{{asset_url 'component-card.css'}}" />
 {{snippet
@@ -177,7 +176,7 @@
       "id": "desktop_grid_cols",
       "type": "range",
       "label": "t:sections.collection-list.settings.desktop_grid_cols.label",
-      "default": "3",
+      "default": 3,
       "min": 1,
       "max": 5,
       "step": 1
@@ -216,7 +215,8 @@
       "label": "t:sections.collection-list.settings.max_in_mobile.label",
       "default": 3,
       "max": 8,
-      "min": 3
+      "min": 3,
+      "step": 1
     },
     {
       "type": "text",
