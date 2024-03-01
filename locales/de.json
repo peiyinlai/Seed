@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Es gibt keine Blogbeiträge in diesem Blog",
       "readmore": "Mehr sehen",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Mehr ansehen"
     },
     "comment": {
       "comment": "Kommentar",
@@ -233,12 +234,14 @@
       "phone": "Mobiltelefon",
       "reset_password_error_hint": "Bitte geben Sie zuerst E-Mail oder Mobiltelefon an",
       "revoke": "Löschen abbrechen",
+      "revoke_btn": "Löschvorgang abbrechen",
       "revoke_message": "Ihr Konto wird gelöscht, alle Kontodaten werden am {{time}} gelöscht, Sie können diesen Vorgang vor diesem Datum abbrechen",
       "save_btn": "SPEICHERN",
       "select__date": "Datum auswählen",
       "subscribe_confirm_tip": "Vielen Dank für Ihr Abonnement.",
       "timeout_tip": "Der Vorgang ist abgelaufen, bitte erneut überprüfen",
       "unknow_error_tip": "Es ist ein Fehler aufgetreten, versuchen Sie es später erneut",
+      "unregister": "Account löschen",
       "username": "Name",
       "verify_email_message": "Bevor Sie Ihr Konto löschen können, müssen wir Ihre Identität überprüfen.Ein E-Mail mit dem Bestätigungscode wird an Ihre angegebene E-Mail-Adresse {{email}} gesendet.",
       "verify_phone_message": "Bevor Sie Ihr Konto löschen können, müssen wir Ihre Identität überprüfen.Eine Bestätigung per SMS wird an Ihr Handy {{phone}} gesendet",
@@ -648,6 +651,20 @@
       "load_more_items": "Laden von {{current_offset}} ~ {{last_current_offset}} / {{total}} Elementen",
       "unavailable": "Nicht verfügbar"
     },
+    "giftcard": {
+      "seoTitle": "Das Guthaben auf Ihrer Geschenkkarte {{ shop }} beträgt {{ value }}!",
+      "balance": "Wert",
+      "buy_giftcard": "Kaufen Sie eine Geschenkkarte",
+      "description": "Hier ist Ihre {{price}} Geschenkkarte für {{shop}}!",
+      "expired_date": "Verfallsdatum",
+      "invalid_tip": "Ihre Geschenkkarte ist ungültig, bitte kaufen Sie eine andere",
+      "permanent": "Dauerhaft",
+      "receive_at": "Läuft ab am",
+      "receive_tip": "Hier erhalten Sie bitte Ihre Geschenkkarte",
+      "title": "Ihre Geschenkkarte",
+      "use_giftcard": "Geschenkkarte verwenden",
+      "use_giftcard_tip": "Sie können die Geschenkkartennummer an der Kasse zum Abzug eingeben"
+    },
     "product_details": {
       "activity_toast_price_limit": "Der Aktionspreis dieses Artikels gilt nur für den Kauf von {{num}} Stück",
       "activity_toast_product__limit": "Maximal können Sie {{stock}} Artikel zum Aktionspreis gleichzeitig kaufen",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Zuletzt angesehen"
-    },
-    "giftcard": {
-      "balance": "Wert",
-      "buy_giftcard": "Kaufen Sie eine Geschenkkarte",
-      "description": "Hier ist Ihre {{price}} Geschenkkarte für {{shop}}!",
-      "expired_date": "Verfallsdatum",
-      "invalid_tip": "Ihre Geschenkkarte ist ungültig, bitte kaufen Sie eine andere",
-      "permanent": "Dauerhaft",
-      "receive_at": "Läuft ab am",
-      "receive_tip": "Hier erhalten Sie bitte Ihre Geschenkkarte",
-      "title": "Ihre Geschenkkarte",
-      "use_giftcard": "Geschenkkarte verwenden",
-      "use_giftcard_tip": "Sie können die Geschenkkartennummer an der Kasse zum Abzug eingeben"
     }
   },
   "reduction_code": {

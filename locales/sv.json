@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Det finns inga blogginlägg i den här bloggen.",
       "readmore": "Läs mer",
-      "title": "Blogg"
+      "title": "Blogg",
+      "view_more": "Visa mer"
     },
     "comment": {
       "comment": "Kommentar",
@@ -233,12 +234,14 @@
       "phone": "Mobiltelefon",
       "reset_password_error_hint": "Aktivera först e-postmeddelandet eller mobiltelefonen",
       "revoke": "Avbryt avslutning",
+      "revoke_btn": "Avbryt utloggning",
       "revoke_message": "Det här kontot håller på att stängas, kontodata kommer att raderas vid {{time}}, du kan avbryta processen före det datumet",
       "save_btn": "SPARA",
       "select__date": "Välj ett Datum",
       "subscribe_confirm_tip": "Tack för prenumerationen.",
       "timeout_tip": "Driften avbröts, Kontrollera att din igen",
       "unknow_error_tip": "Undantag i tjänsten, försök igen senare",
+      "unregister": "Konto utloggning",
       "username": "Namn",
       "verify_email_message": "Före avslutning av konto måste vi verifiera er identitet\nEtt verifieringsmail kommer skickas till er epost {{email}}",
       "verify_phone_message": "Före avslutning av kontot måste vi verifiera din identitet\nVi kommer skicka ett verifieringsmedelande till er mobilnummer {{phone}}",
@@ -648,6 +651,20 @@
       "load_more_items": "Laddar {{current_offset}} ~ {{last_current_offset}} av {{total}} saker",
       "unavailable": "inte tillgänglig"
     },
+    "giftcard": {
+      "seoTitle": "Din {{ shop }} presentkort balans är {{ value }}!",
+      "balance": "Balans",
+      "buy_giftcard": "Köp ett presentkort",
+      "description": "Här är ditt presentkort {{price}} för {{shop}}!",
+      "expired_date": "Sista giltighetsdatum",
+      "invalid_tip": "Ditt presentkort är inte giltigt, köp ett annat",
+      "permanent": "Permanent",
+      "receive_at": "Utgår i",
+      "receive_tip": "Få ditt presentkort",
+      "title": "Ditt presentkort",
+      "use_giftcard": "Rädda ett presentkort",
+      "use_giftcard_tip": "Du kan ange ditt presentkortnummer vid kassan för att dra av"
+    },
     "product_details": {
       "activity_toast_price_limit": "Den maximala tillåtna mängden för denna begränsade produkt är {{num}}",
       "activity_toast_product__limit": "Köp begränsat till {{stock}} kampanjprodukt",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Senaste Konsulterade Produkter"
-    },
-    "giftcard": {
-      "balance": "Balans",
-      "buy_giftcard": "Köp ett presentkort",
-      "description": "Här är ditt presentkort {{price}} för {{shop}}!",
-      "expired_date": "Sista giltighetsdatum",
-      "invalid_tip": "Ditt presentkort är inte giltigt, köp ett annat",
-      "permanent": "Permanent",
-      "receive_at": "Utgår i",
-      "receive_tip": "Få ditt presentkort",
-      "title": "Ditt presentkort",
-      "use_giftcard": "Rädda ett presentkort",
-      "use_giftcard_tip": "Du kan ange ditt presentkortnummer vid kassan för att dra av"
     }
   },
   "reduction_code": {

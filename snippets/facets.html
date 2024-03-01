@@ -111,7 +111,7 @@
                     </summary>
                     <div class="facets__price-content {{#if ../filter_type '==' 'horizontal' }}facets__display global-modal-border-shadow{{else}}facets__display-vertical{{/if}}">
                       <div class="facets__header">
-                        <div class="facets__selected">{{t 'products.facets.max_price' price=(money filter.range_max)}}</div>
+                        <div class="facets__selected">{{{t 'products.facets.max_price' price=(money filter.range_max)}}}</div>
                         {{#if ../filter_type '!=' 'vertical'}}
                           <facet-remove>
                             <a href="{{filter.url_to_remove}}" class="facets__reset body4">
@@ -289,7 +289,7 @@
                             {{filter.label}}
                           </button>
                           <div style="margin-bottom:20px">
-                            {{t "products.facets.max_price" price=(money filter.range_max)}}
+                            {{{t "products.facets.max_price" price=(money filter.range_max)}}}
                           </div>
 
                           {{snippet

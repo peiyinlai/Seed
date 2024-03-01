@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Na tomto blogu nejsou žádné blogové příspěvky.",
       "readmore": "Přečtěte si více",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Zobrazit více"
     },
     "comment": {
       "comment": "Komentář",
@@ -233,12 +234,14 @@
       "phone": "Mobilní Telefon",
       "reset_password_error_hint": "Nejprve prosím svažte e-mail nebo mobilní telefon",
       "revoke": "Zrušit uzavření",
+      "revoke_btn": "Zrušit odhlášení",
       "revoke_message": "Tento účet je v procesu uzavření, data účtu budou smazána na {{time}}, proces můžete zrušit před tímto datem",
       "save_btn": "ULOŽIT",
       "select__date": "Vyberte Datum",
       "subscribe_confirm_tip": "Děkujeme za předplatné.",
       "timeout_tip": "Časový limit operace vypršel, zkontrolujte to znovu",
       "unknow_error_tip": "Výjimka služby, zkuste to znovu později",
+      "unregister": "Odhlášení z účtu",
       "username": "Jméno",
       "verify_email_message": "Před uzavřením účtu, musíme ověřit vaši totožnost\nVáš e-mail {{email}} obdrží ověřovací e-mail",
       "verify_phone_message": "Před uzavřením účtu, musíme ověřit vaši totožnost\nVáš mobilní telefon {{phone}} obdrží ověřovací zprávu",
@@ -648,6 +651,20 @@
       "load_more_items": "Načítání {{current_offset}} ~ {{last_current_offset}} z {{total}} položek",
       "unavailable": "nedostupný"
     },
+    "giftcard": {
+      "seoTitle": "Zůstatek vaše {{ shop }} dárkových karet je {{ value }}!",
+      "balance": "Zůstatek",
+      "buy_giftcard": "Koupit dárkovou kartu",
+      "description": "Zde je vaše {{price}} dárková karta pro {{shop}}!",
+      "expired_date": "Datum expirace",
+      "invalid_tip": "Vaše dárková karta je neplatná, kupte si prosím další",
+      "permanent": "Trvalý",
+      "receive_at": "Vypršela v",
+      "receive_tip": "Prosím, obdržíte svou dárkovou kartu",
+      "title": "Vaše dárková karta",
+      "use_giftcard": "Použijte dárkovou kartu",
+      "use_giftcard_tip": "Číslo dárkové karty můžete zadat při pokladně pro odpočet"
+    },
     "product_details": {
       "activity_toast_price_limit": "Maximální povolené množství pro tento omezený produkt je {{num}}",
       "activity_toast_product__limit": "Nákup omezen na {{stock}} propagační produkt",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Nedávno Prohlížené Výrobky"
-    },
-    "giftcard": {
-      "balance": "Zůstatek",
-      "buy_giftcard": "Koupit dárkovou kartu",
-      "description": "Zde je vaše {{price}} dárková karta pro {{shop}}!",
-      "expired_date": "Datum expirace",
-      "invalid_tip": "Vaše dárková karta je neplatná, kupte si prosím další",
-      "permanent": "Trvalý",
-      "receive_at": "Vypršela v",
-      "receive_tip": "Prosím, obdržíte svou dárkovou kartu",
-      "title": "Vaše dárková karta",
-      "use_giftcard": "Použijte dárkovou kartu",
-      "use_giftcard_tip": "Číslo dárkové karty můžete zadat při pokladně pro odpočet"
     }
   },
   "reduction_code": {

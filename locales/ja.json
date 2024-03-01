@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "このブログにはまだ投稿がありません",
       "readmore": "もっと見る",
-      "title": "ブログ"
+      "title": "ブログ",
+      "view_more": "さらに表示"
     },
     "comment": {
       "comment": "コメント",
@@ -233,12 +234,14 @@
       "phone": "携帯電話",
       "reset_password_error_hint": "先にメールまたは携帯電話を関連付けてください",
       "revoke": "アカウントの削除をキャンセルする",
+      "revoke_btn": "アカウント削除を取り下げる",
       "revoke_message": "本アカウントはキャンセル中となります。アカウントデータは{{time}}に削除されます。このキャンセルプロセスは、この日付より前にキャンセルできます。",
       "save_btn": "セーブ",
       "select__date": "日付を選択してください",
       "subscribe_confirm_tip": "サブスクしていただきありがとうございます。",
       "timeout_tip": "操作がタイムアウトしました。もう一度検証してください",
       "unknow_error_tip": "サーバーエラー、後でもう一度試してください",
+      "unregister": "アカウント削除",
       "username": "名前",
       "verify_email_message": "アカウントをキャンセルする前に、本人確認を行う必要があります。メールアドレス {{email}} に確認コードが届きます",
       "verify_phone_message": "アカウントをキャンセルする前に、本人確認を行う必要があります。お使いの携帯電話{{phone}}に確認用SMSが届きます",
@@ -648,6 +651,20 @@
       "load_more_items": "{{current_offset}} ~ {{last_current_offset}} / {{total}} 点のアイテムを読み込み中",
       "unavailable": "利用不可"
     },
+    "giftcard": {
+      "seoTitle": "あなたの {{ shop }} ギフトカードの残高は {{ value }} です。",
+      "balance": "バランス",
+      "buy_giftcard": "ギフトカードを購入する",
+      "description": "こちらが {{shop}} の金額 {{price}} のギフトカードです",
+      "expired_date": "有効期限",
+      "invalid_tip": "無効なギフトカードです。別のギフトカードを購入してください",
+      "permanent": "永続",
+      "receive_at": "に期限切れ",
+      "receive_tip": "ギフトカードを受け取ってください",
+      "title": "ギフトカード",
+      "use_giftcard": "ギフトカードを使う",
+      "use_giftcard_tip": "決済ページでギフトカード番号を入力して使用することができます"
+    },
     "product_details": {
       "activity_toast_price_limit": "本割引商品は{{num}}点までのご購入とさせていただきます",
       "activity_toast_product__limit": "最大{{stock}}点の割引商品を同時に購入できます",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "最近チェックした商品"
-    },
-    "giftcard": {
-      "balance": "バランス",
-      "buy_giftcard": "ギフトカードを購入する",
-      "description": "こちらが {{shop}} の金額 {{price}} のギフトカードです",
-      "expired_date": "有効期限",
-      "invalid_tip": "無効なギフトカードです。別のギフトカードを購入してください",
-      "permanent": "永続",
-      "receive_at": "に期限切れ",
-      "receive_tip": "ギフトカードを受け取ってください",
-      "title": "ギフトカード",
-      "use_giftcard": "ギフトカードを使う",
-      "use_giftcard_tip": "決済ページでギフトカード番号を入力して使用することができます"
     }
   },
   "reduction_code": {

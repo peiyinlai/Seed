@@ -596,3 +596,27 @@ window.Shopline.loadFeatures(
     defineCustomElement('modify-customer-modal', () => ModifyCustomerPhoneOrEmailModal);
   },
 );
+
+defineCustomElement(
+  'unsubscribe-email-form',
+  () =>
+    class UnsubscribeEmailForm extends HTMLElement {
+      constructor() {
+        super();
+
+        this.form = this.querySelector('form');
+        this.submitButton = this.querySelector('button[type="submit"]');
+
+        if (this.form && this.submitButton) {
+          this.form.addEventListener('change', this.updateSubmitButtonStatus.bind(this));
+        }
+      }
+
+      updateSubmitButtonStatus() {
+        const formData = new FormData(this.form);
+        if (formData.get('customer[unsubscribe_reason]')) {
+          this.submitButton.disabled = false;
+        }
+      }
+    },
+);

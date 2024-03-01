@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "V tem blogu ni objav v blogu.",
       "readmore": "Preberi več",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Pokaži več"
     },
     "comment": {
       "comment": "Komentiraj",
@@ -233,12 +234,14 @@
       "phone": "Mobilni telefon",
       "reset_password_error_hint": "Najprej se povežite z elektronski ali mobilnim telefonom",
       "revoke": "Prekliči zapiranje",
+      "revoke_btn": "Prekliči odjavo",
       "revoke_message": "Ta račun je v postopku zapiranja, podatki o računu bodo izbrisani na dan {{time}}, postopek lahko prekličete pred tem datumom",
       "save_btn": "SHRANI",
       "select__date": "Izberite datum",
       "subscribe_confirm_tip": "Zahvaljujemo se vam za naročnino.",
       "timeout_tip": "Postopek se iztekel, prosimo, potrdite znova",
       "unknow_error_tip": "Izjema storitve, poskusite znova pozneje",
+      "unregister": "Odjava iz računa",
       "username": "Ime",
       "verify_email_message": "Pred zaprtjem računa moramo preveriti vašo identiteto\nNa vaš elektronski naslov {{email}} boste prejeli e-poštno sporočilo za preverjanje",
       "verify_phone_message": "Pred zaprtjem računa moramo preveriti vašo identiteto\nNa vaš mobilni telefon {{phone}} boste prejeli sporočilo za preverjanje",
@@ -648,6 +651,20 @@
       "load_more_items": "Nalaganje {{current_offset}} ~ {{last_current_offset}} iz {{total}} predmetov",
       "unavailable": "ni na voljo"
     },
+    "giftcard": {
+      "seoTitle": "Vaše stanje darilne kartice {{ shop }} je {{ value }}!",
+      "balance": "Stanje",
+      "buy_giftcard": "Kupite darilno kartico",
+      "description": "Tukaj je vaša darilna kartica {{price}} za {{shop}}!",
+      "expired_date": "Datum poteka veljavnosti",
+      "invalid_tip": "Vaša darilna kartica je neveljavna, prosimo, kupite drugo",
+      "permanent": "Trajno",
+      "receive_at": "Prenehanje veljavnosti",
+      "receive_tip": "Prosimo, prejmite vašo darilno kartico",
+      "title": "Vaša darilna kartica",
+      "use_giftcard": "Uporabite darilno kartico",
+      "use_giftcard_tip": "Na blagajni lahko vnesete številko darilne kartice za odbitek"
+    },
     "product_details": {
       "activity_toast_price_limit": "Največja dovoljena količina za ta omejeni izdelek je {{num}}",
       "activity_toast_product__limit": "Nakup je omejen na {{stock}} promocijski izdelek",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Nedavno pregledani izdelki"
-    },
-    "giftcard": {
-      "balance": "Stanje",
-      "buy_giftcard": "Kupite darilno kartico",
-      "description": "Tukaj je vaša darilna kartica {{price}} za {{shop}}!",
-      "expired_date": "Datum poteka veljavnosti",
-      "invalid_tip": "Vaša darilna kartica je neveljavna, prosimo, kupite drugo",
-      "permanent": "Trajno",
-      "receive_at": "Prenehanje veljavnosti",
-      "receive_tip": "Prosimo, prejmite vašo darilno kartico",
-      "title": "Vaša darilna kartica",
-      "use_giftcard": "Uporabite darilno kartico",
-      "use_giftcard_tip": "Na blagajni lahko vnesete številko darilne kartice za odbitek"
     }
   },
   "reduction_code": {

@@ -3694,7 +3694,7 @@
         "cart_type": {
           "label": "加购方式",
           "options__0": {
-            "label": "mini购物车"
+            "label": "抽屉购物车"
           },
           "options__1": {
             "label": "进入购物车页"

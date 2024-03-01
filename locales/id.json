@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Di Blog ini tidak ada artikel blog.",
       "readmore": "Lihat selanjutnya",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Lihat lebih banyak"
     },
     "comment": {
       "comment": "Komentar",
@@ -233,12 +234,14 @@
       "phone": "HP",
       "reset_password_error_hint": "Silakan mengikat email atau telepon dulu",
       "revoke": "Batalkan pembatalan",
+      "revoke_btn": "Membatalkan pembatalan akun",
       "revoke_message": "Akun sedang dalam proses dibatalkan, data akun akan dihapus pada {{time}}, Anda dapat membatalkan proses pembatalan sebelum tanggal ini",
       "save_btn": "Simpan",
       "select__date": "Silakan pilih tanggal",
       "subscribe_confirm_tip": "Terima kasih bawah Anda telah berlangganan.",
       "timeout_tip": "Operasi habis waktunya, silakan autentikasi lagi",
       "unknow_error_tip": "Layanan abnormal, silakan coba lagi nanti",
+      "unregister": "Pembatalan akun",
       "username": "Nama",
       "verify_email_message": "Kami perlu memverifikasi identitas Anda sebelum kami melakukan operasi penghapusan\nAlamat email Anda {{email}} akan menerima email kode verifikasi",
       "verify_phone_message": "Kami perlu memverifikasi identitas Anda sebelum kami melakukan operasi penghapusan\nTelepon Anda {{phone}} akan menerima email kode verifikasi",
@@ -648,6 +651,20 @@
       "load_more_items": "Memuat item {{current_offset}} ~ {{last_current_offset}} / {{total}}",
       "unavailable": "Tidak tersedia"
     },
+    "giftcard": {
+      "seoTitle": "Saldo kartu hadiah {{ shop }} Anda adalah {{ value }}！",
+      "balance": "Nilai",
+      "buy_giftcard": "Membeli kartu hadiah",
+      "description": "Nilai kartu hadiah {{price}} Anda untuk {{shop}}!",
+      "expired_date": "Tanggal kedaluwarsa",
+      "invalid_tip": "Kartu hadiah Anda tidak valid, silakan beli yang lain",
+      "permanent": "Abadi",
+      "receive_at": "Kedaluwarsa pada",
+      "receive_tip": "Silakan terima kartu hadiah Anda",
+      "title": "Kartu hadiah Anda",
+      "use_giftcard": "Menggunakan kartu hadiah",
+      "use_giftcard_tip": "Anda dapat memasukkan nomor kartu hadiah saat checkout untuk pengurangan"
+    },
     "product_details": {
       "activity_toast_price_limit": "Kupon produk ini hanya mendukung beli {{num}} buah",
       "activity_toast_product__limit": "Pada waktu bersamaan maksimum dapat beli {{stock}} produk dengan harga diskon",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Produk yang baru dilihat"
-    },
-    "giftcard": {
-      "balance": "Nilai",
-      "buy_giftcard": "Membeli kartu hadiah",
-      "description": "Nilai kartu hadiah {{price}} Anda untuk {{shop}}!",
-      "expired_date": "Tanggal kedaluwarsa",
-      "invalid_tip": "Kartu hadiah Anda tidak valid, silakan beli yang lain",
-      "permanent": "Abadi",
-      "receive_at": "Kedaluwarsa pada",
-      "receive_tip": "Silakan terima kartu hadiah Anda",
-      "title": "Kartu hadiah Anda",
-      "use_giftcard": "Menggunakan kartu hadiah",
-      "use_giftcard_tip": "Anda dapat memasukkan nomor kartu hadiah saat checkout untuk pengurangan"
     }
   },
   "reduction_code": {

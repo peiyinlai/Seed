@@ -62,13 +62,13 @@
               <li>
                 <span>{{ item.variant.quantity_rule.min }}+</span>
                 {{ assign "price" (money_with_currency item.variant.price) }}
-                <span data-text="{{{t "products.product_details.each_price" price=price}}}">{{{t "products.product_details.each_price" price=price}}}</span>
+                <span data-text="{{t "products.product_details.each_price" price=price}}">{{{t "products.product_details.each_price" price=price}}}</span>
               </li>
               {{#each item.variant.quantity_price_breaks as |price_break|}}
                 {{assign "price_break_price" (money_with_currency price_break.price) }}
                 <li>
                   <span>{{ price_break.minimum_quantity }}+</span>
-                  <span data-text="{{{t "products.product_details.each_price" price=price_break_price}}}">{{{t "products.product_details.each_price" price=price_break_price}}}</span>
+                  <span data-text="{{t "products.product_details.each_price" price=price_break_price}}">{{{t "products.product_details.each_price" price=price_break_price}}}</span>
                 </li>
               {{/each}}
             </ul>

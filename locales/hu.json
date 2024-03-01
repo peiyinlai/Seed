@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Nincsenek blogbejegyzések ebben a blogban.",
       "readmore": "Olvass tovább",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Többet mutasson"
     },
     "comment": {
       "comment": "Megjegyzés",
@@ -233,12 +234,14 @@
       "phone": "Mobiltelefon",
       "reset_password_error_hint": "Kérjük, csatoljon e-mailt vagy a mobiltelefont",
       "revoke": "Lezárás megszakítása",
+      "revoke_btn": "Kijelentkezés megszakítása",
       "revoke_message": "Ennek a fióknak a lezárása folyamatban van, az Ön fiókadatait a következő időpontban töröljük: {{time}}, a folyamatot ezen időpont előtt megszakíthatja",
       "save_btn": "MENTÉS",
       "select__date": "Dátum választás",
       "subscribe_confirm_tip": "Köszönjük, hogy feliratkozott.",
       "timeout_tip": "A művelet időtúllépése, újraértékelése",
       "unknow_error_tip": "Szolgáltatás kimaradás. Kérjük, később próbálja újra.",
+      "unregister": "Kijelentkezés a fiókból",
       "username": "Név",
       "verify_email_message": "A fiók lezárása előtt ellenőriznünk kell személyazonosságát\nAz Ön e-mail-címére {{email}} küldünk egy ellenőrző e-mailt",
       "verify_phone_message": "A fiók lezárása előtt ellenőriznünk kell személyazonosságát\nAz Ön mobiltelefonjára {{phone}} küldünk egy ellenőrző üzenetet",
@@ -648,6 +651,20 @@
       "load_more_items": "{{total}} tételből {{current_offset}} ~ {{last_current_offset}} betöltése",
       "unavailable": "nem elérhető el"
     },
+    "giftcard": {
+      "seoTitle": "Az Ön {{ shop }} ajándékkártya egyenlege {{ value }}!",
+      "balance": "Egyenleg",
+      "buy_giftcard": "Vásároljon ajándékkártyát",
+      "description": "Itt van az Ön {{price}} ajándékkártyája {{shop}} számára!",
+      "expired_date": "Lejárat dátuma",
+      "invalid_tip": "Ajándékkártyája érvénytelen, kérjük, vegyen másikat",
+      "permanent": "Állandó",
+      "receive_at": "Lejárt",
+      "receive_tip": "Kérjük, vegye át ajándékkártyáját",
+      "title": "Az Ön ajándékkártyája",
+      "use_giftcard": "Használja fel az ajándékkártyát",
+      "use_giftcard_tip": "Levonáshoz fizetéskor adja meg az ajándékkártya számát"
+    },
     "product_details": {
       "activity_toast_price_limit": "Ennél a korlátozott terméknél a megengedett maximális mennyiség {{num}}",
       "activity_toast_product__limit": "A vásárlás korlátozott {{stock}} promóciós termékre",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Nemrég megtekintett termékek"
-    },
-    "giftcard": {
-      "balance": "Egyenleg",
-      "buy_giftcard": "Vásároljon ajándékkártyát",
-      "description": "Itt van az Ön {{price}} ajándékkártyája {{shop}} számára!",
-      "expired_date": "Lejárat dátuma",
-      "invalid_tip": "Ajándékkártyája érvénytelen, kérjük, vegyen másikat",
-      "permanent": "Állandó",
-      "receive_at": "Lejárt",
-      "receive_tip": "Kérjük, vegye át ajándékkártyáját",
-      "title": "Az Ön ajándékkártyája",
-      "use_giftcard": "Használja fel az ajándékkártyát",
-      "use_giftcard_tip": "Levonáshoz fizetéskor adja meg az ajándékkártya számát"
     }
   },
   "reduction_code": {

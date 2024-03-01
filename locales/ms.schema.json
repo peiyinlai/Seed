@@ -3694,7 +3694,7 @@
         "cart_type": {
           "label": "Kaedah pembelian tambahan",
           "options__0": {
-            "label": "Troli beli-belah mini"
+            "label": "keranjang belanja laci"
           },
           "options__1": {
             "label": "Masuk ke halaman troli beli-belah"

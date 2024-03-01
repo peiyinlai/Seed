@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Det er ingen blogginnlegg i denne bloggen.",
       "readmore": "Les mer",
-      "title": "Blogg"
+      "title": "Blogg",
+      "view_more": "Vis mer"
     },
     "comment": {
       "comment": "Kommentar",
@@ -233,12 +234,14 @@
       "phone": "Mobiltelefon",
       "reset_password_error_hint": "Vennligst bind e-post eller mobiltelefon først",
       "revoke": "Annullere lukket",
+      "revoke_btn": "Avbryt logg ut",
       "revoke_message": "Denne kontoen er lukket, kontodata slettes {{time}}, du kan avbryte prosedyren før denne datoen",
       "save_btn": "LAGRE",
       "select__date": "Velg Dato",
       "subscribe_confirm_tip": "Takk for abonnement.",
       "timeout_tip": "Operasjonen tidsavbrutt, sjekk igjen",
       "unknow_error_tip": "Unntak i tjenesten. Prøv på nytt senere",
+      "unregister": "Konto logg ut",
       "username": "Navn",
       "verify_email_message": "Før du avslutter kontoen din, må vi bekrefte identiteten din\nE-post {{email}} mottar bekreftelses-e-post",
       "verify_phone_message": "Før du avslutter kontoen din, må vi bekrefte identiteten din\nMobiltelefonen {{phone}} mottar bekreftelses melding",
@@ -648,6 +651,20 @@
       "load_more_items": "Lasting {{current_offset}} ~ {{last_current_offset}} av {{total}} varer",
       "unavailable": "utilgjengelig"
     },
+    "giftcard": {
+      "seoTitle": "Din {{ shop }} gavekort balanse er {{ value }}!",
+      "balance": "Saldo",
+      "buy_giftcard": "Kjøp et gavekort",
+      "description": "Her er gavekort ditt {{price}} for {{shop}}!",
+      "expired_date": "Utløpsdato",
+      "invalid_tip": "Gavekort ditt er ikke gyldig, kjøp et nytt",
+      "permanent": "Permanent",
+      "receive_at": "Utløpt kl",
+      "receive_tip": "Få gavekort ditt",
+      "title": "Ditt gavekort",
+      "use_giftcard": "Lagre et gavekort",
+      "use_giftcard_tip": "Du kan oppgi gavekort nummer ditt i kassen for å trekke fra"
+    },
     "product_details": {
       "activity_toast_price_limit": "Maksimalt antall tillatt for dette begrensede produktet er {{num}}",
       "activity_toast_product__limit": "Kjøp begrenset til {{stock}}-kampanjeprodukt",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Nylig Viste Produkter"
-    },
-    "giftcard": {
-      "balance": "Saldo",
-      "buy_giftcard": "Kjøp et gavekort",
-      "description": "Her er gavekort ditt {{price}} for {{shop}}!",
-      "expired_date": "Utløpsdato",
-      "invalid_tip": "Gavekort ditt er ikke gyldig, kjøp et nytt",
-      "permanent": "Permanent",
-      "receive_at": "Utløpt kl",
-      "receive_tip": "Få gavekort ditt",
-      "title": "Ditt gavekort",
-      "use_giftcard": "Lagre et gavekort",
-      "use_giftcard_tip": "Du kan oppgi gavekort nummer ditt i kassen for å trekke fra"
     }
   },
   "reduction_code": {

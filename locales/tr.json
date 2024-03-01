@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Bu blogda blog yazısı yok.",
       "readmore": "Devamını oku",
-      "title": "Blog"
+      "title": "Blog",
+      "view_more": "Daha fazla göster"
     },
     "comment": {
       "comment": "Yorum",
@@ -233,12 +234,14 @@
       "phone": "Cep telefonu",
       "reset_password_error_hint": "Lütfen önce e-postayı veya cep telefonunu bağlayın",
       "revoke": "Kapatmayı iptal edin",
+      "revoke_btn": "Oturumu kapatmayı iptal et",
       "revoke_message": "Bu hesap kapatılmak üzere işleme alınmış durumdadır, hesap verileriniz {{time}} tarihinde silinecektir, bu tarihten önce işlemi iptal edebilirsiniz",
       "save_btn": "KAYDET",
       "select__date": "Tarih seç",
       "subscribe_confirm_tip": "Abone olduğunuz için teşekkür ederiz.",
       "timeout_tip": "İşlem zaman aşımına uğradı, lütfen tekrar doğrulayın",
       "unknow_error_tip": "Servis istisnası, sonra tekrar deneyin",
+      "unregister": "Hesap oturumu kapatma",
       "username": "Ad",
       "verify_email_message": "Hesabı kapatmadan önce, kimliğinizi doğrulamamız gerekiyor\n{{email}} e-posta adresinize bir doğrulama e-postası alacaksınız",
       "verify_phone_message": "Hesabı kapatmadan önce, kimliğinizi doğrulamamız gerekiyor\n{{phone}} numaralı cep telefonunuza bir doğrulama mesajı alacaksınız",
@@ -648,6 +651,20 @@
       "load_more_items": "{{total}} öğeden {{current_offset}} ~ {{last_current_offset}} yükleniyor",
       "unavailable": "kullanılamıyor"
     },
+    "giftcard": {
+      "seoTitle": "{{ shop }} hediye kartı bakiyeniz {{ value }}!",
+      "balance": "Bakiye",
+      "buy_giftcard": "Hediye kartı satın al",
+      "description": "{{shop}} için {{price}} hediye kartınız burada!",
+      "expired_date": "Son kullanım tarihi",
+      "invalid_tip": "Hediye kartınız geçersiz, lütfen yeni bir kart satın alın",
+      "permanent": "Sürekli",
+      "receive_at": "Sona erme tarihi",
+      "receive_tip": "Lütfen hediye kartınızı alın",
+      "title": "Hediye kartınız",
+      "use_giftcard": "Hediye kartı kullan",
+      "use_giftcard_tip": "İndirim için ödeme aşamasında hediye kartı numarasını girebilirsiniz"
+    },
     "product_details": {
       "activity_toast_price_limit": "Bu sınırlı ürün için izin verilen maksimum miktar {{num}}",
       "activity_toast_product__limit": "Satın alma, {{stock}} promosyon ürünüyle sınırlıdır",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Son Görüntülenen Ürünler"
-    },
-    "giftcard": {
-      "balance": "Bakiye",
-      "buy_giftcard": "Hediye kartı satın al",
-      "description": "{{shop}} için {{price}} hediye kartınız burada!",
-      "expired_date": "Son kullanım tarihi",
-      "invalid_tip": "Hediye kartınız geçersiz, lütfen yeni bir kart satın alın",
-      "permanent": "Sürekli",
-      "receive_at": "Sona erme tarihi",
-      "receive_tip": "Lütfen hediye kartınızı alın",
-      "title": "Hediye kartınız",
-      "use_giftcard": "Hediye kartı kullan",
-      "use_giftcard_tip": "İndirim için ödeme aşamasında hediye kartı numarasını girebilirsiniz"
     }
   },
   "reduction_code": {

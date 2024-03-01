@@ -9,7 +9,8 @@
     "blog_list": {
       "empty_description": "Šiame tinklaraštyje nėra jokių tinklaraščio įrašų.",
       "readmore": "Skaityti daugiau",
-      "title": "Dienoraštis"
+      "title": "Dienoraštis",
+      "view_more": "Rodyti daugiau"
     },
     "comment": {
       "comment": "komentuoti",
@@ -233,12 +234,14 @@
       "phone": "Mobilusis telefonas",
       "reset_password_error_hint": "Prašome pirma susieti el. paštą ar mobilųjį telefoną",
       "revoke": "Atšaukti uždarymą",
+      "revoke_btn": "Atšaukti išėjimą",
       "revoke_message": "Šiai paskyrai taikoma uždarymo procedūra, paskyros duomenys bus pašalintos {{time}}, galite atšaukti procedūrą prieš tą datą",
       "save_btn": "IŠSAUGOTI",
       "select__date": "Pasirinkti datą",
       "subscribe_confirm_tip": "Dėkojame už jūsų prenumeratą.",
       "timeout_tip": "Baigėsi operacijos skirtasis laikas, patikrinkite dar kartą",
       "unknow_error_tip": "Paslaugos išimtis, bandykite dar kartą vėliau",
+      "unregister": "Išėjimas iš paskyros",
       "username": "Pavadinimas",
       "verify_email_message": "Prieš uždarydami paskyrą, turime patikrinti jūsų tapatybę\nĮ jūsų el. paštą {{email}} bus išsiųstas patikros el. pašto laiškas",
       "verify_phone_message": "Prieš uždarydami paskyrą, turime patikrinti jūsų tapatybę\nĮ jūsų mobilųjį telefoną {{phone}} bus išsiųstas patikros pranešimas",
@@ -648,6 +651,20 @@
       "load_more_items": "{{total}} prekių krova {{current_offset}} ~ {{last_current_offset}}",
       "unavailable": "neprieinama"
     },
+    "giftcard": {
+      "seoTitle": "Jūsų {{ shop }} dovanų kortelės likutis yra {{ value }}!",
+      "balance": "Likutis",
+      "buy_giftcard": "Įsigyti dovanų kortelė",
+      "description": "Štai jūsų {{price}} dovanų kortelė {{shop}}!",
+      "expired_date": "Galiojimo terminas",
+      "invalid_tip": "Jūsų dovanų kortelė negaliojanti, prašome įsigyti kitą",
+      "permanent": "Nuolatinis",
+      "receive_at": "Nebegalioja nuo",
+      "receive_tip": "Prašome priimti savo dovanų kortelė",
+      "title": "Jūsų dovanų kortelė",
+      "use_giftcard": "Naudoti dovanų kortelė",
+      "use_giftcard_tip": "Atskaitymui galite įvesti dovanų kortelės numerį atsiskaitant"
+    },
     "product_details": {
       "activity_toast_price_limit": "Maksimalus kiekis leidžiamas šiai ribotai prekei - {{num}}",
       "activity_toast_product__limit": "Įsigijimas apribotas iki {{stock}} remiamų prekių",
@@ -749,19 +766,6 @@
     },
     "recently_viewed_products": {
       "recently_viewed_products": "Naujausiai peržiūrėtos prekės"
-    },
-    "giftcard": {
-      "balance": "Likutis",
-      "buy_giftcard": "Įsigyti dovanų kortelė",
-      "description": "Štai jūsų {{price}} dovanų kortelė {{shop}}!",
-      "expired_date": "Galiojimo terminas",
-      "invalid_tip": "Jūsų dovanų kortelė negaliojanti, prašome įsigyti kitą",
-      "permanent": "Nuolatinis",
-      "receive_at": "Nebegalioja nuo",
-      "receive_tip": "Prašome priimti savo dovanų kortelė",
-      "title": "Jūsų dovanų kortelė",
-      "use_giftcard": "Naudoti dovanų kortelė",
-      "use_giftcard_tip": "Atskaitymui galite įvesti dovanų kortelės numerį atsiskaitant"
     }
   },
   "reduction_code": {

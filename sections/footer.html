@@ -235,7 +235,7 @@
                 </div>
               </dropdown-menu>
             {{/and}}
-            {{#and settings.show_country_selector (gt (length localization.available_contries) 1)}}
+            {{#and settings.show_country_selector (gt (length localization.available_countries) 1)}}
               <dropdown-menu>
                 <div class="dropdown-menu">
                   <input type="hidden" name="country_code" value="{{localization.country.iso_code}}" />
@@ -246,7 +246,7 @@
                   </button>
                   <div class="dropdown-menu__list-wrapper top global-modal-border-shadow body4" hidden>
                     <ul class="dropdown-menu__list list-unstyled">
-                      {{#each localization.available_contries}}
+                      {{#each localization.available_countries}}
                         <li>
                           <a href="javascript:;" data-value="{{iso_code}}">
                             {{name}}（{{currency.iso_code}}

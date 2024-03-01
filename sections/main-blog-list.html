@@ -7,7 +7,6 @@
   padding_bottom=section.settings.padding_bottom
 }}
 <main class="section section-padding page-width">
-  {{assign "settings" section.settings}}
   <h1 class="blogslist__title title4">
     {{blog.title}}
   </h1>
@@ -19,7 +18,7 @@
             <ul
               class="blogslist__list
                 blogslist__list--{{global.section.settings.layout}}
-                {{#and (eq global.section.settings.layout 'list') (gt (length blogs) 2)}}blog-item-grid-list{{/and}}
+                {{#and (eq global.section.settings.layout 'list') (gt (length blog.articles) 2)}}blog-item-grid-list{{/and}}
                 list-unstyled"
             >
               {{#each blog.articles}}

@@ -3694,7 +3694,7 @@
         "cart_type": {
           "label": "Cách thêm vào giỏ hàng",
           "options__0": {
-            "label": "Giỏ hàng mini"
+            "label": "giỏ hàng ngăn kéo"
           },
           "options__1": {
             "label": "Vào trang giỏ hàng"
