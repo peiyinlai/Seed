@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset_url 'section-image-banner.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-image-banner.css")}}
 
 {{assign "banner1" section.settings.banner1}}
 {{assign "banner2" section.settings.banner2}}
@@ -36,7 +36,7 @@
             banner-item-wrapper--size-{{#if (isFalsey override_banner_height)}}{{banner_height_size}}{{else}}none{{/if}}"
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet "image" data=banner1 pc_size=image_pc_size class="banner-item banner-pc-item" lazy=true}}
+            {{snippet "image" data=banner1 pc_size=image_pc_size class="banner-item banner-pc-item"}}
           </div>
         </div>
       {{/if}}
@@ -46,7 +46,7 @@
             banner-item-wrapper--size-{{#if (isFalsey override_banner_height)}}{{banner_height_size}}{{else}}none{{/if}}"
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet "image" data=banner2 pc_size=image_pc_size class="banner-item banner-pc-item" lazy=true}}
+            {{snippet "image" data=banner2 pc_size=image_pc_size class="banner-item banner-pc-item"}}
           </div>
         </div>
       {{/if}}
@@ -130,7 +130,7 @@
             banner-item-wrapper--size-{{#if (isFalsey override_banner_height)}}{{banner_height_size}}{{else}}none{{/if}}"
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet "image" data=banner1 mobile_size="100%" class="banner-item banner-mobile-item" lazy=true}}
+            {{snippet "image" data=banner1 mobile_size="100%" class="banner-item banner-mobile-item"}}
           </div>
         </div>
       {{/if}}
@@ -198,7 +198,7 @@
             "
         >
           <div style="padding-bottom: {{banner_ratio}};">
-            {{snippet "image" data=banner2 mobile_size="100%" class="banner-item banner-mobile-item" lazy=true}}
+            {{snippet "image" data=banner2 mobile_size="100%" class="banner-item banner-mobile-item"}}
           </div>
         </div>
       {{/if}}

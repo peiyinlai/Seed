@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{asset_url 'component-accordion.css'}}" />
-<link rel="stylesheet" href="{{asset_url 'section-collapsible-content.css'}}" />
+{{snippet "stylesheet" href=(asset_url "component-accordion.css")}}
+{{snippet "stylesheet" href=(asset_url "section-collapsible-content.css")}}
 
 {{snippet
   "section-padding-creator"
@@ -38,7 +38,7 @@
                   style="padding-bottom:{{divide 100 section.settings.image.aspect_ratio}}%;"
                 {{/if}}
               >
-                {{snippet "image" data=section.settings.image lazy=true}}
+                {{snippet "image" data=section.settings.image}}
               </div>
             </div>
           {{/if}}

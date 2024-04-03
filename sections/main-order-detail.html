@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset_url 'section-main-order-detail.css' }}" />
+{{snippet "stylesheet" href=(asset_url "section-main-order-detail.css")}}
 
 {{snippet
   "section-padding-creator"
@@ -94,7 +94,7 @@
                               <div class="product-property__value">
                                 {{#each property.urls as |url|}}
                                   <a class="product-property__link" href="{{url}}" target="_blank">
-                                    {{snippet "image" class="product-property__image" data=url lazy=true}}
+                                    {{snippet "image" class="product-property__image" data=url}}
                                   </a>
                                 {{/each}}
                               </div>

@@ -1,9 +1,9 @@
-{{stylesheet_tag (asset_url "section-main-cart-items.css")}}
+{{snippet "stylesheet" href=(asset_url "section-main-cart-items.css")}}
 
 
 {{#if settings.cart_type "!==" "drawer"}}
-  {{stylesheet_tag (asset_url "snippet-cart-item.css")}}
-  {{stylesheet_tag (asset_url "component-cart.css")}}
+  {{snippet "stylesheet" href=(asset_url "snippet-cart-item.css")}}
+  {{snippet "stylesheet" href=(asset_url "component-cart.css")}}
   <script src="{{asset_url 'component-quantity-input.js'}}" defer></script>
   <script src="{{asset_url 'component-cart.js'}}" defer></script>
 {{/if}}

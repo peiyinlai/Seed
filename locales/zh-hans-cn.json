@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "隐私政策"
     },
+    "product": {
+      "unavailable_sale": "此商品不支持在线销售"
+    },
     "promotion": {
       "no_promotion": "不参与优惠"
     },
@@ -601,9 +604,11 @@
       "method": "付款方式",
       "paid": "已付款",
       "partially_paid": "部分付款",
+      "partially_refund": "部分退款",
       "paying": "付款中",
       "payment": "支付",
       "payment_status": "支付状态",
+      "refund": "已退款",
       "unpaid": "未支付"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "加载更多项目",
       "no_product_data_found": "暂无当前商品数据，请稍后再试",
       "sold_out": "已售罄",
       "added_to_cart_successfully": "加购成功",
@@ -970,7 +976,7 @@
       "error_message_2014": "账号有风险",
       "error_message_2016": "账号有风险",
       "error_message_2020": "系统繁忙，请稍后再试",
-      "error_message_3": "服务异常",
+      "error_message_3": "停留时间过长，请刷新页面",
       "error_message_3001": "服务异常，稍后重试",
       "error_message_3002": "未绑定手机/邮箱的用户尝试修改密码",
       "error_message_3003": "多次发送验证码",
@@ -988,6 +994,7 @@
       "error_message_3023": "链接格式错误",
       "error_message_3024": "链接参数错误",
       "error_message_3026": "账号格式错误",
+      "error_message_3027": "密码不能与上一次相同",
       "error_message_3029": "暂不支持手机号激活",
       "error_message_4": "服务异常",
       "error_message_5": "服务异常",

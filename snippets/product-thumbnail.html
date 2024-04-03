@@ -4,19 +4,16 @@
     Accepts:
     - media: {Object} Product Media object
     - media_count: {Number} Number of media objects
-    - position: {String} Position of the media. Used for accessible label.
     - desktop_layout: {String} Layout of the media for desktop.
     - mobile_layout: {String} Layout of the media for mobile.
     - loop: {Boolean} Enable video looping (optional)
     - modal_id: {String} The product modal that will be shown by clicking the thumbnail
     - media_width: {Float} The width percentage that the media column occupies on desktop.
-    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded.
 
     Usage:
     {{ snippet 'product-thumbnail' }}
 {{/comment}}
-
-{{assign 'lazy_load' (default lazy_load true)}}
 
 {{assign 'desktop_columns' 1}}
 {{#if (and (if desktop_layout '==' 'columns') (if media_count '>' 1))}}
@@ -68,7 +65,7 @@
       <span class="deferred-media__poster-button auto-width motion-reduce">
         {{snippet 'icon-play'}}
       </span>
-      {{snippet 'image' data=(default media.preview_image media) class=image_class lazy=true breakpoints='246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'}}
+      {{snippet 'image' data=(default media.preview_image media) class=image_class lazy=lazy_load breakpoints='246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'}}
     </button>
     <template>
       {{#case media.media_type}}

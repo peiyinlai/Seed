@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Gizlilik Politikası"
     },
+    "product": {
+      "unavailable_sale": "Bu ürün çevrimiçi satışları desteklemez"
+    },
     "promotion": {
       "no_promotion": "Değiştirilemeyen indirim"
     },
@@ -601,9 +604,11 @@
       "method": "Ödeme şekli",
       "paid": "Ödendi",
       "partially_paid": "Kısmen ödendi",
+      "partially_refund": "Kısmi iade",
       "paying": "Ödeme",
       "payment": "Ödeme",
       "payment_status": "Ödeme durumu",
+      "refund": "İade edildi",
       "unpaid": "Ödenmedi"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Daha fazla öğe yükleniyor",
       "no_product_data_found": "Ürün verisi bulunamadı. Lütfen daha sonra tekrar deneyin",
       "sold_out": "Tümü Satıldı",
       "added_to_cart_successfully": "Başarıyla sepete eklendi",
@@ -970,7 +976,7 @@
       "error_message_2014": "Hesap risk altında",
       "error_message_2016": "Hesap risk altında",
       "error_message_2020": "Sistem meşgul, lütfen daha sonra tekrar deneyin",
-      "error_message_3": "Servis istisnaları",
+      "error_message_3": "Kalma süresi çok uzun, lütfen sayfayı yenileyin.",
       "error_message_3001": "Servis istisnası, sonra tekrar deneyin",
       "error_message_3002": "Parolalarını değiştirmeye çalıştıkları cep telefonları/posta kutuları bağlı olmayan kullanıcılar",
       "error_message_3003": "Bu kadar sık deneme yapmayın",
@@ -988,6 +994,7 @@
       "error_message_3023": "Link yanlış formata sahip",
       "error_message_3024": "Link yanlış",
       "error_message_3026": "Hesap formatı hatası",
+      "error_message_3027": "Şifre öncekiyle aynı olamaz.",
       "error_message_3029": "Şu an için cep telefonu numarası aktivasyonunu desteklemeyin",
       "error_message_4": "Servis istisnaları",
       "error_message_5": "Servis istisnaları",

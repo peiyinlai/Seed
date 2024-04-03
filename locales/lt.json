@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Privatumo politika"
     },
+    "product": {
+      "unavailable_sale": "Šis produktas nepalaiko pardavimo internetu"
+    },
     "promotion": {
       "no_promotion": "Netaikoma nuolaida"
     },
@@ -601,9 +604,11 @@
       "method": "Mokėjimo būdas",
       "paid": "Sumokėta",
       "partially_paid": "Dalinai sumokėta",
+      "partially_refund": "Dalinis grąžinimas",
       "paying": "Mokėjimas",
       "payment": "Mokėjimas",
       "payment_status": "Mokėjimo būklė",
+      "refund": "Grąžinta",
       "unpaid": "Nesumokėta"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Įkeliama daugiau elementų",
       "no_product_data_found": "Duomenų apie prekę nerasta Prašome bandyti dar kartą vėliau",
       "sold_out": "Išparduota",
       "added_to_cart_successfully": "Sėkmingai įdėta į krepšelį",
@@ -970,7 +976,7 @@
       "error_message_2014": "Sąskaitoms gresia pavojus",
       "error_message_2016": "Sąskaitoms gresia pavojus",
       "error_message_2020": "Sistema užimta, bandykite vėliau",
-      "error_message_3": "Paslaugos išimtys",
+      "error_message_3": "Viešnagė yra per ilga, prašome atnaujinti puslapį.",
       "error_message_3001": "Paslaugos išimtis, bandykite dar kartą vėliau",
       "error_message_3002": "Vartotojai, kurie nėra susieti mobiliaisiais telefonais / pašto dėžutėmis, bando pakeisti savo slaptažodžius",
       "error_message_3003": "Nebandykite taip dažnai",
@@ -988,6 +994,7 @@
       "error_message_3023": "Nuoroda netinkamai suformuota",
       "error_message_3024": "Nuorodos parametro klaida",
       "error_message_3026": "Paskyros formato klaida",
+      "error_message_3027": "Slaptažodis negali būti toks pats kaip paskutinis。",
       "error_message_3029": "Kol kas nepalaikomas mobiliojo telefono numerio aktyvavimas",
       "error_message_4": "Paslaugos išimtys",
       "error_message_5": "Paslaugos išimtys",

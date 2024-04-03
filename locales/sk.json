@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Zásadami ochrany osobných údajov"
     },
+    "product": {
+      "unavailable_sale": "Tento produkt nepodporuje online predaj"
+    },
     "promotion": {
       "no_promotion": "Zľava bez účasti"
     },
@@ -601,9 +604,11 @@
       "method": "Spôsob platby",
       "paid": "Zaplatené",
       "partially_paid": "Čiastočne zaplatené",
+      "partially_refund": "Čiastočné vrátenie peňazí",
       "paying": "Platenie",
       "payment": "Platba",
       "payment_status": "Stav platby",
+      "refund": "Vrátené",
       "unpaid": "Nezaplatené"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Načítava sa viac položiek",
       "no_product_data_found": "Nenašli sa žiadne údaje o produkte. Skúste to neskôr prosím",
       "sold_out": "Vypredané",
       "added_to_cart_successfully": "Pridané do košíka úspešne",
@@ -970,7 +976,7 @@
       "error_message_2014": "Účet v ohrození",
       "error_message_2016": "Účet v ohrození",
       "error_message_2020": "Systém je obsadený, skúste to prosím neskôr",
-      "error_message_3": "Abnormálna služba",
+      "error_message_3": "Pobyt je príliš dlhý, aktualizujte stránku, prosím.",
       "error_message_3001": "Výnimka služby, skúste to znova neskôr",
       "error_message_3002": "Používatelia, ktorí nie sú prepojení s mobilnými telefónmi / poštovými schránkami, sa snažia zmeniť svoje heslá",
       "error_message_3003": "Neskúšajte to tak často",
@@ -988,6 +994,7 @@
       "error_message_3023": "Odkaz je v nesprávnom formáte",
       "error_message_3024": "Odkaz je nesprávny",
       "error_message_3026": "Chyby vo formáte účtu",
+      "error_message_3027": "Heslo nemôže byť rovnaké ako predchádzajúce。",
       "error_message_3029": "Momentálne nepodporuje aktiváciu mobilného telefónneho čísla",
       "error_message_4": "Abnormálna služba",
       "error_message_5": "Abnormálna služba",

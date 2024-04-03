@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Privacybeleid"
     },
+    "product": {
+      "unavailable_sale": "Dit artikel kunt u niet online te kopen"
+    },
     "promotion": {
       "no_promotion": "Niet deelnemen aan de aanbieding"
     },
@@ -601,9 +604,11 @@
       "method": "Betaalmethode",
       "paid": "Betaald",
       "partially_paid": "Gedeeltelijk betaling",
+      "partially_refund": "Gedeeltelijke terugbetaling",
       "paying": "Aan het betalen",
       "payment": "Betaling",
       "payment_status": "Betaling status",
+      "refund": "Terugbetaald",
       "unpaid": "Onbetaald"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Meer artikelen laden",
       "no_product_data_found": "Geen gegevens van dit artikel, probeer het later nog eens",
       "sold_out": "Niet op voorraad",
       "added_to_cart_successfully": "Succesvol toegevoegd aan winkelwagen",
@@ -970,7 +976,7 @@
       "error_message_2014": "Account is in gevaar",
       "error_message_2016": "Account is in gevaar",
       "error_message_2020": "Het systeem is bezet, probeer het later opnieuw",
-      "error_message_3": "Service fout",
+      "error_message_3": "Het verblijf is te lang, vernieuw alstublieft de pagina.",
       "error_message_3001": "Service uitzondering, probeer later opnieuw",
       "error_message_3002": "Gebruikers die niet aan een telefoon/e-mail gebonden zijn, probeert de wachtwoord te wijzigen",
       "error_message_3003": "De verificatiecode meerdere keren versturen",
@@ -988,6 +994,7 @@
       "error_message_3023": "Link formaat fout",
       "error_message_3024": "Link parameter fout",
       "error_message_3026": "Verkeerd formaat van het account",
+      "error_message_3027": "Het wachtwoord mag niet hetzelfde zijn als de vorige keer。",
       "error_message_3029": "Activering via mobiele telefoon is op dit moment niet beschikbaar.",
       "error_message_4": "Service fout",
       "error_message_5": "Service fout",

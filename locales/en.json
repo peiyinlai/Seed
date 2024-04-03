@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Privacy Policy"
     },
+    "product": {
+      "unavailable_sale": "This product is not available for online sale"
+    },
     "promotion": {
       "no_promotion": "Do not join in promotion"
     },
@@ -601,9 +604,11 @@
       "method": "Payment method",
       "paid": "Paid",
       "partially_paid": "Partially paid",
+      "partially_refund": "Partially refund",
       "paying": "Paying",
       "payment": "Payment",
       "payment_status": "Payment status",
+      "refund": "Refunded",
       "unpaid": "Unpaid"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Loading more items",
       "no_product_data_found": "No product data found. Please try again later",
       "sold_out": "Sold Out",
       "added_to_cart_successfully": "Added to cart successfully",
@@ -970,7 +976,7 @@
       "error_message_2014": "Your account is at risk",
       "error_message_2016": "Your account is at risk",
       "error_message_2020": "The system is busy, please try again later",
-      "error_message_3": "The system is busy, please try again later",
+      "error_message_3": "The stay is too long, please refresh the page.",
       "error_message_3001": "Server error, please try again",
       "error_message_3002": "Illegal operation",
       "error_message_3003": "Don't try so frequently",
@@ -988,6 +994,7 @@
       "error_message_3023": "The link has a wrong format",
       "error_message_3024": "The link is wrong",
       "error_message_3026": "Invalid account",
+      "error_message_3027": "The password cannot be the same as the last time.",
       "error_message_3029": "Verification with phone number is not supported yet",
       "error_message_4": "The system is busy, please try again later",
       "error_message_5": "The system is busy, please try again later",

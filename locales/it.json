@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Politica sulla riservatezza"
     },
+    "product": {
+      "unavailable_sale": "Questo articolo non supporta la vendita online "
+    },
     "promotion": {
       "no_promotion": "Non partecipando all'offerta"
     },
@@ -601,9 +604,11 @@
       "method": "Metodo di pagamento",
       "paid": "Pagato",
       "partially_paid": "Parzialmente pagato",
+      "partially_refund": "Rimborso parziale",
       "paying": "Pagando",
       "payment": "Pagamento",
       "payment_status": "Stato del pagamento",
+      "refund": "Rimborsato",
       "unpaid": "Non pagato"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Carica più articoli",
       "no_product_data_found": "Nessun dato sul prodotto attuale, riprova più tardi",
       "sold_out": "Venduto",
       "added_to_cart_successfully": "Acquisto aggiuntivo riuscito",
@@ -970,7 +976,7 @@
       "error_message_2014": "Il conto è a rischio",
       "error_message_2016": "Il conto è a rischio",
       "error_message_2020": "Il sistema è occupato, riprova più tardi",
-      "error_message_3": "Errore del servizio",
+      "error_message_3": "Il soggiorno è troppo lungo, si prega di aggiornare la pagina.",
       "error_message_3001": "Errore del servizio, riprova più tardi",
       "error_message_3002": "Gli utenti che non hanno associato i loro cellulari/e-mail provano a modificare le loro password",
       "error_message_3003": "I codici di verifica sono inviati più volte",
@@ -988,6 +994,7 @@
       "error_message_3023": "Il link ha una forma scorretta",
       "error_message_3024": "Il parametro del link è scorretto",
       "error_message_3026": "Formato errato dell'account",
+      "error_message_3027": "La password non può essere la stessa della precedente。",
       "error_message_3029": "L'attivazione con il numero di cellulare non è supportata in questo momento",
       "error_message_4": "Errore del servizio",
       "error_message_5": "Errore del servizio",

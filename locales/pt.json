@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Política de Privacidade"
     },
+    "product": {
+      "unavailable_sale": "Este item não está disponível para venda online"
+    },
     "promotion": {
       "no_promotion": "Não participando da oferta"
     },
@@ -601,9 +604,11 @@
       "method": "Método de pagamento",
       "paid": "Pago",
       "partially_paid": "Pagamento parcial",
+      "partially_refund": "Reembolso parcial",
       "paying": "Pagamento em andamento",
       "payment": "Pagamento",
       "payment_status": "Status de pagamento",
+      "refund": "Reembolsado",
       "unpaid": "Não pago"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Carregar mais itens",
       "no_product_data_found": "Sem dados de produto atual, tente novamente mais tarde",
       "sold_out": "Esgotado",
       "added_to_cart_successfully": "Compra adicional com sucesso",
@@ -970,7 +976,7 @@
       "error_message_2014": "A conta está em risco",
       "error_message_2016": "A conta está em risco",
       "error_message_2020": "O sistema está ocupado, tente novamente mais tarde",
-      "error_message_3": "Erro de serviço",
+      "error_message_3": "A estadia é demasiado longa, por favor, atualize a página.",
       "error_message_3001": "Erro de serviço, tente novamente mais tarde",
       "error_message_3002": "Usuários que não estão vinculados a um celular/email tentam alterar sua senha",
       "error_message_3003": "Enviar códigos de verificação várias vezes",
@@ -988,6 +994,7 @@
       "error_message_3023": "O link tem um formato errado",
       "error_message_3024": "O parâmetro de link está errado",
       "error_message_3026": "Formato errado da conta",
+      "error_message_3027": "A senha não pode ser a mesma que a anterior。",
       "error_message_3029": "A ativação do telefone celular não é suportada no momento",
       "error_message_4": "Erro de serviço",
       "error_message_5": "Erro de serviço",

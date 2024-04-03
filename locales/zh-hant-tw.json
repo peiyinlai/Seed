@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "隱私政策"
     },
+    "product": {
+      "unavailable_sale": "此商品不支持在線銷售"
+    },
     "promotion": {
       "no_promotion": "不參與優惠"
     },
@@ -601,9 +604,11 @@
       "method": "付款方式",
       "paid": "已付款",
       "partially_paid": "部分付款",
+      "partially_refund": "部分退款",
       "paying": "付款中",
       "payment": "付款",
       "payment_status": "付款狀態",
+      "refund": "已退款",
       "unpaid": "未付款"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "加載更多項目",
       "no_product_data_found": "找不到產品資料。請稍後再試",
       "sold_out": "已售罄",
       "added_to_cart_successfully": "加購成功",
@@ -970,7 +976,7 @@
       "error_message_2014": "賬號有風險",
       "error_message_2016": "賬號有風險",
       "error_message_2020": "系統繁忙，請稍後再試",
-      "error_message_3": "服務異常",
+      "error_message_3": "停留時間過長，請重新整理頁面。",
       "error_message_3001": "服務異常，稍後重試",
       "error_message_3002": "不正當操作",
       "error_message_3003": "請勿太頻繁嘗試",
@@ -988,6 +994,7 @@
       "error_message_3023": "鏈接格式錯誤",
       "error_message_3024": "鏈接參數錯誤",
       "error_message_3026": "帳號格式錯誤",
+      "error_message_3027": "密碼不能與上次相同。",
       "error_message_3029": "暫不支援手機號激活",
       "error_message_4": "服務異常",
       "error_message_5": "服務異常",

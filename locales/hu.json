@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "az Adatvédelmi szabályzatát"
     },
+    "product": {
+      "unavailable_sale": "Ez az elem nem támogatja az online értékesítést"
+    },
     "promotion": {
       "no_promotion": "Nem használható kedvezmény"
     },
@@ -601,9 +604,11 @@
       "method": "Fizetési mód",
       "paid": "Fizetve",
       "partially_paid": "Részben fizetve",
+      "partially_refund": "részleges visszatérítés",
       "paying": "Fizetés",
       "payment": "Fizetés",
       "payment_status": "A fizetés állapota",
+      "refund": "Visszatérítve",
       "unpaid": "Nincs fizetve"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "További elemek betöltése",
       "no_product_data_found": "Nem található termékadat. Kérjük, később próbálja újra",
       "sold_out": "Elfogyott",
       "added_to_cart_successfully": "Sikeresen a kosárba",
@@ -970,7 +976,7 @@
       "error_message_2014": "A fiók veszélyben van",
       "error_message_2016": "A fiók veszélyben van",
       "error_message_2020": "A rendszer foglalt, kérjük, próbálja meg később újra",
-      "error_message_3": "Szolgáltatás kivételek",
+      "error_message_3": "A tartózkodás túl hosszú, frissítse az oldalt.",
       "error_message_3001": "Szolgáltatás kimaradás. Kérjük, később próbálja újra.",
       "error_message_3002": "Mobiltelefonhoz/postafiókhoz nem kötött felhasználók próbálják meg megváltoztatni a jelszavaikat",
       "error_message_3003": "Ne próbálkozzon ilyan gyakran",
@@ -988,6 +994,7 @@
       "error_message_3023": "A hivatkozás hibás",
       "error_message_3024": "Hivatkozásparaméter-hiba",
       "error_message_3026": "Fiók formátum hiba",
+      "error_message_3027": "A jelszó nem lehet ugyanaz, mint az előző。",
       "error_message_3029": "Egyelőre nem támogatjuk a mobiltelefonszám aktiválását",
       "error_message_4": "Szolgáltatás kivételek",
       "error_message_5": "Szolgáltatás kivételek",

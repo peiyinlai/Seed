@@ -102,7 +102,7 @@
                 {{#if global.cover_ratio '==' 'auto'}}simple-blog__image-auto {{#if (isFalsey image.src)}}simple-blog__noimage-auto{{/if}}{{else}}simple-blog__image-{{global.cover_ratio}}{{/if}}"
             >
               {{#if image.src}}
-                {{snippet "image" class="simple-blog__image" data=image lazy=true}}
+                {{snippet "image" class="simple-blog__image" data=image}}
               {{else}}
                 <div class="simple-blog__empty-img">
                   {{placeholder_svg_tag "image"}}

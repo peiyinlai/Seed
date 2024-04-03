@@ -1,6 +1,6 @@
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
-<link rel="stylesheet" href="{{asset_url 'section-collection-list.css'}}" />
-<link rel="stylesheet" href="{{asset_url 'component-card.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-collection-list.css")}}
+{{snippet "stylesheet" href=(asset_url "component-card.css")}}
 {{snippet
   "section-padding-creator"
   section_id=section.id

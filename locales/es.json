@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Política de privacidad"
     },
+    "product": {
+      "unavailable_sale": "Este artículo no se puede vender online"
+    },
     "promotion": {
       "no_promotion": "No participar en la oferta"
     },
@@ -601,9 +604,11 @@
       "method": "Método de pago",
       "paid": "Pagado",
       "partially_paid": "Reembolsado parcialmente",
+      "partially_refund": "Reembolso parcial",
       "paying": "Pagando",
       "payment": "Pago",
       "payment_status": "Estado de pago",
+      "refund": "Reembolsado",
       "unpaid": "No pagado"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Cargar más artículos",
       "no_product_data_found": "No hay información del artículo actual ahora, por favor inténtalo más tarde",
       "sold_out": "Agotado",
       "added_to_cart_successfully": "Agregado al carrito con éxito",
@@ -970,7 +976,7 @@
       "error_message_2014": "La cuenta está en riesgo",
       "error_message_2016": "La cuenta está en riesgo",
       "error_message_2020": "El sistema está ocupado, inténtelo más tarde",
-      "error_message_3": "Error de servicio",
+      "error_message_3": "La estancia es demasiado larga, por favor, actualice la página.",
       "error_message_3001": "Error de servicio, inténtelo más tarde",
       "error_message_3002": "El usuario que no ha vinculado su teléfono/correo electrónico intenta modificar la contraseña",
       "error_message_3003": "Demasiadas veces de verificación",
@@ -988,6 +994,7 @@
       "error_message_3023": "El enlace tiene un formato incorrecto",
       "error_message_3024": "El parámetro de enlace es incorrecto",
       "error_message_3026": "Error de formato de cuenta",
+      "error_message_3027": "La contraseña no puede ser la misma que la anterior。",
       "error_message_3029": "La activación por teléfono móvil no es posible en este momento.",
       "error_message_4": "Error de servicio",
       "error_message_5": "Error de servicio",

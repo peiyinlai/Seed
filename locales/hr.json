@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "politika privatnosti"
     },
+    "product": {
+      "unavailable_sale": "Ovaj proizvod ne podržava online prodaju"
+    },
     "promotion": {
       "no_promotion": "Popust bez sudjelovanja"
     },
@@ -601,9 +604,11 @@
       "method": "Način plaćanja",
       "paid": "Plaćeno",
       "partially_paid": "Djelomično plaćeno",
+      "partially_refund": "Djelomičan povrat novca",
       "paying": "Plaćanje",
       "payment": "Plaćanje",
       "payment_status": "Status plaćanja",
+      "refund": "Povrat",
       "unpaid": "Neplaćeno"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Učitavanje više stavki",
       "no_product_data_found": "Nisu pronađeni podaci o proizvodu. Molimo pokušajte ponovo kasnije",
       "sold_out": "Prodano",
       "added_to_cart_successfully": "Dodano u košaricu uspješno",
@@ -970,7 +976,7 @@
       "error_message_2014": "Račun pod rizikom",
       "error_message_2016": "Račun pod rizikom",
       "error_message_2020": "Sustav je zauzet, pokušajte ponovo kasnije",
-      "error_message_3": "Iznimke usluga",
+      "error_message_3": "Boravak je predug, molimo osvježite stranicu.",
       "error_message_3001": "Iznimka usluge, pokušajte ponovo kasnije",
       "error_message_3002": "Korisnici koji nisu vezani za mobilne telefone/ poštanske sandučiće pokušavaju promijeniti svoje lozinke",
       "error_message_3003": "Nemojte pokušavati tako često",
@@ -988,6 +994,7 @@
       "error_message_3023": "Poveznica ima pogrešan format",
       "error_message_3024": "Poveznica je pogrešna",
       "error_message_3026": "Pogreška formata računa",
+      "error_message_3027": "Lozinka ne može biti ista kao i prethodna。",
       "error_message_3029": "Za sada ne podržavaj aktivaciju broja mobilnog telefona",
       "error_message_4": "Iznimke usluga",
       "error_message_5": "Iznimke usluga",

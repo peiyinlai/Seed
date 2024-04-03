@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Chính sách quyền riêng tư"
     },
+    "product": {
+      "unavailable_sale": "Mặt hàng này không hỗ trợ bán trực tuyến"
+    },
     "promotion": {
       "no_promotion": "Không tham gia chương trình khuyến mãi"
     },
@@ -601,9 +604,11 @@
       "method": "Phương thức thanh toán",
       "paid": "Đã thanh toán",
       "partially_paid": "Thanh toán một phần",
+      "partially_refund": "Hoàn trả một phần",
       "paying": "Đang thanh toán",
       "payment": "Thanh toán",
       "payment_status": "Trạng thái thanh toán",
+      "refund": "Đã được hoàn trả",
       "unpaid": "Chưa thanh toán"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Đang tải thêm mục",
       "no_product_data_found": "Không tìm thấy thông tin sản phẩm. Vui lòng thử lại sau.",
       "sold_out": "Hết hàng",
       "added_to_cart_successfully": "Đã thêm vào giỏ hàng thành công",
@@ -970,7 +976,7 @@
       "error_message_2014": "Tài khoản đang gặp rủi ro",
       "error_message_2016": "Tài khoản đang gặp rủi ro",
       "error_message_2020": "Hệ thống đang bận, vui lòng thử lại sau",
-      "error_message_3": "Ngoại lệ dịch vụ",
+      "error_message_3": "Thời gian lưu trú quá lâu, vui lòng làm mới trang.",
       "error_message_3001": "Ngoại lệ dịch vụ, hãy thử lại sau",
       "error_message_3002": "Người dùng không liên kết với hộp thư/số điện thoại di động cố gắng thay đổi mật khẩu của họ",
       "error_message_3003": "Đừng cố gắng nhập liên tục",
@@ -988,6 +994,7 @@
       "error_message_3023": "Liên kết sai định dạng",
       "error_message_3024": "Liên kết sai",
       "error_message_3026": "Lỗi định dạng tài khoản",
+      "error_message_3027": "Mật khẩu không được giống với lần trước.",
       "error_message_3029": "Hiện tại không hỗ trợ kích hoạt số điện thoại di động",
       "error_message_4": "Ngoại lệ dịch vụ",
       "error_message_5": "Ngoại lệ dịch vụ",

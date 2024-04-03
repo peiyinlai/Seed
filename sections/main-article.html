@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset_url 'section-main-article.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-main-article.css")}}
 <article class="article-template">
   {{#with this as |global|}}
     {{#each section.blocks}}
@@ -11,7 +11,7 @@
                 style="padding-bottom:{{times (divide 1 global.article.image.aspect_ratio) 100}}%;"
               {{/and}}
             >
-              {{snippet "image" data=global.article.image lazy=false fetchpriority="high"}}
+              {{snippet "image" data=global.article.image fetchpriority="high"}}
             </div>
           </div>
         {{/if}}

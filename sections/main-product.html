@@ -13,14 +13,14 @@
 {{/if}}
 
 <section id="MainProduct-{{section.id}}" class="page-width section-padding" data-section="{{section.id}}">
-  <link rel="stylesheet" href="{{asset_url 'component-product-modal.css'}}" />
-  <link rel="stylesheet" href="{{asset_url 'section-collapsible-content.css'}}" />
-  <link rel="stylesheet" href="{{asset_url 'section-main-product.css'}}" />
-  <link rel="stylesheet" href="{{asset_url 'component-accordion.css'}}" />
-  <link rel="stylesheet" href="{{asset_url 'section-main-product-media-gallery.css'}}" />
-  <link rel="stylesheet" href="{{asset_url 'component-price.css'}}" />
+  {{snippet "stylesheet" href=(asset_url "component-product-modal.css")}}
+  {{snippet "stylesheet" href=(asset_url "section-collapsible-content.css")}}
+  {{snippet "stylesheet" href=(asset_url "section-main-product.css")}}
+  {{snippet "stylesheet" href=(asset_url "component-accordion.css")}}
+  {{snippet "stylesheet" href=(asset_url "section-main-product-media-gallery.css")}}
+  {{snippet "stylesheet" href=(asset_url "component-price.css")}}
   {{#if product.quantity_price_breaks_configured }}
-    <link rel="stylesheet" href="{{asset_url 'component-volume-pricing.css'}}" />
+    {{snippet "stylesheet" href=(asset_url "component-volume-pricing.css")}}
     <script src="{{asset_url 'price-per-item.js'}}" defer="defer"></script>
     <script src="{{asset_url 'component-show-more.js'}}" defer="defer"></script>
   {{/if}}

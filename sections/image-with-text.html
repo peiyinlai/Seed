@@ -11,7 +11,7 @@
 {{assign "mobile_text_align" settings.mobile_text_align}}
 {{assign "app_block_prefix" "shopline://apps"}}
 
-<link rel="stylesheet" href="{{asset_url 'section-image-with-text.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-image-with-text.css")}}
 
 {{snippet
   "section-padding-creator"
@@ -41,7 +41,7 @@
     >
       <div class="image-with-text__image-box">
         {{#if image}}
-          {{snippet "image" class="image-with-text__image" data=image lazy=true}}
+          {{snippet "image" class="image-with-text__image" data=image}}
         {{else}}
           {{placeholder_svg_tag "image" "empty-image-class"}}
         {{/if}}

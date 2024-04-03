@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Dasar Privasi Tapak Web"
     },
+    "product": {
+      "unavailable_sale": "Barangan dagangan ini tidak menyokong jualan dalam talian"
+    },
     "promotion": {
       "no_promotion": "Bukan diskaun penyertaan"
     },
@@ -601,9 +604,11 @@
       "method": "Kaedah bayaran",
       "paid": "Dibayar",
       "partially_paid": "Dibayar separa",
+      "partially_refund": "Bayaran balik separa",
       "paying": "Membayar",
       "payment": "Bayaran",
       "payment_status": "Status bayaran",
+      "refund": "Dikembalikan",
       "unpaid": "Belum bayar"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Memuat lebih banyak item",
       "no_product_data_found": "Tiada data produk ditemui. Sila cuba lagi kemudian",
       "sold_out": "Habis Dijual",
       "added_to_cart_successfully": "Berjaya ditambahkan pada troli",
@@ -970,7 +976,7 @@
       "error_message_2014": "Akaun berisiko",
       "error_message_2016": "Akaun berisiko",
       "error_message_2020": "Sistem sedang sibuk, sila cuba lagi kemudian",
-      "error_message_3": "Pengecualian perkhidmatan",
+      "error_message_3": "Tempoh penginapan terlalu lama, sila muat semula halaman.",
       "error_message_3001": "Pengecualian perkhidmatan, sila cuba lagi kemudian",
       "error_message_3002": "Pengguna yang tidak terikat kepada telefon bimbit/peti mel cuba mengubah kata laluan mereka",
       "error_message_3003": "Jangan cuba terlalu kerap",
@@ -988,6 +994,7 @@
       "error_message_3023": "Pautan mempunyai format yang salah",
       "error_message_3024": "Pautan adalah salah",
       "error_message_3026": "Ralat format akaun",
+      "error_message_3027": "Kata laluan tidak boleh sama seperti sebelumnya。",
       "error_message_3029": "Jangan menyokong pengaktifan nombor telefon mudah alih buat masa ini",
       "error_message_4": "Pengecualian perkhidmatan",
       "error_message_5": "Pengecualian perkhidmatan",

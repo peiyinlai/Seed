@@ -45,6 +45,7 @@ defineCustomElement('media-gallery', () => {
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);
           activeThumbnail.parentElement.prepend(activeThumbnail);
+          this.elements.thumbnails.resetSlides();
         }
         if (this.elements.viewer.slider) {
           this.elements.viewer.resetSlides();

@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Konfidencialitātes politika"
     },
+    "product": {
+      "unavailable_sale": "Šis produkts neatbalsta pārdošanu tiešsaistē"
+    },
     "promotion": {
       "no_promotion": "Neiesaistītās atlaides"
     },
@@ -601,9 +604,11 @@
       "method": "Maksājuma veids",
       "paid": "Samaksāts",
       "partially_paid": "Daļēji samaksāts",
+      "partially_refund": "Daļēja atmaksa",
       "paying": "Maksājot",
       "payment": "Maksājums",
       "payment_status": "Maksājuma statuss",
+      "refund": "Atliekams",
       "unpaid": "Neapmaksāts"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Notiek citu vienumu ielāde",
       "no_product_data_found": "Nav atrasti dati par produktu. Lūdzu, mēģiniet vēlreiz vēlāk",
       "sold_out": "Pārdevies",
       "added_to_cart_successfully": "Pievienots grozam veiksmīgi",
@@ -970,7 +976,7 @@
       "error_message_2014": "Konti ir apdraudēti",
       "error_message_2016": "Konti ir apdraudēti",
       "error_message_2020": "Sistēma ir aizņemta, lūdzu, mēģiniet vēlreiz vēlāk",
-      "error_message_3": "Pakalpojumu izņēmumi",
+      "error_message_3": "Uzturēšanās ir pārāk ilga, lūdzu, atjauniniet lapu.",
       "error_message_3001": "Pakalpojuma izņēmums, mēģiniet vēlreiz vēlāk",
       "error_message_3002": "Lietotāji, kas nav saistīti ar mobilajiem tālruņiem / pastkastēm, mēģina mainīt paroli",
       "error_message_3003": "Nemēģiniet tik bieži",
@@ -988,6 +994,7 @@
       "error_message_3023": "Saitē ir nepareizā formātā",
       "error_message_3024": "Saitē nav labs",
       "error_message_3026": "Konta formāta kļūda",
+      "error_message_3027": "Parole nedrīkst būt tāda pati kā iepriekšējā。",
       "error_message_3029": "Pagaidām neatbalsta mobilā tālruņa numura aktivizēšanu",
       "error_message_4": "Pakalpojumu izņēmumi",
       "error_message_5": "Pakalpojumu izņēmumi",

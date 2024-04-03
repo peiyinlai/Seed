@@ -1482,6 +1482,9 @@
             "label": "Xếp hàng"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "HIển thị hình nền"
         },

@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Pravilnikom o zasebnosti"
     },
+    "product": {
+      "unavailable_sale": "Ta izdelek ne podpira spletne prodaje"
+    },
     "promotion": {
       "no_promotion": "Neudeležen popust"
     },
@@ -601,9 +604,11 @@
       "method": "Način plačila",
       "paid": "Plačano",
       "partially_paid": "Delno plačano",
+      "partially_refund": "Delno vračilo",
       "paying": "Plačilo",
       "payment": "Plačilo",
       "payment_status": "Status plačila",
+      "refund": "Vrnjeno",
       "unpaid": "Neplačano"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Nalaganje več predmetov",
       "no_product_data_found": "Ni najdenih podatkov o izdelku. Poskusite znova pozneje",
       "sold_out": "Razprodano",
       "added_to_cart_successfully": "Uspešno dodan v košarico",
@@ -970,7 +976,7 @@
       "error_message_2014": "Račun v nevarnosti",
       "error_message_2016": "Račun v nevarnosti",
       "error_message_2020": "Sistem je zaseden, poskusite znova pozneje",
-      "error_message_3": "Izjeme pri storitvah",
+      "error_message_3": "Bivanje je predolgo, prosimo, osvežite stran.",
       "error_message_3001": "Izjema storitve, poskusite znova pozneje",
       "error_message_3002": "Uporabniki, ki niso vezani na mobilne telefone/poštne predale, poskušajo spremeniti svoja gesla",
       "error_message_3003": "Ne poskušajte tako pogosto",
@@ -988,6 +994,7 @@
       "error_message_3023": "Povezava ima napačno obliko",
       "error_message_3024": "Povezava je napačna",
       "error_message_3026": "Napaka v formatu računa",
+      "error_message_3027": "Geslo ne sme biti enako kot prej。",
       "error_message_3029": "Zaenkrat ne podpiramo aktivacije številke mobilnega telefona",
       "error_message_4": "Izjeme pri storitvah",
       "error_message_5": "Izjeme pri storitvah",

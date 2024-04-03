@@ -1,6 +1,6 @@
 {{ assign 'main_menu' section.settings.main_menu_link_list }}
 
-<link rel="stylesheet" href="{{ asset_url 'section-header.css' }}" />
+{{snippet "stylesheet" href=(asset_url "section-header.css")}}
 
 <script src="{{ asset_url 'component-predictive-search.js' }}" defer></script>
 <script src="{{ asset_url 'section-header-modal.js' }}" defer></script>
@@ -10,22 +10,22 @@
 {{/if}}
 
 {{#if cart.discount_enable_cart}}
-  {{ stylesheet_tag (asset_url "component-cart-coupon.css") }}
+  {{snippet "stylesheet" href=(asset_url "component-cart-coupon.css")}}
   <script src="{{asset_url 'component-cart-coupon.js'}}" defer></script>
 {{/if}}
 
 {{#if settings.cart_type '===' 'drawer'}}
-  {{ stylesheet_tag (asset_url "section-cart-drawer.css") }}
-  {{ stylesheet_tag (asset_url "snippet-cart-fixed-checkout.css") }}
-  {{ stylesheet_tag (asset_url "snippet-cart-item.css") }}
-  {{ stylesheet_tag (asset_url "component-cart.css") }}
+  {{snippet "stylesheet" href=(asset_url "section-cart-drawer.css")}}
+  {{snippet "stylesheet" href=(asset_url "snippet-cart-fixed-checkout.css")}}
+  {{snippet "stylesheet" href=(asset_url "snippet-cart-item.css")}}
+  {{snippet "stylesheet" href=(asset_url "component-cart.css")}}
   <script src="{{ asset_url 'component-quantity-input.js' }}" defer="defer"></script>
   <script src="{{ asset_url 'component-cart.js' }}" defer="defer"></script>
   <script src="{{ asset_url 'section-cart-drawer.js' }}" defer="defer"></script>
 {{/if}}
 
 {{#if settings.cart_type '===' 'notification'}}
-  {{ stylesheet_tag (asset_url "component-cart-notification.css") }}
+  {{snippet "stylesheet" href=(asset_url "component-cart-notification.css")}}
   <script src="{{ asset_url 'component-cart-notification.js' }}" defer="defer"></script>
 {{/if}}
   {{#if section.settings.sticky_header_type "!=" "none"}}

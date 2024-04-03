@@ -12,7 +12,7 @@
   }
 }
 .featured-product .product.color-scheme-none {
-  background-color: #fff;
+  background-color: rgb(var(--color-page-background));
 }
 .featured-product.background-secondary {
   background-color: rgba(0, 0, 0, 0.04);

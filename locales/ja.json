@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "プライバシーポリシー"
     },
+    "product": {
+      "unavailable_sale": "この商品はネットで販売できません。"
+    },
     "promotion": {
       "no_promotion": "現時点、適用できるプロモーションがありません。"
     },
@@ -601,9 +604,11 @@
       "method": "支払い方法",
       "paid": "支払い完了",
       "partially_paid": "一部支払い済み",
+      "partially_refund": "部分払い戻し",
       "paying": "支払い処理中",
       "payment": "支払い",
       "payment_status": "支払いステータス",
+      "refund": "返金されました",
       "unpaid": "未払い"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "さらにアイテムをロードする",
       "no_product_data_found": "商品データが見つかりません。しばらくしてからもう一度お試しください",
       "sold_out": "完売",
       "added_to_cart_successfully": "カートに入れました",
@@ -970,7 +976,7 @@
       "error_message_2014": "このアカウントがリスクにさらされています",
       "error_message_2016": "このアカウントがリスクにさらされています",
       "error_message_2020": "システムがビジー状態です。後でもう一度お試しください。",
-      "error_message_3": "異常が発生しています",
+      "error_message_3": "滞在時間が長すぎますので、ページを更新してください。",
       "error_message_3001": "異常が発生しています。後でもう一度お試しください。",
       "error_message_3002": "不正な操作です",
       "error_message_3003": "認証コードの送信が頻繁すぎます",
@@ -988,6 +994,7 @@
       "error_message_3023": "リンクのフォーマットが正しくありません 。",
       "error_message_3024": "リンクパラメータエラー",
       "error_message_3026": "アカウントフォーマットエラー",
+      "error_message_3027": "前回のパスワードと同じにはできません。",
       "error_message_3029": "携帯電話番号での認証が対応されていません",
       "error_message_4": "異常が発生しています",
       "error_message_5": "異常が発生しています",

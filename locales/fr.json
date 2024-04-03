@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Politique de confidentialité"
     },
+    "product": {
+      "unavailable_sale": "Ce produit n’est pas disponible à la vente en ligne"
+    },
     "promotion": {
       "no_promotion": "Ne pas participer à l'offre"
     },
@@ -601,9 +604,11 @@
       "method": "Mode de paiement",
       "paid": "Payé",
       "partially_paid": "Partiellement payé",
+      "partially_refund": "Remboursement partiel",
       "paying": "Paiement en cours",
       "payment": "Paiement",
       "payment_status": "Statut du paiement",
+      "refund": "Remboursé",
       "unpaid": "Non payé"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Charger plus d’éléments",
       "no_product_data_found": "Aucune donnée trouvée concernant le produit. Veuillez réessayer plus tard",
       "sold_out": "Épuisé",
       "added_to_cart_successfully": "Achat supplémentaire réussi",
@@ -970,7 +976,7 @@
       "error_message_2014": "Le compte est risqué",
       "error_message_2016": "Le compte est risqué",
       "error_message_2020": "Le système est occupé, veuillez réessayer plus tard",
-      "error_message_3": "Erreur de service",
+      "error_message_3": "Le séjour est trop long, veuillez rafraîchir la page.",
       "error_message_3001": "Exception de service, réessayer plus tard",
       "error_message_3002": "Opération illégale",
       "error_message_3003": "Espacez vos tentatives",
@@ -988,6 +994,7 @@
       "error_message_3023": "Erreur de format de lien",
       "error_message_3024": "Erreur de paramètre de lien",
       "error_message_3026": "Le format du compte est incorrect",
+      "error_message_3027": "Le mot de passe ne peut pas être le même que précédemment。",
       "error_message_3029": "L'activation de téléphone mobile n'est pas disponible pour le moment.",
       "error_message_4": "Erreur de service",
       "error_message_5": "Erreur de service",

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{asset_url 'section-main-list-collections.css'}}" />
-<link rel="stylesheet" href="{{asset_url 'component-card.css'}}" media="all" />
+{{snippet "stylesheet" href=(asset_url "section-main-list-collections.css")}}
+{{snippet "stylesheet" href=(asset_url "component-card.css")}}
 
 {{assign "title" section.settings.title}}
 {{assign "mobile_cols" section.settings.m_cols}}
@@ -26,7 +26,7 @@
             title=name
             ratio=../collection_image_ratio
             fill_type=../collection_fill_type
-            lazy_load=(if @index '!==' 0)
+            lazy_load=(if @index '>' 2)
             desktop_grid_cols=../section.settings.pc_cols
             mobile_grid_cols=../section.settings.m_cols
           }}

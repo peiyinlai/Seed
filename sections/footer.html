@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="{{asset_url 'component-dropdown-menu.css'}}" />
-<link rel="stylesheet" href="{{asset_url 'section-footer.css'}}" />
-<link rel="stylesheet" href="{{asset_url 'snippet-tips-card.css'}}" />
+{{snippet "stylesheet" href=(asset_url "component-dropdown-menu.css")}}
+{{snippet "stylesheet" href=(asset_url "section-footer.css")}}
+{{snippet "stylesheet" href=(asset_url "snippet-tips-card.css")}}
 <script src="{{asset_url 'component-localization-form.js'}}" defer></script>
 <script src="{{asset_url 'component-dropdown-menu.js'}}" defer></script>
 <script src="{{asset_url 'section-footer.js'}}" defer></script>
@@ -71,7 +71,7 @@
             {{#capture "img_style"}}width:{{settings.image_width}}px;height:{{settings.image_width}}px;{{/capture}}
             {{#if settings.image}}
               <div class="footer-block__details-content footer-block-image" style="text-align: {{settings.align}};">
-                {{snippet "image" data=settings.image lazy=true style=img_style}}
+                {{snippet "image" data=settings.image style=img_style}}
               </div>
             {{/if}}
           </div>

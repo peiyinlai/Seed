@@ -1482,6 +1482,9 @@
             "label": "列表"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "顯示封面圖"
         },

@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Personvernpolicy"
     },
+    "product": {
+      "unavailable_sale": "Denne varen støtter ikke nettsalg"
+    },
     "promotion": {
       "no_promotion": "Rabatt som ikke deltar"
     },
@@ -601,9 +604,11 @@
       "method": "Betalingsmåte",
       "paid": "Betalt",
       "partially_paid": "Delvis betalt",
+      "partially_refund": "Delvis refusjon",
       "paying": "Betalende",
       "payment": "Betaling",
       "payment_status": "Betalingsstatus",
+      "refund": "Refundert",
       "unpaid": "Ubetalt"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Laster inn flere varer",
       "no_product_data_found": "Finner ingen produktdata. Prøv på nytt senere",
       "sold_out": "Utsolgt",
       "added_to_cart_successfully": "Lagt til i handlekurven vellykket",
@@ -970,7 +976,7 @@
       "error_message_2014": "Konto i fare",
       "error_message_2016": "Konto i fare",
       "error_message_2020": "Systemet er travelt, prøv igjen senere",
-      "error_message_3": "Service unntak",
+      "error_message_3": "Oppholdet er for langt, vennligst oppdater siden.",
       "error_message_3001": "Unntak i tjenesten. Prøv på nytt senere",
       "error_message_3002": "Brukere som ikke er bundet til mobiltelefoner/postbokser prøver å endre passord",
       "error_message_3003": "Ikke prøv så ofte",
@@ -988,6 +994,7 @@
       "error_message_3023": "Linken har feil format",
       "error_message_3024": "Linken er feil",
       "error_message_3026": "Feil i kontoformat",
+      "error_message_3027": "Passordet kan ikke være det samme som forrige gang。",
       "error_message_3029": "Støtter ikke mobil nummer aktivering på dette tidspunktet",
       "error_message_4": "Service unntak",
       "error_message_5": "Service unntak",

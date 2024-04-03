@@ -1482,6 +1482,9 @@
             "label": "List"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "Display cover"
         },

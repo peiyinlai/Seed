@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Sekretesspolicy"
     },
+    "product": {
+      "unavailable_sale": "Denna produkt stöder inte onlineförsäljning"
+    },
     "promotion": {
       "no_promotion": "Icke-deltagande rabatter"
     },
@@ -601,9 +604,11 @@
       "method": "Betalningsmetod",
       "paid": "Betald",
       "partially_paid": "Delvis betalad",
+      "partially_refund": "Delvis återbetalning",
       "paying": "Betalning",
       "payment": "Betalning",
       "payment_status": "Betalningsstatus",
+      "refund": "Återbetald",
       "unpaid": "Jag betalar inte"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Laddar fler objekt",
       "no_product_data_found": "Inga produktdata hittades. Försök igen senare",
       "sold_out": "Slutsålt",
       "added_to_cart_successfully": "Har lagts till i kundvagnen",
@@ -970,7 +976,7 @@
       "error_message_2014": "Konto i fara",
       "error_message_2016": "Konto i fara",
       "error_message_2020": "Systemet är upptaget, försök igen senare",
-      "error_message_3": "Service Undantag",
+      "error_message_3": "Vistelsen är för lång, vänligen uppdatera sidan.",
       "error_message_3001": "Undantag i tjänsten, försök igen senare",
       "error_message_3002": "Användare som inte är relaterade till mobiltelefoner / postlådor försöker ändra sitt lösenord",
       "error_message_3003": "Försök inte så ofta",
@@ -988,6 +994,7 @@
       "error_message_3023": "Länken är i fel format",
       "error_message_3024": "Länken är fel",
       "error_message_3026": "Fel i konto format",
+      "error_message_3027": "Lösenordet kan inte vara samma som förra gången。",
       "error_message_3029": "Stöder inte mobil nummer aktivering just nu",
       "error_message_4": "Service Undantag",
       "error_message_5": "Service Undantag",

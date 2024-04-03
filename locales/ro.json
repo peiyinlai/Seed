@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Politica de confidențialitate"
     },
+    "product": {
+      "unavailable_sale": "Această marfă nu acceptă vânzări online"
+    },
     "promotion": {
       "no_promotion": "Reducere neparticipantă"
     },
@@ -601,9 +604,11 @@
       "method": "Metodă de plată",
       "paid": "Plătit",
       "partially_paid": "Plătit parțial",
+      "partially_refund": "Rambursare parțială",
       "paying": "Se plătește",
       "payment": "Plată",
       "payment_status": "Stare plată",
+      "refund": "Returnat",
       "unpaid": "Neplătit"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Se încarcă mai multe articole",
       "no_product_data_found": "Nu a fost găsită nicio informație despre produs. Vă rugăm să încercați din nou mai târziu",
       "sold_out": "Vândut",
       "added_to_cart_successfully": "Adăugat în coș cu succes",
@@ -970,7 +976,7 @@
       "error_message_2014": "Contul este în risc",
       "error_message_2016": "Contul este în risc",
       "error_message_2020": "Sistemul este ocupat, vă rugăm să încercați din nou mai târziu",
-      "error_message_3": "Service pentru excepții",
+      "error_message_3": "Șederea este prea lungă, vă rugăm să actualizați pagina.",
       "error_message_3001": "Întreruperea serviciului. Vă rugăm să încercați din nou mai târziu.",
       "error_message_3002": "Utilizatorii care nu sunt asociați cu telefoanele mobile/adresele electronice încearcă să-și schimbe parolele",
       "error_message_3003": "Nu încercați atât de frecvent",
@@ -988,6 +994,7 @@
       "error_message_3023": "Link-ul este incorect",
       "error_message_3024": "Eroare link parametru",
       "error_message_3026": "Eroare de format de cont",
+      "error_message_3027": "Parola nu poate fi aceeași ca cea anterioară。",
       "error_message_3029": "Deocamdată nu suportăm activarea numărului de telefon mobil",
       "error_message_4": "Service pentru excepții",
       "error_message_5": "Service pentru excepții",

@@ -11,7 +11,7 @@
 {{/with}}
 
 {{#if show_announcement}}
-  <link rel="stylesheet" href="{{asset_url 'section-announcement-bar.css'}}" />
+  {{snippet "stylesheet" href=(asset_url "section-announcement-bar.css")}}
   {{#if section.settings.display_mode "!==" "tiled"}}
     <script src="{{asset_url 'component-slider.js'}}" defer></script>
     <script src="{{asset_url 'section-announcement-bar.js'}}" defer></script>

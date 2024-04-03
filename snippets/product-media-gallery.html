@@ -33,6 +33,8 @@
   {{assign 'hide_mobile_slider' true}}
 {{/if}}
 
+{{assign "media_width" 0.65}}
+
 {{#if section.settings.product_image_size 'large'}}
   {{assign 'media_width' 0.65}}
 {{else if section.settings.product_image_size 'medium'}}
@@ -68,10 +70,8 @@
             class="product__media-item grid__item slider__slide is-active"
             data-media-id="{{ section.id }}-{{ featured_media.id }}"
           >
-            {{ assign 'media_position' 1 }}
             {{snippet 'product-thumbnail'
               media=featured_media
-              position=media_position
               media_count=media_count
               desktop_layout=section.settings.product_image_pc_show_style
               mobile_layout=section.settings.product_mobile_thumbnail_image_hide
@@ -98,21 +98,14 @@
               class="product__media-item grid__item slider__slide{{#if global.single_media_visible }} product__media-item--single{{/if}}{{#if (and (isTruthy global.product.selected_or_first_available_variant.featured_media) (if @index '==' 0)) }} is-active{{/if}}{{#if media.media_type '!=' 'image' }} product__media-item--full{{/if}}{{#contains global.variant_images media.src}} product__media-item--variant{{/contains}}"
               data-media-id="{{ global.section.id }}-{{ media.id }}"
             >
-              {{assign 'media_position' (plus (default global.media_position 0) 1)}}
-              {{assign 'lazy_load' false}}
-              {{#if media_position '>' 1}}
-                {{assign 'lazy_load' true}}
-              {{/if}}
               {{snippet 'product-thumbnail'
                 media=media
-                position=media_position
                 media_count=media_count
                 desktop_layout=global.section.settings.product_image_pc_show_style
                 mobile_layout=global.section.settings.product_mobile_thumbnail_image_hide
                 loop=global.section.settings.video_loop
                 modal_id=global.section.id
                 media_width=global.media_width
-                lazy_load=lazy_load
               }}
             </li>
           {{/unless}}

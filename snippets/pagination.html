@@ -10,7 +10,7 @@
     - paginate: {Object}
     - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
 {{/comment}}
-<link rel="stylesheet" href="{{asset_url 'component-pagination.css'}}" media="print" onload="this.media='all'" />
+{{snippet "stylesheet" href=(asset_url "component-pagination.css") lazy=true}}
 
 <div class="pagination-wrapper">
   <nav class="pagination">

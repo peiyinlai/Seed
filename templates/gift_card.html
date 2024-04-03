@@ -1,6 +1,6 @@
 {{layout "gift_card"}}
 
-<link rel="stylesheet" href="{{asset_url 'template-giftcard.css'}}" />
+{{snippet "stylesheet" href=(asset_url "template-giftcard.css")}}
 
 {{assign "invalid" (or (isFalsey gift_card.enabled) (isTruthy gift_card.expired))}}
 

@@ -213,31 +213,23 @@ defineCustomElement('slider-component', () => {
     _getTotalPage() {
       if (this.slideItems.length === 1) return 1;
 
-      const sliderWidth = this.slider.clientWidth;
-      const sliderHeight = this.slider.clientHeight;
-      const sliderScrollWidth = this.slider.scrollWidth;
-      const sliderScrollHeight = this.slider.scrollHeight;
+      const sliderClientSize = this.direction === 'horizontal' ? this.slider.clientWidth : this.slider.clientHeight;
+      const sliderFullSize = this.direction === 'horizontal' ? this.slider.scrollWidth : this.slider.scrollHeight;
+
       let slideWithInScreenNum = 1;
 
       for (let i = this.slideItems.length - 2; i >= 0; i--) {
         const slide = this.slideItems[i];
+        const slideOffsetSize = this.direction === 'horizontal' ? slide.offsetLeft : slide.offsetTop;
 
-        if (this.direction === 'horizontal') {
-          if (sliderScrollWidth - slide.offsetLeft - sliderWidth > -1) {
-            return this.slideItems.length - slideWithInScreenNum + 1;
-          }
+        if (sliderFullSize - slideOffsetSize < sliderClientSize + 1) {
+          slideWithInScreenNum++;
+        } else {
+          break;
         }
-
-        if (this.direction === 'vertical') {
-          if (sliderScrollHeight - slide.offsetTop - sliderHeight > -1) {
-            return this.slideItems.length - slideWithInScreenNum + 1;
-          }
-        }
-
-        slideWithInScreenNum++;
       }
 
-      return 1;
+      return this.slideItems.length - slideWithInScreenNum + 1;
     }
 
     _updateView() {

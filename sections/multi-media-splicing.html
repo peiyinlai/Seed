@@ -2,9 +2,9 @@
 {{assign "settings" section.settings}}
 {{#capture "sizes"}}(min-width: {{theme_settings.page_width}}px){{#if (size section.blocks) 1}}calc({{theme_settings.page_width}}px - 100px){{else}}{{round (times (minus theme_settings.page_width 100) 0.67)}}px{{/if}}, (min-width: 750px){{#if (size section.blocks) 1}} calc(100vw - 100px){{else}} 500px{{/if}}, calc(100vw - 30px){{/capture}}
 
-{{stylesheet_tag (asset_url "section-multi-media-splicing.css")}}
-{{stylesheet_tag (asset_url "component-card.css")}}
-{{stylesheet_tag (asset_url "component-price.css")}}
+{{snippet "stylesheet" href=(asset_url "section-multi-media-splicing.css")}}
+{{snippet "stylesheet" href=(asset_url "component-card.css")}}
+{{snippet "stylesheet" href=(asset_url "component-price.css")}}
 
 {{snippet
   "section-padding-creator"
@@ -100,7 +100,6 @@
                               "image"
                               class="hover-effect-target"
                               data=settings.cover_image
-                              lazy=true
                               sizes=sizes
                               breakpoints="550, 720, 990, 1100, 1500, 2200, 3000"
                             }}

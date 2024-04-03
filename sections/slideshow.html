@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset_url 'section-slideshow.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-slideshow.css")}}
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
 
 {{assign "pc_height" section.settings.section_height}}
@@ -45,7 +45,8 @@
     <div id="Slider-{{section.id}}" class="slideshow__slider slider">
       {{#with section as |section|}}
         {{#each blocks}}
-          {{assign "firstLinkInImage" (and this.settings.link (if (length this.settings.link_text) "===" 0))}}
+          {{assign "first_link_in_image" (and this.settings.link (if (length this.settings.link_text) "===" 0))}}
+          {{assign "ele" (ternary first_link_in_image 'a' 'div')}}
           <div
             {{{shopline_attributes}}}
             id="Slide-{{id}}"
@@ -60,8 +61,8 @@
               "
           >
             
-            <a
-              href="{{#if firstLinkInImage}}{{this.settings.link}}{{else}}javascript:;{{/if}}"
+            <{{ele}}
+              {{#if first_link_in_image}}href="{{this.settings.link}}"{{/if}}
               class="slideshow-slide__media {{#if @index '>' 0}}slideshow-slide__media--adapt{{/if}} "
             >
               
@@ -70,7 +71,6 @@
                   "image"
                   class="slideshow-slide__image display-none display-block-desktop"
                   data=this.settings.image
-                  lazy=true
                 }}
               {{else}}
                 <div class="slideshow-slide__image-placeholder display-none display-block-desktop">
@@ -87,13 +87,13 @@
                 )
               }}
               {{#if mobileImage}}
-                {{snippet "image" class="slideshow-slide__image display-none-desktop" data=mobileImage lazy=true}}
+                {{snippet "image" class="slideshow-slide__image display-none-desktop" data=mobileImage}}
               {{else}}
                 <div class="slideshow-slide__image-placeholder display-none-desktop">
                   {{placeholder_svg_tag "lifestyle-1"}}
                 </div>
               {{/if}}
-            </a>
+            </{{ele}}>
 
             <div class="slideshow-slide__text-wrapper">
               <div class="slideshow-slide__text">

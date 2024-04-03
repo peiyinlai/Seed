@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Zásady Ochrany Osobních Údajů"
     },
+    "product": {
+      "unavailable_sale": "Toto zboží nepodporuje online prodej"
+    },
     "promotion": {
       "no_promotion": "Sleva bez účasti"
     },
@@ -601,9 +604,11 @@
       "method": "Způsob platby",
       "paid": "Zaplaceno",
       "partially_paid": "Částečně zaplaceno",
+      "partially_refund": "Částečné vrácení peněz",
       "paying": "Placení",
       "payment": "Platba",
       "payment_status": "Stav platby",
+      "refund": "Vráceno",
       "unpaid": "Nezaplaceno"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Načítání dalších položek",
       "no_product_data_found": "Nebyly nalezeny žádné údaje o produktu. Zkuste to prosím později",
       "sold_out": "Vyprodáno",
       "added_to_cart_successfully": "Přidáno do košíku úspěšně",
@@ -970,7 +976,7 @@
       "error_message_2014": "Účet v ohrožení",
       "error_message_2016": "Účet v ohrožení",
       "error_message_2020": "Systém je obsazen, zkuste to prosím později",
-      "error_message_3": "Výjimka služby",
+      "error_message_3": "Příliš dlouhý pobyt, prosím, obnovte stránku.",
       "error_message_3001": "Výjimka služby, zkuste to znovu později",
       "error_message_3002": "Uživatelé, kteří nejsou vázáni na mobilní telefony / poštovní schránky, se snaží změnit svá hesla",
       "error_message_3003": "Nezkoušejte to tak často",
@@ -988,6 +994,7 @@
       "error_message_3023": "Odkaz je ve špatném formátu",
       "error_message_3024": "Odkaz je špatný",
       "error_message_3026": "Chyba formátu účtu",
+      "error_message_3027": "Heslo nesmí být stejné jako minule。",
       "error_message_3029": "Prozatím nepodporujeme aktivaci mobilního telefonního čísla",
       "error_message_4": "Výjimka služby",
       "error_message_5": "Výjimka služby",

@@ -4,6 +4,9 @@
   position: relative;
   background-color: rgb(var(--color-page-background));
   color: rgb(var(--color-text));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /*safari iphone default text-color*/
 .header a:not(.button),

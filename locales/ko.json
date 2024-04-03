@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "개인정보 정책"
     },
+    "product": {
+      "unavailable_sale": "이 상품은 온라인 판매가 지원되지 않습니다"
+    },
     "promotion": {
       "no_promotion": "제안에 참여하지 않음"
     },
@@ -546,7 +549,7 @@
     "activate_account_discount": "계정 활성화 및 할인코드 받기",
     "handle_success": "작업 성공",
     "search": {
-      "search": "ここに入力して［検索］をタップします",
+      "search": "여기에 입력하고 검색하세요\"가 됩니다",
       "search_hint": "“{{key}}” 검색"
     }
   },
@@ -601,9 +604,11 @@
       "method": "지불 방식",
       "paid": "지불함",
       "partially_paid": "일부 지불",
+      "partially_refund": "부분 환불",
       "paying": "지불중",
       "payment": "지불",
       "payment_status": "지불 상태",
+      "refund": "환불 완료",
       "unpaid": "지불하지 않늠"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "더 많은 항목 불러오기",
       "no_product_data_found": "현재 상품 데이터가 없습니다. 잠시후 다시 시도하세요",
       "sold_out": "판매됨",
       "added_to_cart_successfully": "추가 구매에 성공하였습니다.",
@@ -970,7 +976,7 @@
       "error_message_2014": "계좌번호는 위험이 존재합니다",
       "error_message_2016": "계좌번호는 위험이 존재합니다",
       "error_message_2020": "시스템이 바쁩니다. 잠시 후에 다시 시도하십시오.",
-      "error_message_3": "서비스가 이상합니다",
+      "error_message_3": "체류 시간이 너무 길어서 페이지를 새로 고칩니다.",
       "error_message_3001": "서비스가 이상합니다. 나중에 다시 시도합니다.",
       "error_message_3002": "핸드폰/이메일을 귀속하지 않은 사용자가 비밀번호 수정을 시도합니다",
       "error_message_3003": "여러번 검증번호 발송",
@@ -988,6 +994,7 @@
       "error_message_3023": "잘못된 링크 형식",
       "error_message_3024": "링크 인자 오류",
       "error_message_3026": "계정 형식 오류",
+      "error_message_3027": "비밀번호는 이전과 동일할 수 없습니다。",
       "error_message_3029": "휴대폰 번호 활성화는 일시적으로 지원되지 않습니다",
       "error_message_4": "서비스가 이상합니다",
       "error_message_5": "서비스가 이상합니다",

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset_url 'section-customer.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-customer.css")}}
 <script src="{{asset_url 'section-customer-lib-jquery.js'}}" defer></script>
 <script src="{{asset_url 'section-main-activate-account.js'}}" defer></script>
 
@@ -25,7 +25,7 @@
   <div class="marketing-discount-display" style="--background-color: {{invite_activation_information.discount_bg_color.rgba}}">
     {{#if invite_activation_information.discount_banner_image}}
     <div class="marketing-banner-image">
-      {{snippet "image" data=invite_activation_information.discount_banner_image lazy=true}}
+      {{snippet "image" data=invite_activation_information.discount_banner_image}}
     </div>
     {{/if}}
     <div class="marketing-banner-body">

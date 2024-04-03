@@ -9,12 +9,6 @@
     />
     <link rel="canonical" href="{{canonical_url}}" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="preconnect" href="https://cdn.shopline.com" crossorigin />
-    <link rel="dns-prefetch" href="https://cdn.myshopline.com" />
-    <link rel="dns-prefetch" href="https://img.myshopline.com" />
-    <link rel="preconnect" href="https://img.myshopline.com" />
-    <link rel="dns-prefetch" href="https://img-va.myshopline.com" />
-    <link rel="preconnect" href="https://img-va.myshopline.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -36,10 +30,7 @@
 
     {{snippet "theme-css-var"}}
 
-    {{{stylesheet_tag (asset_url "base.css")}}}
-    {{{stylesheet_tag (asset_url "section-header.css")}}}
-    {{{stylesheet_tag (asset_url "section-announcement-bar.css")}}}
-    {{{stylesheet_tag (asset_url "section-footer.css")}}}
+    {{snippet "stylesheet" href=(asset_url "base.css")}}
 
     <script src="{{asset_url 'global.js'}}" defer="defer"></script>
 

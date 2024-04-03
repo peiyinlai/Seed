@@ -53,7 +53,7 @@
   width: 330px;
   max-height: 480px;
   overflow: auto;
-  z-index: 2;
+  z-index: 10;
   background-color: rgb(var(--color-page-background));
   padding: 20px 20px;
 }

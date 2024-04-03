@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Polityka prywatności"
     },
+    "product": {
+      "unavailable_sale": "Tego produktu nie można kupić przez internet "
+    },
     "promotion": {
       "no_promotion": "Nie uczestniczę w ofercie"
     },
@@ -601,9 +604,11 @@
       "method": "Metody płatności",
       "paid": "Opłacono",
       "partially_paid": "Płatność za część",
+      "partially_refund": "Częściowy zwrot",
       "paying": "Opłaca",
       "payment": "Płatność",
       "payment_status": "Stan płatności",
+      "refund": "Zwrócone",
       "unpaid": "Nie opłacono"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Załaduj więcej projektów",
       "no_product_data_found": "Brak danych tego produktu, proszę spróbować później",
       "sold_out": "Wyprzedane",
       "added_to_cart_successfully": "Pomyślnie dodano",
@@ -970,7 +976,7 @@
       "error_message_2014": "Konto jest niebezpieczne",
       "error_message_2016": "Konto jest niebezpieczne",
       "error_message_2020": "System jest zajęty. Spróbuj ponownie później",
-      "error_message_3": "Usługa działa nienormalnie",
+      "error_message_3": "Czas pobytu jest zbyt długi, proszę odświeżyć stronę.",
       "error_message_3001": "Nie powiodło się, proszę spróbować ponownie później.",
       "error_message_3002": "Użytkownik, który nie powiązał swego numeru telefonu/e-maila, próbuje zmienić hasło",
       "error_message_3003": "Wielekrotnie wysłać kod weryfikacyjny",
@@ -988,6 +994,7 @@
       "error_message_3023": "Zła forma linku",
       "error_message_3024": "Zła forma parametru",
       "error_message_3026": "Zła forma konta",
+      "error_message_3027": "Hasło nie może być takie samo jak poprzednio。",
       "error_message_3029": "Aktywacja numeru telefonu komórkowego nie jest obecnie obsługiwana",
       "error_message_4": "Usługa działa nienormalnie",
       "error_message_5": "Usługa działa nienormalnie",

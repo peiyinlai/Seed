@@ -1482,6 +1482,9 @@
             "label": "Daftar"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "Tampilkan Gambar Sampul"
         },

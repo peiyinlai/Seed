@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Tietosuojakäytäntö"
     },
+    "product": {
+      "unavailable_sale": "Tämä tuote ei tue verkkomyyntiä"
+    },
     "promotion": {
       "no_promotion": "Tuotteet, joihin alennus ei sovellu"
     },
@@ -601,9 +604,11 @@
       "method": "Maksutapa",
       "paid": "Maksettu",
       "partially_paid": "Osittain maksettu",
+      "partially_refund": "Osa hyvitys",
       "paying": "Maksaminen",
       "payment": "Maksaminen",
       "payment_status": "Maksun tilanne",
+      "refund": "Palautettu",
       "unpaid": "Maksamatta"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Ladataan lisää kohteita",
       "no_product_data_found": "Tuotetietoja ei löytynyt Yritä myöhemmin uudelleen",
       "sold_out": "Loppuunmyyty",
       "added_to_cart_successfully": "Lisätty onnistuneesti ostoskoriin",
@@ -970,7 +976,7 @@
       "error_message_2014": "Tilit ovat vaarassa",
       "error_message_2016": "Tilit ovat vaarassa",
       "error_message_2020": "Järjestelmä on varattu. Yritä myöhemmin uudelleen",
-      "error_message_3": "Palvelu Poikkeus",
+      "error_message_3": "Oleskelu on liian pitkä, päivitä sivu.",
       "error_message_3001": "Palvelupoikkeus, yritä myöhemmin uudelleen",
       "error_message_3002": "Käyttäjät, jotka on linkitetty matkapuhelinnumeroonsa/sähköpostiinsa, yrittävät vaihtaa salasanaa",
       "error_message_3003": "Älä yritä kovin usein",
@@ -988,6 +994,7 @@
       "error_message_3023": "Linkki on väärässä muodossa",
       "error_message_3024": "Linkki ei ole hyvä.",
       "error_message_3026": "Tilin muodon virhe",
+      "error_message_3027": "Salasana ei saa olla sama kuin viimeksi。",
       "error_message_3029": "Matkapuhelinnumeron aktivointi ei ole toistaiseksi mahdollista",
       "error_message_4": "Palvelu Poikkeus",
       "error_message_5": "Palvelu Poikkeus",

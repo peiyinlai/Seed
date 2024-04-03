@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Privaatsuspoliitika"
     },
+    "product": {
+      "unavailable_sale": "See toode ei toeta online-müüki"
+    },
     "promotion": {
       "no_promotion": "Mitteosalev soodushind"
     },
@@ -601,9 +604,11 @@
       "method": "Makseviis",
       "paid": "Tasutud",
       "partially_paid": "Osaliselt tasutud",
+      "partially_refund": "Osa tagasimakse",
       "paying": "Maksmine",
       "payment": "Makse",
       "payment_status": "Makse staatus",
+      "refund": "Tagastatud",
       "unpaid": "Tasumata"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Rohkemate üksuste laadimine",
       "no_product_data_found": "Tooteandmeid ei leitud. Proovi hiljem uuesti",
       "sold_out": "Välja müüdud",
       "added_to_cart_successfully": "Lisatud ostukorvi edukalt",
@@ -970,7 +976,7 @@
       "error_message_2014": "Kontod on ohus",
       "error_message_2016": "Kontod on ohus",
       "error_message_2020": "Süsteem on hõivatud, proovi hiljem uuesti",
-      "error_message_3": "Teenuse erandid",
+      "error_message_3": "Viibimine on liiga pikk, palun värskendage lehekülge.",
       "error_message_3001": "Teenuse erand, proovige hiljem uuesti",
       "error_message_3002": "Kasutajad, kes pole seotud mobiiltelefoni/e-postiga peavad proovima muuta oma salasõnu",
       "error_message_3003": "Ära proovi nii sageli",
@@ -988,6 +994,7 @@
       "error_message_3023": "Link on vales vormingus",
       "error_message_3024": "Link vales",
       "error_message_3026": "Konto vormingu tõrked",
+      "error_message_3027": "Parool ei tohi olla sama mis eelmine kord。",
       "error_message_3029": "Mobiiltelefoninumbri aktiveerimist esialgu ei toetata",
       "error_message_4": "Teenuse erandid",
       "error_message_5": "Teenuse erandid",

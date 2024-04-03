@@ -32,7 +32,7 @@
 {{/if}}
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
 <script src="{{asset_url 'section-text-columns-with-image.js'}}" defer></script>
-<link rel="stylesheet" href="{{asset_url 'section-text-columns-with-image.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-text-columns-with-image.css")}}
 {{snippet
   "section-padding-creator"
   section_id=section.id

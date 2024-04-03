@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Datenschutz-Bestimmungen"
     },
+    "product": {
+      "unavailable_sale": "Dieser Artikel ist online nicht erhältlich"
+    },
     "promotion": {
       "no_promotion": "Nicht am Angebot teilnehmen"
     },
@@ -601,9 +604,11 @@
       "method": "Zahlungsart",
       "paid": "Bezahlt",
       "partially_paid": "Teilweise bezahlt",
+      "partially_refund": "Teilweise Rückerstattung",
       "paying": "Zahlungsvorgang",
       "payment": "Zahlung",
       "payment_status": "Zahlungsstatus",
+      "refund": "Erstattet",
       "unpaid": "Nicht bezahlt"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Weitere Artikel laden",
       "no_product_data_found": "Keine Produktdaten gefunden. Bitte später erneut versuchen.",
       "sold_out": "Ausverkauft",
       "added_to_cart_successfully": "Erfolgreicher Zukauf",
@@ -970,7 +976,7 @@
       "error_message_2014": "Das Konto ist gefährdet",
       "error_message_2016": "Das Konto ist gefährdet",
       "error_message_2020": "Das System ist beschäftigt, bitte versuchen Sie es später noch einmal",
-      "error_message_3": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",
+      "error_message_3": "Die Verweildauer ist zu lang, bitte aktualisieren Sie die Seite.",
       "error_message_3001": "Es ist ein Fehler aufgetreten, versuchen Sie es später erneut",
       "error_message_3002": "Unzulässiger Vorgang",
       "error_message_3003": "Versuchen Sie es nicht so oft",
@@ -988,6 +994,7 @@
       "error_message_3023": "Der Link hat ein falsches Format",
       "error_message_3024": "Falsche Link-Parameter",
       "error_message_3026": "Falsches Kontoformat",
+      "error_message_3027": "Das Passwort darf nicht mit dem vorherigen übereinstimmen。",
       "error_message_3029": "Die Aktivierung der Mobiltelefonnummern ist zur Zeit nicht verfügbar.",
       "error_message_4": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",
       "error_message_5": "Das System ist ausgelastet, bitte versuchen Sie es später erneut",

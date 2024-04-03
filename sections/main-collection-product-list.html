@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="{{asset_url 'section-collection-product-list.css'}}" media="all" />
-<link rel="stylesheet" href="{{ asset_url 'component-card.css' }}" media="all">
-<link rel="stylesheet" href="{{ asset_url 'component-price.css' }}" media="all">
+{{snippet "stylesheet" href=(asset_url "section-collection-product-list.css")}}
+{{snippet "stylesheet" href=(asset_url "component-card.css")}}
+{{snippet "stylesheet" href=(asset_url "component-price.css")}}
 {{#if section.settings.enable_quick_add}}
-  <link rel="stylesheet" href="{{ asset_url 'component-quick-add.css' }}" media="print" onload="this.media='all'">
+  {{snippet "stylesheet" href=(asset_url "component-quick-add.css") lazy=true}}
   <script src="{{ asset_url 'component-quick-add.js' }}" defer="defer"></script>
   <script src="{{ asset_url 'component-product-form.js' }}" defer="defer"></script>
 {{/if}}
@@ -12,7 +12,7 @@
 <div class="section-padding page-width">
   <div class="{{#if section.settings.filter_type '===' 'vertical' }}facets-vertical{{/if}}">
     {{#or section.settings.enable_filtering section.settings.enable_sorting }}
-      {{ stylesheet_tag (asset_url 'component-facets.css') }}
+      {{snippet "stylesheet" href=(asset_url "component-facets.css")}}
       <script src="{{ asset_url 'component-facets.js' }}" defer="defer"></script>
       <aside class="facets-wrapper{{#unless section.settings.enable_filtering}} facets-wrapper--no-filters{{/unless}}" id="main-collection-filters" data-id="{{ section.id }}">
         {{ snippet 'facets' results=collection enable_filtering=section.settings.enable_filtering enable_sorting=section.settings.enable_sorting filter_type=section.settings.filter_type }}
@@ -69,7 +69,7 @@
                         show_secondary_image=../section.settings.show_secondary_image
                         desktop_grid_cols=../section.settings.columns_desktop
                         mobile_grid_cols=../section.settings.columns_mobile
-                        lazy_load=(if @index '!==' 0)
+                        lazy_load=(if @index '>' 2)
                         theme_settings=../settings
                     }}
                   </li>

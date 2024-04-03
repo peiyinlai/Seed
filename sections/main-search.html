@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="{{ asset_url 'component-card.css' }}" media="all">
-<link rel="stylesheet" href="{{ asset_url 'component-price.css' }}" media="all">
-<link rel="stylesheet" href="{{ asset_url 'section-main-search.css' }}" media="all">
+{{snippet "stylesheet" href=(asset_url "component-card.css")}}
+{{snippet "stylesheet" href=(asset_url "component-price.css")}}
+{{snippet "stylesheet" href=(asset_url "section-main-search.css")}}
 <script src="{{ asset_url 'component-predictive-search.js' }}" defer></script>
 
 
@@ -57,7 +57,7 @@
       </div>
       <div class="main-search__container {{#if section.settings.filter_type '===' 'vertical' }}facets-vertical{{/if}}">
         {{#or section.settings.enable_filtering section.settings.enable_sorting }}
-          {{ stylesheet_tag (asset_url 'component-facets.css') }}
+          {{snippet "stylesheet" href=(asset_url "component-facets.css")}}
           <script src="{{ asset_url 'component-facets.js' }}" defer="defer"></script>
           <aside class="facets-wrapper{{#unless section.settings.enable_filtering}} facets-wrapper--no-filters{{/unless}}" id="main-collection-filters" data-id="{{ section.id }}">
             {{ snippet 'facets' results=search enable_filtering=section.settings.enable_filtering enable_sorting=section.settings.enable_sorting filter_type=section.settings.filter_type }}
@@ -124,7 +124,7 @@
                                 </div>
                               </div>
                               {{#if item.featured_image.src}}
-                                {{snippet 'image' data=item.featured_image lazy=true pc_size=(append '1/' ../section.settings.columns_desktop ) mobile_size=(append '1/' ../section.settings.columns_mobile )}}
+                                {{snippet 'image' data=item.featured_image pc_size=(append '1/' ../section.settings.columns_desktop ) mobile_size=(append '1/' ../section.settings.columns_mobile )}}
                               {{else}}
                                 <div class="placeholder">
                                   {{placeholder_svg_tag 'image'}}
@@ -139,7 +139,7 @@
                           <div class="search__article-card">
                             <a href="{{#if (isFalsey item.url)}}javascript:;{{else}}{{item.url}}{{/if}}" class="search__article-card-wrapper global-blog-card-border-shadow">
                               {{#if item.image.src}}
-                                {{snippet 'image' data=item.image lazy=true pc_size=(append '1/' ../section.settings.columns_desktop ) mobile_size=(append '1/' ../section.settings.columns_mobile )}}
+                                {{snippet 'image' data=item.image pc_size=(append '1/' ../section.settings.columns_desktop ) mobile_size=(append '1/' ../section.settings.columns_mobile )}}
                               {{else}}
                                 <div class="placeholder">
                                   {{placeholder_svg_tag 'image'}}

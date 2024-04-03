@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Política de Privacidade"
     },
+    "product": {
+      "unavailable_sale": "Este produto não é compatível com as vendas em linha"
+    },
     "promotion": {
       "no_promotion": "Não participar da oferta"
     },
@@ -601,9 +604,11 @@
       "method": "Forma de pagamento",
       "paid": "Pago",
       "partially_paid": "Pagamento parcial",
+      "partially_refund": "Reembolso parcial",
       "paying": "Pagamento em curso",
       "payment": "Pagar",
       "payment_status": "Status de pagamento",
+      "refund": "Reembolsado",
       "unpaid": "Não pago"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Carregando mais itens",
       "no_product_data_found": "Sem dados actuais do item, por favor tente novamente mais tarde",
       "sold_out": "Vendido",
       "added_to_cart_successfully": "",
@@ -970,7 +976,7 @@
       "error_message_2014": "A conta possui riscos",
       "error_message_2016": "A conta possui riscos",
       "error_message_2020": "O sistema está ocupado, por favor tente novamente mais tarde",
-      "error_message_3": "Erro de serviço",
+      "error_message_3": "A estadia é demasiado longa, por favor, atualize a página.",
       "error_message_3001": "Erro de serviço, tente novamente mais tarde",
       "error_message_3002": "Utilizador com telemóvel/correio electrónico não vinculado tenta alterar a palavra-passe",
       "error_message_3003": "Código de verificação enviado várias vezes",
@@ -988,6 +994,7 @@
       "error_message_3023": "A ligação está no formato errado",
       "error_message_3024": "A ligação não é boa",
       "error_message_3026": "Erro de formato de conta",
+      "error_message_3027": "A senha não pode ser a mesma que a anterior。",
       "error_message_3029": "De momento, não suportamos a ativação do número de telemóvel",
       "error_message_4": "Erro de serviço",
       "error_message_5": "Erro de serviço",

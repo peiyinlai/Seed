@@ -1482,6 +1482,9 @@
             "label": "Senarai"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "Tunjuk imej muka depan"
         },

@@ -11,7 +11,7 @@
     - class: {String} container class
     - desktop_grid_cols: {Number}
     - mobile_grid_cols: {Number}
-    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+    - lazy_load: {Boolean} Image should be lazy loaded.
 
     Usage:
     {{ snippet 'collection-card' }}
@@ -19,8 +19,7 @@
 
 
 
-<link rel="stylesheet" href="{{asset_url 'snippet-collection-card.css'}}" />
-{{assign 'lazy_load' (default lazy_load true)}}
+{{snippet "stylesheet" href=(asset_url "snippet-collection-card.css")}}
 {{assign "image_ratio" (default ratio 100)}}
 {{#and (if ratio "===" "adapt") (has card_collection "featured_image")}}
   {{assign

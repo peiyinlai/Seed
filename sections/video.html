@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset_url 'section-video.css'}}" />
+{{snippet "stylesheet" href=(asset_url "section-video.css")}}
 <script src="{{asset_url 'section-video.js'}}" defer></script>
 
 
@@ -48,7 +48,7 @@
             type="button"
           >
             {{#if cover }}
-              {{ snippet 'image' sizes=cover_sizes class="video-section__cover" data=section.settings.cover lazy=true}}
+              {{ snippet 'image' sizes=cover_sizes class="video-section__cover" data=section.settings.cover}}
             {{else}}
               {{placeholder_svg_tag "image" "placeholder"}}
             {{/if}}
@@ -58,7 +58,7 @@
           </button>
         {{else}}
           {{#if cover.src }}
-            {{ snippet 'image' sizes=cover_sizes class="video-section__cover" data=section.settings.cover lazy=true}}
+            {{ snippet 'image' sizes=cover_sizes class="video-section__cover" data=section.settings.cover}}
           {{else}}
             {{placeholder_svg_tag "image" "placeholder"}}
           {{/if}}

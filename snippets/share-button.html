@@ -7,7 +7,7 @@
 {{/comment}}
 
 <script src="{{asset_url 'component-share-button.js'}}" defer></script>
-<link rel="stylesheet" href="{{asset_url 'component-share-button.css'}}" />
+{{snippet "stylesheet" href=(asset_url "component-share-button.css")}}
 
 <div class="share-button__container">
   <share-button id="Share-{{section.id}}" class="share-button quick-add-hidden" {{{shopline_attributes}}}>

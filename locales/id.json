@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Kebijakan privasi"
     },
+    "product": {
+      "unavailable_sale": "Produk ini tidak mendukung penjualan online"
+    },
     "promotion": {
       "no_promotion": "Tidak berpartisipasi dalam penawaran"
     },
@@ -601,9 +604,11 @@
       "method": "Metode pembayaran",
       "paid": "Sudah bayar",
       "partially_paid": "Pembayaran sebagian",
+      "partially_refund": "Bayaran balik separa",
       "paying": "Dalam proses pembayaran",
       "payment": "Pembayaran",
       "payment_status": "Status Pembayaran",
+      "refund": "Dikembalikan",
       "unpaid": "Belum bayar"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Muat lebih banyak item",
       "no_product_data_found": "Tidak ada data produk saat ini, silakan coba lagi nanti",
       "sold_out": "Terjual habis",
       "added_to_cart_successfully": "कार्ट में सफलतापूर्वक जोड़ा गया",
@@ -970,7 +976,7 @@
       "error_message_2014": "Akun berisiko",
       "error_message_2016": "Akun berisiko",
       "error_message_2020": "Sistem sibuk, silakan coba lagi nanti",
-      "error_message_3": "Layanan abnormal",
+      "error_message_3": "Waktu tinggal terlalu lama, silakan segarkan halaman.",
       "error_message_3001": "Layanan abnormal, silakan coba lagi nanti",
       "error_message_3002": "Pengguna yang belum mengikat telepon/email coba mengubah kata sandi",
       "error_message_3003": "Kirim kode verifikasi beberapa kali",
@@ -988,6 +994,7 @@
       "error_message_3023": "Format link salah",
       "error_message_3024": "Parameter link salah",
       "error_message_3026": "Format akun salah",
+      "error_message_3027": "Kata sandi tidak boleh sama seperti sebelumnya。",
       "error_message_3029": "Aktivasi nomor telepon tidak didukung",
       "error_message_4": "Layanan abnormal",
       "error_message_5": "Layanan abnormal",

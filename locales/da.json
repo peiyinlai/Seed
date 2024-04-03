@@ -170,6 +170,9 @@
     "policy": {
       "privacy_policy": "Privatliv Politik"
     },
+    "product": {
+      "unavailable_sale": "Dette produkt understøtter ikke onlinesalg"
+    },
     "promotion": {
       "no_promotion": "Ikke-deltagende rabat"
     },
@@ -601,9 +604,11 @@
       "method": "Betalingsmetode",
       "paid": "Betalt",
       "partially_paid": "Delvist betalt",
+      "partially_refund": "Delvis tilbagebetaling",
       "paying": "Betaling",
       "payment": "Betaling",
       "payment_status": "Betalingsstatus",
+      "refund": "Refunderet",
       "unpaid": "Ubetalt"
     },
     "shipping": {
@@ -645,6 +650,7 @@
       }
     },
     "general": {
+      "load_more_btn": "Indlæser flere varer",
       "no_product_data_found": "Ingen produktdata fundet. Prøv igen senere",
       "sold_out": "Solgt Ud",
       "added_to_cart_successfully": "Føjet til indkøbskurven med succes",
@@ -970,7 +976,7 @@
       "error_message_2014": "Kontoen er i fare",
       "error_message_2016": "Kontoen er i fare",
       "error_message_2020": "Systemet er optaget. Prøv igen senere",
-      "error_message_3": "Service undtagelser",
+      "error_message_3": "Opholdet er for langt, opdater venligst siden.",
       "error_message_3001": "Serviceundtagelse, prøv igen senere",
       "error_message_3002": "Brugere, der ikke er bundet til mobiltelefoner/postkasser, forsøger at ændre deres adgangskoder",
       "error_message_3003": "Forsøg ikke så ofte",
@@ -988,6 +994,7 @@
       "error_message_3023": "Linket er i det forkerte format",
       "error_message_3024": "Linket er ikke god.",
       "error_message_3026": "Fejl i kontoformat",
+      "error_message_3027": "Adgangskoden må ikke være den samme som sidste gang。",
       "error_message_3029": "Understøtter ikke aktivering af mobiltelefonnummer indtil videre",
       "error_message_4": "Service undtagelser",
       "error_message_5": "Service undtagelser",

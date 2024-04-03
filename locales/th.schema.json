@@ -1482,6 +1482,9 @@
             "label": "รายการ"
           }
         },
+        "page_number": {
+          "label": ""
+        },
         "is_show_cover": {
           "label": "แสดงภาพหน้าปก"
         },
