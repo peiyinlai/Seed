@@ -293,6 +293,28 @@
       "province": "Provins",
       "zip_code": "Postnummer"
     },
+    "company": {
+      "account": {
+        "billTitle": "Företagets faktureringsadress",
+        "link": "Företagskontoansökan",
+        "shipping": "Företagets leveransadress",
+        "title": "Företagskontoansökan"
+      },
+      "bill": {
+        "sameAsCompany": "Företagets faktureringsadress samma som företagets leveransadress"
+      },
+      "create": {
+        "limit": "Antalet företag för butiken har nått sin gräns. Kontakta handlaren för hjälp.",
+        "success": "Tack. Formuläret har skickats."
+      },
+      "field": {
+        "companyName": "Företagsnamn",
+        "email": "E-post"
+      },
+      "form": {
+        "submit": "Skicka"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Avbryt",
       "cancel_mobile_button": "avbryt",
       "clear_button": "Avbryt",
+      "company_empty_hint": "Företagsnamnet får inte vara tomt",
+      "company_existed": "Företagsnamnet finns redan.",
       "confirm": "OKEJ",
       "confirm_button": "Okej",
       "date_format": "MM/dd/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Beställ information",
+      "insuranceService": "Försäkringstjänster",
+      "insuranceService_applyClaim": "Ansök om krav",
+      "insuranceService_content_email": "1. Policyn skickades till din “{{email}}”-e-postadress av {{serviceName}}. Om du inte har fått din policyinformation, vänligen kontakta din butiks kundtjänst. 2. Om det finns skada, förlust, försening eller någon annan situation under transporten kan du begära ett krav.",
+      "insuranceService_content_phone": "1. Policyn har skickats till din “{{phopne}}”-telefon från {{serviceName}}. Om du inte har fått din policyinformation, vänligen kontakta din butiks kundtjänst. 2. Om det finns skada, förlust, försening eller någon annan situation under transporten kan du begära ett krav.",
       "order": "Beställ",
       "remark": "Observation av kontroller",
       "time": "Beställd från:",

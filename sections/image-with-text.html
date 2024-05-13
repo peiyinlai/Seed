@@ -21,9 +21,9 @@
 }}
 
 {{assign "ignore_image_height" false}}
-{{#or (if color_scheme "!=" "none") image_overlap_display}}
+{{#if color_scheme != "none" or image_overlap_display}}
   {{assign "ignore_image_height" true}}
-{{/or}}
+{{/if}}
 <div class="section-padding page-width">
   <div
     class="image-with-text
@@ -50,7 +50,7 @@
     <div
       class="image-with-text__info-wrap {{#if (isFalsey image_overlap_display)}}color-scheme-{{color_scheme}}{{/if}} "
     >
-      {{#if block_length ">" 0}}
+      {{#if block_length > 0}}
         <div class="image-with-text__info-reference">
           <div
             class="image-with-text__info
@@ -58,39 +58,39 @@
               image-with-text__info--align-{{pc_text_align}}
               image-with-text__info--m-align-{{mobile_text_align}}"
           >
-            {{#each section.blocks}}
-              {{#startsWith ../app_block_prefix type}}
-                {{render this}}
+            {{#for section.blocks as |block|}}
+              {{#startsWith app_block_prefix block.type}}
+                {{render block}}
               {{/startsWith}}
-              {{#if (trim type) "===" "title"}}
+              {{#if (trim block.type) == "title"}}
                 <h2
-                  {{{this.shopline_attributes}}}
-                  class="title3 image-with-text__title image-with-text__title--size-{{settings.title_size}}"
+                  {{{block.shopline_attributes}}}
+                  class="title3 image-with-text__title image-with-text__title--size-{{block.settings.title_size}}"
                 >
-                  {{settings.title}}
+                  {{block.settings.title}}
                 </h2>
               {{/if}}
-              {{#if (trim type) "===" "content"}}
+              {{#if (trim block.type) == "content"}}
                 <div
-                  {{{this.shopline_attributes}}}
+                  {{{block.shopline_attributes}}}
                   class="body3 image-with-text__content rte"
-                >{{{settings.content}}}</div>
+                >{{{block.settings.content}}}</div>
               {{/if}}
-              {{#if (trim type) "===" "sub_title"}}
-                <div class="body3 image-with-text__sub-title image-with-text__sub-title--size-{{settings.text_size}}">{{{settings.text}}}</div>
+              {{#if (trim block.type) == "sub_title"}}
+                <div {{{block.shopline_attributes}}} class="body3 image-with-text__sub-title image-with-text__sub-title--size-{{block.settings.text_size}}">{{{block.settings.text}}}</div>
               {{/if}}
-              {{#if (trim type) "===" "button"}}
-                {{#if (trim settings.button_text)}}
+              {{#if (trim block.type) == "button"}}
+                {{#if (trim block.settings.button_text)}}
                   <a
-                    {{{this.shopline_attributes}}}
-                    {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                    {{{block.shopline_attributes}}}
+                    {{#if block.settings.link}}href="{{block.settings.link}}"{{else}}href="javascript:;"{{/if}}
                     class="image-with-text__btn button"
                   >
-                    {{settings.button_text}}
+                    {{block.settings.button_text}}
                   </a>
                 {{/if}}
               {{/if}}
-            {{/each}}
+            {{/for}}
           </div>
         </div>
       {{/if}}

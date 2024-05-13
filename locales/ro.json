@@ -293,6 +293,28 @@
       "province": "Provincie ",
       "zip_code": "Cod poștal "
     },
+    "company": {
+      "account": {
+        "billTitle": "Adresa de facturare a companiei",
+        "link": "Cerere pentru contul companiei",
+        "shipping": "Adresa de livrare a companiei",
+        "title": "Cerere pentru contul companiei"
+      },
+      "bill": {
+        "sameAsCompany": "Adresa de facturare a companiei este aceeași cu adresa de livrare a companiei"
+      },
+      "create": {
+        "limit": "Numărul de companii pentru magazin a atins limita sa. Vă rugăm să contactați comerciantul pentru asistență.",
+        "success": "Mulțumesc. Formularul a fost trimis."
+      },
+      "field": {
+        "companyName": "Numele companiei",
+        "email": "Email"
+      },
+      "form": {
+        "submit": "Trimite"
+      }
+    },
     "email": {
       "mail_common": "Adresă poștală"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Anulează",
       "cancel_mobile_button": "Anulează",
       "clear_button": "Şterge",
+      "company_empty_hint": "Numele companiei nu poate fi gol",
+      "company_existed": "Numele companiei există deja.",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detalii comandă",
+      "insuranceService": "Servicii de Asigurare",
+      "insuranceService_applyClaim": "Aplică pentru cereri de despăgubire",
+      "insuranceService_content_email": "1. Politica a fost trimisă către e-mailul dvs. \"{{email}}\" de către {{serviceName}}. Dacă nu ați primit informațiile politicii, vă rugăm să contactați magazinul serviciului de clienți. 2. Dacă sunt daune, pierderi, întârzieri sai alte situații în timpul transportului, puteți aplica pentru o cerere de despăgubire.",
+      "insuranceService_content_phone": "1. Politica a fost trimisă către telefonul dvs de \"{{phopne}}\" către {{serviceName}}. Dacă nu ați primit informațiile politicii, vă rugăm să contactați magazinul serviciului de clienți. 2. Dacă sunt daune, pierderi, întârzieri sai alte situații în timpul transportului, puteți aplica pentru o cerere de despăgubire. ",
       "order": "Comandă",
       "remark": "Observații comandă",
       "time": "Comandat la:",

@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "Number of blogs per page"
         },
         "is_show_cover": {
           "label": "Display cover"

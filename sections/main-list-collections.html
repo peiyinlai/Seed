@@ -8,7 +8,7 @@
 {{assign "collection_fill_type" section.settings.collection_fill_type}}
 {{assign "modulo_result" (modulo 28 section.settings.pc_cols)}}
 {{assign "paginate_by" 30}}
-{{#if modulo_result "==" 0}}
+{{#if modulo_result == 0}}
   {{assign "paginate_by" 28}}
 {{/if}}
 <div class="page-width">
@@ -19,22 +19,22 @@
     <div
       class="main-list-collections__container grid grid-cols-{{pc_cols}}-desktop grid-cols-{{mobile_cols}} text-center"
     >
-        {{#each collections as |card_collection|}}
+        {{#for collections as |card_collection|}}
           {{snippet
             "collection-card"
             card_collection=card_collection
             title=name
-            ratio=../collection_image_ratio
-            fill_type=../collection_fill_type
-            lazy_load=(if @index '>' 2)
-            desktop_grid_cols=../section.settings.pc_cols
-            mobile_grid_cols=../section.settings.m_cols
+            ratio=collection_image_ratio
+            fill_type=collection_fill_type
+            lazy_load=(if forloop.index0 > 2)
+            desktop_grid_cols=section.settings.pc_cols
+            mobile_grid_cols=section.settings.m_cols
           }}
-        {{/each}}
+        {{/for}}
     </div>
-    
+
     <div class="main-list-collections__pagination">
-      {{#if paginate.pages ">" 1}}
+      {{#if paginate.pages > 1}}
         {{snippet "pagination" paginate=paginate anchor=""}}
       {{/if}}
     </div>

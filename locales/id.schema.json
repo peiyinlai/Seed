@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "Jumlah blog per halaman"
         },
         "is_show_cover": {
           "label": "Tampilkan Gambar Sampul"

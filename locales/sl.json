@@ -293,6 +293,28 @@
       "province": "Provinca",
       "zip_code": "Poštna številka"
     },
+    "company": {
+      "account": {
+        "billTitle": "Naslov za obračun podjetja",
+        "link": "Vloga za odprtje podjetniškega računa",
+        "shipping": "Naslov za pošiljanje podjetja",
+        "title": "Vloga za odprtje podjetniškega računa"
+      },
+      "bill": {
+        "sameAsCompany": "Naslov za obračun podjetja enak kot naslov za pošiljanje podjetja"
+      },
+      "create": {
+        "limit": "Število podjetij za trgovino je doseglo svojo mejo. Prosimo, kontaktirajte trgovca za pomoč.",
+        "success": "Hvala. Obrazec je bil poslan."
+      },
+      "field": {
+        "companyName": "Ime podjetja",
+        "email": "E-pošta"
+      },
+      "form": {
+        "submit": "Pošlji"
+      }
+    },
     "email": {
       "mail_common": "Pošta"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Prekliči",
       "cancel_mobile_button": "prekliči",
       "clear_button": "Počisti",
+      "company_empty_hint": "Ime podjetja ne sme biti prazno",
+      "company_existed": "Ime podjetja že obstaja.",
       "confirm": "V redu",
       "confirm_button": "V redu",
       "date_format": "MM/dd/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Podrobnosti o naročilu",
+      "insuranceService": "Storitve zavarovanja",
+      "insuranceService_applyClaim": "Vložitev zahtevkov",
+      "insuranceService_content_email": "1. Polico je na vaš e-poštni naslov \"{{email}}\" poslal {{serviceName}}. Če podatkov o polici niste prejeli, prosimo, da stopite v stik s službo za pomoč strankam v trgovini. 2. Če med prevozom pride do poškodbe, izgube, zamude ali druge okoliščine, lahko vložite zahtevek.",
+      "insuranceService_content_phone": "1. Polico je na vaš telefon\"{{phopne}}\" poslal {{serviceName}}. Če podatkov o polici niste prejeli, prosimo, da stopite v stik s službo za pomoč strankam v trgovini. 2. Če med prevozom pride do poškodbe, izgube, zamude ali druge okoliščine, lahko vložite zahtevek.",
       "order": "Naročilo",
       "remark": "Opomba o naročilu",
       "time": "Naročeno pri:",

@@ -293,6 +293,28 @@
       "province": "Província",
       "zip_code": "Postal Código"
     },
+    "company": {
+      "account": {
+        "billTitle": "Endereço de cobrança da empresa",
+        "link": "Aplicação de conta da empresa",
+        "shipping": "Endereço de envio da empresa",
+        "title": "Aplicação de conta da empresa"
+      },
+      "bill": {
+        "sameAsCompany": "Endereço de cobrança da empresa igual ao endereço de envio da empresa"
+      },
+      "create": {
+        "limit": "O número de empresas para a loja atingiu o seu limite. Por favor, contate o comerciante para assistência.",
+        "success": "Obrigado. O formulário foi enviado."
+      },
+      "field": {
+        "companyName": "Nome da empresa",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Enviar"
+      }
+    },
     "email": {
       "mail_common": "Caixa de correio"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Cancelar",
       "cancel_mobile_button": "Cancelar",
       "clear_button": "Limpar",
+      "company_empty_hint": "O nome da empresa não pode estar em branco",
+      "company_existed": "O nome da empresa já existe.",
       "confirm": "Ok",
       "confirm_button": "Ok",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detalhes do pedido",
+      "insuranceService": "Serviços de Seguros",
+      "insuranceService_applyClaim": "Apresentar um Sinistros",
+      "insuranceService_content_email": "1. A apólice foi enviada ao seu e-mail \"{{email}}\" por {{serviceName}}. Se não recebeu as informações sobre a apólice, contacte o serviço de atendimento ao cliente da loja. 2. Se ocorreram quaisquer danos, prejuízos ou outras situações durante o transporte, você pode apresentar um sinistro.",
+      "insuranceService_content_phone": "1. A apólice foi enviada ao seu telefone \"{{phopne}}\" por {{serviceName}}. Se não recebeu as informações sobre a apólice, contacte o serviço de atendimento ao cliente da loja. 2. Se ocorreram quaisquer danos, prejuízos ou outras situações durante o transporte, você pode apresentar um sinistro.",
       "order": "Pedidos",
       "remark": "Notas de pedido",
       "time": "Hora da compra:",

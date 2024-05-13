@@ -581,7 +581,7 @@ details[open] > .drawer-menus__sub-item .drawer-menus__item-icon-off {
 .predictive-search__list-item[selected="true"] > *,
 .predictive-search__list-item:hover > * {
   color: rgb(var(--color-text));
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(rgb(var(--color-text)), 0.08);
 }
 
 .predictive-search__list-item:nth-of-type(1):not(:last-child),

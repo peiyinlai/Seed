@@ -148,7 +148,7 @@ input {
   width: 100%;
 }
 .image-with-text__empty-img {
-  background-color: #f3f3f3;
+  background-color: rgb(var(--color-image-background));
   height: 100%;
   width: 100%;
 }
@@ -215,7 +215,7 @@ input {
     width: 100%;
   }
   .image-with-text__empty-img {
-    background-color: #f3f3f3;
+    background-color: rgb(var(--color-image-background));
     height: 100%;
     width: 100%;
   }
@@ -225,7 +225,7 @@ input {
 }
 .image-with-text__image-box .empty-image-class {
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: rgb(var(--color-image-background));
   height: 100%;
   display: block;
 }

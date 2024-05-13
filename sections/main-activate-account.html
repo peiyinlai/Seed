@@ -73,7 +73,7 @@
       {{snippet "loading-overlay-spinner"}}
     </button>
 
-    {{#or privacy_policy_url terms_of_service_url}}
+    {{#if privacy_policy_url or terms_of_service_url}}
       <div class="actions">
         <label>
           <span class="field-checkbox">
@@ -85,16 +85,16 @@
             {{#if privacy_policy_url}}
               <a target="_blank" href="{{privacy_policy_url}}">{{t "customer.register.privacy_policy"}}</a>
             {{/if}}
-            {{#and privacy_policy_url terms_of_service_url}}
+            {{#if privacy_policy_url and terms_of_service_url}}
               <span>{{t "customer.general.and_button"}}</span>
-            {{/and}}
+            {{/if}}
             {{#if terms_of_service_url}}
               <a target="_blank" href="{{terms_of_service_url}}">{{t "customer.register.terms_of_service"}}</a>
             {{/if}}
           </span>
         </label>
       </div>
-    {{/or}}
+    {{/if}}
 
     <div class="actions" data-type="email-marketing">
       <label>

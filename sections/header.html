@@ -5,7 +5,7 @@
 <script src="{{ asset_url 'component-predictive-search.js' }}" defer></script>
 <script src="{{ asset_url 'section-header-modal.js' }}" defer></script>
 
-{{#if section.settings.sticky_header_type "!=" "none"}}
+{{#if section.settings.sticky_header_type != "none"}}
   <script src="{{ asset_url 'section-header-sticky-header.js' }}" defer></script>
 {{/if}}
 
@@ -14,7 +14,7 @@
   <script src="{{asset_url 'component-cart-coupon.js'}}" defer></script>
 {{/if}}
 
-{{#if settings.cart_type '===' 'drawer'}}
+{{#if settings.cart_type == 'drawer'}}
   {{snippet "stylesheet" href=(asset_url "section-cart-drawer.css")}}
   {{snippet "stylesheet" href=(asset_url "snippet-cart-fixed-checkout.css")}}
   {{snippet "stylesheet" href=(asset_url "snippet-cart-item.css")}}
@@ -24,11 +24,11 @@
   <script src="{{ asset_url 'section-cart-drawer.js' }}" defer="defer"></script>
 {{/if}}
 
-{{#if settings.cart_type '===' 'notification'}}
+{{#if settings.cart_type == 'notification'}}
   {{snippet "stylesheet" href=(asset_url "component-cart-notification.css")}}
   <script src="{{ asset_url 'component-cart-notification.js' }}" defer="defer"></script>
 {{/if}}
-  {{#if section.settings.sticky_header_type "!=" "none"}}
+  {{#if section.settings.sticky_header_type != "none"}}
     <sticky-header data-sticky-type="{{section.settings.sticky_header_type}}">
   {{/if}}
   <header
@@ -43,7 +43,7 @@
       {{ assign 'pc_logo_width' settings.desktop_logo_width }}
       {{ assign 'mobile_logo_width' settings.mobile_logo_width }}
 
-      <{{#if page_type '===' 'index'}}h1{{else}}div{{/if}} class="header__heading">
+      <{{#if page_type == 'index'}}h1{{else}}div{{/if}} class="header__heading">
         <a
           class="header__heading-link"
           style="--header-logo-pc-width: {{pc_logo_width}}px; --header-logo-mobile-width: {{mobile_logo_width}}px;"
@@ -61,124 +61,122 @@
             <span>{{ shop.name }}</span>
           {{/if}}
         </a>
-      </{{#if page_type '===' 'index'}}h1{{else}}div{{/if}}>
+      </{{#if page_type == 'index'}}h1{{else}}div{{/if}}>
 
-      {{#or
-        (if section.settings.navigation_layout "===" "middle-left")
-        (and 
-          (if section.settings.navigation_layout "===" "middle-line")
-          (if section.settings.main_menu_style "===" "drawer")
+      {{#if
+        section.settings.navigation_layout == "middle-left"
+        or
+        (if
+          section.settings.navigation_layout == "middle-line"
+          and
+          section.settings.main_menu_style == "drawer"
         )
       }}
         <div class="header__buttons">
-          {{snippet 
-            "header-tools" 
+          {{snippet
+            "header-tools"
             show_search_entry=section.settings.show_search_entry
           }}
 
-          {{snippet 
-            "header-icons" 
+          {{snippet
+            "header-icons"
             show_user_entry=section.settings.show_user_entry
             show_cart_entry=section.settings.show_cart_entry
             menu=main_menu
           }}
         </div>
       {{else}}
-        {{snippet 
-          "header-tools" 
+        {{snippet
+          "header-tools"
           show_search_entry=section.settings.show_search_entry
         }}
 
-        {{snippet 
-          "header-icons" 
+        {{snippet
+          "header-icons"
           show_user_entry=section.settings.show_user_entry
           show_cart_entry=section.settings.show_cart_entry
           menu=main_menu
         }}
-      {{/or}}
+      {{/if}}
 
-      {{#if section.settings.main_menu_style "===" "drawer"}}
-        {{snippet 
-          "header-menu-drawer" 
-          show_user_entry=section.settings.show_user_entry 
-          menu=main_menu 
+      {{#if section.settings.main_menu_style == "drawer"}}
+        {{snippet
+          "header-menu-drawer"
+          show_user_entry=section.settings.show_user_entry
+          menu=main_menu
           class="display-none-tablet header__drawer-nav"
         }}
       {{/if}}
 
-      {{#if section.settings.main_menu_style "===" "dropdown"}}
+      {{#if section.settings.main_menu_style == "dropdown"}}
         <nav class="header__inline-nav display-none-tablet {{#if section.settings.show_line_separator}}header__inline-nav--has-divider{{/if}}">
           <ul class="header__inline-menus list-unstyled">
-            {{#each main_menu.links}}
-              {{#with this as |topLink|}}
+            {{#for main_menu.links as |link|}}
                 {{ assign 'is_megamenu' false }}
-                {{#each links}}
-                  {{#if (length links) '>' 0}}
-                    {{#with topLink}}
-                      {{ assign 'is_megamenu' true }}
-                    {{/with}}
+                {{#for link.links as |link|}}
+                  {{#if (length link.links) > 0}}
+                    {{ assign 'is_megamenu' true }}
                   {{/if}}
-                {{/each}}
-              {{/with}}
+                {{/for}}
 
-              <li class="header-inline-menus__item header-inline-menus__item--{{#if (length links) '>' 0}}has-submenu{{/if}} {{#if is_megamenu}}is-megamenu{{/if}}">
-                {{#if (length links) '>' 0}}
+              <li class="header-inline-menus__item header-inline-menus__item--{{#if (length link.links) > 0}}has-submenu{{/if}} {{#if is_megamenu}}is-megamenu{{/if}}">
+                {{#if (length link.links) > 0}}
                   <span class="header-inline-menus__link menus__link body4 fw-bold">
-                    {{ title }}
+                    {{ link.title }}
                     <span class="header-inline-menus__arrow">{{ snippet 'icon-arrow' }}</span>
                   </span>
                   {{#if is_megamenu}}
                     <div class="header__inline-submenus header-megamenu">
                       <ul class="page-width megamenu__list">
-                        {{#each links}}
+                        {{#for link.links as |link|}}
                           <li class="megamenu-list__item">
-                            {{#if (length links) '>' 0}}
+                            {{#if (length link.links) > 0}}
                               <span class="megamenu-list__item-title menus__link body2">
-                                <b>{{ title }}</b>
+                                <b>{{ link.title }}</b>
                               </span>
                               <ul class="megamenu-list__submenu list-unstyled">
-                                {{#each links}}
+                                {{#for link.links as |link|}}
                                   <li class="megamenu-submenu__item">
-                                    <a class="menus__link body3" {{#if url}}href="{{ url }}"{{else}}href="javascript:;" role="link"{{/if}}>{{ title }}</a>
+                                    <a class="menus__link body3" {{#if link.url}}href="{{ link.url }}"{{else}}href="javascript:;" role="link"{{/if}}>{{ link.title }}</a>
                                   </li>
-                                {{/each}}
+                                {{/for}}
                               </ul>
                             {{else}}
-                              <a class="megamenu-list__item-title menus__link body2" {{#if url}}href="{{ url }}"{{else}}href="javascript:;" role="link"{{/if}}>
-                                <b>{{ title }}</b>
+                              <a class="megamenu-list__item-title menus__link body2" {{#if link.url}}href="{{ link.url }}"{{else}}href="javascript:;" role="link"{{/if}}>
+                                <b>{{ link.title }}</b>
                               </a>
                             {{/if}}
                           </li>
-                        {{/each}}
+                        {{/for}}
                       </ul>
                     </div>
                   {{else}}
                     <ul class="header__inline-submenus header-dropdown-menu list-unstyled">
-                      {{#each links}}
+                      {{#for link.links as |link|}}
                         <li class="header-inline-submenus__item">
-                          <a class="header-inline-submenus__link menus__link body3" {{#if url}}href="{{ url }}"{{else}}href="javascript:;" role="link"{{/if}}>{{title}}</a>
+                          <a class="header-inline-submenus__link menus__link body3" {{#if link.url}}href="{{ link.url }}"{{else}}href="javascript:;" role="link"{{/if}}>{{link.title}}</a>
                         </li>
-                      {{/each}}
+                      {{/for}}
                     </ul>
                   {{/if}}
                 {{else}}
-                  <a class="header-inline-menus__link menus__link body4 fw-bold" {{#if url}}href="{{ url }}"{{else}}href="javascript:;" role="link"{{/if}}>
-                    {{ title }}
+                  <a class="header-inline-menus__link menus__link body4 fw-bold" {{#if link.url}}href="{{ link.url }}"{{else}}href="javascript:;" role="link"{{/if}}>
+                    {{ link.title }}
                     <span class="header-inline-menus__arrow">{{ snippet 'icon-arrow' }}</span>
                   </a>
                 {{/if}}
               </li>
-            {{/each}}
+            {{/for}}
           </ul>
         </nav>
       {{/if}}
     </div>
   </header>
-  {{#if section.settings.sticky_header_type "!=" "none"}}
+  {{#if section.settings.sticky_header_type != "none"}}
     </sticky-header>
   {{/if}}
 
-{{#if settings.cart_type '==' "notification" }}
+{{#if settings.cart_type == "notification" }}
   {{ snippet 'cart-notification' color_scheme=section.settings.color_scheme }}
 {{/if}}
 

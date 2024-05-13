@@ -34,7 +34,7 @@
   white-space: nowrap;
 }
 .simple-blog__extra-info .separator {
-  color: #29252c;
+  color: rgba(var(--color-text));
   margin-left: 15px;
   margin-right: 15px;
   font-size: 25px;

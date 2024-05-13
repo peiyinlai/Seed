@@ -143,7 +143,7 @@
 }
 
 .cart-item__totals .original__price {
-  color: #949494;
+  color: rgb(var(--color-light-text));
   font-size: 13px;
   line-height: 1.6;
   text-decoration: line-through;

@@ -293,6 +293,28 @@
       "province": "Province",
       "zip_code": "Pasta indekss"
     },
+    "company": {
+      "account": {
+        "billTitle": "Uzņēmuma norēķinu adrese",
+        "link": "Uzņēmuma konta pieteikums",
+        "shipping": "Uzņēmuma piegādes adrese",
+        "title": "Uzņēmuma konta pieteikums"
+      },
+      "bill": {
+        "sameAsCompany": "Uzņēmuma norēķinu adrese ir tāda pati kā uzņēmuma piegādes adrese"
+      },
+      "create": {
+        "limit": "Uzņēmumu skaits veikalam ir sasniedzis limitu. Lūdzu, sazinieties ar tirgotāju, lai saņemtu palīdzību.",
+        "success": "Paldies. Veidlapa ir iesniegta."
+      },
+      "field": {
+        "companyName": "Kompānijas nosaukums",
+        "email": "E-pasts"
+      },
+      "form": {
+        "submit": "Iesniegt"
+      }
+    },
     "email": {
       "mail_common": "Pasta"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Atceltu",
       "cancel_mobile_button": "Atcelts",
       "clear_button": "Skaidrs",
+      "company_empty_hint": "Uzņēmuma nosaukuma lauks nedrīkst būt tukšs",
+      "company_existed": "Uzņēmuma nosaukums jau eksistē",
       "confirm": "LABI",
       "confirm_button": "LABI",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Sīkāka informācija par pasūtījumu",
+      "insuranceService": "Apdrošināšanas pakalpojumiem",
+      "insuranceService_applyClaim": "Pieteikties prasībai",
+      "insuranceService_content_email": "1. Politika jūsu \"{{email}}\" nosūtīja uz e-pasta {{serviceName}}. Ja neesat saņēmis informāciju par politiku, lūdzu, sazinieties ar sava veikala klientu apkalpošanu. 2. Ja transportēšanas laikā ir radušies bojājumi, nozaudēšana, aizkavēšanās vai kāda cita situācija, varat iesniegt prasību.",
+      "insuranceService_content_phone": "1. Politika jūsu \"{{phopne}}\" nosūtīja uz telefons {{serviceName}}. Ja neesat saņēmis informāciju par politiku, lūdzu, sazinieties ar sava veikala klientu apkalpošanu. 2. Ja transportēšanas laikā ir radušies bojājumi, nozaudēšana, aizkavēšanās vai kāda cita situācija, varat iesniegt prasību.",
       "order": "Pasūtījums",
       "remark": "Piezīme par pasūtījumu",
       "time": "Pasūtīts:",

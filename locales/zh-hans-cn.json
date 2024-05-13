@@ -293,6 +293,28 @@
       "province": "省份",
       "zip_code": "邮编"
     },
+    "company": {
+      "account": {
+        "billTitle": "公司账单地址",
+        "link": "公司账号申请",
+        "shipping": "公司收货地址",
+        "title": "公司账号申请"
+      },
+      "bill": {
+        "sameAsCompany": "公司账单地址与收货地址相同"
+      },
+      "create": {
+        "limit": "公司数量已经达到上限，请联系商家进行处理。",
+        "success": "感谢，表单已提交！"
+      },
+      "field": {
+        "companyName": "公司名称",
+        "email": "邮箱"
+      },
+      "form": {
+        "submit": "提交"
+      }
+    },
     "email": {
       "mail_common": "邮箱"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "取消",
       "cancel_mobile_button": "取消",
       "clear_button": "清除",
+      "company_empty_hint": "公司名称不能为空",
+      "company_existed": "公司名称已存在",
       "confirm": "确定",
       "confirm_button": "确定",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "订单详情",
+      "insuranceService": "保险服务",
+      "insuranceService_applyClaim": "申请索赔",
+      "insuranceService_content_email": "1.保单已由{{serviceName}}发送到您的邮箱\"{{email}}\"。如果您没有收到保单邮件，请联系店铺客服。2.如运送过程中出现损坏、遗失、延误等情况，您可以申请索赔。",
+      "insuranceService_content_phone": "1.保单已由{{serviceName}}发送到您的手机\"{{phopne}}\"。如果您没有收到保单信息，请联系店铺客服。2.如运送过程中出现损坏、遗失、延误等情况，您可以申请索赔。",
       "order": "订单",
       "remark": "订单备注",
       "time": "订购时间：",

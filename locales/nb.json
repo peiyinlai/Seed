@@ -293,6 +293,28 @@
       "province": "Provins",
       "zip_code": "Postnummer"
     },
+    "company": {
+      "account": {
+        "billTitle": "Firmaets faktureringsadresse",
+        "link": "Søknad om firmakonto",
+        "shipping": "Selskapets leveringsadresse",
+        "title": "Søknad om firmakonto"
+      },
+      "bill": {
+        "sameAsCompany": "Firmaets faktureringsadresse er den samme som firmaets leveringsadresse"
+      },
+      "create": {
+        "limit": "Antall bedrifter for butikken har nådd sin grense. Ta kontakt med selgeren for å få hjelp.",
+        "success": "Takk skal du ha. Skjemaet er sendt inn."
+      },
+      "field": {
+        "companyName": "Selskapsnavn",
+        "email": "E-post"
+      },
+      "form": {
+        "submit": "Sende inn"
+      }
+    },
     "email": {
       "mail_common": "Post"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Annullere",
       "cancel_mobile_button": "annullere",
       "clear_button": "Annuller",
+      "company_empty_hint": "Firmanavnet kan ikke stå tomt",
+      "company_existed": "Firmanavnet finnes allerede.",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Bestillingsdetaljer",
+      "insuranceService": "Forsikringstjenester",
+      "insuranceService_applyClaim": "Søke om krav",
+      "insuranceService_content_email": "1. Policyen ble sendt til din “{{email}}” e-postadresse av {{serviceName}}. Hvis du ikke har mottatt din policyinformasjon, kan du kontakte butikkens kundeservice. 2. Hvis det er skade, tap, forsinkelse eller andre situasjoner under transport, kan du be om et krav.",
+      "insuranceService_content_phone": "1. Policyen er sendt til “{{phopne}}”elefonen din fra {{serviceName}}. Hvis du ikke har mottatt din policyinformasjon, kan du kontakte butikkens kundeservice. 2. Hvis det er skade, tap, forsinkelse eller andre situasjoner under transport, kan du be om et krav.",
       "order": "Ordrer",
       "remark": "Bestillingsmerknader",
       "time": "Bestilt den:",

@@ -25,12 +25,12 @@
 
 {{assign 'image_ratio' (default image_ratio 100) }}
 
-{{#and (if image_ratio '===' 'adapt') product_data.featured_media}}
+{{#if image_ratio == 'adapt' and product_data.featured_media}}
   {{assign 'image_ratio' (ternary product_data.featured_media.aspect_ratio (divide 100 product_data.featured_media.aspect_ratio) 100)}}
-{{else if (if image_ratio '===' 'adapt')}}
+{{else if image_ratio == 'adapt'}}
   
   {{assign 'image_ratio' 100}}
-{{/and}}
+{{/if}}
 
 
 {{#unless product_data}}
@@ -39,15 +39,15 @@
 
 {{assign 'jump_link' product_data.url}}
 
-<div class="product-card-wrapper card card-wrapper">
+<div class="product-card-wrapper card card-wrapper" {{{shopline_attributes}}}>
   <a {{#if jump_link}}href="{{ jump_link }}"{{else}}href="javascript:;"{{/if}}>
     <div class="card__inner ratio global-product-card-border-shadow"  style="--ratio-percent: {{ image_ratio }}%; --image-fill-type: {{image_fill_type}}; --badge-border-radius: {{theme_settings.product_discount_radius}}px;">
       <div class="card__media media--hover-effect">
         {{#if product_data.featured_media}}
           {{snippet 'image' data=product_data.featured_media lazy=lazy_load pc_size=(append '1/' desktop_grid_cols ) mobile_size=(append '1/' mobile_grid_cols ) class="collection-hero__image"}}
-          {{#and product_data.media.[1] show_secondary_image}}
+          {{#if product_data.media.[1] and show_secondary_image}}
             {{snippet 'image' data=product_data.media.[1] lazy=true pc_size=(append '1/' desktop_grid_cols ) mobile_size=(append '1/' mobile_grid_cols ) class="collection-hero__image"}}
-          {{/and}}
+          {{/if}}
         {{else}}
         
         <div class="placeholder">
@@ -61,16 +61,16 @@
             {{t 'transaction.item.sold_out'}}
           </span>
         {{/unless ~}}
-        {{~#and product_data.available (if product_data.compare_at_price '>' product_data.price) theme_settings.product_discount}}
+        {{~#if product_data.available and product_data.compare_at_price > product_data.price and theme_settings.product_discount}}
           <span class=" body4 fw-bold">
             {{t 'products.product_list.save'}}
           </span>
-        {{/and ~}}
+        {{/if ~}}
       </div>
-      {{#and show_quick_add product_data product_data.available}}
+      {{#if show_quick_add and product_data and product_data.available}}
         <div class="quick-add hover-effect-container">
           {{ assign 'product_form_id' (append 'quick-add-' section_id '__' product_data.id) }}
-          {{#if (length product_data.variants) '===' 1}}
+          {{#if (length product_data.variants) == 1}}
           <product-form>
             {{#form "product" product_data id=product_form_id}}
               <input
@@ -108,7 +108,7 @@
           </modal-opener>
           {{/if}}
         </div>
-      {{/and}}
+      {{/if}}
     </div>
     <div class="card__content text-center">
       <h3 class="product__title body3 text-center {{theme_settings.product_title_show_type}} {{#unless theme_settings.product_mobile_title_show}}display-none-tablet{{/unless}}">
@@ -121,7 +121,7 @@
       {{snippet 'price' product=product_data}}
     </div>
   </a>
-  {{#and show_quick_add (gt (length product_data.variants) 1) }}
+  {{#if show_quick_add and (gt (length product_data.variants) 1) }}
     <quick-add-modal id="QuickAdd-{{ product_data.id }}">
       <details>
         <summary class="display-none"></summary>
@@ -139,5 +139,5 @@
         </div>
       </details>
     </quick-add-modal>
-  {{/and}}
+  {{/if}}
 </div>

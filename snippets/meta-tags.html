@@ -4,9 +4,9 @@
 {{~assign "og_description" (default page_description (default shop.description shop.name))}}
 
 {{~assign "page_type" template.name}}
-{{~#if page_type "==" "product"}}
+{{~#if page_type == "product"}}
   {{~assign "og_type" "product"}}
-{{~else if page_type "==" "article"}}
+{{~else if page_type == "article"}}
   {{~assign "og_type" "article"}}
 {{~/if}}
 
@@ -23,7 +23,7 @@
   <meta property="og:image:height" content="{{page_image.height}}" />
 {{/if}}
 
-{{~#if page_type "==" "product"}}
+{{~#if page_type == "product"}}
   <meta property="og:price:amount" content="{{money_without_currency product.price}}" />
   <meta property="og:price:currency" content="{{cart.currency.iso_code}}" />
 {{/if}}

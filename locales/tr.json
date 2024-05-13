@@ -293,6 +293,28 @@
       "province": "Eyalet",
       "zip_code": "Posta kodu"
     },
+    "company": {
+      "account": {
+        "billTitle": "Şirket fatura adresi",
+        "link": "Şirket hesap başvurusu",
+        "shipping": "Şirket teslimat adresi",
+        "title": "Şirket hesap başvurusu"
+      },
+      "bill": {
+        "sameAsCompany": "Şirketin fatura adresi, şirketin teslimat adresiyle aynıdır"
+      },
+      "create": {
+        "limit": "Mağaza için şirket sayısı sınırına ulaşıldı. Lütfen yardım için satıcıya başvurun.",
+        "success": "Teşekkür ederim. Form gönderildi."
+      },
+      "field": {
+        "companyName": "Şirket adı",
+        "email": "E-posta"
+      },
+      "form": {
+        "submit": "Gönder"
+      }
+    },
     "email": {
       "mail_common": "Posta"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "İptal",
       "cancel_mobile_button": "İptal",
       "clear_button": "Temizle",
+      "company_empty_hint": "Şirket adı boş olamaz",
+      "company_existed": "Şirket adı zaten mevcut.",
       "confirm": "Tamam",
       "confirm_button": "Tamam",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Sipariş detayları",
+      "insuranceService": "Sigorta Hizmetleri",
+      "insuranceService_applyClaim": "Tazminat başvurusunda",
+      "insuranceService_content_email": "1. Politika {{serviceName}} tarafından “{{email}}” e-posta adresinize gönderildi. Eğer politika bilgilerini almadıysanız, lütfen mağazanın müşteri hizmetleriyle iletişime geçin. 2. Eğer taşıma sırasında herhangi bir hasar, kayıp, gecikme veya farklı bir durum varsa, tazminat başvurusunda bulunabilirsiniz.",
+      "insuranceService_content_phone": "1. Politika {{serviceName}} tarafından “{{phopne}}” numaralı telefonunuza gönderildi. Eğer politika bilgilerini almadıysanız, lütfen mağazanın müşteri hizmetleriyle iletişime geçin. 2. Eğer taşıma sırasında herhangi bir hasar, kayıp, gecikme veya farklı bir durum varsa, tazminat başvurusunda bulunabilirsiniz.",
       "order": "Sipariş",
       "remark": "Sipariş açıklaması",
       "time": "Sipariş verme:",

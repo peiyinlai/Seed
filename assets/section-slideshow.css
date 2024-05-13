@@ -227,7 +227,7 @@ a.slideshow-slide__media {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(var(--color-page-background));
   box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
   transition: transform 0.3s;
   border: none;
@@ -288,7 +288,7 @@ a.slideshow-slide__media {
   cursor: pointer;
   border: none;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   transition: background 0.3s;
   overflow: hidden;
 }
@@ -352,7 +352,7 @@ a.slideshow-slide__media {
   margin: 7px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   transition: background 0.3s;
   cursor: pointer;
 }

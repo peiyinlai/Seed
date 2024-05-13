@@ -2,7 +2,7 @@
 
 {{snippet "stylesheet" href=(asset_url "template-giftcard.css")}}
 
-{{assign "invalid" (or (isFalsey gift_card.enabled) (isTruthy gift_card.expired))}}
+{{assign "invalid" (if (isFalsey gift_card.enabled) or (isTruthy gift_card.expired))}}
 
 {{#if gift_card.code}}
   <div id="giftCardPage">

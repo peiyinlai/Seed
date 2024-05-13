@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "Bilangan blog setiap halaman"
         },
         "is_show_cover": {
           "label": "Tunjuk imej muka depan"

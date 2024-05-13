@@ -41,7 +41,7 @@
         data-media-id="video-id"
         {{#if cover }} style="padding-bottom: {{append (default (divide 100 cover.aspect_ratio) 56.25) '%'}}"{{/if}}
       >
-        {{#if (or video external_video) }}
+        {{#if video or external_video }}
           <button
             id="Deferred-Poster-Modal-video-id"
             class="video-section__poster media deferred-media__poster"

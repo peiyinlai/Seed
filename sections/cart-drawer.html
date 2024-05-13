@@ -20,9 +20,9 @@
           </div>
           <cart-drawer-items>
             <div class="cart-drawer__items" id="CartDrawer-CartItems">
-              {{#each cart.items as |item|}}
+              {{#for cart.items as |item|}}
                 {{snippet "cart-item" item=item namespace="CartDrawer-" type="drawer"}}
-              {{/each}}
+              {{/for}}
             </div>
             <div id="CartDrawer-CartErrors"></div>
           </cart-drawer-items>
@@ -32,13 +32,13 @@
             {{/if}}
 
             <ul class="cart-drawer__amount-wrapper">
-              {{#if cart.items_subtotal_price "!=" cart.total_price}}
+              {{#if cart.items_subtotal_price != cart.total_price}}
                 <li class="cart__subtotal">
                   <em class="body3">{{t "cart.checkout_proceeding.subtotal"}}</em>
                   <span class="body2 fw-bold">{{money_with_currency cart.items_subtotal_price}}</span>
                 </li>
               {{/if}}
-              {{#if cart.total_discount ">" 0}}
+              {{#if cart.total_discount > 0}}
                 <li class="cart__discount">
                   <em class="body3">{{t "transaction.general.discount_off"}}</em>
                   <span class="body2 fw-bold">-{{money_with_currency cart.total_discount}}</span>
@@ -51,7 +51,7 @@
             </ul>
             <div class="cart-drawer__checkout-wrapper">
               <div class="cart-drawer__taxes__desc body4 rte">
-                {{#if (and cart.taxes_included shop.shipping_policy.body)}}
+                {{#if cart.taxes_included and shop.shipping_policy.body}}
                   {{{t "cart.next_step.taxes_included_and_shipping_policy_html" link=shop.shipping_policy.url}}}
                 {{else if cart.taxes_included}}
                   {{t "cart.next_step.taxes_included_but_shipping_at_checkout"}}

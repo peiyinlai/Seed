@@ -6,7 +6,7 @@
 {{assign 'namespace' (ternary (eq namespace 'CartDrawer-') 'Drawer-quantity-' 'Quantity-')}}
 
 <quantity-input class="quantity">
-  <button class="quantity__button {{#if min '==' value}}disabled{{/if}}" name="minus" type="button">
+  <button class="quantity__button {{#if min == value}}disabled{{/if}}" name="minus" type="button">
     {{snippet "icon-minus"}}
   </button>
   <input
@@ -22,9 +22,9 @@
     value="{{value}}"
     data-cart-quantity="{{ cart_qty }}"
     form="{{form_id}}"
-    {{#and (if min "==" value) (if max "==" value)}}disabled{{/and}}
+    {{#if min == value and max == value}}disabled{{/if}}
   />
-  <button class="quantity__button {{#if max '==' value}}disabled{{/if}}" name="plus" type="button">
+  <button class="quantity__button {{#if max == value}}disabled{{/if}}" name="plus" type="button">
     {{snippet "icon-plus"}}
   </button>
 </quantity-input>

@@ -1,14 +1,14 @@
 
 
 {{assign 'class_name' ''}}
-{{#if type '==' 'error'}}
+{{#if type == 'error'}}
 {{assign 'class_name' 'tips-cart-fail-color'}}
 {{/if}}
 <div class="tips-cart body6 {{class_name}} {{class}}">
-  {{#if type '==' 'success'}}
+  {{#if type == 'success'}}
     {{snippet "icon-success"}}
   {{/if}}
-  {{#if type '==' 'error'}}
+  {{#if type == 'error'}}
     {{snippet "icon-error"}}
   {{/if}}
   {{text}}

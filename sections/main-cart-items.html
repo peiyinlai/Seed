@@ -1,7 +1,7 @@
 {{snippet "stylesheet" href=(asset_url "section-main-cart-items.css")}}
 
 
-{{#if settings.cart_type "!==" "drawer"}}
+{{#if settings.cart_type != "drawer"}}
   {{snippet "stylesheet" href=(asset_url "snippet-cart-item.css")}}
   {{snippet "stylesheet" href=(asset_url "component-cart.css")}}
   <script src="{{asset_url 'component-quantity-input.js'}}" defer></script>
@@ -35,9 +35,9 @@
         <div class="cart__header-total">{{t "cart.payment.total_sum"}}</div>
       </div>
       <div class="main-cart-items-wrapper">
-        {{#each cart.items as |item|}}
+        {{#for cart.items as |item|}}
           {{snippet "cart-item" item=item}}
-        {{/each}}
+        {{/for}}
       </div>
     </div>
   </div>

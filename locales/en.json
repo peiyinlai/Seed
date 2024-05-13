@@ -293,6 +293,28 @@
       "province": "Province",
       "zip_code": "Postal code"
     },
+    "company": {
+      "account": {
+        "billTitle": "Company billing address",
+        "link": "Company account application",
+        "shipping": "Company shipping address",
+        "title": "Company account application"
+      },
+      "bill": {
+        "sameAsCompany": "Company billing address same as company shipping address"
+      },
+      "create": {
+        "limit": "The number of companies for the shop has reached its limit. Please contact the merchant for assistance.",
+        "success": "Thank you. The form has been submitted."
+      },
+      "field": {
+        "companyName": "Company name",
+        "email": "Email"
+      },
+      "form": {
+        "submit": "Submit"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Cancel",
       "cancel_mobile_button": "cancel",
       "clear_button": "Clear",
+      "company_empty_hint": "Company name can't be blank",
+      "company_existed": "Company name already exists",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "MM/dd/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Order details",
+      "insuranceService": "Insurance Service",
+      "insuranceService_applyClaim": "Apply for a claim",
+      "insuranceService_content_email": "1. Insurance policy has been sent to your email \"{{email}}\" by {{serviceName}}. If you have not received the policy email, please contact the store customer service. 2. In case of damage, loss, or delay during transportation, you can apply for a claim.",
+      "insuranceService_content_phone": "1. Insurance policy has been sent to your phone \"{{phone}}\" by {{serviceName}}. If you have not received the policy message, please contact the store customer service. 2. In case of damage, loss, or delay during transportation, you can apply for a claim.",
       "order": "Order",
       "remark": "Order remark",
       "time": "Ordered at:",

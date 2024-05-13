@@ -150,7 +150,7 @@
           type="text"
           id="AddressCityInput"
           name="address[city]"
-          value="{{form.address.city}}"
+          data-default="{{form.address.city}}"
           maxlength="64"
           placeholder="{{t 'customer.address.city'}}"
           class="field__input"
@@ -182,7 +182,7 @@
           type="text"
           id="AddressDistrictInput"
           name="address[district]"
-          value="{{form.address.district}}"
+          data-default="{{form.address.district}}"
           maxlength="64"
           placeholder="{{t 'customer.address.district'}}"
           class="field__input"
@@ -229,7 +229,7 @@
       <div>
         <label>
           <span class="field-checkbox">
-            <input type="checkbox" name="address[def]" value="true" {{#if form.address.id '==' customer.default_address.id}}checked{{/if}} />
+            <input type="checkbox" name="address[def]" value="true" {{#if form.address.id == customer.default_address.id}}checked{{/if}} />
             <span class="checkbox"></span>
           </span>
           <span class="body4">

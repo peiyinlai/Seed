@@ -293,6 +293,28 @@
       "province": "Tartomány",
       "zip_code": "Irányítószám"
     },
+    "company": {
+      "account": {
+        "billTitle": "Vállalati számlázási cím",
+        "link": "Vállalati számla alkalmazás",
+        "shipping": "A cég szállítási címe",
+        "title": "Vállalati számla alkalmazás"
+      },
+      "bill": {
+        "sameAsCompany": "A vállalat számlázási címe megegyezik a vállalati szállítási címmel"
+      },
+      "create": {
+        "limit": "Az üzlethez tartozó cégek száma elérte a korlátot. Segítségért forduljon a kereskedőhöz.",
+        "success": "Köszönöm. Az űrlap elküldve."
+      },
+      "field": {
+        "companyName": "Cégnév",
+        "email": "Email"
+      },
+      "form": {
+        "submit": "Beküldés"
+      }
+    },
     "email": {
       "mail_common": "Levél"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Mégse",
       "cancel_mobile_button": "Mégse",
       "clear_button": "Törlés",
+      "company_empty_hint": "A cégnév mező nem lehet üres",
+      "company_existed": "A vállalatnév már létezik.",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Megrendelés részletei",
+      "insuranceService": "Biztosítási szolgáltatások",
+      "insuranceService_applyClaim": "Kártérítés igénylése",
+      "insuranceService_content_email": "1. A kötvényt {{serviceName}} elküldte az Ön „{{email}}” e-mail-címére. Ha nem kapta meg a kötvénnyel kapcsolatos információkat, kérjük, forduljon az üzlet ügyfélszolgálatához. 2. Ha a szállítás során bármilyen sérülés, károsodás, késedelem vagy egyéb helyzet adódik, akkor kártérítést kérhet.",
+      "insuranceService_content_phone": "1. A kötvényt {{serviceName}} elküldte az Ön „{{phopne}}” telefonjára. Ha nem kapta meg a kötvénnyel kapcsolatos információkat, kérjük, forduljon az üzlet ügyfélszolgálatához. 2. Ha a szállítás során bármilyen sérülés, károsodás, késedelem vagy egyéb helyzet adódik, akkor kártérítést kérhet.",
       "order": "Rendelés",
       "remark": "Megjegyzés a rendeléshez",
       "time": "Megrendelve:",

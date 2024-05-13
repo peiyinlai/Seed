@@ -19,8 +19,8 @@
   left: 0;
   z-index: 3;
   padding: 60px 40px 40px 40px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0px 0px 40px rgba(var(--color-text), 0.1);
+  background-color: rgba(var(--color-page-background));
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -47,8 +47,8 @@
   position: absolute;
   right: 11px;
   top: 11px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border: 1px solid rgba(var(--color-text), 0.05);
   width: 28px;
   height: 28px;
   border-radius: 50%;

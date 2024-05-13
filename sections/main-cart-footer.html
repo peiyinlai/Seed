@@ -9,70 +9,68 @@
   class="page-width cart__footer-container {{#if cart.empty}}cart-empty{{/if}}"
   id="main-cart-footer"
   data-id="{{section.id}}"
-  data-show-fixed-checkout="{{and (isFalsey cart.empty) (if cart.total_discount '>' 0)}}"
+  data-show-fixed-checkout="{{if (isFalsey cart.empty) and cart.total_discount > 0}}"
 >
   <div class="cart__checkout-container" data-blocks="{{json section}}">
-    {{#with this as |global|}}
-      {{#each section.blocks}}
-        {{#if type "===" "subtotal"}}
-          <div class="cart__checkout-subtotal">
-            {{#if global.cart.discount_enable_cart}}
-              {{snippet "cart-coupon" cart=global.cart}}
-            {{/if}}
+    {{#for section.blocks as |block|}}
+      {{#if block.type == "subtotal"}}
+        <div class="cart__checkout-subtotal" {{{block.shopline_attributes}}}>
+          {{#if cart.discount_enable_cart}}
+            {{snippet "cart-coupon" cart=cart}}
+          {{/if}}
 
-            <ul class="cart__amount-wrapper">
-              {{#if global.cart.items_subtotal_price "!=" global.cart.total_price}}
-                <li class="cart__subtotal">
-                  <em class="body3">{{t "cart.checkout_proceeding.subtotal"}}</em>
-                  <span class="body2 fw-bold">{{money_with_currency global.cart.items_subtotal_price}}</span>
-                </li>
-              {{/if}}
-              {{#if global.cart.total_discount ">" 0}}
-                <li class="cart__discount">
-                  <em class="body3">{{t "transaction.general.discount_off"}}</em>
-                  <span class="body2 fw-bold">-{{money_with_currency global.cart.total_discount}}</span>
-                </li>
-              {{/if}}
-              <li class="cart__total">
-                <em class="body2 fw-bold">{{t "cart.payment.total_sum"}}</em>
-                <span class="body2 fw-bold">{{money_with_currency global.cart.total_price}}</span>
+          <ul class="cart__amount-wrapper">
+            {{#if cart.items_subtotal_price != cart.total_price}}
+              <li class="cart__subtotal">
+                <em class="body3">{{t "cart.checkout_proceeding.subtotal"}}</em>
+                <span class="body2 fw-bold">{{money_with_currency cart.items_subtotal_price}}</span>
               </li>
-            </ul>
+            {{/if}}
+            {{#if cart.total_discount > 0}}
+              <li class="cart__discount">
+                <em class="body3">{{t "transaction.general.discount_off"}}</em>
+                <span class="body2 fw-bold">-{{money_with_currency cart.total_discount}}</span>
+              </li>
+            {{/if}}
+            <li class="cart__total">
+              <em class="body2 fw-bold">{{t "cart.payment.total_sum"}}</em>
+              <span class="body2 fw-bold">{{money_with_currency cart.total_price}}</span>
+            </li>
+          </ul>
+        </div>
+      {{/if}}
+      {{#if block.type == "buttons"}}
+        <div class="cart__checkout-wrapper" {{{block.shopline_attributes}}}>
+          <div class="cart__checkout">
+            {{#if additional_checkout_buttons}}
+              {{{content_for_additional_checkout_buttons}}}
+            {{/if}}
+            {{assign "form_id" (append 'cart-form--' scene)}}
+            {{#form "cart" id=form_id}}
+              <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout">
+                {{t "cart.checkout_proceeding.checkout"}}
+              </button>
+            {{/form}}
           </div>
-        {{/if}}
-        {{#if type "===" "buttons"}}
-          <div class="cart__checkout-wrapper">
-            <div class="cart__checkout">
-              {{#if global.additional_checkout_buttons}}
-                {{{global.content_for_additional_checkout_buttons}}}
-              {{/if}}
-              {{assign "form_id" (append 'cart-form--' global.scene)}}
-              {{#form "cart" id=form_id}}
-                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout">
-                  {{t "cart.checkout_proceeding.checkout"}}
-                </button>
-              {{/form}}
-            </div>
-            <div class="cart__taxes__desc body4 rte">
-              {{#if (and global.cart.taxes_included global.shop.shipping_policy.body)}}
-                {{{t "cart.next_step.taxes_included_and_shipping_policy_html" link=global.shop.shipping_policy.url}}}
-              {{else if global.cart.taxes_included}}
-                {{t "cart.next_step.taxes_included_but_shipping_at_checkout"}}
-              {{else if global.shop.shipping_policy.body}}
-                {{{t "cart.next_step.taxes_and_shipping_policy_at_checkout_html" link=global.shop.shipping_policy.url}}}
-              {{else}}
-                {{t "cart.next_step.calculated_taxes_fees"}}
-              {{/if}}
-            </div>
+          <div class="cart__taxes__desc body4 rte">
+            {{#if cart.taxes_included and shop.shipping_policy.body}}
+              {{{t "cart.next_step.taxes_included_and_shipping_policy_html" link=shop.shipping_policy.url}}}
+            {{else if cart.taxes_included}}
+              {{t "cart.next_step.taxes_included_but_shipping_at_checkout"}}
+            {{else if shop.shipping_policy.body}}
+              {{{t "cart.next_step.taxes_and_shipping_policy_at_checkout_html" link=shop.shipping_policy.url}}}
+            {{else}}
+              {{t "cart.next_step.calculated_taxes_fees"}}
+            {{/if}}
           </div>
-        {{/if}}
-        {{#startsWith "shopline://apps" type}}
-          {{render this}}
-        {{/startsWith}}
-      {{/each}}
-      <div id="cart-errors"></div>
-    {{/with}}
-  </div>
+        </div>
+      {{/if}}
+      {{#startsWith "shopline://apps" block.type}}
+        {{render block}}
+      {{/startsWith}}
+    {{/for}}
+    <div id="cart-errors"></div>
+</div>
 
   {{snippet "cart-fixed-checkout" scene=scene cart=cart shop=shop className="cart-footer__fixed-checkout display-none-desktop"}}
 </div>

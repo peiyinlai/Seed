@@ -293,6 +293,28 @@
       "province": "省份",
       "zip_code": "郵編"
     },
+    "company": {
+      "account": {
+        "billTitle": "公司帳單地址",
+        "link": "公司帳號申請",
+        "shipping": "公司收貨地址",
+        "title": "公司帳號申請"
+      },
+      "bill": {
+        "sameAsCompany": "公司帳單地址與收貨地址相同"
+      },
+      "create": {
+        "limit": "公司數量已達上限，請聯絡商家進行處理。",
+        "success": "感謝，表單已投稿！"
+      },
+      "field": {
+        "companyName": "公司名稱",
+        "email": "信箱"
+      },
+      "form": {
+        "submit": "提交"
+      }
+    },
     "email": {
       "mail_common": "郵件"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "取消",
       "cancel_mobile_button": "取消",
       "clear_button": "清除",
+      "company_empty_hint": "公司名稱不能為空",
+      "company_existed": "公司名稱已存在",
       "confirm": "確定",
       "confirm_button": "確定",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "訂單詳細資料",
+      "insuranceService": "保險服務",
+      "insuranceService_applyClaim": "申請索賠",
+      "insuranceService_content_email": "1.保單已由{{serviceName}}發送到您的郵箱\"{{email}}\"。如果您沒有收到保單郵件，請聯繫店鋪客服。2.如運送過程中出現損壞、遺失、延誤等情況，您可以申請索賠。",
+      "insuranceService_content_phone": "1.保單已由{{serviceName}}發送到您的手機\"{{phopne}}\"。如果您沒有收到保單信息，請聯繫店鋪客服。2.如運送過程中出現損壞、遺失、延誤等情況，您可以申請索賠。",
       "order": "訂單",
       "remark": "訂單備註",
       "time": "訂購於：",

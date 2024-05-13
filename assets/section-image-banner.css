@@ -177,7 +177,7 @@
   text-align: right;
 }
 .section-image-banner .mask {
-  background-color: #000;
+  background-color: rgba(var(--color-mask));
   height: 100%;
   left: 0;
   opacity: 0.3;

@@ -39,7 +39,7 @@
     </ul>
 
     {{assign "last_current_offset" (add paginate.current_offset paginate.page_size)}}
-    {{#if paginate.current_page "==" paginate.pages}}{{assign "last_current_offset" paginate.items}} {{/if}}
+    {{#if paginate.current_page == paginate.pages}}{{assign "last_current_offset" paginate.items}} {{/if}}
     <div class="pagination-info body4">
       {{t
         "products.product_list.load_more_desc"

@@ -25,31 +25,31 @@
           </a>
         {{/if}}
         <div class="address__list">
-          {{#each customer.addresses}}
+          {{#for customer.addresses as |address|}}
             <div class="address__item">
               <div class="address__header">
                 <p class="address__title">
-                  {{#if id '==' ../customer.default_address.id}}
+                  {{#if address.id == customer.default_address.id}}
                     <span class="address--default">{{t 'customer.address.default'}}</span>
                   {{/if}}
-                  <span class="body3 fw-bold address__name">{{ last_name }}{{ ternary first_name (append (ternary last_name ', ' '') first_name) '' }}</span>
+                  <span class="body3 fw-bold address__name">{{ address.last_name }}{{ ternary address.first_name (append (ternary address.last_name ', ' '') address.first_name) '' }}</span>
                 </p>
                 <div class="address__btns">
-                  <a href="{{url}}" class="address__btn">{{snippet 'icon-edit'}}</a>
-                  {{#form "customer_address" address_seq=this.id return_to=../../routes.account_url id=(append 'address-form-' this.id)}}
-                    <button class="address__btn address__btn--remove" type="button" data-form-id="{{append 'address-form-' this.id}}" data-confirm-message="{{ t 'customer.address.delete__address' }}">{{snippet 'icon-delete'}}</button>
+                  <a href="{{address.url}}" class="address__btn">{{snippet 'icon-edit'}}</a>
+                  {{#form "customer_address" address_seq=address.id return_to=routes.account_url id=(append 'address-form-' address.id)}}
+                    <button class="address__btn address__btn--remove" type="button" data-form-id="{{append 'address-form-' address.id}}" data-confirm-message="{{ t 'customer.address.delete__address' }}">{{snippet 'icon-delete'}}</button>
                   {{/form}}
                 </div>
               </div>
 
-              <div class="body4 address__phone">{{ phone }}</div>
+              <div class="body4 address__phone">{{ address.phone }}</div>
 
               <div class="body4 address__detail">
-                {{ assign 'address' (format_address this) }}
-                <div class="pay-info__content">{{{ replace address.string '<br>' ', ' }}}</div>
+                {{assign "address_formatted" (format_address address)}}
+                <div class="pay-info__content">{{{ replace address_formatted.string '<br>' ', ' }}}</div>
               </div>
             </div>
-          {{/each}}
+          {{/for}}
         </div>
 
       {{/if}}

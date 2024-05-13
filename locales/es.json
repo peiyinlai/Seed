@@ -293,6 +293,28 @@
       "province": "Provincia",
       "zip_code": "Código postal"
     },
+    "company": {
+      "account": {
+        "billTitle": "Dirección de facturación de la empresa",
+        "link": "Solicitud de cuenta de empresa",
+        "shipping": "Dirección de envío de la empresa",
+        "title": "Solicitud de cuenta de empresa"
+      },
+      "bill": {
+        "sameAsCompany": "La dirección de facturación de la empresa es la misma que la dirección de envío de la empresa."
+      },
+      "create": {
+        "limit": "El número de empresas de la tienda ha llegado a su límite. Comuníquese con el comerciante para obtener ayuda.",
+        "success": "Gracias. El formulario ha sido enviado."
+      },
+      "field": {
+        "companyName": "Nombre de empresa",
+        "email": "Correo electrónico"
+      },
+      "form": {
+        "submit": "Entregar"
+      }
+    },
     "email": {
       "mail_common": "E-mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Cancelar",
       "cancel_mobile_button": "Cancelar",
       "clear_button": "Limpiar",
+      "company_empty_hint": "El nombre de la empresa no puede estar en blanco",
+      "company_existed": "El nombre de la empresa ya existe.",
       "confirm": "De acuerdo",
       "confirm_button": "De acuerdo",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detalles del pedido",
+      "insuranceService": "Servicio de seguris",
+      "insuranceService_applyClaim": "Solicitar un reclamo",
+      "insuranceService_content_email": "1. La póliza se ha enviado a su correo electrónico \"{{email}}\" por {{serviceName}}. Si no recibe el correo electrónico con la póliza, comuníquese con el servicio de atención al cliente de la tienda. 2. Si se producen los casos como daños, pérdidas y retrasos durante el transporte, puede solicitar un reclamo.",
+      "insuranceService_content_phone": "1. La póliza se ha enviado a su teléfono móvil \"{{phopne}}\" por {{serviceName}}. Si no recibe información sobre la póliza, comuníquese con el servicio de atención al cliente de la tienda. 2. Si se producen los casos como daños, pérdidas y retrasos durante el transporte, puede solicitar un reclamo.",
       "order": "Pedidos",
       "remark": "Observaciones sobre el pedido",
       "time": "Ordenado en:",

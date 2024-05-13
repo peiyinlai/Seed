@@ -293,6 +293,28 @@
       "province": "Province",
       "zip_code": "Code postal"
     },
+    "company": {
+      "account": {
+        "billTitle": "Adresse de facturation de l'entreprise",
+        "link": "Demande de compte entreprise",
+        "shipping": "Adresse de livraison de l'entreprise",
+        "title": "Demande de compte entreprise"
+      },
+      "bill": {
+        "sameAsCompany": "Adresse de facturation de l'entreprise identique à l'adresse de livraison de l'entreprise"
+      },
+      "create": {
+        "limit": "Le nombre d'entreprises pour le magasin a atteint sa limite. Veuillez contacter le commerçant pour obtenir de l'aide.",
+        "success": "Merci. Le formulaire a été soumis."
+      },
+      "field": {
+        "companyName": "Nom de l'entreprise",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Soumettre"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Annuler",
       "cancel_mobile_button": "annuler",
       "clear_button": "Effacer",
+      "company_empty_hint": "Le nom de l'entreprise ne peut pas être vide",
+      "company_existed": "Le nom de l'entreprise existe déjà.",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Détails de la commande",
+      "insuranceService": "Services d'assurance ",
+      "insuranceService_applyClaim": "Demande d'indemnisation ",
+      "insuranceService_content_email": " 1. La police d'assurance a été envoyée à votre adresse électronique \"{{email}}\" par {{serviceName}}. Si vous n'avez pas reçu la police d'assurance par e-mail, veuillez contacter le service clientèle du magasin. 2. En cas de dommage, de perte ou de retard etc. pendant la livraison, vous pouvez faire une demande d'indemnisation. ",
+      "insuranceService_content_phone": " 1. La police d’assurance  a été envoyée à votre téléphone portable \"{{phopne}}\" par {{serviceName}}. Si vous n'avez pas reçu les informations relatives à la police d'assurance, veuillez contacter le service clientèle du magasin. 2. En cas de dommage, de perte ou de retard, etc. pendant la livraison, vous pouvez faire une demande d’indemnisation. ",
       "order": "Commande",
       "remark": "Remarques de commandes",
       "time": "Commandé à :",

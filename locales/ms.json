@@ -293,6 +293,28 @@
       "province": "Wilayah",
       "zip_code": "Poskod"
     },
+    "company": {
+      "account": {
+        "billTitle": "Alamat pengebilan syarikat",
+        "link": "Permohonan akaun syarikat",
+        "shipping": "Alamat penghantaran syarikat",
+        "title": "Permohonan akaun syarikat"
+      },
+      "bill": {
+        "sameAsCompany": "Alamat pengebilan syarikat sama dengan alamat penghantaran syarikat"
+      },
+      "create": {
+        "limit": "Bilangan syarikat untuk kedai itu telah mencapai hadnya. Sila hubungi peniaga untuk mendapatkan bantuan.",
+        "success": "Terima kasih. Borang telah diserahkan."
+      },
+      "field": {
+        "companyName": "Nama syarikat",
+        "email": "E-mel"
+      },
+      "form": {
+        "submit": "Hantar"
+      }
+    },
     "email": {
       "mail_common": "Mel"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Batal",
       "cancel_mobile_button": "batal",
       "clear_button": "Padam",
+      "company_empty_hint": "Nama syarikat tidak boleh kosong",
+      "company_existed": "Nama syarikat sudah wujud",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "MM/dd/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Butiran pesanan",
+      "insuranceService": "Perkhidmatan Insurans",
+      "insuranceService_applyClaim": "Memohon Tuntutan",
+      "insuranceService_content_email": "1. Dasar telah dihantar kepada e-mel anda \"{{email}}\" oleh {{serviceName}}. Jika anda belum menerima maklumat dasar, sila hubungi khidmat pelanggan kedai. 2. Jika terdapat sebarang kerosakan, kehilangan, kelewatan atau situasi lain semasa penghantaran, anda boleh memohon tuntutan. ",
+      "insuranceService_content_phone": "1. Dasar telah dihantar kepada e-mel anda \"{{phopne}}\" oleh {{serviceName}}. Jika anda belum menerima maklumat dasar, sila hubungi khidmat pelanggan kedai. 2. Jika terdapat sebarang kerosakan, kehilangan, kelewatan atau situasi lain semasa penghantaran, anda boleh memohon tuntutan. ",
       "order": "Pesanan",
       "remark": "Catatan pesanan",
       "time": "Dipesan pada:",

@@ -293,6 +293,28 @@
       "province": "성",
       "zip_code": "우편번호"
     },
+    "company": {
+      "account": {
+        "billTitle": "회사 청구서 수신 주소",
+        "link": "법인계좌 신청",
+        "shipping": "회사 배송 주소",
+        "title": "법인계좌 신청"
+      },
+      "bill": {
+        "sameAsCompany": "회사 청구서 수신 주소는 회사 배송 주소와 동일합니다."
+      },
+      "create": {
+        "limit": "상점의 회사 수가 제한에 도달했습니다. 도움이 필요하면 판매자에게 문의하세요.",
+        "success": "감사합니다. 양식이 제출되었습니다."
+      },
+      "field": {
+        "companyName": "회사 이름",
+        "email": "이메일"
+      },
+      "form": {
+        "submit": "제출하다"
+      }
+    },
     "email": {
       "mail_common": "이메일"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "취소",
       "cancel_mobile_button": "취소",
       "clear_button": "지우기",
+      "company_empty_hint": "회사 이름은 비워둘 수 없습니다.",
+      "company_existed": "회사 이름이 이미 존재합니다.",
       "confirm": "확인",
       "confirm_button": "확인",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "주문 상세정보",
+      "insuranceService": "보험서비스 ",
+      "insuranceService_applyClaim": "클레임신청 ",
+      "insuranceService_content_email": "1. 보험 증서가 {{serviceName}}님의 이메일 \"{{email}}\"로 전송되었습니다.보험 증서 메일을 받지 못하셨다면, 매장 고객센터에 문의하시기 바랍니다.2. 운송 중 파손, 분실, 지연 등이 발생한 경우 손해배상을 청구할 수 있습니다. ",
+      "insuranceService_content_phone": "1.보험증권은 {{serviceName}}님의 휴대폰 \"{{phopne}}\"로 발송되었습니다.보험증권 정보를 받지 못하셨다면, 매장 고객센터에 문의하시기 바랍니다.2. 운송 중 파손, 분실, 지연 등이 발생한 경우 손해배상을 청구할 수 있습니다.",
       "order": "주문",
       "remark": "주문 비주",
       "time": "구매 시간:",

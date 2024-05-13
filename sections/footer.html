@@ -5,6 +5,10 @@
 <script src="{{asset_url 'component-dropdown-menu.js'}}" defer></script>
 <script src="{{asset_url 'section-footer.js'}}" defer></script>
 
+{{#if request.design_mode}}
+  <script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+{{/if}}
+
 {{assign "theme_settings" settings}}
 {{assign "settings" section.settings}}
 
@@ -14,69 +18,69 @@
     padding-top: {{ settings.padding_top }}px;
     padding-bottom: {{ settings.padding_bottom }}px;
   }
-  {{#and (isFalsey settings.show_letter_subscribe) (isFalsey settings.show_social_media)}}
+  {{#if (isFalsey settings.show_letter_subscribe) and (isFalsey settings.show_social_media)}}
     .section-{{ section.id }}-padding .footer-block--newsletter {
       margin-top: 0;
     }
-  {{/and}}
+  {{/if}}
 {{/style}}
 
 <footer class="footer section-{{section.id}}-padding color-scheme-{{settings.color_scheme}}">
   <div class="footer__content-top page-width">
     {{assign "footer_grid_class" (append "grid-cols-" (length section.blocks))}}
-    {{#if (length section.blocks) ">" 4}}
+    {{#if (length section.blocks) > 4}}
       {{assign "footer_grid_class" "grid-cols-4"}}
     {{/if}}
     <div class="footer__blocks-wrapper grid {{footer_grid_class}} grid-cols-1-tablet">
-      {{#each section.blocks}}
-        {{#if type "===" "menu"}}
-          <footer-menu class="footer-block grid__item footer-block--list" {{{shopline_attributes}}}>
-            {{#if settings.title}}
+      {{#for section.blocks as |block|}}
+        {{#if block.type == "menu"}}
+          <footer-menu class="footer-block grid__item footer-block--list" {{{block.shopline_attributes}}}>
+            {{#if block.settings.title}}
               <div class="footer-block__heading body3">
-                {{settings.title}}
+                {{block.settings.title}}
                 {{snippet "icon-arrow"}}
                 {{snippet "icon-minus"}}
               </div>
             {{/if}}
-            {{assign "link" settings.menu}}
+            {{assign "link" block.settings.menu}}
             <ul class="footer-block__details-content list-unstyled">
-              {{#each link.links}}
+              {{#for link.links as |link|}}
                 <li class="body5">
                   <a
-                    href="{{default url 'javascript:;'}}"
+                    href="{{default link.url 'javascript:;'}}"
                     class="link link--text list-menu__item list-menu__item--link
-                      {{#if active}}list-menu__item--active{{/if}}"
+                      {{#if link.active}}list-menu__item--active{{/if}}"
                   >
-                    {{title}}
+                    {{link.title}}
                   </a>
                 </li>
-              {{/each}}
+              {{/for}}
             </ul>
           </footer-menu>
         {{/if}}
-        {{#if type "===" "custom"}}
-          <div class="footer-block grid__item" {{{shopline_attributes}}}>
-            {{#if settings.title}}
-              <div class="footer-block__heading body3">{{settings.title}}</div>
+        {{#if block.type == "custom"}}
+          <div class="footer-block grid__item" {{{block.shopline_attributes}}}>
+            {{#if block.settings.title}}
+              <div class="footer-block__heading body3">{{block.settings.title}}</div>
             {{/if}}
-            {{#if settings.content}}
+            {{#if block.settings.content}}
               <div class="footer-block__details-content rte body5">
-                {{{settings.content}}}
+                {{{block.settings.content}}}
               </div>
             {{/if}}
           </div>
         {{/if}}
-        {{#if type "===" "image"}}
-          <div class="footer-block grid__item" {{{shopline_attributes}}}>
-            {{#capture "img_style"}}width:{{settings.image_width}}px;height:{{settings.image_width}}px;{{/capture}}
-            {{#if settings.image}}
-              <div class="footer-block__details-content footer-block-image" style="text-align: {{settings.align}};">
-                {{snippet "image" data=settings.image style=img_style}}
+        {{#if block.type == "image"}}
+          <div class="footer-block grid__item" {{{block.shopline_attributes}}}>
+            {{#capture "img_style"}}width:{{block.settings.image_width}}px;height:{{block.settings.image_width}}px;{{/capture}}
+            {{#if block.settings.image}}
+              <div class="footer-block__details-content footer-block-image" style="text-align: {{block.settings.align}};">
+                {{snippet "image" data=block.settings.image style=img_style}}
               </div>
             {{/if}}
           </div>
         {{/if}}
-      {{/each}}
+      {{/for}}
     </div>
     <div class="footer-block--newsletter">
       <div class="footer-block--subscribe">
@@ -116,96 +120,94 @@
       </div>
       <ul class="footer__list-social list-unstyled list-social">
         {{#if settings.show_social_media}}
-          {{#with theme_settings}}
-            {{#if social_facebook_link}}
-              <li>
-                <a href="{{social_facebook_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-fb"}}
-                  {{else}}
-                    {{snippet "icon-social-fb"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_twitter_link}}
-              <li>
-                <a href="{{social_twitter_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-twitter"}}
-                  {{else}}
-                    {{snippet "icon-social-twitter"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_pinterest_link}}
-              <li>
-                <a href="{{social_pinterest_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-pin"}}
-                  {{else}}
-                    {{snippet "icon-social-pin"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_instagram_link}}
-              <li>
-                <a href="{{social_instagram_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-ig"}}
-                  {{else}}
-                    {{snippet "icon-social-ig"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_snapchat_link}}
-              <li>
-                <a href="{{social_snapchat_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-snapchat"}}
-                  {{else}}
-                    {{snippet "icon-social-snapchat"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_tiktok_link}}
-              <li>
-                <a href="{{social_tiktok_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-tiktok"}}
-                  {{else}}
-                    {{snippet "icon-social-tiktok"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_youtube_link}}
-              <li>
-                <a href="{{social_youtube_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-youtube"}}
-                  {{else}}
-                    {{snippet "icon-social-youtube"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-            {{#if social_linkedin_link}}
-              <li>
-                <a href="{{social_linkedin_link}}" target="_blank">
-                  {{#if show_official_icon}}
-                    {{snippet "icon-official-linkedin"}}
-                  {{else}}
-                    {{snippet "icon-social-linkedin"}}
-                  {{/if}}
-                </a>
-              </li>
-            {{/if}}
-          {{/with}}
+          {{#if theme_settings.social_facebook_link}}
+            <li>
+              <a href="{{theme_settings.social_facebook_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-fb"}}
+                {{else}}
+                  {{snippet "icon-social-fb"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_twitter_link}}
+            <li>
+              <a href="{{theme_settings.social_twitter_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-twitter"}}
+                {{else}}
+                  {{snippet "icon-social-twitter"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_pinterest_link}}
+            <li>
+              <a href="{{theme_settings.social_pinterest_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-pin"}}
+                {{else}}
+                  {{snippet "icon-social-pin"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_instagram_link}}
+            <li>
+              <a href="{{theme_settings.social_instagram_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-ig"}}
+                {{else}}
+                  {{snippet "icon-social-ig"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_snapchat_link}}
+            <li>
+              <a href="{{theme_settings.social_snapchat_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-snapchat"}}
+                {{else}}
+                  {{snippet "icon-social-snapchat"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_tiktok_link}}
+            <li>
+              <a href="{{theme_settings.social_tiktok_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-tiktok"}}
+                {{else}}
+                  {{snippet "icon-social-tiktok"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_youtube_link}}
+            <li>
+              <a href="{{theme_settings.social_youtube_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-youtube"}}
+                {{else}}
+                  {{snippet "icon-social-youtube"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
+          {{#if theme_settings.social_linkedin_link}}
+            <li>
+              <a href="{{theme_settings.social_linkedin_link}}" target="_blank">
+                {{#if theme_settings.show_official_icon}}
+                  {{snippet "icon-official-linkedin"}}
+                {{else}}
+                  {{snippet "icon-social-linkedin"}}
+                {{/if}}
+              </a>
+            </li>
+          {{/if}}
         {{/if}}
       </ul>
     </div>
@@ -215,7 +217,7 @@
       <div class="footer__column footer__localization">
         <localization-form>
           {{#form "localization" id="localization-form" enctype="multipart/form-data" accept-charset="UTF-8"}}
-            {{#and settings.show_locale_selector (gt (length localization.available_languages) 1)}}
+            {{#if settings.show_locale_selector and (gt (length localization.available_languages) 1)}}
               <dropdown-menu>
                 <div class="dropdown-menu">
                   <input type="hidden" name="locale_code" value="{{localization.language.iso_code}}" />
@@ -225,17 +227,17 @@
                   </button>
                   <div class="dropdown-menu__list-wrapper top global-modal-border-shadow body4" hidden>
                     <ul class="dropdown-menu__list list-unstyled">
-                      {{#each localization.available_languages}}
+                      {{#for localization.available_languages as |language|}}
                         <li>
-                          <a href="javascript:;" data-value="{{iso_code}}">{{endonym_name}}</a>
+                          <a href="javascript:;" data-value="{{language.iso_code}}">{{language.endonym_name}}</a>
                         </li>
-                      {{/each}}
+                      {{/for}}
                     </ul>
                   </div>
                 </div>
               </dropdown-menu>
-            {{/and}}
-            {{#and settings.show_country_selector (gt (length localization.available_countries) 1)}}
+            {{/if}}
+            {{#if settings.show_country_selector and (gt (length localization.available_countries) 1)}}
               <dropdown-menu>
                 <div class="dropdown-menu">
                   <input type="hidden" name="country_code" value="{{localization.country.iso_code}}" />
@@ -246,28 +248,28 @@
                   </button>
                   <div class="dropdown-menu__list-wrapper top global-modal-border-shadow body4" hidden>
                     <ul class="dropdown-menu__list list-unstyled">
-                      {{#each localization.available_countries}}
+                      {{#for localization.available_countries as |country|}}
                         <li>
-                          <a href="javascript:;" data-value="{{iso_code}}">
-                            {{name}}（{{currency.iso_code}}
-                            {{currency.symbol}}）
+                          <a href="javascript:;" data-value="{{country.iso_code}}">
+                            {{country.name}}（{{country.currency.iso_code}}
+                            {{country.currency.symbol}}）
                           </a>
                         </li>
-                      {{/each}}
+                      {{/for}}
                     </ul>
                   </div>
                 </div>
               </dropdown-menu>
-            {{/and}}
+            {{/if}}
           {{/form}}
         </localization-form>
       </div>
       <div class="footer__column footer__column--info">
         {{#if settings.show_pay_channel.show}}
           <div class="footer__payment">
-            {{#each settings.show_pay_channel.pay_channel_list}}
-              {{payment_type_svg_tag type}}
-            {{/each}}
+            {{#for settings.show_pay_channel.pay_channel_list as |pay_channel|}}
+              {{payment_type_svg_tag pay_channel.type}}
+            {{/for}}
           </div>
         {{/if}}
         <div class="footer__copyright body6">

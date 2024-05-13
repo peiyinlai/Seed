@@ -1,70 +1,72 @@
 {{assign "show_announcement" false}}
 
-{{#with this as |global|}}
-  {{#each section.blocks}}
-    {{#if (trim settings.notice_link_text)}}
-      {{#with global}}
-        {{assign "show_announcement" true}}
-      {{/with}}
-    {{/if}}
-  {{/each}}
-{{/with}}
+{{#for section.blocks as |block|}}
+  {{#if (trim block.settings.notice_link_text)}}
+    {{assign "show_announcement" true}}
+  {{/if}}
+{{/for}}
 
 {{#if show_announcement}}
   {{snippet "stylesheet" href=(asset_url "section-announcement-bar.css")}}
-  {{#if section.settings.display_mode "!==" "tiled"}}
+  {{#if section.settings.display_mode != "tiled"}}
     <script src="{{asset_url 'component-slider.js'}}" defer></script>
     <script src="{{asset_url 'section-announcement-bar.js'}}" defer></script>
+
+    {{#if request.design_mode}}
+      <script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+    {{/if}}
   {{/if}}
 
   <div class="announcement-bar--container">
-    {{#or (if section.settings.display_mode "===" "tiled") (if section.settings.display_mode "===" "compact")}}
+    {{#if section.settings.display_mode == "tiled" or section.settings.display_mode == "compact"}}
       <div
         class="announcement-bar--list
           announcement-bar--{{section.settings.display_mode}}
-          {{#if section.settings.display_mode '===' 'compact'}}display-none-tablet{{/if}}"
+          {{#if section.settings.display_mode == 'compact'}}display-none-tablet{{/if}}"
       >
-        {{#each section.blocks}}
-          {{~#if (isTruthy settings.notice_link_text)}}
-            <div class="announcement-bar--item color-scheme-{{settings.notice_style}}" {{{shopline_attributes}}}>
-              {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
+        {{#for section.blocks as |block|}}
+          {{~#if (isTruthy block.settings.notice_link_text)}}
+            <div class="announcement-bar--item color-scheme-{{block.settings.notice_style}}" {{{block.shopline_attributes}}}>
+              {{assign "ele" (ternary (if block.settings.notice_link) "a" "div")}}
               <{{ele}}
-                {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}}
+                {{#if block.settings.notice_link}}href="{{block.settings.notice_link}}"{{/if}}
                 class="body4 announcement--text"
               >
-                {{~settings.notice_link_text~}}
+                {{~block.settings.notice_link_text~}}
               </{{ele}}>
             </div>
           {{~/if}}
-        {{/each}}
+        {{/for}}
       </div>
-    {{/or}}
+    {{/if}}
 
-    {{#if section.settings.display_mode "!==" "tiled"}}
-      {{assign "direction" (ternary (if section.settings.display_mode "===" "vertical") "vertical" "horizontal")}}
+    {{#if section.settings.display_mode != "tiled"}}
+      {{assign "direction" (ternary (if section.settings.display_mode == "vertical") "vertical" "horizontal")}}
       <announcement-bar-section
         direction="{{direction}}"
-        class="{{#if section.settings.display_mode '===' 'compact'}}display-none-desktop{{/if}}"
+        autoplay="true"
+        speed="5"
+        class="{{#if section.settings.display_mode == 'compact'}}display-none-desktop{{/if}}"
       >
         <div id="Slider-{{section.id}}" class="announcement-bar__slider announcement-bar__slider--{{direction}} slider">
-          {{#each section.blocks}}
-            {{~#if (isTruthy settings.notice_link_text)}}
+          {{#for section.blocks as |block|}}
+            {{~#if (isTruthy block.settings.notice_link_text)}}
               <div
                 id="Slide-{{id}}"
                 class="announcement-bar__slide slider__slide announcement-bar--item
-                  color-scheme-{{settings.notice_style}}"
-                {{{shopline_attributes}}}
+                  color-scheme-{{block.settings.notice_style}}"
+                {{{block.shopline_attributes}}}
               >
-                {{assign "ele" (ternary (if settings.notice_link) "a" "div")}}
+                {{assign "ele" (ternary (if block.settings.notice_link) "a" "div")}}
                 <{{ele}}
-                  {{#if settings.notice_link}}href="{{settings.notice_link}}"{{/if}}
+                  {{#if block.settings.notice_link}}href="{{block.settings.notice_link}}"{{/if}}
                   class="body4 announcement--text"
                 >
-                  {{~settings.notice_link_text~}}
+                  {{~block.settings.notice_link_text~}}
                 </{{ele}}>
               </div>
             {{~/if}}
-          {{/each}}
+          {{/for}}
         </div>
       </announcement-bar-section>
     {{/if}}

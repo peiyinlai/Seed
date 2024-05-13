@@ -293,6 +293,28 @@
       "province": "Provincia",
       "zip_code": "Codice postale"
     },
+    "company": {
+      "account": {
+        "billTitle": "Indirizzo di fatturazione dell'azienda",
+        "link": "Applicazione conto aziendale",
+        "shipping": "Indirizzo di spedizione dell'azienda",
+        "title": "Applicazione conto aziendale"
+      },
+      "bill": {
+        "sameAsCompany": "L'indirizzo di fatturazione dell'azienda corrisponde all'indirizzo di spedizione dell'azienda"
+      },
+      "create": {
+        "limit": "Il numero di aziende per il negozio ha raggiunto il limite. Contatta il commerciante per ricevere assistenza.",
+        "success": "Grazie. Il modulo è stato inviato."
+      },
+      "field": {
+        "companyName": "Nome della ditta",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Invia"
+      }
+    },
     "email": {
       "mail_common": "E-mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Annulla",
       "cancel_mobile_button": "Annulla",
       "clear_button": "Cancella",
+      "company_empty_hint": "Il nome dell'azienda non può essere vuoto",
+      "company_existed": "Il nome dell'azienda esiste già.",
       "confirm": "Sicuro",
       "confirm_button": "Sicuro",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Dettagli dell'ordine",
+      "insuranceService": "Servizi assicurativi",
+      "insuranceService_applyClaim": "Chiedi un indennizzo",
+      "insuranceService_content_email": "1. La polizza è stata inviata alla tua email \"{{email}}\" da {{serviceName}}. Se non ricevi l'email della polizza, contatta il servizio clienti del negozio. 2. Se durante il trasporto si verificano danni, perdite, ritardi, ecc., puoi chiedere un indennizzo.",
+      "insuranceService_content_phone": "1. La polizza è stata inviata al tuo cellulare \"{{phopne}}\" da {{serviceName}}. Se non ricevi informazioni sulla polizza, contatta il servizio clienti del negozio. 2. Se durante il trasporto si verificano danni, perdite, ritardi, ecc., puoi chiedere un indennizzo.",
       "order": "Ordine",
       "remark": "Note sull'ordine",
       "time": "Ordinato a:",

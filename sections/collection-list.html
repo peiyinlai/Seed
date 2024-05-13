@@ -1,4 +1,7 @@
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
+{{#if request.design_mode}}
+  <script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+{{/if}}
 {{snippet "stylesheet" href=(asset_url "section-collection-list.css")}}
 {{snippet "stylesheet" href=(asset_url "component-card.css")}}
 {{snippet
@@ -17,9 +20,9 @@
 {{assign "max_in_mobile" section.settings.max_in_mobile}}
 {{assign "scroll_pc" section.settings.slice_in_pc}}
 {{assign "scroll_mobile" section.settings.slice_in_mobile}}
-{{#or scroll_pc scroll_mobile}}
+{{#if scroll_pc or scroll_mobile}}
   {{assign "is_scroll" true}}
-{{/or}}
+{{/if}}
 <div class="color-scheme-{{color_scheme}}">
   <div class="page-width text-center section-padding">
     <h4 class="title3 title-wrapper">
@@ -35,36 +38,38 @@
           {{#if scroll_mobile}}slider--mobile mobile-slider-full-screen{{/if}}"
         style="--mobile-cols:{{mobile_grid_cols}}"
       >
-        {{#each section.blocks}}
-          {{assign "title" settings.title}}
-          {{assign "image_position" settings.image_display_area}}
-          {{assign "card_collection" settings.category}}
-          {{#if @index ">=" ../max_in_mobile}}
+        {{#for section.blocks as |block|}}
+          {{assign "title" block.settings.title}}
+          {{assign "image_position" block.settings.image_display_area}}
+          {{assign "card_collection" block.settings.category}}
+          {{#if forloop.index0 >= max_in_mobile}}
             {{assign "class" "display-none-tablet"}}
           {{/if}}
           {{snippet
             "collection-card"
+            block=block
             card_collection=card_collection
             title=title
-            ratio=../ratio
+            ratio=ratio
             position=image_position
             desktop_grid_cols=desktop_grid_cols
             mobile_grid_cols=mobile_grid_cols
-            is_scroll=../is_scroll
+            is_scroll=is_scroll
             class=class
-            blockId=id
+            blockId=block.id
+            shopline_attributes=block.shopline_attributes
           }}
-        {{/each}}
+        {{/for}}
       </div>
       {{assign "length" (length section.blocks)}}
-      {{#and (if length ">" desktop_grid_cols) scroll_pc}}
+      {{#if length > desktop_grid_cols and scroll_pc}}
         <button name="previous" class="colletionlist__arrow display-none display-flex-desktop">
           {{snippet "icon-arrow" class="icon"}}
         </button>
         <button name="next" class="colletionlist__arrow colletionlist__arrow--right display-none display-flex-desktop">
           {{snippet "icon-arrow" class="icon"}}
         </button>
-      {{/and}}
+      {{/if}}
     </slider-component>
     {{#if (isTruthy button_text)}}
       <div class="collection-list-more-btn">

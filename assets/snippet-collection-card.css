@@ -1,5 +1,5 @@
 .collection__item__image {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(var(--color-page-background));
   position: relative;
 }
 .collection__item__image img {

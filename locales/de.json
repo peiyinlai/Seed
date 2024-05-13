@@ -293,6 +293,28 @@
       "province": "Bundesland",
       "zip_code": "Postleitzahl"
     },
+    "company": {
+      "account": {
+        "billTitle": "Rechnungsadresse des Unternehmens",
+        "link": "Unternehmenskontobewerbung",
+        "shipping": "Lieferadresse des Unternehmens",
+        "title": "Unternehmenskontobewerbung"
+      },
+      "bill": {
+        "sameAsCompany": "Die Rechnungsadresse des Unternehmens ist dieselbe wie die Lieferadresse des Unternehmens"
+      },
+      "create": {
+        "limit": "Die Anzahl der Unternehmen für den Laden hat ihr Limit erreicht. Bitte wenden Sie sich an den Händler um Hilfe.",
+        "success": "Danke. Das Formular wurde gesendet."
+      },
+      "field": {
+        "companyName": "Firmenname",
+        "email": "E-Mail"
+      },
+      "form": {
+        "submit": "Einreichen"
+      }
+    },
     "email": {
       "mail_common": "E-Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Abbrechen",
       "cancel_mobile_button": "Abbrechen",
       "clear_button": "Aufräumen",
+      "company_empty_hint": "Der Firmenname darf nicht leer sein",
+      "company_existed": "Firmenname existiert bereits.",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Bestelldetails",
+      "insuranceService": "Versicherungsdienstleistungen",
+      "insuranceService_applyClaim": "Anspruch auf Schadensersatz",
+      "insuranceService_content_email": "1. Der Versicherungsschein wurde von {{serviceName}} an Ihre E-Mail-Adresse „{{email}}“ gesendet. Wenn Sie die E-Mail mit dem Versicherungsschein nicht erhalten, wenden Sie sich bitte an den Kundendienst des Shops. 2. Im Falle einer Beschädigung, Verlust, Verspätung usw. während des Transports  können Sie einen Anspruch auf Schadensersatz geltend machen.",
+      "insuranceService_content_phone": "1. Der Versicherungsschein wurde von {{serviceName}} an Ihr Smartphone „{{phopne}}“ geschickt. Wenn Sie die E-Mail mit dem Versicherungsschein nicht erhalten, wenden Sie sich bitte an den Kundendienst des Shops. 2. Im Falle einer Beschädigung, Verlust, Verspätung usw. während des Transports  können Sie einen Anspruch auf Schadensersatz geltend machen.",
       "order": "Bestellung",
       "remark": "Bestellhinweis",
       "time": "Bestellt bei:",

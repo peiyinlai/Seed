@@ -13,5 +13,13 @@ defineCustomElement(
       init() {}
 
       slideChange() {}
+
+      splideTo(index) {
+        detectingScreen(({ isMobileScreen }) => {
+          if (isMobileScreen) {
+            super.slideTo(index);
+          }
+        }, true);
+      }
     },
 );

@@ -35,9 +35,9 @@
         <div class="info-item gender">
           <div class="body4 info-label">{{t "customer.account.gender"}}</div>
           <div class="body4 info-value">
-            {{#if customer.gender "==" 1}}
+            {{#if customer.gender == 1}}
               {{t "customer.account.gender_male"}}
-            {{else if customer.gender "==" 2}}
+            {{else if customer.gender == 2}}
               {{t "customer.account.gender_female"}}
             {{else}}
               {{t "customer.account.gender_secret"}}
@@ -47,21 +47,21 @@
           <div class="gender-edit body4">
             <label class="gender-radio__wrapper">
               <span class="gender-radio">
-                <input type="radio" name="customer[gender]" value="male" {{#if customer.gender "==" 1}}checked{{/if}}>
+                <input type="radio" name="customer[gender]" value="male" {{#if customer.gender == 1}}checked{{/if}}>
                 <span class="gender-radio__inner"></span>
               </span>
               <span>{{t "customer.account.gender_male"}}</span>
             </label>
             <label class="gender-radio__wrapper">
               <span class="gender-radio">
-                <input type="radio" name="customer[gender]" value="female" {{#if customer.gender "==" 2}}checked{{/if}}>
+                <input type="radio" name="customer[gender]" value="female" {{#if customer.gender == 2}}checked{{/if}}>
                 <span class="gender-radio__inner"></span>
               </span>
               <span>{{t "customer.account.gender_female"}}</span>
             </label>
             <label class="gender-radio__wrapper">
               <span class="gender-radio">
-                <input type="radio" name="customer[gender]" value="prefer not to say" {{#if customer.gender "==" 3}}checked{{/if}}>
+                <input type="radio" name="customer[gender]" value="prefer not to say" {{#if customer.gender == 3}}checked{{/if}}>
                 <span class="gender-radio__inner"></span>
               </span>
               <span>{{t "customer.account.gender_secret"}}</span>

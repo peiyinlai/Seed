@@ -293,6 +293,28 @@
       "province": "Provinsi",
       "zip_code": "Kode pos"
     },
+    "company": {
+      "account": {
+        "billTitle": "Alamat penagihan perusahaan",
+        "link": "Aplikasi akun perusahaan",
+        "shipping": "Alamat pengiriman perusahaan",
+        "title": "Aplikasi akun perusahaan"
+      },
+      "bill": {
+        "sameAsCompany": "Alamat penagihan perusahaan sama dengan alamat pengiriman perusahaan"
+      },
+      "create": {
+        "limit": "Jumlah perusahaan untuk toko tersebut telah mencapai batasnya. Silakan hubungi pedagang untuk bantuan.",
+        "success": "Terima kasih. Formulir telah diserahkan."
+      },
+      "field": {
+        "companyName": "Nama perusahaan",
+        "email": "Surel"
+      },
+      "form": {
+        "submit": "Kirim"
+      }
+    },
     "email": {
       "mail_common": "Email"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Batal",
       "cancel_mobile_button": "Batal",
       "clear_button": "Bersih",
+      "company_empty_hint": "Nama perusahaan tidak boleh kosong",
+      "company_existed": "Nama perusahaan sudah ada",
       "confirm": "Konfirmasi",
       "confirm_button": "Konfirmasi",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detail pesanan",
+      "insuranceService": "Pelayanan Asuransi",
+      "insuranceService_applyClaim": "Pengajuan Klaim",
+      "insuranceService_content_email": "1. Polis asuransi telah dikirimkan oleh {{serviceName}} ke email Anda \"{{email}}\". Jika Anda tidak menerima email polis, silakan hubungi layanan pelanggan toko. 2. Jika terjadi kerusakan, kehilangan, atau keterlambatan selama pengiriman, Anda dapat mengajukan klaim.",
+      "insuranceService_content_phone": "2. Polis asuransi telah dikirimkan oleh {{serviceName}} ke ponsel Anda \"{{phopne}}\". Jika Anda tidak menerima email polis, silakan hubungi layanan pelanggan toko. 2. Jika terjadi kerusakan, kehilangan, atau keterlambatan selama pengiriman, Anda dapat mengajukan klaim.",
       "order": "Pesanan",
       "remark": "Catatan pesanan",
       "time": "Waktu pesan:",

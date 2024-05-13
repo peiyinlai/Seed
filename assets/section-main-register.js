@@ -106,6 +106,7 @@ class CustomerRegister {
             emailMarketing.classList.remove('display-none');
             emailMarketing.removeAttribute('disabled');
             emailMarketingCheckBox.setAttribute('name', emailMarketingCheckBox.getAttribute('_name'));
+            emailMarketingCheckBox.removeAttribute('disabled');
           }
         }
       });

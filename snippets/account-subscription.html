@@ -55,14 +55,14 @@
 
                   <div class="modify-info__content body4">
                     <checkbox-group class="unsubscribe-reasons" type="radio">
-                      {{#each form.unsubscribe_reasons}}
+                      {{#for form.unsubscribe_reasons as |reason|}}
                         <label class="unsubscribe-reason">
                           <span class="field-radio">
-                            <input type="radio" name="customer[unsubscribe_reason]" value="{{value}}" />
+                            <input type="radio" name="customer[unsubscribe_reason]" value="{{reason.value}}" />
                             <span class="radio"></span>
                           </span>
-                          <span>{{t text}}</span>
-                          {{#if show_other_reason}}
+                          <span>{{t reason.text}}</span>
+                          {{#if reason.show_other_reason}}
                             <input
                               class="unsubscribe-reason__input body4"
                               type="text"
@@ -71,7 +71,7 @@
                             />
                           {{/if}}
                         </label>
-                      {{/each}}
+                      {{/for}}
                     </checkbox-group>
                   </div>
 
@@ -234,21 +234,21 @@
                         autocomplete="off"
                         {{#if customer_without_dialing_code_phone}}disabled{{/if}}
                       >
-                        {{#each all_country_dialing_code}}
+                        {{#for all_country_dialing_code as |item|}}
                           <option
-                            value="{{dialing_code}}"
-                            data-iso-code="{{iso_code}}"
+                            value="{{item.dialing_code}}"
+                            data-iso-code="{{item.iso_code}}"
                             {{#if
                               (ternary
-                                ../customer.phone_dialing_code
-                                (if ../customer.phone_dialing_code "==" dialing_code)
-                                (if ../localization.country.iso_code "==" iso_code)
+                                customer.phone_dialing_code
+                                (if customer.phone_dialing_code == item.dialing_code)
+                                (if localization.country.iso_code == item.iso_code)
                               )
                             }}
                               selected="selected"
                             {{/if}}
-                          >{{name}}</option>
-                        {{/each}}
+                          >{{item.name}}</option>
+                        {{/for}}
                       </select>
                     </div>
                     {{#if customer_without_dialing_code_phone}}

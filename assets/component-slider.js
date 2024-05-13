@@ -163,6 +163,7 @@ defineCustomElement('slider-component', () => {
     }
 
     initSlides() {
+      this.slideItems = Array.from(this.querySelectorAll('[id^="Slide-"]'));
       this.totalPage = this._getTotalPage();
       this.updateView();
     }
@@ -182,7 +183,6 @@ defineCustomElement('slider-component', () => {
     }
 
     resetSlides() {
-      this.slideItems = Array.from(this.querySelectorAll('[id^="Slide-"]'));
       this.initSlides();
       this._slideUpdate();
     }
@@ -246,13 +246,13 @@ defineCustomElement('slider-component', () => {
     isSlideVisible(element) {
       if (this.direction === 'vertical') {
         return (
-          element.offsetTop - this.slider.scrollTop > -1 &&
-          this.slider.clientHeight + this.slider.scrollTop - (element.offsetTop + element.clientHeight) > -1
+          element.offsetTop - this.slider.scrollTop >= -1 &&
+          this.slider.clientHeight + this.slider.scrollTop - (element.offsetTop + element.clientHeight) >= -1
         );
       }
       return (
-        element.offsetLeft - this.slider.scrollLeft > -1 &&
-        this.slider.clientWidth + this.slider.scrollLeft - (element.offsetLeft + element.clientWidth) > -1
+        element.offsetLeft - this.slider.scrollLeft >= -1 &&
+        this.slider.clientWidth + this.slider.scrollLeft - (element.offsetLeft + element.clientWidth) >= -1
       );
     }
 

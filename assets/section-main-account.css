@@ -381,7 +381,7 @@
 }
 
 .modify-info__modal .modify-info__content .modify-info__input.disabled {
-  background-color: #efefef;
+  background-color: rgba(var(--color-text), 0.05);
 }
 
 .modify-info__modal .modify-info__content .modify-info__input input {

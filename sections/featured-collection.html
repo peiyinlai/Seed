@@ -17,19 +17,19 @@
 }}
 
 {{assign "products_to_display" section.settings.collection.all_products_count}}
-{{#if (if section.settings.collection.all_products_count ">" section.settings.products_to_show)}}
+{{#if section.settings.collection.all_products_count > section.settings.products_to_show}}
   {{assign "products_to_display" section.settings.products_to_show}}
   {{assign "more_in_collection" true}}
 {{/if}}
 {{assign "columns_mobile_int" section.settings.columns_mobile}}
 
-{{#and section.settings.enable_mobile_slider (if products_to_display ">" columns_mobile_int)}}
+{{#if section.settings.enable_mobile_slider and products_to_display > columns_mobile_int}}
   {{assign "show_mobile_slider" true}}
-{{/and}}
+{{/if}}
 {{assign "show_desktop_slider" false}}
-{{#and section.settings.enable_desktop_slider (if products_to_display ">" section.settings.columns_desktop)}}
+{{#if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop}}
   {{assign "show_desktop_slider" true}}
-{{/and}}
+{{/if}}
 <div class="isolate">
   <div class="featured-collection section-padding" style="--mobile-cols:{{section.settings.columns_mobile}}">
     <div
@@ -41,13 +41,13 @@
       {{#if section.settings.title}}
         <h2 class="{{section.settings.heading_size}}">{{section.settings.title}}</h2>
       {{/if}}
-      {{#and section.settings.show_description section.settings.collection.description}}
+      {{#if section.settings.show_description and section.settings.collection.description}}
         <div class="collection__description rte">
           {{#if section.settings.show_description}}
             {{{section.settings.collection.description}}}
           {{/if}}
         </div>
-      {{/and}}
+      {{/if}}
     </div>
     <slider-component
       class="slider-mobile-gutter
@@ -59,35 +59,35 @@
         id="Slider-{{section.id}}"
         class="grid product-grid contains-card contains-card--product
           grid-cols-{{section.settings.columns_desktop}}-desktop
-          {{#if section.settings.collection.products.length '===' 0}} grid-cols-2
+          {{#if section.settings.collection.products.length == 0}} grid-cols-2
           {{else}} grid-cols-{{columns_mobile_int}}{{/if}}
-          {{#or show_mobile_slider show_desktop_slider}} slider slider-full-screen
+          {{#if show_mobile_slider or show_desktop_slider}} slider slider-full-screen
             {{#if show_desktop_slider}} slider--desktop{{/if}}
             {{#if show_mobile_slider}} slider--mobile grid--peek{{/if}}
-          {{/or}}
+          {{/if}}
           "
       >
-        {{#if section.settings.collection.products.length ">" 0}}
+        {{#if section.settings.collection.products.length > 0}}
           {{assign "limit" (multiply section.settings.products_to_show 1)}}
-          {{#each section.settings.collection.products limit=limit as |product|}}
+          {{#for section.settings.collection.products limit=limit as |product|}}
             <li
-              id="Slide-{{../section.id}}-featured-collection"
-              class="grid__item{{#or ../show_mobile_slider ../show_desktop_slider}} slider__slide{{/or}}"
+              id="Slide-{{section.id}}-featured-collection"
+              class="grid__item{{#if show_mobile_slider or show_desktop_slider}} slider__slide{{/if}}"
             >
               {{snippet
                 "product-card"
                 product_data=product
-                image_ratio=../section.settings.product_image_ratio
-                show_secondary_image=../section.settings.show_secondary_image
-                show_quick_add=../section.settings.enable_quick_add
-                section_id=../section.id
-                desktop_grid_cols=../section.settings.columns_desktop
-                mobile_grid_cols=../section.settings.columns_mobile
-                image_fill_type=../section.settings.image_fill_type
-                theme_settings=../settings
+                image_ratio=section.settings.product_image_ratio
+                show_secondary_image=section.settings.show_secondary_image
+                show_quick_add=section.settings.enable_quick_add
+                section_id=section.id
+                desktop_grid_cols=section.settings.columns_desktop
+                mobile_grid_cols=section.settings.columns_mobile
+                image_fill_type=section.settings.image_fill_type
+                theme_settings=settings
               }}
             </li>
-          {{/each}}
+          {{/for}}
         {{else}}
           <li class="grid__item">
             {{snippet "product-card" theme_settings=settings}}
@@ -103,8 +103,8 @@
           </li>
         {{/if}}
       </ul>
-      {{#or show_mobile_slider show_desktop_slider}}
-        {{#if section.settings.page_style "===" "number"}}
+      {{#if show_mobile_slider or show_desktop_slider}}
+        {{#if section.settings.page_style == "number"}}
           <div class="slider-buttons">
             <button type="button" class="slider-button slider-button--prev" name="previous">
               {{snippet "icon-arrow"}}
@@ -126,7 +126,7 @@
             </button>
           </div>
         {{/if}}
-        {{#if section.settings.page_style "===" "arrow"}}
+        {{#if section.settings.page_style == "arrow"}}
           <div class="control__arrow-buttons slider-buttons">
             <button class="control__arrow-button" name="previous">
               {{snippet "icon-arrow"}}
@@ -136,57 +136,57 @@
             </button>
           </div>
         {{/if}}
-        {{#if section.settings.page_style "===" "bars"}}
+        {{#if section.settings.page_style == "bars"}}
           {{#if show_desktop_slider}}
             <div class="control__bars slider-buttons display-none-tablet">
-              {{#each section.settings.collection.products limit=limit as |product|}}
-                {{#if @index "<=" (minus ../products_to_display ../section.settings.columns_desktop)}}
-                  <button name="pager" class="slider-counter__link control__bar" data-index="{{@index}}"></button>
+              {{#for section.settings.collection.products limit=limit as |product|}}
+                {{#if forloop.index0 <= (minus products_to_display section.settings.columns_desktop)}}
+                  <button name="pager" class="slider-counter__link control__bar" data-index="{{forloop.index0}}"></button>
                 {{/if}}
-              {{/each}}
+              {{/for}}
             </div>
           {{/if}}
 
           {{#if show_mobile_slider}}
             <div class="control__bars slider-buttons display-none-desktop">
-              {{#each section.settings.collection.products limit=limit as |product|}}
-                {{#if @index "<=" (minus ../products_to_display ../section.settings.columns_mobile)}}
-                  <button name="pager" class="slider-counter__link control__bar" data-index="{{@index}}"></button>
+              {{#for section.settings.collection.products limit=limit as |product|}}
+                {{#if forloop.index0 <= (minus products_to_display section.settings.columns_mobile)}}
+                  <button name="pager" class="slider-counter__link control__bar" data-index="{{forloop.index0}}"></button>
                 {{/if}}
-              {{/each}}
+              {{/for}}
             </div>
           {{/if}}
         {{/if}}
-        {{#if section.settings.page_style "===" "dots"}}
+        {{#if section.settings.page_style == "dots"}}
           {{#if show_desktop_slider}}
             <div class="control__dots slider-buttons display-none-tablet">
-              {{#each section.settings.collection.products limit=limit as |product|}}
-                {{#if @index "<=" (minus ../products_to_display ../section.settings.columns_desktop)}}
-                  <button class="slider-counter__link control__dot" name="pager" data-index="{{@index}}"></button>
+              {{#for section.settings.collection.products limit=limit as |product|}}
+                {{#if forloop.index0 <= (minus products_to_display section.settings.columns_desktop)}}
+                  <button class="slider-counter__link control__dot" name="pager" data-index="{{forloop.index0}}"></button>
                 {{/if}}
-              {{/each}}
+              {{/for}}
             </div>
           {{/if}}
           {{#if show_mobile_slider}}
             <div class="control__dots slider-buttons display-none-desktop">
-              {{#each section.settings.collection.products limit=limit as |product|}}
-                {{#if @index "<=" (minus ../products_to_display ../section.settings.columns_mobile)}}
-                  <button class="slider-counter__link control__dot" name="pager" data-index="{{@index}}"></button>
+              {{#for section.settings.collection.products limit=limit as |product|}}
+                {{#if forloop.index0 <= (minus products_to_display section.settings.columns_mobile)}}
+                  <button class="slider-counter__link control__dot" name="pager" data-index="{{forloop.index0}}"></button>
                 {{/if}}
-              {{/each}}
+              {{/for}}
             </div>
           {{/if}}
         {{/if}}
-      {{/or}}
+      {{/if}}
     </slider-component>
 
-    {{#and (if section.settings.button_text) more_in_collection}}
+    {{#if section.settings.button_text and more_in_collection}}
       <div class="collection__view-all text-center">
         <a href="{{section.settings.collection.url}}" class="button">
           {{section.settings.button_text}}
         </a>
       </div>
-    {{/and}}
+    {{/if}}
   </div>
 </div>
 {{#schema}}

@@ -81,7 +81,7 @@ summary .icon-fold {
   bottom: 0;
   right: 0;
   margin: auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(var(--color-text), 0.1);
   border-radius: 50%;
 }
 

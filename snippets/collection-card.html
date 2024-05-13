@@ -2,6 +2,7 @@
     Renders a collection card
 
     Accepts:
+    - block {Object} Block object
     - card_collection {Object} Collection object
     - title: {String} collection title
     - is_scroll: {Boolean} decides if the cards should be scrollable or not
@@ -21,20 +22,20 @@
 
 {{snippet "stylesheet" href=(asset_url "snippet-collection-card.css")}}
 {{assign "image_ratio" (default ratio 100)}}
-{{#and (if ratio "===" "adapt") (has card_collection "featured_image")}}
+{{#if ratio == "adapt" and (has card_collection "featured_image")}}
   {{assign
     "image_ratio"
     (ternary card_collection.featured_image.aspect_ratio (divide 100 card_collection.featured_image.aspect_ratio) 100)
   }}
-{{/and}}
-{{#and (if ratio "===" "adapt") "and" (isFalsey (has card_collection "featured_image"))}}
+{{/if}}
+{{#if ratio == "adapt" and (isFalsey (has card_collection "featured_image"))}}
   {{assign "image_ratio" 100}}
-{{/and}}
+{{/if}}
 <a
   class="collection-item col shopline-element-collection-item card-wrapper {{#if is_scroll}}slider__slide{{/if}} {{class}}"
   href="{{#if (isFalsey card_collection.url)}}javascript:;{{else}}{{card_collection.url}}{{/if}}"
-  {{{shopline_attributes}}}
-  id="Slide-{{id}}"
+  {{{block.shopline_attributes}}}
+  id="Slide-{{block.id}}"
 >
   <div class="card {{#if is_scroll}}collection__scroll__item{{/if}}">
     <div
@@ -61,7 +62,7 @@
       </div>
     </div>
     <div class="body3 collection__item__name card__content">
-      {{default settings.title (default card_collection.title "Example collection")}}
+      {{default block.settings.title (default card_collection.title "Example collection")}}
     </div>
   </div>
 </a>

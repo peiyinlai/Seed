@@ -293,6 +293,28 @@
       "province": "Província",
       "zip_code": "Código postal"
     },
+    "company": {
+      "account": {
+        "billTitle": "Endereço de cobrança da empresa",
+        "link": "Aplicação de conta da empresa",
+        "shipping": "Endereço de envio da empresa",
+        "title": "Aplicação de conta da empresa"
+      },
+      "bill": {
+        "sameAsCompany": "Endereço de cobrança da empresa igual ao endereço de envio da empresa"
+      },
+      "create": {
+        "limit": "O número de empresas para a loja atingiu seu limite. Por favor, entre em contato com o comerciante para obter assistência.",
+        "success": "Obrigado. O formulário foi enviado."
+      },
+      "field": {
+        "companyName": "Nome da empresa",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Enviar"
+      }
+    },
     "email": {
       "mail_common": "Email"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Cancelar",
       "cancel_mobile_button": "Cancelar",
       "clear_button": "Limpar",
+      "company_empty_hint": "O nome da empresa não pode ficar em branco",
+      "company_existed": "O nome da empresa já existe.",
       "confirm": "Confirme",
       "confirm_button": "Confirme",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detalhes do pedido",
+      "insuranceService": "Serviços de seguro",
+      "insuranceService_applyClaim": "Solicitação de reclamação",
+      "insuranceService_content_email": "1. A apólice foi enviada para o seu e-mail \"{{email}}\" por {{serviceName}}. Se você não recebeu o e-mail da apólice, entre em contato com o serviço de atendimento ao cliente da loja.  2. Em caso de danos, perda, atraso ou outras situações durante a entrega, você pode solicitar uma reclamação.",
+      "insuranceService_content_phone": "1. A apólice foi enviada para o seu celular \"{{phopne}}\" por {{serviceName}}. Se você não recebeu a mensagem da apólice, entre em contato com o atendimento ao cliente da loja. 2. Em caso de danos, perda, atraso ou outras situações durante a entrega, você pode solicitar uma reclamação.",
       "order": "Pedidos",
       "remark": "Notas de pedido",
       "time": "Tempo do pedido:",

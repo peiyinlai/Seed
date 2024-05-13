@@ -18,7 +18,25 @@ defineCustomElement('quick-add-modal', () => {
       document.body.appendChild(this);
     }
 
+    observeCssParsed(opener) {
+      const target = opener.closest('modal-opener');
+
+      const onCssParsed = (event) => {
+        if (event.animationName === 'cssParsed') {
+          super.open(opener);
+          this.loading = false;
+          target.removeEventListener('animationstart', onCssParsed);
+        }
+      };
+
+      target.addEventListener('animationstart', onCssParsed);
+    }
+
     open(opener) {
+      if (opener.classList.contains('loading')) {
+        return;
+      }
+
       opener.classList.add('loading');
       opener.querySelector('.loading-overlay__spinner').classList.add('display-flex');
 
@@ -29,13 +47,16 @@ defineCustomElement('quick-add-modal', () => {
           this.productElement = responseHTML.querySelector('section[id^="MainProduct-"]');
           this.preventDuplicatedIDs();
           this.removeDOMElements();
-          this.setInnerHTML(this.modalContent, this.productElement.innerHTML);
+
+          // To avoid flickering use animations as a sign that style parsing is complete
+          const flag = this.cssParsedFlag();
+          this.observeCssParsed(opener);
+          this.setInnerHTML(this.modalContent, this.productElement.innerHTML + flag);
 
           if (window.Shopline && window.Shopline.PaymentButton) {
             window.Shopline.PaymentButton.init();
           }
           this.preventVariantURLSwitching();
-          super.open(opener);
         })
         .finally(() => {
           opener.classList.remove('loading');
@@ -56,6 +77,28 @@ defineCustomElement('quick-add-modal', () => {
         newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
         oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
       });
+    }
+
+    cssParsedFlag() {
+      const html = `
+        <style>
+          @keyframes cssParsed {
+            0% {
+              opacity: 0.99;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          [data-modal="#${this.id}"] {
+            animation: 0.1s cssParsed;
+          }
+
+        </style>
+      `;
+
+      return html;
     }
 
     preventVariantURLSwitching() {

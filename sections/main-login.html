@@ -19,10 +19,10 @@
   {{#form "customer_login" id="login-customer-form" thirdLogin="true"}}
     {{assign "activation_tag" form.register_config.activation_tag}}
     {{assign "support_type_list" (split form.register_config.types ",")}}
-    {{assign "has_switch" (and (inArray support_type_list 'email') (inArray support_type_list 'mobile') )}}
+    {{assign "has_switch" (if (inArray support_type_list 'email') and (inArray support_type_list 'mobile') )}}
     {{assign
       "has_third_login"
-      (or (inArray support_type_list "line") (inArray support_type_list "facebook") (inArray support_type_list "google"))
+      (if (inArray support_type_list "line") or (inArray support_type_list "facebook") or (inArray support_type_list "google"))
     }}
 
     <h1 id="customer-login-title" class="title5 text-center customer-form-title">
@@ -32,7 +32,7 @@
     {{#if activation_tag}}
       <p id="customer-activation-hint" class="body6 text-center customer-form-hint display-none" data-show="activation"></p>
     {{/if}}
-    
+
     {{#if has_switch}}
       <div class="tab" id="login-customer-tab" data-show="normal">
         <a class="body3 active" data-type="email">
@@ -44,8 +44,8 @@
       </div>
     {{/if}}
 
-    {{#each support_type_list}}
-      {{#if (if this "==" "email")}}
+    {{#for support_type_list as |type|}}
+      {{#if type == "email"}}
         <div class="field" data-type="email">
           {{snippet
             "input-email"
@@ -61,20 +61,20 @@
         </div>
       {{/if}}
 
-      {{#if this "==" "mobile"}}
-        <phone-input class="field {{#if ../has_switch}}display-none{{/if}}" data-type="mobile">
+      {{#if type == "mobile"}}
+        <phone-input class="field {{#if has_switch}}display-none{{/if}}" data-type="mobile">
           {{snippet
             "input-phone"
-            all_country_dialing_code= ../all_country_dialing_code
+            all_country_dialing_code= all_country_dialing_code
             input_name="customer[phone]"
             input_id="RegisterPhone"
             code_name="customer[code]"
             input_required=true
-            country_iso_code=../localization.country.iso_code
+            country_iso_code=localization.country.iso_code
           }}
         </phone-input>
       {{/if}}
-    {{/each}}
+    {{/for}}
 
     <div class="field">
       <div class="field__container">

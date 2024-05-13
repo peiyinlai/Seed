@@ -10,28 +10,31 @@
 {{assign "no_spacing" "false"}}
 
 {{assign "pc_cols" section.settings.pc_cols}}
-{{#if (if (length section.blocks) "==" 1)}}
+{{#if (if (length section.blocks) == 1)}}
   {{assign "pc_cols" 1}}
 {{/if}}
 {{assign "image_style" "square"}}
-{{#if image_ratio "===" "circle"}}
+{{#if image_ratio == "circle"}}
   {{assign "image_style" "round"}}
   {{assign "image_ratio" "100%"}}
 {{/if}}
 
-{{#and (if color_scheme "===" "none") (if (isFalsey show_block_bg))}}
+{{#if (if color_scheme == "none") and (if (isFalsey show_block_bg))}}
   {{assign "no_spacing" "true"}}
-{{/and}}
+{{/if}}
 
-{{#and (if settings.content_border_thickness ">=" 1)}}
+{{#if settings.content_border_thickness >= 1}}
   {{assign "no_spacing" "false"}}
-{{/and}}
+{{/if}}
 
-{{#if (if settings.content_shadow_opacity ">=" 1)}}
+{{#if settings.content_shadow_opacity >= 1}}
   {{assign "no_spacing" "false"}}
 {{/if}}
 <script src="{{asset_url 'component-slider.js'}}" defer></script>
 <script src="{{asset_url 'section-text-columns-with-image.js'}}" defer></script>
+{{#if request.design_mode}}
+  <script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+{{/if}}
 {{snippet "stylesheet" href=(asset_url "section-text-columns-with-image.css")}}
 {{snippet
   "section-padding-creator"
@@ -42,7 +45,7 @@
 <div
   class="section section-padding text-columns-with-images
     color-scheme-{{color_scheme}}
-    section-gap{{#if color_scheme '!==' 'none'}}--padding{{/if}}
+    section-gap{{#if color_scheme != 'none'}}--padding{{/if}}
     "
 >
   <div class="page-width color-scheme-{{color_scheme}}">
@@ -59,26 +62,27 @@
       class="{{#if show_touch}}display-none display-flex-desktop{{/if}}
         text-columns-with-images__wrapper grid grid-cols-1
         grid-cols-{{pc_cols}}-desktop"
-      style="{{#if (if pc_cols '==' 1)}}justify-content:center;{{/if}}"
+      style="{{#if (if pc_cols == 1)}}justify-content:center;{{/if}}"
     >
-      {{#each section.blocks}}
-        <div class="text-columns-with-images__inner {{../container-wrapper-cls}}">
+      {{#for section.blocks as |block|}}
+        <div class="text-columns-with-images__inner {{container-wrapper-cls}}">
           {{snippet
             "text-columns-with-image-card"
-            image_style=../image_style
-            image_width=../image_width
-            image_ratio=../image_ratio
-            no_spacing=../no_spacing
-            show_mask=../show_block_bg
-            color_scheme=../color_scheme
-            text_align=../text_align
-            pc_cols=../pc_cols
-            jump_link=../jump_link
-            shopline_attributes=this.shopline_attributes
-            theme_settings=../settings
+            block=block
+            image_style=image_style
+            image_width=image_width
+            image_ratio=image_ratio
+            no_spacing=no_spacing
+            show_mask=show_block_bg
+            color_scheme=color_scheme
+            text_align=text_align
+            pc_cols=pc_cols
+            jump_link=jump_link
+            shopline_attributes=block.shopline_attributes
+            theme_settings=settings
           }}
         </div>
-      {{/each}}
+      {{/for}}
     </div>
 
     {{#if show_touch}}
@@ -89,23 +93,24 @@
           style="width: 100%;"
         >
           <ul id="Slider-{{section.id}}" class="text-columns-images-swiper-box slider list-unstyled">
-            {{#each section.blocks}}
+            {{#for section.blocks as |block|}}
               <li id="Slide-{{id}}" class="slider__slide">
                 {{snippet
                   "text-columns-with-image-card"
-                  image_style=../image_style
-                  image_width=../image_width
-                  image_ratio=../image_ratio
-                  no_spacing=../no_spacing
-                  show_mask=../show_block_bg
-                  color_scheme=../color_scheme
-                  text_align=../text_align
-                  jump_link=../jump_link
-                  shopline_attributes=this.shopline_attributes
-                  theme_settings=../settings
+                  block=block
+                  image_style=image_style
+                  image_width=image_width
+                  image_ratio=image_ratio
+                  no_spacing=no_spacing
+                  show_mask=show_block_bg
+                  color_scheme=color_scheme
+                  text_align=text_align
+                  jump_link=jump_link
+                  shopline_attributes=block.shopline_attributes
+                  theme_settings=settings
                 }}
               </li>
-            {{/each}}
+            {{/for}}
           </ul>
           <div class="text-image-pagination-box body4">
             <button class="ctr-button prev" name="previous">

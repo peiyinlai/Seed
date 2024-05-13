@@ -48,5 +48,23 @@ defineCustomElement(
           };
         }
       }
+
+      openMenu() {
+        detectingScreen(({ isMobileScreen }) => {
+          if (isMobileScreen) {
+            this.toggleAttribute('open', false);
+            this.handleMenuCollapse();
+          }
+        }, true);
+      }
+
+      closeMenu() {
+        detectingScreen(({ isMobileScreen }) => {
+          if (isMobileScreen) {
+            this.toggleAttribute('open', true);
+            this.handleMenuCollapse();
+          }
+        }, true);
+      }
     },
 );

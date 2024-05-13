@@ -17,43 +17,41 @@
         </h2>
       {{/if}}
     </div>
-    {{#with this as |global|}}
-      <div class="blogs__list-wrapper">
-        <ul class="grid grid-cols-{{default this.section.settings.pc_cols '3'}}-desktop blogs__list">
-          {{#if blog_collection.articles.length}}
-            {{#each blog_collection.articles limit=section.settings.limit}}
-              <li class="blogs__item hover-image-scale" {{{this.shopline_attributes}}}>
-                {{snippet
-                  "blog-card"
-                  placeholder=false
-                  info=this
-                  show_author=global.section.settings.is_show_author
-                  show_date=global.section.settings.is_show_date
-                  show_cover=global.section.settings.is_show_cover
-                  cover_ratio="medium"
-                  show_desc=global.section.settings.is_show_desc
-                  btn_text=(t "blog.blog.read_more")
-                }}
-              </li>
-            {{/each}}
-          {{else}}
-            <li class="blogs__item hover-image-scale" {{{this.shopline_attributes}}}>
+    <div class="blogs__list-wrapper">
+      <ul class="grid grid-cols-{{default section.settings.pc_cols '3'}}-desktop blogs__list">
+        {{#if blog_collection.articles.length}}
+          {{#for blog_collection.articles limit=section.settings.limit as |article|}}
+            <li class="blogs__item hover-image-scale" {{{article.shopline_attributes}}}>
               {{snippet
                 "blog-card"
-                placeholder=true
-                info=this
-                show_author=global.section.settings.is_show_author
-                show_date=global.section.settings.is_show_date
-                show_cover=global.section.settings.is_show_cover
+                placeholder=false
+                info=article
+                show_author=section.settings.is_show_author
+                show_date=section.settings.is_show_date
+                show_cover=section.settings.is_show_cover
                 cover_ratio="medium"
-                show_desc=global.section.settings.is_show_desc
+                show_desc=section.settings.is_show_desc
                 btn_text=(t "blog.blog.read_more")
               }}
             </li>
-          {{/if}}
-        </ul>
-      </div>
-    {{/with}}
+          {{/for}}
+        {{else}}
+          <li class="blogs__item hover-image-scale" {{{shopline_attributes}}}>
+            {{snippet
+              "blog-card"
+              placeholder=true
+              info=this
+              show_author=section.settings.is_show_author
+              show_date=section.settings.is_show_date
+              show_cover=section.settings.is_show_cover
+              cover_ratio="medium"
+              show_desc=section.settings.is_show_desc
+              btn_text=(t "blog.blog.read_more")
+            }}
+          </li>
+        {{/if}}
+      </ul>
+    </div>
   </div>
   {{#if (isTruthy section.settings.btn_text)}}
     <div class="stage-blogs-btn">

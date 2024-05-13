@@ -15,38 +15,38 @@
       color-scheme-{{color_scheme}}"
   >
     <div class="newsletter-content">
-      {{#each section.blocks}}
-        {{#if this.type "===" "title"}}
-          <div {{{this.shopline_attributes}}} class="newsletter-title">
-            <h2 class="section-title text-center {{this.settings.fontSize}}">
-              {{this.settings.title}}
+      {{#for section.blocks as |block|}}
+        {{#if block.type == "title"}}
+          <div {{{block.shopline_attributes}}} class="newsletter-title">
+            <h2 class="section-title text-center {{block.settings.fontSize}}">
+              {{block.settings.title}}
             </h2>
           </div>
         {{/if}}
-        {{#if this.type "===" "desc"}}
+        {{#if block.type == "desc"}}
           <div
-            {{{this.shopline_attributes}}}
+            {{{block.shopline_attributes}}}
             class="rte newsletter-desc body3 text-center"
-          >{{{this.settings.description}}}</div>
+          >{{{block.settings.description}}}</div>
         {{/if}}
-        {{#if this.type "===" "button"}}
+        {{#if block.type == "button"}}
           {{#form "customer"}}
-            <div {{{this.shopline_attributes}}} class="newsletter-button-group">
+            <div {{{block.shopline_attributes}}} class="newsletter-button-group">
               <div class="field newsletter--field">
                 {{snippet
                   "input-email"
                   input_class="field__input"
                   input_required=true
                   input_name="contact[email]"
-                  input_placeholder=this.settings.placeholder
+                  input_placeholder=block.settings.placeholder
                 }}
                 <label class="field__label body3">
-                  {{this.settings.placeholder}}
+                  {{block.settings.placeholder}}
                 </label>
               </div>
               <button type="submit" class="button newsletter--button display-none display-inline-flex-desktop">
-                {{#if (isTruthy this.settings.button_text)}}
-                  {{this.settings.button_text}}
+                {{#if (isTruthy block.settings.button_text)}}
+                  {{block.settings.button_text}}
                 {{else}}
                   {{snippet "icon-mail"}}
                 {{/if}}
@@ -63,7 +63,7 @@
             {{/if}}
           {{/form}}
         {{/if}}
-      {{/each}}
+      {{/for}}
     </div>
   </div>
 </div>

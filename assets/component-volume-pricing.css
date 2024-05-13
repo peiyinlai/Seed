@@ -35,11 +35,11 @@ volume-pricing li {
 }
 
 volume-pricing li:nth-child(odd) {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(var(--color-text), 0.03);
 }
 
 volume-pricing li:nth-child(even) {
-  background: rgba(0, 0, 0, 0.09);
+  background: rgba(var(--color-text), 0.09);
 }
 
 volume-pricing show-more-button {

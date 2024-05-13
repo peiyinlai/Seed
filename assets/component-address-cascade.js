@@ -22,13 +22,32 @@ defineCustomElement(
         if (hasNextLevel) {
           this.initProvince();
           this.createCityOptions().then((hasDistrictLevel) => {
-            this.initCity();
             if (hasDistrictLevel) {
+              this.toggleCityInputContainer(false);
+              this.toggleDistrictInputContainer(false);
+
+              this.initCity();
               this.createDistrictOptions().then(() => {
                 this.initDistrict();
               });
+            } else {
+              // If there are no city and district data
+              // show the city and district input instead
+              this.toggleCityInputContainer(true);
+              this.toggleDistrictInputContainer(true);
+
+              this.initCityInput();
+              this.initDistrictInput();
             }
           });
+        } else {
+          // If there is no province data
+          // show the city and district input
+          this.toggleCityInputContainer(true);
+          this.toggleDistrictInputContainer(true);
+
+          this.initCityInput();
+          this.initDistrictInput();
         }
       }
 
@@ -50,8 +69,16 @@ defineCustomElement(
         this.backfillDefault(this.cityEl);
       }
 
+      initCityInput() {
+        this.backfillInputDefault(this.cityInputEl);
+      }
+
       initDistrict() {
         this.backfillDefault(this.districtEl);
+      }
+
+      initDistrictInput() {
+        this.backfillInputDefault(this.districtInputEl);
       }
 
       // backfill default value
@@ -59,6 +86,13 @@ defineCustomElement(
         const value = selectElement.getAttribute('data-default');
         if (value && selectElement.options.length > 0) {
           this.setSelectorByValue(selectElement, value);
+        }
+      }
+
+      backfillInputDefault(selectElement) {
+        const value = selectElement.getAttribute('data-default');
+        if (value) {
+          selectElement.value = value;
         }
       }
 
@@ -120,7 +154,15 @@ defineCustomElement(
       provinceHandler() {
         return this.createCityOptions().then((hasNextLevel) => {
           if (hasNextLevel) {
+            this.toggleCityInputContainer(false);
+            this.toggleDistrictInputContainer(false);
+
             this.createDistrictOptions();
+          } else {
+            // If there are no city and district data
+            // show the city and district input instead
+            this.toggleCityInputContainer(true);
+            this.toggleDistrictInputContainer(true);
           }
         });
       }
@@ -132,9 +174,6 @@ defineCustomElement(
 
         this.clearOptions(this.provinceEl);
         if (provinces && provinces.length === 0) {
-          this.toggleCityInputContainer(true);
-          this.toggleDistrictInputContainer(true);
-
           this.provinceContainer.style.display = 'none';
           this.cityContainer.style.display = 'none';
           this.districtContainer.style.display = 'none';
@@ -142,9 +181,6 @@ defineCustomElement(
           this.clearOptions(this.cityEl);
           return false;
         }
-
-        this.toggleCityInputContainer(false);
-        this.toggleDistrictInputContainer(false);
 
         for (let i = 0; i < provinces.length; i++) {
           this.createOption(this.provinceEl, {
@@ -158,19 +194,19 @@ defineCustomElement(
       }
 
       toggleDistrictInputContainer(show) {
+        this.districtInputContainer.querySelector('input').value = '';
         if (show) {
           this.districtInputContainer.style.display = '';
         } else {
-          this.districtInputContainer.querySelector('input').value = '';
           this.districtInputContainer.style.display = 'none';
         }
       }
 
       toggleCityInputContainer(show) {
+        this.cityInputContainer.querySelector('input').value = '';
         if (show) {
           this.cityInputContainer.style.display = '';
         } else {
-          this.cityInputContainer.querySelector('input').value = '';
           this.cityInputContainer.style.display = 'none';
         }
       }
@@ -179,6 +215,11 @@ defineCustomElement(
         const hasNextLevel = this.createProvinceOptions();
         if (hasNextLevel) {
           this.provinceHandler();
+        } else {
+          // If there is no province data
+          // show the city and district input
+          this.toggleCityInputContainer(true);
+          this.toggleDistrictInputContainer(true);
         }
       }
 

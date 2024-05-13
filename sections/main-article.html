@@ -1,50 +1,48 @@
 {{snippet "stylesheet" href=(asset_url "section-main-article.css")}}
 <article class="article-template">
-  {{#with this as |global|}}
-    {{#each section.blocks}}
-      {{#if type "===" "select"}}
-        {{#if global.article.image.src}}
-          <div class="page-width article-template__hero-container" {{{shopline_attributes}}}>
-            <div
-              class="article-template__hero-{{settings.image_height}} media"
-              {{#and (if settings.image_height "===" "adapt") (if global.article.image)}}
-                style="padding-bottom:{{times (divide 1 global.article.image.aspect_ratio) 100}}%;"
-              {{/and}}
-            >
-              {{snippet "image" data=global.article.image fetchpriority="high"}}
-            </div>
+  {{#for section.blocks as |block|}}
+    {{#if block.type == "select"}}
+      {{#if article.image.src}}
+        <div class="page-width article-template__hero-container" {{{block.shopline_attributes}}}>
+          <div
+            class="article-template__hero-{{block.settings.image_height}} media"
+            {{#if block.settings.image_height == "adapt" and article.image}}
+              style="padding-bottom:{{times (divide 1 article.image.aspect_ratio) 100}}%;"
+            {{/if}}
+          >
+            {{snippet "image" data=article.image fetchpriority="high"}}
           </div>
+        </div>
+      {{/if}}
+    {{/if}}
+    {{#if block.type == "title"}}
+      <header class="page-width" {{{block.shopline_attributes}}}>
+        <h1 class="article-template__title title4">{{article.title}}</h1>
+        {{#if block.settings.blog_show_date}}
+          <span class="circle-divider caption-with-letter-spacing body3">
+            {{date article.published_at "abbreviated_date"}}
+          </span>
         {{/if}}
-      {{/if}}
-      {{#if type "===" "title"}}
-        <header class="page-width" {{{shopline_attributes}}}>
-          <h1 class="article-template__title title4">{{global.article.title}}</h1>
-          {{#if settings.blog_show_date}}
-            <span class="circle-divider caption-with-letter-spacing body3">
-              {{date global.article.published_at "abbreviated_date"}}
-            </span>
-          {{/if}}
-          {{#if settings.blog_show_author}}
-            <span class="caption-with-letter-spacing body3">
-              <span itemprop="name">{{global.article.author}}</span>
-            </span>
-          {{/if}}
-        </header>
-        <div class="article-template__divide page-width"></div>
-      {{/if}}
-      {{#if type "===" "content"}}
-        <div class="article-template__content page-width rte body3" itemprop="articleBody" {{{shopline_attributes}}}>
-          {{{global.article.content}}}
-        </div>
-      {{/if}}
-      {{#if type "===" "share"}}
-        <div class="article-template__social-sharing page-width" {{{shopline_attributes}}}>
-          {{assign "share_url" (append global.request.origin global.article.url)}}
-          {{snippet "share-button" share_link=share_url}}
-        </div>
-      {{/if}}
-    {{/each}}
-  {{/with}}
+        {{#if block.settings.blog_show_author}}
+          <span class="caption-with-letter-spacing body3">
+            <span itemprop="name">{{article.author}}</span>
+          </span>
+        {{/if}}
+      </header>
+      <div class="article-template__divide page-width"></div>
+    {{/if}}
+    {{#if block.type == "content"}}
+      <div class="article-template__content page-width rte body3" itemprop="articleBody" {{{block.shopline_attributes}}}>
+        {{{article.content}}}
+      </div>
+    {{/if}}
+    {{#if block.type == "share"}}
+      <div class="article-template__social-sharing page-width" {{{block.shopline_attributes}}}>
+        {{assign "share_url" (append request.origin article.url)}}
+        {{snippet "share-button" share_link=share_url}}
+      </div>
+    {{/if}}
+  {{/for}}
   <div class="article-template__back element-margin-top page-width">
     <a href="{{blog.url}}" class="article-template__link link animate-arrow body3">
       <span class="icon-wrap">{{snippet "icon-arrow"}}</span>
@@ -54,10 +52,10 @@
   {{#if blog.comments_enabled}}
     <div class="article-template__comment-wrapper">
       <div id="comments" class="page-width">
-        {{#if article.comments_count ">" 0}}
+        {{#if article.comments_count > 0}}
           {{assign "anchor_id" (append "#Comments-" article.id)}}
           <h2 id="{{anchor_id}}" class="article-template__comment-title title4" tabindex="-1">
-            {{#if article.comments_count "==" 1}}
+            {{#if article.comments_count == 1}}
               {{t "blog.comment.single_count" count=article.comments_count}}
             {{else}}
               {{t "blog.comment.title" count=article.comments_count}}
@@ -65,15 +63,15 @@
           </h2>
           {{#paginate article.comments by=5}}
             <div class="article-template__comments">
-              {{#and (if comment.status "==" "pending") comment.content}}
+              {{#if comment.status == "pending" and comment.content}}
                 <article id="{{comment.id}}" class="article-template__comments-comment body3">
                   {{comment.content}}
                   <footer class="right">
                     <span class="circle-divider caption-with-letter-spacing body6">{{comment.author}}</span>
                   </footer>
                 </article>
-              {{/and}}
-              {{#each article.comments as |comment|}}
+              {{/if}}
+              {{#for article.comments as |comment|}}
                 <article id="{{comment.id}}" class="article-template__comments-comment body3">
                   {{comment.content}}
                   <footer class="right">
@@ -84,8 +82,8 @@
                     </span>
                   </footer>
                 </article>
-              {{/each}}
-              {{#if paginate.pages ">" 1}}
+              {{/for}}
+              {{#if paginate.pages > 1}}
                 {{snippet "pagination" paginate=paginate anchor=""}}
               {{/if}}
             </div>
@@ -93,11 +91,11 @@
         {{/if}}
         {{assign "moderated" blog.moderated}}
         {{#form "new_comment" article}}
-          {{#and moderated form.posted_successfully}}
+          {{#if moderated and form.posted_successfully}}
             {{assign "post_message" "blog.comment.comment_audit_tip"}}
           {{else}}
             {{assign "post_message" "blog.comment.success"}}
-          {{/and}}
+          {{/if}}
           <h2 class="title4 comment_title">{{t "blog.comment.post_comment"}}</h2>
           {{#if form.errors.messages}}
             <h3 class="field__info field__info--error body6" tabindex="-1">

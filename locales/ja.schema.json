@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "ページあたりのブログ数"
         },
         "is_show_cover": {
           "label": "カバー画像を表示"

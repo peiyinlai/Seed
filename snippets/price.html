@@ -31,7 +31,7 @@
         <span class="body2 fw-bold price-item price-item--regular">{{ money_price_min }} - {{ money_price_max }}</span>
       </div>
     {{else}}
-      {{#if compare_at_price ">" price}}
+      {{#if compare_at_price > price}}
         <div class="price__sale">
           <span class="body2 fw-bold price-item price-item--sale">
             {{money_price}}

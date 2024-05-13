@@ -293,6 +293,28 @@
       "province": "Maakunta",
       "zip_code": "Postinumero"
     },
+    "company": {
+      "account": {
+        "billTitle": "Yrityksen laskutusosoite",
+        "link": "Yritystilihakemus",
+        "shipping": "Yrityksen toimitusosoite",
+        "title": "Yritystilihakemus"
+      },
+      "bill": {
+        "sameAsCompany": "Yrityksen laskutusosoite on sama kuin yrityksen toimitusosoite"
+      },
+      "create": {
+        "limit": "Kaupan yritysten määrä on saavuttanut rajansa. Ota yhteyttä myyjään saadaksesi apua.",
+        "success": "Kiitos. Lomake on lähetetty."
+      },
+      "field": {
+        "companyName": "Yrityksen nimi",
+        "email": "Sähköposti"
+      },
+      "form": {
+        "submit": "Lähetä"
+      }
+    },
     "email": {
       "mail_common": "Posti"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Peruuta",
       "cancel_mobile_button": "peruutettu",
       "clear_button": "Tyhjennä",
+      "company_empty_hint": "Yrityksen nimi ei voi olla tyhjä",
+      "company_existed": "Yrityksen nimi on jo käytössä.",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Tilauksen tiedot",
+      "insuranceService": "Vakuutuspalvelut",
+      "insuranceService_applyClaim": "Hae vaatimusta",
+      "insuranceService_content_email": "1. Politiikka on lähetetty sähköpostiisi \"{{email}}\" by {{serviceName}}. Jos et ole saanut käytäntötietoja, ota yhteyttä kaupan asiakaspalveluun. 2. Jos kuljetuksen aikana on vahinko, menetys, viivästys tai muu tilanne, voit hakea vaatimusta.",
+      "insuranceService_content_phone": "1. Politiikka on lähetetty puhelin \"{{phopne}}\" by {{serviceName}}. Jos et ole saanut käytäntötietoja, ota yhteyttä kaupan asiakaspalveluun. 2. Jos kuljetuksen aikana on vahinko, menetys, viivästys tai muu tilanne, voit hakea vaatimusta.",
       "order": "Tilaus",
       "remark": "Tilauksen huomautukset",
       "time": "Tilausaika:",

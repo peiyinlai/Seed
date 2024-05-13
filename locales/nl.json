@@ -293,6 +293,28 @@
       "province": "Provincie",
       "zip_code": "Postcode"
     },
+    "company": {
+      "account": {
+        "billTitle": "Factuuradres van bedrijf",
+        "link": "Aanvraag bedrijfsaccount",
+        "shipping": "Verzendadres van bedrijf",
+        "title": "Aanvraag bedrijfsaccount"
+      },
+      "bill": {
+        "sameAsCompany": "Factuuradres van het bedrijf is hetzelfde als het verzendadres van het bedrijf"
+      },
+      "create": {
+        "limit": "Het aantal bedrijven voor de winkel heeft zijn limiet bereikt. Neem voor hulp contact op met de verkoper.",
+        "success": "Bedankt. Het formulier is verzonden."
+      },
+      "field": {
+        "companyName": "Bedrijfsnaam",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Indienen"
+      }
+    },
     "email": {
       "mail_common": "E-mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Annuleren",
       "cancel_mobile_button": "Annuleren",
       "clear_button": "Legen",
+      "company_empty_hint": "Bedrijfsnaam mag niet leeg zijn",
+      "company_existed": "Bedrijfsnaam bestaat al.",
       "confirm": "Oké",
       "confirm_button": "Oké",
       "date_format": "dd-MM-yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Bestelling gegevens",
+      "insuranceService": "Verzekeringen Service",
+      "insuranceService_applyClaim": "Compensatie aanvragen",
+      "insuranceService_content_email": "1. De polis is naar uw e-mailadres \"{{email}}\" gestuurd door {{serviceName}}. Als u de e-mail met de polis niet ontvangt, neem dan contact op met de klantenservice van de winkel.  2.Als er schade, verlies of vertraging optreedt tijdens de levering, kunt u een compensatie aanvragen.",
+      "insuranceService_content_phone": "1. De polis is naar uw mobiele telefoon \"{{phopne}}\" gestuurd door {{serviceName}}. Als u de bericht met de polis niet ontvangt, neem dan contact op met de klantenservice van de winkel.  2.Als er schade, verlies of vertraging optreedt tijdens de levering, kunt u een compensatie aanvragen.",
       "order": "Bestelling",
       "remark": "Bestelnotitie",
       "time": "Besteld op:",

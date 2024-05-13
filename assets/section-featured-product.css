@@ -15,7 +15,7 @@
   background-color: rgb(var(--color-page-background));
 }
 .featured-product.background-secondary {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(var(--color-mask), 0.04);
 }
 .featured-product.background-secondary .product {
   padding: 25px;

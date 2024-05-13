@@ -293,6 +293,28 @@
       "province": "Prowincja ",
       "zip_code": "Kod pocztowy "
     },
+    "company": {
+      "account": {
+        "billTitle": "Adres rozliczeniowy firmy",
+        "link": "Aplikacja konta firmowego",
+        "shipping": "Adres dostawy firmy",
+        "title": "Aplikacja konta firmowego"
+      },
+      "bill": {
+        "sameAsCompany": "Adres rozliczeniowy firmy taki sam jak adres dostawy firmy"
+      },
+      "create": {
+        "limit": "Liczba firm dla sklepu osiągnęła swój limit. Prosimy o kontakt z handlowcem o pomoc.",
+        "success": "Dziękujemy. Formularz został przesłany."
+      },
+      "field": {
+        "companyName": "Nazwa firmy",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Wyślij"
+      }
+    },
     "email": {
       "mail_common": "E-mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Anuluj",
       "cancel_mobile_button": "Anulować",
       "clear_button": "Wyczyść",
+      "company_empty_hint": "Nazwa firmy nie może być pusta",
+      "company_existed": "Nazwa firmy już istnieje.",
       "confirm": "Potwierdzenie",
       "confirm_button": "Potwierdzić",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Szczegóły zamówienia",
+      "insuranceService": "Usługi ubezpieczeniowe",
+      "insuranceService_applyClaim": "Złóż wniosek o odszkodowanie",
+      "insuranceService_content_email": "1. Polityka została wysłana na Twój adres e-mail „{{email}}” przez {{serviceName}}. Jeżeli nie otrzymasz e-maila z polityką, skontaktuj się z obsługą klienta sklepu. 2. Jeśli podczas transportu nastąpi uszkodzenie, zagubienie, opóźnienie itp., możesz ubiegać się o reklamację.",
+      "insuranceService_content_phone": "1. Polisa została wysłana na Twój telefon komórkowy „{{phopne}}” przez {{serviceName}}. Jeśli nie otrzymasz informacji o zasadach, skontaktuj się z obsługą klienta sklepu. 2. Jeśli podczas transportu nastąpi uszkodzenie, zagubienie, opóźnienie itp., możesz ubiegać się o reklamację.",
       "order": "Zamówienie",
       "remark": "Kometarze zamówienia",
       "time": "Czas złożenia zamówienia：",

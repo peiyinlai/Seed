@@ -10,7 +10,7 @@
 {{snippet "stylesheet" href=(asset_url "component-share-button.css")}}
 
 <div class="share-button__container">
-  <share-button id="Share-{{section.id}}" class="share-button quick-add-hidden" {{{shopline_attributes}}}>
+  <share-button id="Share-{{section.id}}" class="share-button quick-add-hidden" {{{block.shopline_attributes}}}>
     <details id="Details-{{block.id}}-{{section.id}}">
       <summary class="share-button__button body6">
         {{snippet "icon-shared"}}

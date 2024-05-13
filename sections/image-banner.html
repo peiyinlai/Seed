@@ -11,7 +11,7 @@
 {{assign "mobile_flatten" section.settings.mobile_banner_flatten}}
 {{assign "show_mobile_textarea" section.settings.m_show_textarea}}
 {{assign "blocks_length" (default (length section.blocks) 0)}}
-{{assign "image_pc_size" (ternary (and banner1 banner2) "1/2" "100vw")}}
+{{assign "image_pc_size" (ternary (if banner1 and banner2) "1/2" "100vw")}}
 
 {{assign "banner_ratio" "0"}}
 {{#if (isTruthy override_banner_height)}}
@@ -27,7 +27,7 @@
 <div class="section section-padding section-image-banner">
   
   <div
-    class="section-image-banner-pc {{#or banner1 banner2}}image-banner-loaded{{/or}} display-none display-block-desktop"
+    class="section-image-banner-pc {{#if banner1 or banner2}}image-banner-loaded{{/if}} display-none display-block-desktop"
   >
     <div class="image-banner--container">
       {{#if banner1}}
@@ -50,62 +50,62 @@
           </div>
         </div>
       {{/if}}
-      {{#and (isFalsey banner1) (isFalsey banner2)}}
+      {{#if (isFalsey banner1) and (isFalsey banner2)}}
         {{placeholder_svg_tag "lifestyle-1" "default-image"}}
-      {{/and}}
+      {{/if}}
       <div class="mask" style="opacity: {{alpha_range}}%"></div>
     </div>
     
-    {{#if blocks_length ">" 0}}
+    {{#if blocks_length > 0}}
       <div class="content content--pos-{{pc_position}}">
         <div class="page-width">
           <div
             class="wrapper global-content-border-shadow
               pc-content-text-{{section.settings.pc_text_position}}
-              {{#and (isFalsey show_textarea) (isFalsey banner1) (isFalsey banner2)}}wrapper--default--shadow{{/and}}
+              {{#if (isFalsey show_textarea) and (isFalsey banner1) and (isFalsey banner2)}}wrapper--default--shadow{{/if}}
               {{#if show_textarea}}
                 color-scheme-{{color_scheme}}
               {{else}}
                 wrapper--default-scheme
               {{/if}}"
           >
-            {{#each section.blocks}}
-              {{#if (trim type) "===" "title"}}
-                <h2 {{{this.shopline_attributes}}} class="title {{settings.title_size}}">
-                  {{newline_to_br settings.title}}
+            {{#for section.blocks as |block|}}
+              {{#if (trim block.type) == "title"}}
+                <h2 {{{block.shopline_attributes}}} class="title {{block.settings.title_size}}">
+                  {{newline_to_br block.settings.title}}
                 </h2>
               {{/if}}
 
-              {{#if (trim type) "===" "desc"}}
-                <p {{{this.shopline_attributes}}} class="desc body1">
-                  {{settings.description}}
+              {{#if (trim block.type) == "desc"}}
+                <p {{{block.shopline_attributes}}} class="desc body1">
+                  {{block.settings.description}}
                 </p>
               {{/if}}
-              {{#if (trim type) "===" "button"}}
-                {{assign "outline_button" settings.outline_button}}
-                {{assign "outline_button_2" settings.outline_button_2}}
-                <div {{{this.shopline_attributes}}} class="control-wrap">
+              {{#if (trim block.type) == "button"}}
+                {{assign "outline_button" block.settings.outline_button}}
+                {{assign "outline_button_2" block.settings.outline_button_2}}
+                <div {{{block.shopline_attributes}}} class="control-wrap">
                   <div class="control">
-                    {{~#if settings.button_text}}
+                    {{~#if block.settings.button_text}}
                       <a
-                        {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                        {{#if block.settings.link}}href="{{block.settings.link}}"{{else}}href="javascript:;"{{/if}}
                         class="button {{#if (isTruthy outline_button)}}button--secondary{{else}}btn-primary{{/if}}"
                       >
-                        {{settings.button_text}}
+                        {{block.settings.button_text}}
                       </a>
                     {{~/if}}
-                    {{~#if settings.link_text_2}}
+                    {{~#if block.settings.link_text_2}}
                       <a
-                        {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
+                        {{#if block.settings.link_2}}href="{{block.settings.link_2}}"{{else}}href="javascript:;"{{/if}}
                         class="button {{#if (isTruthy outline_button_2)}}button--secondary{{else}}btn-primary{{/if}}"
                       >
-                        {{settings.link_text_2}}
+                        {{block.settings.link_text_2}}
                       </a>
                     {{~/if}}
                   </div>
                 </div>
               {{/if}}
-            {{/each}}
+            {{/for}}
           </div>
         </div>
       </div>
@@ -114,16 +114,16 @@
   
   <div
     class="section-image-banner-mobile
-      {{#or banner1 banner2}}image-banner-loaded{{/or}}
+      {{#if banner1 or banner2}}image-banner-loaded{{/if}}
       display-block display-none-desktop
       {{#if (isTruthy mobile_flatten)}}section-image-banner--m-flatten{{else}}section-image-banner--m-normal {{/if}}"
     data-section-type="image-banner"
     data-section-id="{{section.id}}"
   >
     <div class="image-banner--container">
-      {{#and (isFalsey banner1) (isFalsey banner2)}}
+      {{#if (isFalsey banner1) and (isFalsey banner2)}}
         {{placeholder_svg_tag "lifestyle-1" "default-image"}}
-      {{/and}}
+      {{/if}}
       {{#if banner1}}
         <div
           class="banner-item-wrapper first-banner
@@ -135,7 +135,7 @@
         </div>
       {{/if}}
 
-      {{#if blocks_length ">" 0}}
+      {{#if blocks_length > 0}}
         <div
           class="content content--pos-center
             {{#if show_mobile_textarea}}content-m--normal-flow{{else}}content-m-no-bg{{/if}}
@@ -144,49 +144,49 @@
           <div
             class="wrapper page-width
               mobile-content-text-{{section.settings.mobile_text_position}}
-              {{#and (isFalsey show_mobile_textarea) (isFalsey banner1) (isFalsey banner2)}}wrapper--default--shadow{{/and}}
+              {{#if (isFalsey show_mobile_textarea) and (isFalsey banner1) and (isFalsey banner2)}}wrapper--default--shadow{{/if}}
               {{#if show_mobile_textarea}} color-scheme-{{color_scheme}}
               {{else}} wrapper--default-scheme {{/if}}
               "
           >
-            {{#each section.blocks}}
-              {{#if (trim type) "===" "title"}}
-                <h2 {{{this.shopline_attributes}}} class="title2 {{settings.title_size}}">
-                  {{newline_to_br settings.title}}
+            {{#for section.blocks as |block|}}
+              {{#if (trim block.type) == "title"}}
+                <h2 {{{block.shopline_attributes}}} class="title2 {{block.settings.title_size}}">
+                  {{newline_to_br block.settings.title}}
                 </h2>
               {{/if}}
 
-              {{#if (trim type) "===" "desc"}}
-                <p {{{this.shopline_attributes}}} class="body1">
-                  {{settings.description}}
+              {{#if (trim block.type) == "desc"}}
+                <p {{{block.shopline_attributes}}} class="body1">
+                  {{block.settings.description}}
                 </p>
               {{/if}}
-              {{#if (trim type) "===" "button"}}
-                {{assign "outline_button" settings.outline_button}}
-                {{assign "outline_button_2" settings.outline_button_2}}
-                <div class="control-wrap" {{{this.shopline_attributes}}}>
+              {{#if (trim block.type) == "button"}}
+                {{assign "outline_button" block.settings.outline_button}}
+                {{assign "outline_button_2" block.settings.outline_button_2}}
+                <div class="control-wrap" {{{block.shopline_attributes}}}>
                   <div class="control">
-                    {{~#if settings.button_text}}
+                    {{~#if block.settings.button_text}}
                       <a
-                        {{#if settings.link}}href="{{settings.link}}"{{else}}href="javascript:;"{{/if}}
+                        {{#if block.settings.link}}href="{{block.settings.link}}"{{else}}href="javascript:;"{{/if}}
                         class="button {{#if (isTruthy outline_button)}}button--secondary{{/if}}"
                       >
-                        {{settings.button_text}}
+                        {{block.settings.button_text}}
                       </a>
                     {{~/if}}
-                    {{~#if settings.link_text_2}}
+                    {{~#if block.settings.link_text_2}}
                       <a
-                        {{#if settings.link_2}}href="{{settings.link_2}}"{{else}}href="javascript:;"{{/if}}
+                        {{#if block.settings.link_2}}href="{{block.settings.link_2}}"{{else}}href="javascript:;"{{/if}}
                         class="button {{#if (isTruthy outline_button_2)}}button--secondary{{/if}}"
                       >
-                        {{settings.link_text_2}}
+                        {{block.settings.link_text_2}}
                       </a>
                     {{~/if}}
                   </div>
                 </div>
 
               {{/if}}
-            {{/each}}
+            {{/for}}
           </div>
         </div>
       {{/if}}
@@ -203,9 +203,9 @@
         </div>
       {{/if}}
       
-      {{#or (isFalsey show_mobile_textarea) (and (isFalsey image_url banner1) (isFalsey image_url banner2))}}
+      {{#if (isFalsey show_mobile_textarea) or (if (isFalsey image_url banner1) and (isFalsey image_url banner2))}}
         <div class="mask" style="opacity: {{alpha_range}}%"></div>
-      {{/or}}
+      {{/if}}
     </div>
   </div>
 </div>

@@ -1,6 +1,10 @@
 {{snippet "stylesheet" href=(asset_url "component-accordion.css")}}
 {{snippet "stylesheet" href=(asset_url "section-collapsible-content.css")}}
 
+{{#if request.design_mode}}
+  <script src="{{asset_url 'theme-editor.js'}}" defer="defer"></script>
+{{/if}}
+
 {{snippet
   "section-padding-creator"
   section_id=section.id
@@ -26,7 +30,7 @@
           class="grid
             {{#if section.settings.image}}grid-cols-2{{else}}grid-cols-1{{/if}}
             collapsible-content__grid
-            {{#if section.settings.desktop_layout '===' 'image_second'}} collapsible-content__grid--reverse{{/if}}"
+            {{#if section.settings.desktop_layout == 'image_second'}} collapsible-content__grid--reverse{{/if}}"
         >
           {{#if section.settings.image}}
             <div class="grid__item collapsible-content__grid-item">
@@ -34,7 +38,7 @@
                 class="collapsible-content__media
                   collapsible-content__media--{{section.settings.image_ratio}}
                   media global-media-border-shadow"
-                {{#if section.settings.image_ratio "===" "adapt"}}
+                {{#if section.settings.image_ratio == "adapt"}}
                   style="padding-bottom:{{divide 100 section.settings.image.aspect_ratio}}%;"
                 {{/if}}
               >
@@ -43,13 +47,13 @@
             </div>
           {{/if}}
           <div class="grid__item">
-            {{#each section.blocks as |block|}}
-              <div class="accordion">
+            {{#for section.blocks as |block|}}
+              <div class="accordion" {{{block.shopline_attributes}}}>
                 <details
-                  id="Details-{{block.id}}-{{../section.id}}"
-                  {{#and ../section.settings.open_first_collapsible_row (if @index "==" 0)}} open {{/and}}
+                  id="Details-{{block.id}}-{{section.id}}"
+                  {{#if section.settings.open_first_collapsible_row and forloop.index0 == 0}} open {{/if}}
                 >
-                  <summary id="Summary-{{block.id}}-{{../section.id}}">
+                  <summary id="Summary-{{block.id}}-{{section.id}}">
                     {{snippet "icon-accordion" icon=block.settings.icon}}
                     <h3 class="accordion__title title6">
                       {{block.settings.heading}}
@@ -62,13 +66,13 @@
                       {{snippet "icon-plus"}}
                     </div>
                   </summary>
-                  <div class="accordion__content rte body3" id="CollapsibleAccordion-{{block.id}}-{{../section.id}}">
+                  <div class="accordion__content rte body3" id="CollapsibleAccordion-{{block.id}}-{{section.id}}">
                     {{{block.settings.row_content}}}
                     {{{block.settings.page.content}}}
                   </div>
                 </details>
               </div>
-            {{/each}}
+            {{/for}}
           </div>
         </div>
       </div>

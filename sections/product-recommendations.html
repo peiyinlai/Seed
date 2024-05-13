@@ -20,23 +20,23 @@
     <h2 class="title4 title-wrapper text-center">
       {{title}}
     </h2>
-    {{#if (and (isTruthy recommendations.performed) (if recommendations.products_count ">" 0))}}
+    {{#if (isTruthy recommendations.performed) and recommendations.products_count > 0}}
       <div class="grid grid-cols-{{pc_cols}}-desktop grid-cols-{{mobile_cols}}">
-        {{#forIn recommendations.products}}
+        {{#for recommendations.products as |item|}}
           <li>
             {{snippet
               "product-card"
-              product_data=this
-              show_secondary_image=../section.settings.show_secondary_image
-              image_ratio=../section.settings.product_image_ratio
-              section_id=../section.id
-              desktop_grid_cols=../section.settings.pc_cols
-              mobile_grid_cols=../section.settings.mobile_cols
-              image_fill_type=../section.settings.product_fill_type
-              theme_settings=../settings
+              product_data=item
+              show_secondary_image=section.settings.show_secondary_image
+              image_ratio=section.settings.product_image_ratio
+              section_id=section.id
+              desktop_grid_cols=section.settings.pc_cols
+              mobile_grid_cols=section.settings.mobile_cols
+              image_fill_type=section.settings.product_fill_type
+              theme_settings=settings
             }}
           </li>
-        {{/forIn}}
+        {{/for}}
       </div>
     {{/if}}
   </product-recommendations>

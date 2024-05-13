@@ -1,9 +1,7 @@
 <div class="{{#if section.settings.include_margins}}page-width{{/if}}">
-  {{#with section as |section|}}
-    {{#each blocks}}
-      {{render this}}
-    {{/each}}
-  {{/with}}
+  {{#for section.blocks as |block|}}
+    {{render block}}
+  {{/for}}
 </div>
 
 {{#schema}}

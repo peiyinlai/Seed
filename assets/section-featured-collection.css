@@ -114,15 +114,15 @@
 }
 
 .featured-collection .control__dot {
-  background-color: rgba(1, 1, 1, 0.1);
+  background-color: rgba(var(--color-text), 0.1);
 }
 
 .featured-collection .control__dot:hover {
-  background-color: rgba(1, 1, 1, 0.1);
+  background-color: rgba(var(--color-text), 0.1);
 }
 
 .featured-collection .control__dot.is-active {
-  background: #010101;
+  background: rgb(var(--color-text));
 }
 
 .featured-collection .control__bars {
@@ -133,7 +133,7 @@
 }
 
 .featured-collection .control__bar {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(var(--color-text), 0.1);
   flex: 1;
   border: none;
   height: 6px;
@@ -144,11 +144,11 @@
 }
 
 .featured-collection .control__bar:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(var(--color-text), 0.1);
 }
 
 .featured-collection .control__bar.is-active {
-  background: #000;
+  background: rgb(var(--color-text));
   border-radius: 5px;
 }
 
@@ -166,7 +166,6 @@
   margin: 7px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
   transition: background 0.3s;
   cursor: pointer;
 }
@@ -175,13 +174,6 @@
   width: 10px;
   height: 10px;
   cursor: default;
-}
-
-.control__dot:hover,
-.control__dot:active,
-.control__dot:target,
-.control__dot.is-active {
-  background-color: #fff;
 }
 
 .control__arrow-button {
@@ -194,6 +186,7 @@
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  color: #000;
   background-color: #fff;
   box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
   transition: transform 0.3s;

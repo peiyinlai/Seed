@@ -1152,7 +1152,6 @@ select.field__input--classic + .field__suffix {
 .field-checkbox input[type="checkbox"]:checked + .checkbox::after {
   position: absolute;
   display: table;
-  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg) scale(1) translate(-50%, -50%);
@@ -1182,7 +1181,6 @@ select.field__input--classic + .field__suffix {
   display: table;
   width: 5.71428571px;
   height: 9.14285714px;
-  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg) scale(0) translate(-50%, -50%);

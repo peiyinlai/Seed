@@ -49,12 +49,12 @@
         <accordion-component>
           <nav class="header__drawer-nav">
             <ul class="header__drawer-menus list-unstyled">
-              {{#each menu.links}}
-                {{#if (length links) ">" 0}}
+              {{#for menu.links as |link|}}
+                {{#if (length link.links) > 0}}
                   <li>
                     <details>
                       <summary class="drawer-menus__item body3 fw-bold">
-                        {{title}}
+                        {{link.title}}
                         <span class="drawer-menus__item-icon drawer-menus__item-icon-on">
                           {{snippet "icon-arrow"}}
                         </span>
@@ -63,11 +63,11 @@
                         </span>
                       </summary>
                       <ul class="drawer-menus__sub-menus list-unstyled">
-                        {{#each links}}
-                          {{#if (length links) ">" 0}}
+                        {{#for link.links as |link|}}
+                          {{#if (length link.links) > 0}}
                             <details>
                               <summary class="drawer-menus__sub-item body5">
-                                {{title}}
+                                {{link.title}}
                                 <span class="drawer-menus__item-icon drawer-menus__item-icon-on">
                                   {{snippet "icon-arrow"}}
                                 </span>
@@ -76,25 +76,25 @@
                                 </span>
                               </summary>
                               <ul class="drawer-menus__sub-menus list-unstyled">
-                                {{#each links}}
+                                {{#for link.links as |link|}}
                                   <li>
                                     <a
                                       class="drawer-menus__sub-item body5"
-                                      {{#if url}}href="{{url}}"{{else}}href="javascript:;" role="link"{{/if}}
-                                    >{{title}}</a>
+                                      {{#if link.url}}href="{{link.url}}"{{else}}href="javascript:;" role="link"{{/if}}
+                                    >{{link.title}}</a>
                                   </li>
-                                {{/each}}
+                                {{/for}}
                               </ul>
                             </details>
                           {{else}}
                             <li>
                               <a
                                 class="drawer-menus__sub-item body5"
-                                {{#if url}}href="{{url}}"{{else}}href="javascript:;" role="link"{{/if}}
-                              >{{title}}</a>
+                                {{#if link.url}}href="{{link.url}}"{{else}}href="javascript:;" role="link"{{/if}}
+                              >{{link.title}}</a>
                             </li>
                           {{/if}}
-                        {{/each}}
+                        {{/for}}
                       </ul>
                     </details>
                   </li>
@@ -102,11 +102,11 @@
                   <li>
                     <a
                       class="drawer-menus__item body3 fw-bold"
-                      {{#if url}}href="{{url}}"{{else}}href="javascript:;" role="link"{{/if}}
-                    >{{title}}</a>
+                      {{#if link.url}}href="{{link.url}}"{{else}}href="javascript:;" role="link"{{/if}}
+                    >{{link.title}}</a>
                   </li>
                 {{/if}}
-              {{/each}}
+              {{/for}}
             </ul>
           </nav>
         </accordion-component>

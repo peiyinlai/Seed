@@ -31,7 +31,7 @@
   </h1>
   {{#form "create_customer" id="create-customer-form"}}
     {{assign "support_type_list" (split form.register_config.types ",")}}
-    {{assign "has_switch" (and (inArray support_type_list "email") (inArray support_type_list "mobile"))}}
+    {{assign "has_switch" (if (inArray support_type_list "email") and (inArray support_type_list "mobile"))}}
 
     {{#if has_switch}}
       <div class="tab" id="create-customer-tab">
@@ -44,8 +44,8 @@
       </div>
     {{/if}}
 
-    {{#each support_type_list}}
-      {{#if this "==" "email"}}
+    {{#for support_type_list as |support_type|}}
+      {{#if support_type == "email"}}
         <div class="field" data-type="email">
           {{snippet
             "input-email"
@@ -61,20 +61,20 @@
         </div>
       {{/if}}
 
-      {{#if this "==" "mobile"}}
-        <phone-input class="field {{#if ../has_switch}}display-none{{/if}}" data-type="mobile">
+      {{#if support_type == "mobile"}}
+        <phone-input class="field {{#if has_switch}}display-none{{/if}}" data-type="mobile">
           {{snippet
             "input-phone"
-            all_country_dialing_code= ../all_country_dialing_code
+            all_country_dialing_code= all_country_dialing_code
             input_name="customer[phone]"
             input_id="RegisterPhone"
             input_required=true
             code_name="customer[code]"
-            country_iso_code=../localization.country.iso_code
+            country_iso_code=localization.country.iso_code
           }}
         </phone-input>
       {{/if}}
-    {{/each}}
+    {{/for}}
 
     <div class="field">
       <div class="field__container">
@@ -202,7 +202,7 @@
       </button>
     </div>
 
-    {{#or has_privacy_policy has_terms_of_service}}
+    {{#if has_privacy_policy or has_terms_of_service}}
       <div class="actions">
         <label>
           <span class="field-checkbox">
@@ -221,7 +221,7 @@
           </span>
         </label>
       </div>
-    {{/or}}
+    {{/if}}
 
     {{#if (inArray support_type_list "email")}}
       <div class="actions" data-type="email-marketing">

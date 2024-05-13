@@ -293,6 +293,28 @@
       "province": "Provincie",
       "zip_code": "PSČ"
     },
+    "company": {
+      "account": {
+        "billTitle": "Adresa fakturace společnosti",
+        "link": "Žádost o účet společnosti",
+        "shipping": "Adresa pro doručení společnosti",
+        "title": "Žádost o účet společnosti"
+      },
+      "bill": {
+        "sameAsCompany": "Adresa fakturace společnosti stejná jako adresa pro doručení společnosti"
+      },
+      "create": {
+        "limit": "Počet společností pro obchod dosáhl svého limitu. Prosím, kontaktujte obchodníka o pomoc.",
+        "success": "Děkujeme. Formulář byl odeslán."
+      },
+      "field": {
+        "companyName": "Název společnosti",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Odeslat"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Zrušení",
       "cancel_mobile_button": "zrušení",
       "clear_button": "Vymazat",
+      "company_empty_hint": "Název společnosti nemůže být prázdný",
+      "company_existed": "Název společnosti již existuje.",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Podrobnosti objednávky",
+      "insuranceService": "Pojišťovací Služby",
+      "insuranceService_applyClaim": "Žádost o reklamaci",
+      "insuranceService_content_email": "1. Podmínky byly zaslány na váš e-mail „{{email}}“ společností {{serviceName}}. Pokud jste neobdrželi informace o zásadách, kontaktujte prosím volací obchod. 2. Pokud během doručování dojde k poškození, ztrátě, zpoždění nebo jiné situaci, můžete uplatnit reklamaci., můžete požádat o reklamaci.",
+      "insuranceService_content_phone": "1. Podmínky byly odeslány do vašeho telefonu „{{phopne}}“ {{serviceName}}. Pokud jste neobdrželi informace o podmínkách, obraťte se prosím na zákaznický servis obchodu. 2. Pokud během doručování dojde k poškození, ztrátě, zpoždění nebo jiné situaci, můžete uplatnit reklamaci, můžete požádat o reklamaci.",
       "order": "Objednat",
       "remark": "Poznámka k objednávce",
       "time": "Objednáno na:",

@@ -38,12 +38,12 @@
     {{snippet "icon-arrow"}}
   </div>
   <select name="{{code_name}}" class="country-select" {{#if input_disabled}}disabled{{/if}}>
-    {{#each all_country_dialing_code}}
-      {{#if ../country_iso_code "==" iso_code}}
-        <option value="{{dialing_code}}" data-iso-code="{{iso_code}}" selected="selected">{{name}}</option>
+    {{#for all_country_dialing_code as |item|}}
+      {{#if country_iso_code == item.iso_code}}
+        <option value="{{item.dialing_code}}" data-iso-code="{{item.iso_code}}" selected="selected">{{item.name}}</option>
       {{else}}
-        <option value="{{dialing_code}}" data-iso-code="{{iso_code}}">{{name}}</option>
+        <option value="{{item.dialing_code}}" data-iso-code="{{item.iso_code}}">{{item.name}}</option>
       {{/if}}
-    {{/each}}
+    {{/for}}
   </select>
 </div>

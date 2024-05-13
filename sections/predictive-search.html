@@ -12,20 +12,20 @@
   {{/if}}
 
   <ul class="predictive-search__results-list list-unstyled" data-predictive-search>
-    {{#each predictive_search.products}}
+    {{#for predictive_search.products as |item|}}
       <li class="predictive-search__list-item">
-        <a class="predictive-search__item link" href="{{ url }}">
-          {{#if featured_image}}
-            {{ snippet 'image' data=featured_image class="predictive-search__item-image" }}
+        <a class="predictive-search__item link" href="{{ item.url }}">
+          {{#if item.featured_image}}
+            {{ snippet 'image' data=item.featured_image class="predictive-search__item-image" }}
           {{else}}
             {{ placeholder_svg_tag 'image' 'predictive-search__item-image' }}
           {{/if}}
           <div class="predictive-search__item-content">
-            <p class="predictive-search__item-head body3">{{ title }}</p>
+            <p class="predictive-search__item-head body3">{{ item.title }}</p>
           </div>
         </a>
       </li>
-    {{/each}}
+    {{/for}}
     <li class="predictive-search__list-item">
       <button class="predictive-search__term body3">
         {{ t "general.search.search_hint" key="__QUERY_KEY__" }}

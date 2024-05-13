@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "จำนวนบล็อกต่อหน้า"
         },
         "is_show_cover": {
           "label": "แสดงภาพหน้าปก"

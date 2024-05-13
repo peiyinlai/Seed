@@ -1,9 +1,9 @@
 {{snippet "stylesheet" href=(asset_url "section-collections-hero.css")}}
 
 {{assign 'hasCover' false}}
-{{#and section.settings.show_collection_cover collection.banner_image}}
+{{#if section.settings.show_collection_cover and collection.banner_image}}
   {{assign 'hasCover' true}}
-{{/and}}
+{{/if}}
 <div class="collection-hero display-flex {{#if hasCover}}has-collection-image{{else}} page-width{{/if}}">
   {{#if hasCover}}
   <div class="collection-hero__image-wrapper">
@@ -29,9 +29,9 @@
       {{default collection.title (t 'products.product_list.products')}}
     </h1>
   {{/if}}
-{{#and section.settings.show_collection_description collection.description}}
+{{#if section.settings.show_collection_description and collection.description}}
   <div class="{{#if hasCover}}page-width{{/if}} collection-hero__description body3 rte">{{{collection.description}}}</div>
-{{/and}}
+{{/if}}
 </div>
 {{#schema}}
 {

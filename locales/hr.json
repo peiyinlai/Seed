@@ -293,6 +293,28 @@
       "province": "Pokrajina",
       "zip_code": "Poštanski broj"
     },
+    "company": {
+      "account": {
+        "billTitle": "Adresa za naplatu tvrtke",
+        "link": "Prijava za račun tvrtke",
+        "shipping": "Adresa za dostavu tvrtke",
+        "title": "Prijava za račun tvrtke"
+      },
+      "bill": {
+        "sameAsCompany": "Adresa za naplatu tvrtke ista je kao adresa za dostavu tvrtke"
+      },
+      "create": {
+        "limit": "Broj tvrtki za trgovinu dosegnuo je svoj limit. Obratite se trgovcu za pomoć.",
+        "success": "Hvala vam. Obrazac je predan."
+      },
+      "field": {
+        "companyName": "Naziv tvrtke",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "podnijeti"
+      }
+    },
     "email": {
       "mail_common": "Pošta"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Otkaži",
       "cancel_mobile_button": "otkaži",
       "clear_button": "Očisti",
+      "company_empty_hint": "Naziv tvrtke ne može biti prazan",
+      "company_existed": "Naziv tvrtke već postoji",
       "confirm": "Uredu",
       "confirm_button": "Uredu",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detalji narudžbe",
+      "insuranceService": "Usluge osiguranja",
+      "insuranceService_applyClaim": "Podnesite zahtjev za potraživanja",
+      "insuranceService_content_email": "1. Pravilnik vam je poslan na vašu adresu e-pošte \"{{email}}\" od strane {{serviceName}}. Ako niste primili pravilnik, kontaktirajte korisničku službu u trgovini. 2. Ako dođe do oštećenja, gubitka, kašnjenja ili drugih situacija prilikom transporta, možete podnijeti zahtjev za potraživanje. ",
+      "insuranceService_content_phone": "1. Pravilnik vam je poslan na vaš telefon \"{{phopne}}\" od strane {{serviceName}}. Ako niste primili pravilnik, kontaktirajte korisničku službu u trgovini. 2. Ako dođe do oštećenja, gubitka, kašnjenja ili drugih situacija prilikom transporta, možete podnijeti zahtjev za potraživanje.",
       "order": "Narudžba",
       "remark": "Napomena o narudžbi",
       "time": "Poručeno u:",

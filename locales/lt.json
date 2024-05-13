@@ -293,6 +293,28 @@
       "province": "Apskritis",
       "zip_code": "Pašto kodas"
     },
+    "company": {
+      "account": {
+        "billTitle": "Įmonės atsiskaitymo adresas",
+        "link": "Įmonės sąskaitos paraiška",
+        "shipping": "Įmonės pristatymo adresas",
+        "title": "Įmonės sąskaitos paraiška"
+      },
+      "bill": {
+        "sameAsCompany": "Įmonės atsiskaitymo adresas toks pat kaip įmonės pristatymo adresas"
+      },
+      "create": {
+        "limit": "Parduotuvės įmonių skaičius pasiekė ribą. Dėl pagalbos susisiekite su pardavėju.",
+        "success": "Ačiū. Forma pateikta."
+      },
+      "field": {
+        "companyName": "Įmonės pavadinimas",
+        "email": "El. paštas"
+      },
+      "form": {
+        "submit": "Pateikti"
+      }
+    },
     "email": {
       "mail_common": "Paštas"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Atšaukti",
       "cancel_mobile_button": "Atšaukti",
       "clear_button": "Išvalyti",
+      "company_empty_hint": "Įmonės pavadinimo laukas negali būti tuščias",
+      "company_existed": "Įmonės pavadinimas jau egzistuoja",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Užsakymo duomenys",
+      "insuranceService": "Draudimo paslaugos",
+      "insuranceService_applyClaim": "Krieptis dėl pretenzijų",
+      "insuranceService_content_email": "1. {{serviceName}} išsiuntė polisą jūsų el. paštu \"{{email}}\". Jei negavote poliso duomenų, prašome susisiekti su parduotuvės klientų aptarnavimo tarnyba. 2. Jei pervežant buvo patirta(s) žala, nuostolis, vėlavimas ar susidarė kita situacija, galite pateikti pretenziją.   ",
+      "insuranceService_content_phone": "1. {{serviceName}} išsiuntė polisą jūsų telefonu \"{{phopne}}\". Jei negavote poliso duomenų, prašome susisiekti su parduotuvės klientų aptarnavimo tarnyba. 2. Jei pervežant buvo patirta(s) žala, nuostolis, vėlavimas ar susidarė kita situacija, galite pateikti pretenziją.  ",
       "order": "Užsakymai",
       "remark": "Užsakymo pastaba",
       "time": "Užsakyta:",

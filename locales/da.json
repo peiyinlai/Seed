@@ -293,6 +293,28 @@
       "province": "Province",
       "zip_code": "Postnummer"
     },
+    "company": {
+      "account": {
+        "billTitle": "Virksomhedens faktureringsadresse",
+        "link": "Virksomhedens kontos ansøgning",
+        "shipping": "Virksomhedens leveringsadresse",
+        "title": "Virksomhedens kontos ansøgning"
+      },
+      "bill": {
+        "sameAsCompany": "Virksomhedens faktureringsadresse samme som virksomhedens leveringsadresse"
+      },
+      "create": {
+        "limit": "Antallet af virksomheder til butikken har nået sin grænse. Kontakt venligst forhandleren for assistance.",
+        "success": "Tak. Formularen er sendt."
+      },
+      "field": {
+        "companyName": "Virksomhedsnavn",
+        "email": "Email"
+      },
+      "form": {
+        "submit": "Indsend"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Annuller",
       "cancel_mobile_button": "Annuller",
       "clear_button": "Nulstil",
+      "company_empty_hint": "Virksomhedsnavnet kan ikke være tomt",
+      "company_existed": "Firmaets navn findes allerede.",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Ordreoplysninger",
+      "insuranceService": "Forsikringsydelser",
+      "insuranceService_applyClaim": "Ansøg om krav",
+      "insuranceService_content_email": "1. Politik blev sendt til din \"{{email}}\" e-mailadresse af {{serviceName}}. Hvis du ikke har modtaget dine politikoplysninger, bedes du kontakte din butiks kundeservice. 2. Hvis der er skade, tab, forsinkelse eller enhver anden situation under transport, kan du anmode om et krav.",
+      "insuranceService_content_phone": "1. Politik blev sendt til din \"{{phopne}}\" telefon af {{serviceName}}. Hvis du ikke har modtaget dine politikoplysninger, bedes du kontakte din butiks kundeservice. 2. Hvis der er skade, tab, forsinkelse eller enhver anden situation under transport, kan du anmode om et krav.",
       "order": "Ordre",
       "remark": "Ordrebemærkning",
       "time": "Bestilt den:",

@@ -1483,7 +1483,7 @@
           }
         },
         "page_number": {
-          "label": ""
+          "label": "每頁博客數量"
         },
         "is_show_cover": {
           "label": "顯示封面圖"

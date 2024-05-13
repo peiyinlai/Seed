@@ -253,8 +253,8 @@ class ModalDialog extends HTMLElement {
       if (event.code.toUpperCase() === 'ESCAPE') this.close();
     });
     if (this.classList.contains('media-modal')) {
-      this.addEventListener('pointerup', (event) => {
-        if (event.pointerType === 'mouse' && !event.target.closest('deferred-media, product-model')) {
+      this.addEventListener('click', (event) => {
+        if (!event.target.closest('deferred-media, product-model')) {
           this.close();
         }
       });
@@ -397,7 +397,7 @@ class DetailsModal extends BaseElement {
   }
 
   onBodyClick(event) {
-    if (!this.contains(event.target) || event.target.classList.contains('modal__overlay')) {
+    if (event.target.classList.contains('modal__overlay')) {
       this.close(event);
     }
   }
@@ -430,7 +430,7 @@ class DetailsModal extends BaseElement {
     this.onBodyClickEvent = this.onBodyClickEvent || this.onBodyClick.bind(this);
     this.detailsContainer.setAttribute('open', true);
     if (!this.disabledBodyClickClose) {
-      document.body.addEventListener('click', this.onBodyClickEvent);
+      this.detailsContainer.addEventListener('click', this.onBodyClickEvent);
     }
     document.body.classList.add('overflow-hidden');
 
@@ -446,7 +446,7 @@ class DetailsModal extends BaseElement {
     return this.doAnimate(true).then((res) => {
       this.detailsContainer.removeAttribute('open');
       if (!this.disabledBodyClickClose) {
-        document.body.removeEventListener('click', this.onBodyClickEvent);
+        this.detailsContainer.removeEventListener('click', this.onBodyClickEvent);
       }
       document.body.classList.remove('overflow-hidden');
       (this.focusToggle || false) && this.summaryToggle.focus();
@@ -774,8 +774,5 @@ function pauseAllMedia() {
     video.contentWindow.postMessage('{"method":"pause"}', '*');
   });
   document.querySelectorAll('video').forEach((video) => video.pause());
-  document.querySelectorAll('product-model').forEach((model) => {
-    if (model.modelViewerUI) model.modelViewerUI.pause();
-  });
 }
 ;

@@ -13,33 +13,31 @@
   {{#paginate blog.articles by=section.settings.page_number}}
     <div class="bloglist__main">
       <div class="blogslist__page-list">
-        {{#with this as |global|}}
-          <div class="blogslist__list-wrapper">
-            <ul
-              class="blogslist__list
-                blogslist__list--{{global.section.settings.layout}}
-                {{#and (eq global.section.settings.layout 'list') (gt (length blog.articles) 2)}}blog-item-grid-list{{/and}}
-                list-unstyled"
-            >
-              {{#each blog.articles}}
-                <li class="blogslist__item hover-image-scale">
-                  {{snippet
-                    "blog-card"
-                    info=this
-                    show_author=global.section.settings.is_show_author
-                    show_date=global.section.settings.is_show_date
-                    show_cover=global.section.settings.is_show_cover
-                    cover_ratio=global.section.settings.cover_img_ratio
-                    show_desc=global.section.settings.is_show_desc
-                    shopline_attributes=this.shopline_attributes
-                    btn_text=(t "blog.blog.read_more")
-                  }}
-                </li>
-              {{/each}}
-            </ul>
-          </div>
-        {{/with}}
-        {{#if paginate.pages ">" 1}}
+        <div class="blogslist__list-wrapper">
+          <ul
+            class="blogslist__list
+              blogslist__list--{{section.settings.layout}}
+              {{#if (eq section.settings.layout 'list') and (gt (length blog.articles) 2)}}blog-item-grid-list{{/if}}
+              list-unstyled"
+          >
+            {{#for blog.articles as |article|}}
+              <li class="blogslist__item hover-image-scale">
+                {{snippet
+                  "blog-card"
+                  info=article
+                  show_author=section.settings.is_show_author
+                  show_date=section.settings.is_show_date
+                  show_cover=section.settings.is_show_cover
+                  cover_ratio=section.settings.cover_img_ratio
+                  show_desc=section.settings.is_show_desc
+                  shopline_attributes=article.shopline_attributes
+                  btn_text=(t "blog.blog.read_more")
+                }}
+              </li>
+            {{/for}}
+          </ul>
+        </div>
+        {{#if paginate.pages > 1}}
           {{snippet "pagination" paginate=paginate anchor=""}}
         {{/if}}
       </div>

@@ -1,5 +1,5 @@
 {{#if (isFalsey cart.empty)}}
-  {{#each cart.items as |item|}}
+  {{#for cart.items as |item|}}
     <div id="cart-notification-product-{{item.key}}" class="cart-item">
       <div class="cart-notification-product__image {{#if item.image}}global-media-border-shadow{{/if}}">
         {{#if item.image.src}}
@@ -17,21 +17,21 @@
       <div class="cart-notification-product__details">
         <div class="cart-notification-product__name body2">{{item.product.title}}</div>
         {{#unless item.product.has_only_default_variant}}
-          {{#each item.options_with_values as |option|}}
+          {{#for item.options_with_values as |option|}}
             <div class="product-option">
               <span>{{option.name}}:</span>
               <span>{{option.value}}</span>
             </div>
-          {{/each}}
+          {{/for}}
         {{/unless}}
 
-        {{#if item.properties.length ">" 0}}
-          {{#each item.properties as |property|}}
+        {{#if item.properties.length > 0}}
+          {{#for item.properties as |property|}}
             <div class="product-property body4">
               <span class="product-property__name">{{property.name}}:&nbsp;</span>
-              {{#if property.type "==" "text"}}
+              {{#if property.type == "text"}}
                 <span>{{property.value}}</span>
-              {{else if property.type "==" "link"}}
+              {{else if property.type == "link"}}
                 <a class="button button--link" href="{{property.urls.[0]}}" target="_blank">
                   {{#if property.value}}
                     {{property.value}}
@@ -39,19 +39,19 @@
                     {{t 'cart.item.click_to_view'}}
                   {{/if}}
                 </a>
-              {{else if property.type "==" "picture"}}
+              {{else if property.type == "picture"}}
                 <div class="product-property__value">
-                  {{#each property.urls as |url|}}
+                  {{#for property.urls as |url|}}
                     <a class="product-property__link" href="{{url}}" target="_blank">
                       {{snippet "image" class="product-property__image" data=url lazy=true}}
                     </a>
-                  {{/each}}
+                  {{/for}}
                 </div>
               {{/if}}
             </div>
-          {{/each}}
+          {{/for}}
         {{/if}}
       </div>
     </div>
-  {{/each}}
+  {{/for}}
 {{/if}}

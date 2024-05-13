@@ -60,10 +60,6 @@
   cursor: default;
 }
 
-.multi-media-splicing .media--transparent {
-  background-color: transparent;
-}
-
 .multi-media-splicing .media-modal {
   cursor: zoom-out;
 }

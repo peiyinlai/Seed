@@ -293,6 +293,28 @@
       "province": "Maakond",
       "zip_code": "Postiindeks"
     },
+    "company": {
+      "account": {
+        "billTitle": "Ettevõtte arveldusaadress",
+        "link": "Ettevõtte konto taotlus",
+        "shipping": "Ettevõtte tarneaadress",
+        "title": "Ettevõtte konto taotlus"
+      },
+      "bill": {
+        "sameAsCompany": "Ettevõtte arveldusaadress on sama mis ettevõtte tarneaadress"
+      },
+      "create": {
+        "limit": "Poe ettevõtete arv on saavutanud oma piiri. Abi saamiseks võtke ühendust kaupmehega.",
+        "success": "Aitäh. Vorm on esitatud."
+      },
+      "field": {
+        "companyName": "Ettevõtte nimi",
+        "email": "Meil"
+      },
+      "form": {
+        "submit": "Esita"
+      }
+    },
     "email": {
       "mail_common": "Post"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Tühista",
       "cancel_mobile_button": "Tühista",
       "clear_button": "Tühista",
+      "company_empty_hint": "Ettevõtte nime väli ei tohi olla tühi",
+      "company_existed": "Ettevõtte nimi on juba olemas",
       "confirm": "Nõus",
       "confirm_button": "NÕUS",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Tellimuse üksikasjad",
+      "insuranceService": "Kindlustusteenused",
+      "insuranceService_applyClaim": "Nõuet taotlema",
+      "insuranceService_content_email": "1. Poliitika saatis teie \"{{email}}\" e-posti aadressile {{serviceName}}. Kui te ei ole oma poliitikateavet saanud, võtke ühendust oma poe klienditeenindusega. 2. Kui transpordi ajal tekib kahju, kahju, viivitus või mõni muu olukord, võite taotleda nõuet.",
+      "insuranceService_content_phone": "1. Poliitika saatis teie \"{{phopne}}\" telefon {{serviceName}}. Kui te ei ole oma poliitikateavet saanud, võtke ühendust oma poe klienditeenindusega. 2. Kui transpordi ajal tekib kahju, kahju, viivitus või mõni muu olukord, võite taotleda nõuet.",
       "order": "Tellimuse",
       "remark": "Tellimuse märkus",
       "time": "Tellitud:",

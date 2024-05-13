@@ -293,6 +293,28 @@
       "province": "都道府県",
       "zip_code": "郵便番号"
     },
+    "company": {
+      "account": {
+        "billTitle": "会社の請求先住所",
+        "link": "企業アカウントの申請",
+        "shipping": "会社の配送先住所",
+        "title": "企業アカウントの申請"
+      },
+      "bill": {
+        "sameAsCompany": "会社の請求先住所と会社の配送先住所が同じ"
+      },
+      "create": {
+        "limit": "ショップの企業数が制限に達しました。 サポートが必要な場合は販売者にお問い合わせください。",
+        "success": "ありがとう。 フォームは送信されました。"
+      },
+      "field": {
+        "companyName": "会社名",
+        "email": "Eメール"
+      },
+      "form": {
+        "submit": "提出する"
+      }
+    },
     "email": {
       "mail_common": "メール"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "キャンセル",
       "cancel_mobile_button": "キャンセル",
       "clear_button": "クリア",
+      "company_empty_hint": "会社名を空白にすることはできません",
+      "company_existed": "会社名はすでに存在しています。",
       "confirm": "OK",
       "confirm_button": "OK",
       "date_format": "yyyy-MM-dd",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "注文詳細",
+      "insuranceService": "運送保険サービス",
+      "insuranceService_applyClaim": "補償を請求",
+      "insuranceService_content_email": "1. 保険証券は、{{serviceName}}によってご指定のメールアドレス{{email}}に送信されました。保険証券のメールが届かない場合は、ストアのカスタマーサービスにお問い合わせください。2. 輸送中に破損、紛失、遅延などが発生した場合は、補償を請求することができます。",
+      "insuranceService_content_phone": "1. 保険証券は、{{serviceName}}によってご指定の携帯電話番号{{phopne}}宛に送信されました。保険証券のSMSが届かない場合は、ストアのカスタマーサービスにお問い合わせください。2. 輸送中に破損、紛失、遅延などが発生した場合は、補償を請求することができます。",
       "order": "注文",
       "remark": "備考欄",
       "time": "注文時間",

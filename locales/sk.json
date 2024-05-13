@@ -293,6 +293,28 @@
       "province": "Provincia",
       "zip_code": "PSČ"
     },
+    "company": {
+      "account": {
+        "billTitle": "Adresa fakturácie firmy",
+        "link": "Žiadosť o otvorenie účtu pre firmu",
+        "shipping": "Adresa doručenia firmy",
+        "title": "Žiadosť o otvorenie účtu pre firmu"
+      },
+      "bill": {
+        "sameAsCompany": "Adresa fakturácie firmy rovnaká ako adresa doručenia firmy"
+      },
+      "create": {
+        "limit": "Počet spoločností pre obchod dosiahol svoj limit. Prosím, kontaktujte obchodníka o pomoc.",
+        "success": "Ďakujem. Formulár bol odoslaný."
+      },
+      "field": {
+        "companyName": "Názov spoločnosti",
+        "email": "E-mail"
+      },
+      "form": {
+        "submit": "Odoslať"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Zrušiť",
       "cancel_mobile_button": "zrušiť",
       "clear_button": "Vymazať",
+      "company_empty_hint": "Názov spoločnosti nemôže byť prázdny",
+      "company_existed": "Názov spoločnosti už existuje.",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd.MM.yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Detaily objednávky",
+      "insuranceService": "Poisťovacie služby",
+      "insuranceService_applyClaim": "Požiadať o reklamáci",
+      "insuranceService_content_email": "1. Obchodné podmienky Vám boli zaslané na Váš email \"{{email}}\" od {{serviceName}}. Ak ste nedostali informácie o pravidlách, obráťte sa na zákaznícky servis obchodu. 2. Ak počas prepravy dôjde k poškodeniu, strate, oneskoreniu alebo inej situácii, môžete požiadať o reklamáciu.",
+      "insuranceService_content_phone": "1. Podmienky spoločnosti boli odoslané na váš telefón \"{{phopne}}\" {{serviceName}}. Ak ste nedostali informácie o pravidlách, obráťte sa na zákaznícky servis obchodu. 2. Ak počas prepravy dôjde k poškodeniu, strate, oneskoreniu alebo inej situácii, môžete požiadať o reklamáciu.",
       "order": "Objednávka",
       "remark": "Poznámka k objednávke",
       "time": "Objednané na:",

@@ -61,17 +61,6 @@ input {
   position: relative;
   width: 100%;
 }
-.text-columns-with-images-item__image svg {
-  background-color: #f3f3f3;
-  height: auto;
-  vertical-align: top;
-  width: 100%;
-}
-.text-columns-with-images-item__image
-  .text-columns-with-images-item__default-wrapper {
-  background-color: #f3f3f3;
-  position: relative;
-}
 .text-columns-with-images-item__image
   .text-columns-with-images-item__default-wrapper
   .text-columns-with-images-item__default-image {

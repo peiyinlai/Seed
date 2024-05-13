@@ -293,6 +293,28 @@
       "province": "Tỉnh",
       "zip_code": "Mã bưu điện"
     },
+    "company": {
+      "account": {
+        "billTitle": "Địa chỉ thanh toán của công ty",
+        "link": "Đơn đăng ký tài khoản công ty",
+        "shipping": "Địa chỉ giao hàng của công ty",
+        "title": "Đơn đăng ký tài khoản công ty"
+      },
+      "bill": {
+        "sameAsCompany": "Địa chỉ thanh toán của công ty giống với địa chỉ giao hàng của công ty"
+      },
+      "create": {
+        "limit": "Số lượng công ty cho c",
+        "success": "Cảm ơn bạn. Biểu mẫu đã được gửi đi."
+      },
+      "field": {
+        "companyName": "Tên công ty",
+        "email": "Email"
+      },
+      "form": {
+        "submit": "Gửi đi"
+      }
+    },
     "email": {
       "mail_common": "Mail"
     },
@@ -318,6 +340,8 @@
       "cancel_common": "Hủy",
       "cancel_mobile_button": "hủy",
       "clear_button": "Xóa",
+      "company_empty_hint": "Tên công ty không thể để trống",
+      "company_existed": "Tên công ty đã tồn tại",
       "confirm": "OK",
       "confirm_button": "Ok",
       "date_format": "dd/MM/yyyy",
@@ -570,6 +594,10 @@
     },
     "order_details": {
       "details": "Chi tiết đơn hàng",
+      "insuranceService": "Dịch vụ Bảo hiểm",
+      "insuranceService_applyClaim": "Yêu cầu Bồi thường",
+      "insuranceService_content_email": "1.Chính sách đã được {{serviceName}} gửi tới email của bạn là \"{{email}}\". Nếu bạn chưa nhận được thông tin về chính sách, vui lòng liên hệ với bộ phận chăm sóc khách hàng của cửa hàng. 2. Nếu trong quá trình vận chuyển có bất kỳ hư hỏng, mất mát, trì hoãn hoặc tình huống nào khác, bạn có thể yêu cầu bồi thường.",
+      "insuranceService_content_phone": "1.Chính sách đã được {{serviceName}} gửi tới điện thoại của bạn là \"{{phopne}}\". Nếu bạn chưa nhận được thông tin về chính sách, vui lòng liên hệ với bộ phận chăm sóc khách hàng của cửa hàng. 2. Nếu trong quá trình vận chuyển có bất kỳ hư hỏng, mất mát, trì hoãn hoặc tình huống nào khác, bạn có thể yêu cầu bồi thường.",
       "order": "Đơn hàng",
       "remark": "Ghi chú đơn hàng",
       "time": "Đặt hàng lúc:",

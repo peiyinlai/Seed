@@ -2,11 +2,11 @@
 
 {{assign
   "initial_min_value"
-  (ternary (or filter.min_value.value (if filter.min_value.value "===" 0)) filter.min_value.value 0)
+  (ternary (if filter.min_value.value or filter.min_value.value == 0) filter.min_value.value 0)
 }}
 {{assign
   "initial_max_value"
-  (ternary (or filter.max_value.value (if filter.max_value.value "===" 0)) filter.max_value.value filter.range_max)
+  (ternary (if filter.max_value.value or filter.max_value.value == 0) filter.max_value.value filter.range_max)
 }}
 
 <price-range

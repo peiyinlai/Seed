@@ -15,21 +15,21 @@
 
   <section class="customer-order-list-wrap">
     {{#paginate customer.orders by=10}}
-      {{#if customer.orders_count '>' 0 }}
+      {{#if customer.orders_count > 0 }}
         <ul class="customer-order-list list-unstyled">
-          {{#each customer.orders}}
+          {{#for customer.orders as |order|}}
             <li>
-              <a href="{{ ../routes.account_order_list_url }}/{{ id }}" class="customer-order-item">
+              <a href="{{ routes.account_order_list_url }}/{{ order.id }}" class="customer-order-item">
                 <div class="customer-order-item__head body5">
                   
-                  <span class="customer-order-item__seq fw-bold" >{{t 'order.order_status.sequence' id=(append '#' order_number) }}</span>
+                  <span class="customer-order-item__seq fw-bold" >{{t 'order.order_status.sequence' id=(append '#' order.order_number) }}</span>
                   
                   <p class="customer-order-item__create-time">
                     {{t 'order.order_details.time'}}
-                    {{ date created_at '%Y-%m-%d %H:%M %P' }}
+                    {{ date order.created_at '%Y-%m-%d %H:%M %P' }}
                   </p>
                   
-                  {{#if cancelled}}
+                  {{#if order.cancelled}}
                     <span class="customer-order-item__status fw-bold">
                       {{t 'order.order_status.canceled'}}
                     </span>
@@ -39,7 +39,7 @@
                   
                   <div class="customer-order-item__info">
                     <div class="customer-order-item__cover">
-                      {{ assign 'product_image' (first (where line_items 'image')) }}
+                      {{ assign 'product_image' (first (where order.line_items 'image')) }}
                       {{#if product_image.image.src}}
                         {{ snippet 'image' data=product_image pc_size='80px' mobile_size='64px' }}
                       {{else}}
@@ -47,7 +47,7 @@
                       {{/if}}
                     </div>
                     <p class="customer-order-item__product-total">
-                      {{t 'order.order_list.total_amount' transPackages=item_count }}
+                      {{t 'order.order_list.total_amount' transPackages=order.item_count }}
                     </p>
                   </div>
 
@@ -56,13 +56,13 @@
                     
                     <p class="status-box">
                       {{ snippet 'icon-pay' }}
-                      <span class="status-info">{{ financial_status_label }}</span>
+                      <span class="status-info">{{ order.financial_status_label }}</span>
                     </p>
                     <span class="status-divider display-none-desktop"></span>
                     
                     <p class="status-box">
                       {{ snippet 'icon-delivery' }}
-                      <span class="status-info">{{ fulfillment_status_label }}</span>
+                      <span class="status-info">{{ order.fulfillment_status_label }}</span>
                     </p>
                   </div>
                 </div>
@@ -70,12 +70,12 @@
                 <div class="customer-order-item__foot">
                   <p class="customer-order-item__total-info body2 fw-bold">
                     <span>{{t 'transaction.payment.total'}}</span>
-                    <span>{{ money_with_currency total_price currency=currency }}</span>
+                    <span>{{ money_with_currency order.total_price currency=order.currency }}</span>
                   </p>
                 </div>
               </a>
             </li>
-          {{/each}}
+          {{/for}}
         </ul>
       {{else}}
         
@@ -89,7 +89,7 @@
         </div>
       {{/if}}
 
-      {{#if customer.orders_count '>' 0 }}
+      {{#if customer.orders_count > 0 }}
         {{ snippet 'pagination' paginate=paginate anchor='' }}
       {{/if}}
     {{/paginate}}
